@@ -1,0 +1,13 @@
+---
+const themes = [
+ { slug: 'comportements', n: '01', count: 10, name: 'Les bons réflexes', label: 'Comportements', text: 'Mots de passe, informations, photos… et les personnes de l’autre côté de l’écran.', icon: '↗', color: 'coral' },
+ { slug: 'sante', n: '02', count: 8, name: 'Trouver son équilibre', label: 'Santé & attention', text: 'Notifications, vidéos courtes, sommeil : prendre le temps de questionner nos habitudes.', icon: '◷', color: 'teal' },
+ { slug: 'ecologie', n: '03', count: 11, name: 'Derrière nos écrans', label: 'Écologie', text: 'Des matériaux à la seconde vie des appareils, explorer la face matérielle du numérique.', icon: '↻', color: 'yellow' },
+];
+---
+<div class="cards-grid themes">
+  {themes.map(t => <a class:list={['theme-card',t.color]} href={`/quiz/${t.slug}`}>
+    <div class="card-top"><span class="eyebrow">{t.n} / {t.label}</span><span class="card-symbol" aria-hidden="true">{t.icon}</span></div>
+    <h3>{t.name}</h3><p>{t.text}</p><div class="card-bottom"><span>{t.count} questions</span><span aria-hidden="true">Jouer ↗</span></div>
+  </a>)}
+</div>

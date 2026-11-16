@@ -7,3 +7,7 @@
 # Preserve the public-source evidence byte for byte, including original whitespace.
 source-snapshot/*.html -text -whitespace
 source-snapshot/*.css -text -whitespace
+
+*.jpg binary
+# Preserve page breaks and layout in extracted PDF evidence.
+tasks/pdf-text/*.txt -text -whitespace

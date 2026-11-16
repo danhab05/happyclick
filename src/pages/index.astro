@@ -1,15 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ThemeCards from '../components/ThemeCards.astro';
 ---
 <Layout active="/">
-  <main id="contenu" class="home" tabindex="-1">
-    <div id="fullscreen">
-      <div id="first_page_title">
-        <img src="/assets/images/LogoBasseRes.png" class="heartbeat" id="logo" width="444" height="463" alt="Cœur et curseur Happy Click" />
-        <h1>Happy Click</h1>
-        <h3>Campagne 2025-2026</h3>
-        <h2>Le NUMÉRIQUE n'est pas mauvais ...<br />Il suffit d'en faire BON USAGE</h2>
+  <section class="wrap home-hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tiny-heart" aria-hidden="true">♥</span> Campagne 2025-2026</p>
+      <h1>Le numérique,<br />ça se <em>discute.</em></h1>
+      <p class="lead">Un message, une vidéo, un clic. Et si on prenait le temps d’en parler ? Des quiz et des activités pour apprendre à faire ses propres choix.</p>
+      <div class="actions"><a class="button" href="/quiz">Explorer les quiz <span aria-hidden="true">↗</span></a><a class="text-link" href="/kit">Préparer un atelier <span aria-hidden="true">→</span></a></div>
+      <div class="hero-note"><span aria-hidden="true">✳</span><p>À plusieurs, c’est encore mieux.<br /><strong>On échange des idées, pas des points.</strong></p></div>
+    </div>
+    <div class="hero-art" aria-label="Un clic, une question, une discussion : l’esprit Happy Click">
+      <div class="art-stamp">L’ATELIER<br />DES BONS<br />CLICS <span aria-hidden="true">✳</span></div>
+      <div class="paper-card"><span class="eyebrow">Une question pour commencer</span><p>Tout ce qu’on voit<br />en ligne est-il<br /><em>vraiment vrai ?</em></p><div class="paper-rule"></div><span>On en parle ? <span aria-hidden="true">↗</span></span></div>
+      <div class="heart-sticker"><img src="/assets/images/LogoBasseRes.png" width="444" height="463" alt="Cœur et curseur Happy Click" /></div>
+      <div class="landscape-strip"><img src="/assets/images/background_image.png" width="1536" height="1024" alt="" /><span>Changeons de point de vue.</span></div>
+    </div>
+  </section>
+  <div class="manifesto"><div class="wrap"><p>Le NUMÉRIQUE n'est pas mauvais ...<br /><strong>Il suffit d'en faire BON USAGE</strong></p><span aria-hidden="true">↗</span><p>Comprendre les usages.<br />Garder la main.</p></div></div>
+  <section class="wrap section" aria-labelledby="themes-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / Apprendre en échangeant</p><h2 id="themes-title">Trois portes d’entrée.<br />29 occasions de discuter.</h2></div><p>Les questions des cartes Happy Click, maintenant à jouer ici. Choisis un thème, prends position, puis découvre les explications et leurs nuances.</p></div>
+    <ThemeCards />
+  </section>
+  <section class="audience-section section">
+    <div class="wrap"><p class="eyebrow">02 / À chacun son point de départ</p><h2>Tu viens avec<br />quelle envie ?</h2>
+      <div class="audience-grid">
+        <article><span class="audience-number">A.</span><h3>Je suis curieux</h3><p>Jouer avec les cartes, questionner ce que je crois savoir et regarder mes propres habitudes.</p><a class="text-link" href="/mes-usages">Faire le point sur mes usages →</a></article>
+        <article><span class="audience-number">B.</span><h3>On en parle en famille</h3><p>Comprendre les points de vue des enfants et des parents, avec deux guides pour ouvrir la discussion.</p><a class="text-link" href="/guides">Trouver des repères →</a></article>
+        <article><span class="audience-number">C.</span><h3>J’anime un groupe</h3><p>Des cartes à imprimer, trois jeux de rôles et un carnet pour réfléchir à l’éducation au numérique.</p><a class="text-link" href="/kit">Ouvrir le kit pédagogique →</a></article>
       </div>
     </div>
-  </main>
+  </section>
+  <section class="wrap section duo-section">
+    <div class="editorial-number" aria-hidden="true">«<span>Et toi,<br />qu’en<br />penses-tu ?</span>»</div>
+    <div><p class="eyebrow">03 / La discussion fait partie du jeu</p><h2>Pas besoin d’avoir<br />toutes les réponses.</h2><p class="lead">Les cartes invitent à débattre en petits groupes de 4 à 6. Certaines questions ont plusieurs réponses ; certaines explications méritent d’être nuancées.</p><p>Chaque quiz donne accès à la page du document d’origine. Les jeux de rôles prolongent l’échange, en se mettant à la place d’un ami, d’un parent ou d’un enseignant.</p><a class="button secondary" href="/kit#roles">Découvrir les jeux de rôles ↗</a></div>
+  </section>
 </Layout>

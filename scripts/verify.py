@@ -1,118 +1,215 @@
 #!/usr/bin/env python3
-"""Verify the built preview without a browser or requests to the original site."""
-import hashlib, json, re, subprocess
+"""Audit the static build, sources and optional local HTTP, without a browser."""
+import argparse
+import hashlib
+import json
+import re
+import subprocess
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 from urllib.request import urlopen
-import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
+DIST = ROOT / 'dist'
 parser = argparse.ArgumentParser()
-parser.add_argument('--base-url', help='Also GET every built route and referenced resource')
+parser.add_argument('--base-url', help='GET every built file and route, including trailing-slash variants')
 args = parser.parse_args()
+
+
+def normalize(value):
+    return ' '.join(value.split())
+
 
 class Page(HTMLParser):
     def __init__(self, html):
         super().__init__()
-        self.elements, self.text, self.nav = [], [], []
+        self.elements, self.text, self.nav, self.source_blocks = [], [], [], []
         self.in_nav = False
+        self.capture = None
         self.feed(html)
+
     def handle_starttag(self, tag, attributes):
-        a = dict(attributes)
-        self.elements.append((tag, a))
-        if tag == 'nav': self.in_nav = True
-        if tag == 'a' and self.in_nav: self.nav.append(a)
+        attrs = dict(attributes)
+        self.elements.append((tag, attrs))
+        if tag == 'nav':
+            self.in_nav = True
+        if tag == 'a' and self.in_nav:
+            self.nav.append(attrs)
+        if tag in ('p', 'h3', 'h4', 'h5'):
+            self.capture = (tag, [])
+
     def handle_endtag(self, tag):
-        if tag == 'nav': self.in_nav = False
+        if tag == 'nav':
+            self.in_nav = False
+        if self.capture and self.capture[0] == tag:
+            text = normalize(' '.join(self.capture[1]))
+            if text:
+                self.source_blocks.append(text)
+            self.capture = None
+
     def handle_data(self, value):
-        value = ' '.join(value.split())
-        if value: self.text.append(value)
+        if normalize(value):
+            self.text.append(normalize(value))
+            if self.capture:
+                self.capture[1].append(value)
 
-manifest = json.loads((ROOT/'source-snapshot/assets.json').read_text())
-urls = {'/robots.txt'}
-report = ['# Vérification de la préversion', '', 'Commande : `npm run build && npm run verify -- --base-url http://127.0.0.1:4321`', '']
-pdf_count = 0
-for route, expected in (('/',0),('/kit',6),('/guides',2)):
-    path = ROOT/'dist'/route.strip('/')/'index.html'
-    html = path.read_text()
-    page = Page(html)
-    source_name = 'index' if route == '/' else route.strip('/')
-    source = Page((ROOT/f'source-snapshot/{source_name}.html').read_text())
-    built_text = ' '.join(page.text)
-    for text in source.text:
-        assert text in built_text, f'Texte source absent : {text}'
-    assert len(page.nav) == 5
-    assert [a['href'] for a in page.nav] == ['/', '/kit', '/guides'] + [a['href'] for a in source.nav[3:]]
-    assert [a['href'] for a in page.nav if a.get('aria-current') == 'page'] == [route]
-    assert any(tag == 'meta' and a.get('name') == 'robots' and a.get('content') == 'noindex, nofollow' for tag,a in page.elements)
-    assert not any(tag in ('script','form','input','textarea') for tag,a in page.elements)
-    assert 'pdf-rendering.js' not in html
-    downloads = [a['href'] for tag,a in page.elements if tag == 'a' and 'download' in a]
-    objects = [a['data'] for tag,a in page.elements if tag == 'object']
-    assert len(downloads) == expected and downloads == objects
-    original_pdfs = ['/'+a['src'] for tag,a in source.elements if tag == 'embed']
-    assert downloads == original_pdfs
-    pdf_count += len(downloads)
-    urls.add(route)
-    if route != "/":
-        urls.add(route + "/")
-    for tag, a in page.elements:
+
+def disk_for(url):
+    path = DIST / unquote(url).lstrip('/')
+    return path / 'index.html' if path.is_dir() else path
+
+
+expected_routes = {'/', '/kit', '/guides', '/quiz', '/quiz/comportements', '/quiz/sante',
+                   '/quiz/ecologie', '/quiz/tout', '/mes-usages', '/kit/reflexion',
+                   '/kit/roles/addiction', '/kit/roles/cyberharcelement', '/kit/roles/desinformation'}
+pages = {}
+for file in DIST.rglob('index.html'):
+    relative = file.parent.relative_to(DIST).as_posix()
+    route = '/' if relative == '.' else '/' + relative
+    pages[route] = Page(file.read_text())
+assert set(pages) == expected_routes, f'Routes manquantes/inattendues : {set(pages) ^ expected_routes}'
+manifest = json.loads((ROOT / 'source-snapshot/assets.json').read_text())
+source_home = Page((ROOT / 'source-snapshot/index.html').read_text())
+gate_links = [a['href'] for a in source_home.nav if a['href'].startswith('https://')]
+assert len(gate_links) == 2
+urls, fragments = {'/robots.txt'}, []
+report = ['# Vérification de la nouvelle interface et des activités', '',
+          'Commande : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`', '',
+          'Contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.', '',
+          '## Pages, contenu et interactions', '']
+source_block_count = 0
+for route, page in sorted(pages.items()):
+    html = disk_for(route).read_text()
+    text = normalize(' '.join(page.text))
+    expected_active = '/quiz' if route.startswith('/quiz') or route == '/mes-usages' else '/kit' if route.startswith('/kit') else route
+    assert [a['href'] for a in page.nav] == ['/', '/quiz', '/kit', '/guides'], route
+    assert [a['href'] for a in page.nav if a.get('aria-current') == 'page'] == [expected_active], route
+    assert any(tag == 'html' and a.get('lang') == 'fr' for tag, a in page.elements), route
+    assert any(tag == 'meta' and a.get('name') == 'robots' and a.get('content') == 'noindex, nofollow' for tag, a in page.elements), route
+    assert any(tag == 'meta' and a.get('name') == 'viewport' for tag, a in page.elements), route
+    assert sum(tag == 'h1' for tag, _ in page.elements) == 1, route
+    assert 'Happy Click' in re.search(r'<title>(.*?)</title>', html).group(1), route
+    assert not any(tag in ('form', 'iframe') for tag, _ in page.elements), route
+    assert 'pdf-rendering.js' not in html, route
+    ids = [a['id'] for _, a in page.elements if 'id' in a]
+    assert len(ids) == len(set(ids)), f'ID dupliqué : {route}'
+    assert 'contenu' in ids
+    for gate in gate_links:
+        assert any(tag == 'a' and a.get('href') == gate for tag, a in page.elements), f'Lien GATE absent : {route}'
+    if route in ('/', '/kit', '/guides'):
+        name = 'index' if route == '/' else route[1:]
+        source = Page((ROOT / f'source-snapshot/{name}.html').read_text())
+        for block in source.source_blocks:
+            assert block in text, f'Texte source absent sur {route} : {block}'
+            source_block_count += 1
+        downloads = [a['href'] for tag, a in page.elements if tag == 'a' and 'download' in a]
+        originals = ['/' + a['src'].lstrip('/') for tag, a in source.elements if tag == 'embed']
+        assert downloads == originals, f'Documents source modifiés : {route}'
+        assert [a['data'] for tag, a in page.elements if tag == 'object'] == originals
+    scripts = [a for tag, a in page.elements if tag == 'script']
+    interactive = route.startswith('/quiz/') or route in ('/mes-usages', '/kit/reflexion')
+    assert len(scripts) == int(interactive), f'JavaScript hors périmètre : {route}'
+    for script in scripts:
+        assert script.get('type') == 'module' and script.get('src', '').startswith('/_astro/'), route
+    assert not any(name.startswith('on') for _, a in page.elements for name in a), route
+    if not interactive:
+        assert not any(tag in ('input', 'textarea') for tag, _ in page.elements), route
+    for tag, attrs in page.elements:
         for attr in ('href', 'src', 'data'):
-            target = a.get(attr, '')
-            if target.startswith('#'):
-                assert any(other.get('id') == target[1:] for _,other in page.elements)
-            elif target.startswith('/'):
-                urls.add(target)
-            elif target:
-                assert tag == 'a' and target in [a['href'] for a in source.nav[3:]], target
-    report.append(f'- `{route}` : textes source conservés, 5 liens de navigation, {expected} PDF, noindex/nofollow, aucun script/formulaire.')
+            target = attrs.get(attr, '')
+            if not target:
+                continue
+            parsed = urlsplit(target)
+            if parsed.scheme or parsed.netloc:
+                assert tag == 'a' and parsed.scheme == 'https', f'Chargement distant : {target}'
+                continue
+            assert target.startswith(('/', '#')), f'Lien relatif non contrôlé : {route} : {target}'
+            assert not parsed.query, target
+            url = parsed.path or route
+            urls.add(url)
+            if parsed.fragment:
+                fragments.append((url, parsed.fragment))
+    urls.add(route)
+    if route != '/':
+        urls.add(route + '/')
+    report.append(f'- `{route}` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; {len(scripts)} module JS ciblé.')
 
-css = (ROOT/'dist/style.css').read_text()
-for target in re.findall(r'url\([\s\'"]*([^\)\'"\s]+)', css):
+# Question text/options and page references must actually reach the server-rendered HTML.
+quiz = json.loads((ROOT / 'src/data/quiz.json').read_text())
+assert len(quiz) == 29
+for question in quiz:
+    for route in ('/quiz/tout', '/quiz/' + question['theme']):
+        text = normalize(' '.join(pages[route].text))
+        for value in [question['question'], *question['options'], question['feedback'], question['discussion'], question['nuance']]:
+            assert normalize(value) in text, f'Carte incomplète : {route} {question["id"]}'
+for filename, route, expected in [('usage', '/mes-usages', 11), ('teachers', '/kit/reflexion', 14)]:
+    questions = json.loads((ROOT / f'src/data/{filename}.json').read_text())
+    assert len(questions) == expected
+    text = normalize(' '.join(pages[route].text))
+    for question in questions:
+        assert normalize(question['question']) in text, f'{filename} : question absente'
+        for option in question.get('options', []):
+            assert normalize(option) in text
+report.append(f'- {source_block_count} blocs de textes originaux contrôlés ; 29 cartes intégrales dans leur thème et dans le parcours complet ; 11 questions d’usage et 14 questions enseignants.')
+
+css = (DIST / 'style.css').read_text()
+for target in re.findall(r'url\([\s\'\"]*([^\)\'\"\s]+)', css):
     assert target.startswith('/'), f'Ressource CSS distante : {target}'
     urls.add(target)
-assert (ROOT/'dist/robots.txt').read_text().strip() == 'User-agent: *\nDisallow: /'
-assert pdf_count == 8
+assert (DIST / 'robots.txt').read_text().strip() == 'User-agent: *\nDisallow: /'
+# Client modules must stay local and ephemeral; DOM tests separately exercise their behavior.
+for script in list((ROOT / 'src/scripts').glob('*.mjs')) + list((ROOT / 'src/lib').glob('*.mjs')) + list((DIST / '_astro').glob('*.js')):
+    assert not re.search(r'\b(fetch|XMLHttpRequest|sendBeacon|WebSocket|localStorage|sessionStorage|indexedDB)\b|document\.cookie', script.read_text()), f'API réseau/persistance interdite : {script}'
+
+report += ['', '## Documents et empreintes source', '']
+expected_pages = {'activite_cartes_a_imprimer.pdf': 16, 'rp_addiction.pdf': 28,
+                  'rp_cyberharcelement.pdf': 24, 'rp_desinformation.pdf': 21,
+                  'test_numerico_dependance.pdf': 2, 'questionnaire_enseignants.pdf': 4,
+                  'guide_parents.pdf': 9, 'guide_jeune_et_numerique.pdf': 52}
+pdf_pages = {}
 for item in manifest:
-    path = ROOT/'dist'/item['local'].lstrip('/')
+    path = DIST / item['local'].lstrip('/')
     data = path.read_bytes()
     if item['local'] != '/style.css':
-        assert hashlib.sha256(data).hexdigest() == item['sha256'], path
+        assert hashlib.sha256(data).hexdigest() == item['sha256'], f'Source binaire altérée : {path}'
     if path.suffix == '.pdf':
         assert data.startswith(b'%PDF-'), path
-        info = subprocess.check_output(['pdfinfo',str(path)], text=True)
-        pages = re.search(r'^Pages:\s+(\d+)',info,re.M).group(1)
-        report.append(f'- `{item["local"]}` : PDF valide, {pages} pages, {len(data):,} octets, SHA-256 identique à la source.')
+        info = subprocess.check_output(['pdfinfo', str(path)], text=True)
+        count = int(re.search(r'^Pages:\s+(\d+)', info, re.M).group(1))
+        assert count == expected_pages[path.name], path
+        pdf_pages[item['local']] = count
+        report.append(f'- `{path.name}` : {count} pages, {len(data):,} octets ; SHA-256 `{item["sha256"]}` identique à la source.')
     urls.add(item['local'])
+assert len(pdf_pages) == 8 and sum(pdf_pages.values()) == 156
+for url, fragment in fragments:
+    if url.endswith('.pdf'):
+        match = re.fullmatch(r'page=(\d+)', fragment)
+        assert match and 1 <= int(match[1]) <= pdf_pages[url], f'Page PDF invalide : {url}#{fragment}'
+    else:
+        target = pages.get(url.rstrip('/') or '/')
+        assert target and any(a.get('id') == unquote(fragment) for _, a in target.elements), f'Ancre absente : {url}#{fragment}'
 
-report += ['', '## Ressources et HTTP', '']
+# Include every emitted asset, even font variants not selected by the current CSS.
+for path in DIST.rglob('*'):
+    if path.is_file() and path.suffix != '.html':
+        urls.add('/' + path.relative_to(DIST).as_posix())
 for url in sorted(urls):
-    disk = ROOT/'dist'/url.lstrip('/')
-    if disk.is_dir(): disk = disk/'index.html'
+    disk = disk_for(url)
     assert disk.is_file(), f'URL locale manquante : {url}'
     if args.base_url:
-        with urlopen(args.base_url.rstrip('/')+url, timeout=30) as response:
-            data = response.read()
-            assert response.status == 200
-            assert response.geturl() == args.base_url.rstrip('/')+url, f'Redirection inattendue : {url}'
-            assert data == disk.read_bytes(), f'Réponse différente : {url}'
+        expected_url = args.base_url.rstrip('/') + url
+        with urlopen(expected_url, timeout=30) as response:
+            assert response.status == 200 and response.geturl() == expected_url, f'Statut/redirection : {url}'
+            assert response.read() == disk.read_bytes(), f'HTTP différent du build : {url}'
             if url.endswith('.pdf'):
-                assert 'application/pdf' in response.headers.get('Content-Type','')
-report.append(f'{len(urls)} URLs locales vérifiées sur disque' + (' et en HTTP 200 ; réponses identiques aux fichiers du build.' if args.base_url else '.'))
-report.append('Routes avec et sans slash final contrôlées : `/kit`, `/kit/`, `/guides`, `/guides/` (sans redirection en mode HTTP).')
-report += ['', '## Analyse responsive sans navigateur', '', 'Dimensions déduites des règles CSS (pas des mesures de rendu). Navigation flexible avec retour à la ligne ; header dans le flux ≤ 1100 px ; titres fluides ≤ 600 px ; PDF et images bornés au conteneur ; liens PDF toujours visibles.', '', '| Écran (px) | Colonne PDF (px) | Texte (px) | Header |', '|---:|---:|---:|---|']
-for width in (320,375,390,600,768,1024,1280,1440,1920):
-    if width <= 600:
-        content = width - 40
-        paragraph = content
-    elif width <= 1100:
-        content = width * .8
-        paragraph = content * .8
-    else:
-        content = width * .6
-        paragraph = content * .8
-    assert 0 < paragraph <= content <= width
-    report.append(f'| {width} | {content:.0f} | {paragraph:.0f} | {"dans le flux" if width <= 1100 else "fixe"} |')
-report += ['', 'Revue navigateur effectuée par OpenBot, selon son compte rendu : accueil desktop très fidèle ; accueil et kit mobile sans débordement de navigation ni de titres ; guides desktop avec PDF visibles et contenu correct. Build et verify également relancés avec succès par OpenBot. Aucun navigateur utilisé par cet exécutant.', '', 'Les deux liens GATE externes sont conservés exactement ; ils ne sont pas des ressources chargées automatiquement.']
-(ROOT/'tasks/verification.md').write_text('\n'.join(report)+'\n')
+                assert 'application/pdf' in response.headers.get('Content-Type', ''), url
+report += ['', '## Ressources et HTTP', '',
+           f'{len(urls)} URLs contrôlées sur disque' + (' et par HTTP 200 sans redirection, réponses identiques au build.' if args.base_url else ' ; contrôle HTTP non demandé.'),
+           f'{len(fragments)} références à des ancres HTML/pages PDF vérifiées. Les 12 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.', '',
+           '## Responsive et limites de cette vérification', '',
+           'Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Voir `tasks/browser-review.md` pour les vérifications réalisées par OpenBot et celles encore en attente.', '',
+           'Les 10 tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.', '',
+           'Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.']
+(ROOT / 'tasks/verification.md').write_text('\n'.join(report) + '\n')
 print('\n'.join(report))

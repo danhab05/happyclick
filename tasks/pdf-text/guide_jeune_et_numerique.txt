@@ -1,0 +1,2484 @@
+Les jeunes                                                    ÉDUCATION 2.0
+
+                                                              RÉSEAUX SOCIAUX
+
+
+et le numérique                                           JEUX VIDÉO
+
+                                                        SANTÉ MENTALE
+
+Des clefs pour les accompagner                       INTIMITÉ
+
+
+
+
+Des réponses d’experts
+pour aider les professionnel·le·s à :
+0 Comprendre les enjeux
+0 Guider les jeunes
+0 Conseiller les parents                   Ireps
+                                   Nouvelle-Aquitaine
+                                    Vers la santé pour tous
+« Tout ce que vous avez toujours voulu savoir sur les écrans sans jamais oser le demander »
+
+L’Ireps Nouvelle-Aquitaine et L’Agora·MDA sont très heureux de partager ce document réalisé au cours du
+dernier trimestre 2021 et dont la vocation est de contribuer à la construction d’une culture professionnelle des
+usages numériques juvéniles.
+En effet, si les adolescents sont indéniablement les spécialistes des « boutons » et des services proposés par
+leurs applications favorites, notre rôle de professionnel est de les sensibiliser, ainsi que leur famille, aux enjeux
+sous-jacents.
+Au contact direct de cette génération « connectée », votre quotidien vous oblige à comprendre le sens et
+les usages du plus grand nombre, à accompagner les conséquences de certains mésusages mais surtout à en
+connaitre les enjeux. Cette nouvelle mission éducative, à la croisée de la culture adolescente et des mondes
+numériques nécessite pour chacun un effort de formation.
+Un grand merci aux professionnels qui ont permis la réalisation de ce livret, au collectif d’acteurs en addictologie,
+le Réseau Addictions 79 pour les constats qu’ils ont su faire remonter, aux professionnels qui ont pris le temps
+de formuler une question issue de leurs expériences quotidiennes, aux spécialistes sollicités pour nous aider
+à mettre à distance certaines de nos représentations, à l’illustratrice pour sa contribution aussi graphique que
+pertinente et aux financeurs pour la confiance accordée pour mener ce projet à terme.
+Nous vous souhaitons une agréable lecture en espérant qu’elle contribue à renforcer votre légitimité à aborder
+ces sujets complexes, y compris au travers de projets d’éducation au numérique que vous conduirez pour
+l’épanouissement des jeunes et de leur famille, devant et derrière leurs écrans.
+
+
+
+
+       Depuis 2017, la Caf et l’Agora-MDA se mobilisent             L’évolution des technologies, la connexion en
+       en faveur des jeunes afin de renforcer la présence           tout lieu et à tout moment bouleversent notre
+       éducative sur Internet et les réseaux sociaux.               relation aux écrans et modifient profondément nos
+       Pour cela, la Caf soutient financièrement le dispositif      comportements, à tout âge.
+       Promeneurs Du Net (PdN).                                     L’usage nomade des appareils, le recours au « tout
+       A ce jour, 29 PdN assurent une présence en ligne en          numérique » favorisent un usage excessif de ces
+       animant des temps d’échanges et des projets visant           outils, qui peut avoir de lourdes conséquences,
+       à accompagner les jeunes et leurs parents dans               notamment chez les jeunes, que ce soit par une
+       leurs usages numériques.                                     exposition trop importante ou par le développement
+       Notre ambition est de renforcer les compétences              de pratiques addictives (liées aux jeux vidéo par
+       en favorisant la formation des professionnels                exemple).
+       (formation « Web citoyen » pour prévenir les risques         Conformément au plan national de mobilisation
+       de violences, de harcèlements et de radicalisation,          contre les addictions 2018-2022, l’Agence Régionale
+       modules dédiés à l’utilisation des réseaux sociaux).         de Santé Nouvelle-Aquitaine s’attache entre autres
+       Ce livret, dont la réalisation s’appuie sur un travail       à renforcer la coordination et la formation des
+       coopératif, apporte une réponse coordonnée aux               acteurs, pour détecter et intervenir dès les premiers
+       questions des professionnels.                                usages problématiques.
+       Il illustre parfaitement les opportunités que la Caf         Ce guide, destiné aux professionnels, permettra
+       entend soutenir : des actions concertées au bénéfice         de comprendre tous les enjeux de ce phénomène,
+       de l’ensemble de la population deux-sévriennes.              et d’apporter aux jeunes et à leurs parents, des
+       Que l’ensemble des partenaires mobilisés en soient           conseils, des repères et des outils simples pour
+       ici remerciés.                                               mieux maîtriser le numérique, ses pratiques et ses
+                                                                    contenus.
+       Cécile BONAMY,
+       Directrice de la Caf des Deux-Sèvres                         Benoît ELLEBOODE
+                                                                    Directeur général de l’Agence régionale de santé
+                                                                    Nouvelle-Aquitaine
+
+
+
+
+2
+   Page         Education 2.0
+        5       #diététique
+        6       #cybersécurité
+        8       #accompagnement
+       10       #curiosité
+       12       #conduiteaccompagnée
+       14       #normes
+       16       #hygiènenumérique
+       18       #premièresfois
+       20       #confiance
+
+
+
+                               Page          Les réseaux sociaux
+                                 22          #protectiondelenfance
+                                 23          #légitimité
+                                 24          #CNIL
+                                 25          #analyse
+                                 26          #contagiosité
+                                 29          #RGPD
+
+
+
+
+              Page         Jeux vidéo
+                 32        #nuances
+                 34        #expérimentation
+                 36        #captologie
+
+
+
+
+                                      Page       Santé mentale
+                                        39       #gamingdisorder
+                                        40       #ohmonbeaumiroir
+                                        42       #dynamiquefamiliale
+
+
+
+
+Page        Intimité
+  46        #expérimentation
+  48        #consentement
+  50        #estimedesoi
+
+
+
+                                                                       3
+         Éducation 2.0
+
+    #accompagnement          #diététique       #cybersécurité
+        #conduiteaccompagnée      #curiosité     #normes
+    #hygiènenumérique        #premièresfois        #confiance
+
+
+
+
+4
+ÉDUCATION 2.0
+                                    La règle du «3,6,9,12» lancée en 2008
+#diététique
+                                    est-elle toujours réaliste et adaptée
+                                    en 2021 ?
+
+
+
+                                                                                                             Cheffe de bureau
+                                                                                                              médico-social
+                            Serge TISSERON                                                                     (11-25 ans)
+                            Psychiatre et président de l’association Trois, Six, Neuf, Douze
+
+
+
+
+    Leur but était d’aider les parents à apprendre à             Et cela ne disait pas non plus « Pas de jeu vidéo avant 6
+    leurs enfants à se servir des écrans, et à s’en passer,      ans », mais que cet outil numérique, comme plus tard
+    à tout âge. Pour éviter de laisser croire qu’elles           la tablette, doit être acheté pour la famille et pas pour
+    s’arrêtent à 12 ans, elles s’appellent maintenant 3-6-       l’enfant. Donc : « Pas de console de jeu (ou de tablette)
+    9-12+. Elles s’appuient depuis 2008 sur trois principes :    personnelle avant six ans ».
+    accompagnement par l’adulte, alternance entre activités      En 2013, le Family Online Safety Institute, organisation
+    et apprentissage des capacités d’auto-régulation. Les        internationale à but non lucratif qui travaille à rendre le
+    travaux des neurosciences ont confirmé l’importance de       monde en ligne plus sûr pour les enfants et leurs familles,
+    ce dernier point.                                            a honoré 3-6-9-12 de sa plus haute distinction.
+    Il en résulte depuis 2008 également quatre                   Depuis 2015, les messages sont devenus positifs :
+    recommandations valables à tout âge, applicables             1 Avant 3 ans : jouez, parlez, arrêtez la télé
+    avec plusieurs enfants à partir du moment où il existe       1 De 3 à 6 ans : limitez les écrans, partagez-les, parlez
+    plusieurs pièces et plusieurs outils numériques :            en famille
+    1 limiter les temps d’écran,                                 1 De 6 à 9 ans : créez avec les écrans, expliquez-lui
+    1 encourager les activités de création dès le plus jeune     Internet
+    âge (avec ou sans outil numérique),                          1 Après 12 ans : restez disponibles, votre enfant a
+    1 choisir des programmes adaptés,                            encore besoin de vous.
+    1 parler avec les enfants de ce qu’ils voient et font
+                                                                 Enfin, en 2018, j’ai proposé de les reformuler comme
+    avec les écrans.
+                                                                 une « diététique des écrans » et appelé à en civiliser
+    Après avoir été critiquées « faute de preuves », ces deux
+                                                                 les usages comme l’homme a civilisé dans toutes les
+    dernières recommandations sont maintenant relayées
+                                                                 cultures ses façons de se nourrir1.
+    par l’Académie américaine de pédiatrie et l’Académie
+    française de médecine.                                       Nous proposons gratuitement de nombreux documents
+                                                                 visuels, mais seules nos interventions auprès des
+    En parallèle, 3-6-9-12 avance des préconisations propres
+                                                                 parents, des élèves et des professionnels2 permettent,
+    à chaque âge. En 2008, c’était quatre « pas » : pas de
+                                                                 à nos yeux, de développer pleinement nos principes
+    télé avant 3 ans, pas de console de jeu avant 6 ans,
+                                                                 axés sur une éducation critique aux médias, centrée
+    pas d’Internet accompagné avant 9 ans, pas d’Internet
+                                                                 sur l’environnement familial et le choix des contenus.
+    seul avant 12 ans. Cela ne voulait pas dire « pas d’écran
+                                                                 Preuve de leur actualité, les balises ont été adaptées en
+    avant 3 ans » car l’utilisation en co-immersion d’un
+                                                                 2020 à l’utilisation des chatbots3.
+    outil numérique interactif, sur une période courte, peut
+    avoir des effets bénéfiques.
+                                                                 1. https://sergetisseron.com/blog/neuf-conseils-pour-gerer-les-
+                                                                 ecrans-comme-les-aliments/
+                                                                 2. Voir www.3-6-9-12.org
+                                                                 3. Tisseron, S. (2020). L’Emprise insidieuse des machines parlantes,
+                                                                 plus jamais seul. Les Liens qui Libèrent.
+
+
+                                                                                                                                        5
+ÉDUCATION 2.0
+                                        Comment se protéger des arnaques
+#cybersécurité
+                                        sur internet ?
+                                        Et comment en informer les jeunes ?
+
+
+                                                                                                           Educatrice, RHJ
+                                                                                                             (16-30 ans)
+
+
+                                  Vincent BERNARD
+                                  Coordinateur de Bornybuzz Numérique
+
+
+
+
+     En contexte professionnel, lorsque l’on parle des                De même, les 4000 Conseillers Numériques France
+     jeunes et du numérique, on aborde trop souvent la                Service qui se déploient sur le territoire seront
+     question des risques liés au numérique sous l’angle              susceptibles de répondre aux questions et résoudre les
+     comportemental au détriment de la dimension                      problèmes courants.
+     technique. A travers des thématiques comme les usages            De son côté, l’Etat propose le site cybermalveillance.
+     excessifs, le cyberharcèlement ou le sexting, on cantonne        gouv.fr qui permet de comprendre les menaces, explique
+     l’éducation au numérique dans sa dimension sanitaire.            les bonnes pratiques et propose une procédure en cas
+     Ceci s’explique d’abord par le fait que l’on accorde trop        de problèmes.
+     d’importance au principe de précaution et aux paniques           Sur les questions de cybersécurité ou du numérique en
+     morales, mais aussi en raison du mythe du digital                général, en tant que professionnel ou à titre personnel,
+     native. Parce qu’ils ont été bercés par les technologies         nous nous retrouvons bien souvent aussi démunis que
+     dès leur plus jeune âge, les enfants et les adolescents          nos publics. Cependant, ce n’est pas forcément un
+     seraient parfaitement à l’aise avec les technologies et          problème, car cela peut être une opportunité de se poser
+     auraient naturellement les compétences pour être des             collectivement des questions et d’essayer d’y répondre,
+     internautes aguerris. C’est bien sûr complètement faux !         autrement dit, de mettre en place des projets et actions
+                                                                      innovantes. Bientôt, toutes les régions seront dotées
+     Se pose alors la question de qui doit éduquer qui et
+                                                                      d’un Hub territorial dont la mission sera d’accompagner
+     à quoi, mais aussi comment ? Les technologies de
+                                                                      la transition numérique et de recenser les ressources
+     l’information et de la communication se développant
+                                                                      en médiation numérique. Le site de Numérique en
+     rapidement, il est compliqué de déterminer le socle
+                                                                      commun[s] fourmille également d’informations, de
+     des compétences minimales à acquérir en matière de
+                                                                      pistes et d’idées à destination des professionnels certes,
+     numérique et de décliner ensuite ce socle en dispositifs,
+                                                                      mais aussi des responsables associatifs et des élus
+     projets et actions.
+                                                                      locaux.
+     Si la situation est un peu confuse, la généralisation au
+     collège et au lycée de Pix., le service en ligne d’évaluation,   Face à un monde qui change, la réponse à apporter doit
+     de développement et de certification des compétences             être forcément collective. La solitude et le désarroi des
+     numériques, devrait simplifier les choses.                       animateurs et éducateurs sur ces questions doivent être
+                                                                      entendus !
+
+
+
+
+ 6
+                                                                                                            ÉDUCATION 2.0
+
+                                                                                                            #cybersécurité
+
+
+
+
+                        Arnaud GHEYSENS
+                        Président de MyTwiga
+
+
+
+
+L’omniprésence du numérique dans nos vies nous                Il est donc préférable autant que possible que ce cadre
+met maintenant à quelques clics des escrocs les plus          puisse être renforcé par les parents ou des adultes
+imaginatifs de la planète. Les arnaques sur Internet          référents qui doivent poser des limites à l’usage du
+peuvent être technologiques (malwares, ransomwares,           smartphone, grâce notamment aux paramètres familiaux
+attaque DDoS,…) ou utiliser des ressorts plus                 (iOS ou Android) qu’il faut savoir maintenant maîtriser et
+classiques liés à la manipulation (phishing notamment,        qui sont devenus obligatoires avant 15 ans. Ceci suppose
+dropshipping, arnaques aux sentiments).                       évidemment que les parents investissent du temps sur
+L’utilisation du smartphone de plus en plus précoce met       ces sujets qui sont devenus majeurs. Ce cadre qui peut
+d’un coup nos ados en contact avec cette réalité dans         être restrictif au début en fonction de l’âge de l’enfant
+une période qui se caractérise justement par le manque        doit progressivement évoluer vers plus de liberté.
+d’anticipation, le besoin de gratification immédiate, et le   Les ados sont des adultes en devenir. Ils ont besoin qu’on
+besoin de transgresser pour s’affranchir de la tutelle des    les traite aussi comme tels.
+adultes afin de construire sa propre identité. Nos ados       C’est pourquoi ils ont une aversion presque allergique
+sont donc des cibles de choix.                                aux bons conseils des adultes.
+                                                              Ils ont besoin de se faire leur propre opinion. Pour
+C’est pourquoi, un minimum de formation et de
+                                                              les y aider, après avoir rappelé le contexte de manière
+sensibilisation aux bons comportements avant de
+                                                              factuelle : les arnaques qu’ils rencontreront dans le
+prendre les routes du numérique est indispensable.
+                                                              numérique (ou ailleurs) ont pout but principal de leur
+C’est le rôle de la certification PIX depuis la rentrée
+                                                              extorquer de l’argent, et l’acquisition de données
+scolaire 2019, qui s’applique dès le collège à partir de la
+                                                              personnelles fait partie de cette stratégie; on peut les
+5e. Même si cela peut sembler un peu tard (11 ans étant
+                                                              orienter par le biais de conseils indirects et plutôt sous
+l’âge moyen du premier smartphone), cette certification
+                                                              forme de questions que d’affirmations.
+permet de fixer un cadre technique et comportemental,
+absolument nécessaire.                                        Cette génération a la chance de pouvoir s’informer par
+Nécessaire mais loin d’être suffisant pour un ado. Les        le numérique. Découvrir par eux-même en ayant le bon
+conseils uniquement académiques, surtout lorsqu’ils           contexte sera beaucoup plus efficace. Egalement, il y a
+concernent les comportements à adopter, peuvent être          de nombreux youtubeurs qui ont une influence sur nos
+contre-productifs s’ils ne sont pas associés à d’autres       ados et qui traitent de ces sujets (Micode, Le roi des
+référents (les parents), et surtout s’il n’existe pas         rats, etc.). C’est aussi une source d’aide qu’il ne faut pas
+d’environnement favorisant l’autonomie de l’ado afin          négliger dans leur accompagnement à la vie numérique.
+qu’il se construise sa propre expérience.                     Autant s’en servir.
+
+
+
+
+                                                                                                                             7
+ÉDUCATION 2.0
+                                     Face à l’usage intensif des réseaux sociaux dans la
+#accompagnement                      société actuelle, les parents se questionnent souvent
+                                     sur leur rôle de parents vis-à-vis de leurs ados quant
+                                     aux heures passées sur les écrans. Ils ont besoin
+                                     d’être rassurés, de savoir s’ils se comportent comme
+                                     de «bons parents» : «Sommes-nous trop laxistes ?
+                                     Sommes-nous trop durs ?» Ils ont le sentiment de
+                                     ne pas agir comme il faut, comme s’il y avait une
+                                     certaine «normalité».
+                                     Quels conseils leur donneriez-vous ?
+
+
+                                                                                                              Secrétaire-Accueil
+                                                                                                             dans le médico-social
+                                                                                                                  (11-25 ans)
+
+
+
+                                Arnaud GHEYSENS
+                                Président de MyTwiga
+
+
+
+
+     Le premier conseil à donner aux parents est que ce         savoir quel réseau social souhaite utiliser son ado. Cela
+     sentiment d’impuissance est légitime. En tant que          permettra aux parents de se renseigner sur le réseau
+     parent, le numérique nous impose de nouveaux usages        social en question, avant de valider les conditions de
+     pour lesquels nous n’avons aucun référentiel, et le        son utilisation.
+     sentiment de ne pas avoir de leviers pour agir.            1 Instaurer un cadre de temps.
+     Il est important ensuite de rappeler que les réseaux       Aujourd’hui, tous les systèmes d’exploitation
+     sociaux font partie de ce que l’on appelle l’économie de   des smartphones (iOS, Android) proposent des
+     l’attention. Leur objectif est de capter un maximum de     paramétrages familiaux qui sont obligatoires avant l’âge
+     temps de cerveau disponible, avec des techniques très      de 15 ans. La maîtrise de ces paramètres familiaux est
+     sophistiquées issues de l’économie comportementale.        indispensable pour instaurer un cadre.
+     Et cela fonctionne très bien sur nos ados.                 Ce cadre sera d’autant plus respecté qu’il s’inscrira
+     C’est pour cette raison qu’en tant que parent, on ne       dans une logique de progression de liberté en fonction
+     peut pas laisser son enfant sur les réseaux sociaux        de l’autonomie acquise par l’ado.
+     sans cadre et sans accompagnement. Pour rappel,            Bien sûr, cela demande aux parents d’investir du temps
+     le législateur interdit l’usage des réseaux sociaux aux    au début et de s’impliquer dans la mise en place de ce
+     moins de 13 ans, et exige l’autorisation des parents       cadre et de son évolution.
+     avant 15 ans.
+                                                                Le dernier conseil à avoir en tête en tant que parents
+     Il y a 2 leviers importants sur lesquels les parents
+                                                                est qu’il n’existe pas d’outil magique qui va permettre
+     peuvent jouer concrètement pour instaurer ce cadre.
+                                                                à nos ados de s’autoréguler tout seul.
+     1 Avant 15 ans, il faut limiter le nombre de réseaux
+     sociaux (1 ou 2), et utiliser l’argument de la loi pour
+
+
+
+
+ 8
+                                                                                                               ÉDUCATION 2.0
+                           Vincent BERNARD
+                           Coordinateur de Bornybuzz Numérique                                             #accompagnement
+
+
+
+
+Beaucoup de parents ont l’impression que vis-à-vis du           leste et à d’autres resserrer la bride. Cependant, plus les
+numérique et des écrans leur rôle se limite à celui de          médias vont être intégrés tôt dans la vie de famille, plus
+gardien des horloges et ont effectivement l’impression          il sera naturel d’en discuter et plus l’utilisation des outils
+d’être trop laxistes ou à l’opposé trop stricts. Ils            numériques sera ritualisée. Aussi, le plus sage conseil à
+considèrent le numérique comme un facteur extérieur             donner aux parents est d’être au clair avec la place qu’ils
+qu’il faut gérer, ou un intrus dont il faut se méfier. Or, le   souhaitent accorder au numérique et d’expliquer ces
+numérique est transversal. On le retrouve dans tous les         choix à leurs enfants.
+pans de l’existence : dans notre vie professionnelle ou
+                                                                Ensuite, il suffit de faire évoluer les règles, en gardant
+scolaire, familiale, citoyenne et même parfois intime...
+                                                                deux choses fondamentales à l’esprit :
+S’il est effectivement omniprésent, il ne s’acquiert pas
+                                                                - la première est que c’est à eux en tant que parents de
+d’emblée. On ne naît pas internaute ou gamer, on apprend
+                                                                montrer l’exemple ;
+à le devenir. C’est un apprentissage au long cours, un
+                                                                - la seconde est que les enfants ont besoin qu’on leur fasse
+apprentissage par essai/erreur aussi.
+                                                                confiance pour s’épanouir et grandir. Bien entendu, ils
+En fonction de l’enfant, de son âge, de sa personnalité,        vont commettre des erreurs ou faire des bêtises. L’enfant
+de ses expériences heureuses ou malheureuses, mais              parfait, tout comme le parent parfait, n’existe pas. Il n’y
+aussi en fonction des valeurs qu’ils veulent transmettre,       a pas de méthode clé en main pour être un bon parent. Il
+les parents vont devoir à certains moments donner du            n’y en a pas davantage pour éduquer aux médias.
+
+
+
+
+                           Thomas ROHMER
+                           Fondateur et Directeur de l’OPEN
+                           (Observatoire de la parentalité & de l’éducation numérique)
+
+
+
+Les injonctions qui pèsent sur les parents quels que soient     adéquat, au prétexte qu’ils ne maîtrisent pas les outils
+les sujets sont désormais très prégnantes. C’est d’ailleurs     utilisés par les plus jeunes.
+le constat que nous faisons à l’OPEN lors des différentes       L’enjeu, selon nous, réside dans l’incitation à questionner
+conférences et autres groupes de parole que nous                leur posture éducative avant toute chose : seuls les
+animons partout en France. Le besoin de se conformer            parents sont à même d’évaluer et de mesurer l’efficacité
+à une norme, qui est habituellement plus connu dans le          de leur décision, quel que soit le sujet en tenant compte
+cadre du processus d’émancipation adolescent, semble en         des disparités familiales et de la personnalité de leurs
+effet gagner les adultes qui ont peur du regard des autres      enfants.
+parents et du jugement qui peut parfois en découler.            Bien sûr, un point de départ intéressant consiste à les
+La question des pratiques numériques familiales met             interroger quant à leur motivation à équiper (de plus en
+souvent en lumière des difficultés classiques éducatives        plus tôt) les enfants avec des outils numériques. Souvent,
+qu’elles soient conjoncturelles ou bien structurelles au        ce simple questionnement, permet a minima d’entamer un
+sein des familles.                                              dialogue au sein de la famille et au mieux de co-construire
+Lors de nos groupes de parole, les postures parentales          des règles éducatives cohérentes et donc applicables.
+sont souvent clivées. L’arbitrage se situe souvent aux          Pour l’éducation au numérique, comme pour n’importe
+extrémités, certains souhaitant “tout interdire” au risque      quel autre sujet, le dialogue parents/enfants demeure
+que leurs enfants expérimentent par eux-mêmes sans              incontournable pour apaiser les craintes et les tensions
+l’accompagnement des adultes, lorsque d’autres ne               afin de permettre aux plus jeunes de grandir sereinement.
+se sentent pas légitimes pour poser un cadre éducatif
+                                                                                                                                 9
+ÉDUCATION 2.0
+                                      Comment rester « à la page » sur la création
+#curiosité                            des nouveaux réseaux sociaux ? Savoir sur
+                                      lesquels capter ou communiquer avec les
+                                      jeunes ?
+
+
+                                                                                                    Animatrice socio-éducatif,
+                                                                                                        RHJ (16-30 ans)
+
+
+
+                               Thomas ROHMER
+                               Fondateur et Directeur de l’OPEN
+                               (Observatoire de la parentalité & de l’éducation numérique)
+
+
+
+
+      Qu’on se le dise, les réseaux sociaux ne représentent          Pour les parents, l’enjeu consiste plus généralement
+      pas un seul et unique écosystème. Pour mémoire, le             à s’intéresser aux pratiques numériques de leurs
+      premier réseau social officiel a été créé aux USA en 1995      enfants en les questionnant sur ce qu’ils y font, quitte
+      et s’appelait Classmates. Pendant de nombreuses années         à leur demander parfois de leur montrer ou de partager
+      en France sans être un réseau social officiel les Skyblogs     des activités communes sans tomber dans le piège de
+      proposés par la radio Skyrock ont concentré plusieurs          l’inquisition systématique. C’est ce que l’on a observé
+      millions d’adolescents utilisateurs qui partageaient des       pendant les confinements avec de nombreux adultes
+      photos, puis Facebook est arrivé en 2004 et peu à peu a        qui se sont lancés dans des chorégraphies endiablées
+      commencé à conquérir les jeunes générations.                   sur TikTok avec leurs enfants ou petits-enfants. Cette
+      Désormais, Instagram et TikTok occupent une place              démarche empirique facilite souvent l’imposition de
+      prépondérante dans les smartphones des adolescents             règles et la mise en place d’un cadre éducatif cohérent
+      du monde entier.                                               et légitime.
+      Ce phénomène de va et vient est ainsi observé de longue        Les éducateurs qui investissent de plus en plus souvent
+      date et de manière générale. A chaque fois qu’un réseau        ces espaces numériques pour maintenir le lien et
+      social comporte plus d’utilisateurs adultes que de jeunes,     identifier certaines conduites à risque ont une tâche
+      ces derniers disparaissent pour investir des réseaux au        complexe. Dans le numérique comme ailleurs, pour
+      sein desquels ils pourront être plus éloignés du regard et     échanger il faut au minimum être deux. Le fait d’investir
+      de la surveillance des adultes.                                ces espaces n’offre donc aucune garantie que l’échange
+      Pour autant, de nombreux adolescents sont également            aura bien lieu. Identifier la bonne posture, trouver la
+      dans une situation paradoxale. Ils revendiquent parfois        bonne distance, quitte à afficher clairement les raisons
+      de pouvoir utiliser ces outils loin du regard des adultes et   de sa présence sur son profil, demeurent les bases
+      supportent mal que leurs comptes et leurs publications         d’un rapport de confiance propice à l’échange. Par la
+      soient surveillés. Mais certains pointent souvent              suite, adapter sa pratique aux spécificités du réseau et
+      l’incohérence des adultes qui les équipent avec ces outils     se montrer disponible plutôt que « d’aller vers » seront
+      et se désintéressent complètement de ce qu’ils y font.         indéniablement plus efficaces.
+      Face à ces constats, la posture des adultes n’est
+      pas simple et investir ces lieux d’émancipation et
+      d’expérimentation adolescents demeure complexe.
+
+
+
+
+ 10
+                                                                                                          ÉDUCATION 2.0
+                         Vincent BERNARD
+                                                                                                                #curiosité
+                         Coordinateur de Bornybuzz Numérique
+
+
+
+
+Les technologies et les usages se développent plus           qui utilise les moyens de communications actuels. S’il est
+rapidement que la formation initiale ou continue             devenu courant de travailler en réseau, il est également
+dans le domaine. C’est une vraie problématique pour          nécessaire d’envisager le travail en communauté, c’est-
+les professionnels de la jeunesse qui doivent se tenir       à-dire dans un cadre moins formel, moins structuré,
+informés sur les réseaux sociaux que les jeunes utilisent,   plus liquide… Autrement dit, les professionnels doivent
+les jeux vidéo auxquels ils jouent, et les médias qu’ils     s’approprier la culture numérique.
+affectionnent, etc.
+                                                             A côté des plateformes à la mode où l’on peut retrouver
+Aussi, la veille informationnelle sur ces sujets est
+                                                             son public, il y a aussi un savoir-faire à acquérir
+devenue indispensable. S’il existe de nombreuses
+                                                             pour « capter » leur attention, dans le jargon des
+ressources ; si des spécialistes et chercheurs partagent
+                                                             plateformes on appelle cela créer de l’engagement. Il y
+volontiers leurs travaux ; si certains produisent des
+                                                             a des techniques pour le faire. Cependant l’introduction
+contenus de vulgarisation ou partagent leur propre
+                                                             dans les pratiques professionnelles de techniques
+veille, il faut que les professionnels puissent disposer
+                                                             marketing (que les plateformes présentent comme des
+de temps pour s’informer, pour maîtriser les outils et
+                                                             normes d’utilisation) n’est pas sans poser de questions,
+comprendre les codes eux aussi en constante évolution.
+                                                             surtout lorsqu’on s’adresse à un public jeune, et d’autant
+C’est un changement majeur que le numérique induit
+                                                             plus lorsque notre objet est l’éducation aux médias.
+dans les pratiques professionnelles et qui n’est que trop
+                                                             Alors que l’économie de l’attention est au centre des
+rarement abordé.
+                                                             préoccupations, il faut être conscient que l’on utilise des
+Les professionnels de la jeunesse devraient disposer
+                                                             stratégies que l’on déconstruit ou critique par ailleurs.
+d’un temps pour s’informer, voire s’auto-former. Ce
+                                                             Les changements induits par le numérique placent
+temps devrait être sanctuarisé, inscrit dans les fiches
+                                                             les professionnels de la jeunesse dans une injonction
+de poste et inclus dans les budgets. Il y a un travail de
+                                                             paradoxale : d’une part aller vers son public grâce aux
+sensibilisation à mener auprès des employeurs, des
+                                                             outils et de l’autre le sensibiliser aux enjeux sociétaux
+financeurs, des élus et des fédérations. Bien plus qu’une
+                                                             du numérique.
+formation continue, il s’agit d’une formation permanente
+
+
+
+
+                                                                                                                       11
+ÉDUCATION 2.0
+                                  Jusqu’où aller en tant que parent dans le
+#conduiteaccompagnée              contrôle de la vie numérique d’un adolescent ?
+                                  Mots clefs : mal nécessaire, intrusion, respect
+                                  de l’intimité/extimité, confiance, protection,
+                                  contrôle parental, géolocalisation.
+
+                                                                                                       Équipe médico-sociale
+                                                                                                            ( 11-25 ans)
+
+
+
+
+                           Thomas ROHMER
+                           Fondateur et Directeur de l’OPEN
+                           (Observatoire de la parentalité & de l’éducation numérique)
+
+
+
+
+   La plupart des études que nous menons montrent une            Le risque de cette surveillance extrême est qu’elle
+   inquiétude importante de la part des parents quant aux        s’apparente clairement à une violation de l’intimité des
+   pratiques numériques de leurs adolescents.                    enfants lorsqu’ils ne sont pas informés.
+   Ce besoin de réassurance des adultes face à des risques       De nombreux adolescents témoignent souvent de la
+   réels ou fantasmés les incitent souvent à contrôler plutôt    violence de cette découverte qu’ils traduisent comme
+   qu’accompagner.                                               un manque de confiance à leur égard alors que les
+   L’utilisation du smartphone qui redéfinit souvent les liens   motivations sont parfois toutes autres.
+   entre parents et adolescents l’illustre parfaitement. Il      Enfin, cette pratique est avant tout un leurre pour les
+   devient parfois une sorte de cordon ombilical virtuel qui     parents qui confondent la trace numérique avec la réalité
+   rassure aussi bien les parents que les adolescents. Une       du vécu de leur enfant. Voir un point bleu clignoter sur un
+   forme de pacte tacite entre parents et enfants se met en      écran ne présage en rien de ce que l’enfant est en train
+   place : “Je te donne un smartphone mais tu acceptes que       de vivre.
+   je te surveille”. Cela occasionne parfois une adaptation du
+                                                                 Le juste équilibre à trouver entre contrôle et
+   comportement des jeunes qui, se sachant potentiellement
+                                                                 accompagnement progressif, demeure un enjeu éducatif
+   “surveillés”, adoptent des attitudes plus raisonnables.
+                                                                 qui passe le plus souvent par l’acceptation de voir son
+   Se savoir contrôlé permet ainsi d’éviter ou retarder
+                                                                 enfant grandir et s’autonomiser.
+   certaines prises de risques.
+   Mais on observe dans cette quête de l’hypersurveillance
+   des comportements plus radicaux. Ainsi, 26% des parents
+   reconnaissent acheter un smartphone pour pouvoir suivre
+   les déplacements de leurs enfants en les géolocalisant.
+
+
+
+
+ 12
+                                                                                                               ÉDUCATION 2.0
+                           Nadège LARCHER
+                           Directrice pédagogique de MyTwiga
+                                                                                                      #conduiteaccompagnée
+                           et dirigeante d’APcomm - Apprendre à Communiquer
+
+
+
+
+Face à la vie numérique de leurs ados, et notamment             de contrôler. Ses parents ont l’impression que leur ado est
+sur leurs smartphones, les parents se trompent parfois          avec eux à la maison, alors que dans la grande majorité
+de méthodes éducatives, le plus souvent par peur et             des cas, leur ado est parti sur ces routes numériques
+maladresse. Ils confient un téléphone à leurs enfants, puis     seul, sans permis de conduire. Quand le parent en prend
+découvrent son pouvoir de fascination et ses éventuels          conscience, dans un phénomène d’après-coup, il cherche
+dangers, puis cherchent à reprendre le contrôle. S’il est       à reprendre un semblant de contrôle et pense que son
+légitime de s’interroger sur le bien-fondé de ces approches     rôle est de « prendre le volant » à la place de son ado.
+parentales, la problématique centrale est toute autre.          En réalité, tous deux ont besoin de mettre en place une
+Il serait inconcevable pour un parent d’offrir une voiture      « conduite accompagnée numérique » : l’ado a bien
+à son ado et de le laisser partir sur les routes sans           sûr besoin d’être formé aux codes et usages du monde
+cours de conduite, sans permis de conduire. Même                numérique, mais ses parents également. Ils pourraient ainsi
+si cela représente un coût, le parent investit dans cet         reprendre un réel rôle d’éducateur et d’accompagnateur,
+enseignement et reste vigilant dans les premières années        partager avec leurs ados les bons réflexes, se sentir à
+de conduite de son enfant. Or, le smartphone offert à un        nouveau compétents. L’objectif des contrôles parentaux
+ado est une « voiture numérique ». Grâce à cet objet, il        actuels est de permettre cette conduite encadrée, mais le
+part sur les autoroutes du numérique, dans des endroits         volet pédagogique y est malheureusement manquant ou
+virtuels connus ou inconnus, à la rencontre de personnes        trop complexe.
+familières ou non, face à une technologie qu’il a l’illusion
+
+
+
+
+                               Guillaume DORAI
+                               Fondateur et intervenant de LOG.in Prévention
+
+
+
+
+Pour commencer, nous pensons qu’un contrôle parental            Beaucoup de jeunes, quand le contrôle parental n’est
+ne remplacera jamais le rôle éducatif d’un parent. C’est        pas expliqué, pensent que c’est une intrusion dans leurs
+un outil qui permettra d’accompagner de façon progressive       vies privées. Bien au contraire, lors de nos premières
+vers l’autonomie son enfant. Il doit être pris en main afin     sorties avec notre enfant, nous le prenons par la main,
+que chaque entité puisse trouver sa place c’est-à-dire          nous lui montrons les dangers ; sur Internet c’est la même
+pour l’enfant de se sentir sécurisé quand il navigue sur        chose. Dès lors, peut-être que le mot « contrôle parental »
+internet, et pour les parents de se sentir rassurés quand       n’est pas le bon mot employé et peut-être « qu’outil
+ils ne sont pas à ses côtés, quand par exemple il va faire      d’accompagnement parental » serait plus judicieux.
+des recherches ou discuter avec des personnes sur les           Dans tous les cas, la communication et l’écoute restent
+réseaux sociaux. Il existe autant de contrôles parentaux        aujourd’hui les meilleures façons d’éduquer un enfant
+que nécessaire, certains sont gratuits, d’autres ne le sont     car même si un contrôle parental est plutôt fiable au sein
+pas, mais le plus important sera de pouvoir gérer le temps      du foyer, il ne le sera probablement pas à l’extérieur. Si un
+d’écran et de faire en sorte qu’Internet soit accessible        enfant veut et cherche à contourner les règles, il y arrivera
+uniquement en la présence des familles notamment pour           toujours. Lorsqu’un enfant est choqué de ce qu’il peut
+les plus jeunes. Bien entendu, il doit servir aussi à bloquer   trouver sur Internet, le principal est qu’il puisse trouver
+l’accès à du contenu choquant.                                  une oreille attentive prête à l’écouter et le rassurer, et pas
+                                                                le priver de liberté.
+
+                                                                                                                                 13
+ÉDUCATION 2.0
+                                      Les jeunes réclament un smartphone de
+#normes                               plus en plus tôt, dès l’entrée en 6e voire
+                                      en primaire, surtout si leur(s) pair(s) en
+                                      possèdent déjà un. Peut-on alors parler de
+                                      mimétisme ? Faut-il céder à leur demande ?
+                                      N’y a-t-il pas derrière cet achat un désir de
+                                      surveillance et de contrôle de la part des
+                                      parents ?                                                            Secrétaire-Accueil
+                                                                                                          dans le médico-social
+                                                                                                               (11-25 ans)
+
+
+
+                          Arnaud GHEYSENS
+                          Président de MyTwiga
+
+
+
+
+     En tant que parents, nous sommes confrontés à un                1 Le deuxième conseil, qui va s’appuyer là aussi sur
+     nouveau conformisme social qui consiste à donner un             un argument concret, c’est qu’avant 13 ans, les réseaux
+     smartphone à nos enfants de plus en plus tôt. Ce qui était      sociaux sont interdits par la loi. Il n’y a donc pas d’intérêt à
+     inimaginable il y a dix ans, devient la norme aujourd’hui.      avoir un téléphone à part pour téléphoner (ou pour jouer,
+     L’âge moyen du premier smartphone était encore, il n’y a        mais dans ce cas le téléphone n’est pas le support le plus
+     pas si longtemps, de 11 ans et demi, ce qui correspondait       adapté). Et dans le cas où les parents ont besoin d’être
+     à la rentrée en 6e. Cette barrière du collège est aujourd’hui   rassurés, par exemple lorsqu’un enfant doit prendre le car
+     en train de céder, et il n’est plus rare de voir fleurir les    pour aller au collège, un simple téléphone suffit.
+     premiers smartphones dès les classes de primaire.
+                                                                     1 La troisième possibilité est un smartphone dont on
+     La norme sociale est un phénomène très puissant. En tant        peut limiter fortement les fonctionnalités. C’est un cas
+     que parent, si je refuse de donner un téléphone à mon           courant, où c’est souvent le vieux téléphone du parent
+     ado alors que la plupart de ses amis en ont un, alors mon       que l’on donne à son ado. Il faut dans ce cas s’assurer
+     ado risque d’être exclu. Cette peur et cette culpabilisation    qu’il soit bien compatible avec les paramètres familiaux
+     sont d’autant plus fortes avec toute la médiatisation           (postérieur à iOS12 pour Apple, et Android 7 Nougat pour
+     autour du harcèlement scolaire et de l’exclusion.               Google) afin de pouvoir restreindre les fonctionnalités et
+     Les parents se rassurent alors en pensant que pour la           les applications utilisées.
+     sécurité de leur enfant, un smartphone lui permettrait          Le risque toutefois avec ce choix, est de ne pas pouvoir
+     d’appeler ses parents en cas de besoin. C’est évidemment        tenir jusqu’à 13 ans pour l’accès aux réseaux sociaux, ou
+     un jeu de dupe entre les parents et les enfants, car ceux-ci    que l’enfant possesseur du smartphone aura la possibilité
+     n’appelleront jamais leurs parents… Il suffit d’ailleurs de     de contourner.
+     proposer à un ado un simple téléphone pour s’apercevoir,
+                                                                     1 Enfin une quatrième option intermédiaire est de
+     au vu de sa réaction, que la demande n’est pas vraiment
+                                                                     commencer à habituer son ado à avoir un smartphone
+     de pouvoir téléphoner. D’ailleurs pour eux, plutôt ne
+                                                                     mais uniquement à la maison, avec le wifi de la maison
+     rien avoir du tout que d’être en possession d’un vulgaire
+                                                                     (pas de carte SIM). Cela permet d’accompagner aussi son
+     téléphone à clapet.
+                                                                     ado avec l’usage du téléphone, et d’avoir la main dessus
+     1 Le premier conseil à donner est de rester sur cette
+                                                                     plus facilement.
+     barrière symbolique du collège. Ceci est parfaitement
+     entendable par l’ado, et c’est une position ferme en
+     tant que parent qui se justife sans trop devoir dépenser
+     d’énergie en explications.
+
+
+
+
+14
+                                                                                                           ÉDUCATION 2.0
+
+                                                                                                                  #normes
+
+
+
+
+                         Thomas ROHMER
+                         Fondateur et Directeur de l’OPEN
+                         (Observatoire de la parentalité & de l’éducation numérique)
+
+
+
+
+« Les jeunes réclament » est une injonction vécue par         S’il en était besoin, cette volonté clairement exprimée
+de nombreux parents quel que soit le sujet.                   et assumée démontre que la plupart des familles sont
+Parmi tous les équipements numériques qui arrivent            très inquiètes et angoissées. De nombreux adultes nous
+entre les mains des enfants (en moyenne entre 6 et            partagent désormais résumer leur fonction parentale
+10 ans) le smartphone occupe à lui seul une place             à un rôle de « body guard » dont l’ultime mission
+unique. Outil d’émancipation pour les nouveaux                consisterait à éviter qu’il n’arrive quelque chose à leur
+équipés, il est pourtant souvent au cœur de nombreuses        progéniture.
+contradictions des adultes qui le sacralisent dans les        C’est sans doute ce qui motive 24% (cf. Etude
+premiers mois qui suivent l’équipement pour mieux le          Médiamétrie OPEN 2020) des parents à utiliser des
+détester, plus les enfants grandissent et multiplient leurs   logiciels espions qu’ils installent sur le téléphone de leur
+expérimentations.                                             enfant, leur permettant de les géolocaliser mais aussi
+Notre étude publiée en 2020 avec Médiamétrie                  d’écouter les conversations ou lire les messages envoyés
+démontrait en effet le rajeunissement considérable            et reçus quelle que soit l’application.
+de l’âge auquel les enfants reçoivent en moyenne leur         Sans juger ni stigmatiser ces adultes, cette réassurance
+premier smartphone en France. Pendant longtemps, il           naïve se heurte souvent au pragmatisme des jeunes qui
+a consisté en un rituel de passage dans l’univers « des       déploient de nombreuses stratégies pour « filtrer » les
+grands » lors de l’entrée au collège. Désormais cette         appels ou ne pas être trop suivis dans leurs pratiques
+acquisition pour les enfants intervient en moyenne avant      numériques par les adultes.
+10 ans et ce, quel que soit le milieu social.                 C’est souvent au même moment qu’un point de bascule
+Bien sûr le regard des autres parents et la pression de       se produit : cet outil qui incarnait au départ une nouvelle
+la société occasionnent une accélération importante de        forme de confiance parentale va peu à peu devenir un
+l’équipement.                                                 sujet d’inquiétudes réelles ou supposées. L’émancipation
+Pourtant, dans de nombreuses situations, les familles         des adolescents par le biais de certaines pratiques
+que nous rencontrons évoquent une autre raison pour           numériques qui échappent au regard de l’adulte va à
+justifier leur décision. Parmi les motivations citées         son tour générer de nombreuses incompréhensions,
+pour déclencher cet achat pas comme les autres, la            tensions et parfois angoisses chez de nombreux parents.
+réassurance apparaît souvent en tête des critères             S’interroger sur ses propres motivations, résister à
+cités. Lors de nos groupes de parole les parents nous le      la pression des autres adultes en tenant compte de
+confirment : ils souhaitent pouvoir joindre 24h/24h et        la maturité et de la personnalité de son enfant, sont
+7/7 jours leurs enfants.                                      souvent les clés incontournables d’une éducation
+                                                              numérique qu’il faudra par la suite déployer.
+
+
+
+                                                                                                                         15
+ÉDUCATION 2.0
+                                     Est-ce que les jeunes ont vraiment conscience de ce
+#hygiènenumérique                    qu’ils diffusent ?
+                                     Comment cela peut-il être utilisé/conservé ?
+                                     Comment les en informer ?
+                                     Comment peuvent-ils se protéger ?
+                                                                                                                Educatrice, RHJ
+                                                                                                                  (16-30 ans)
+
+
+
+                                Guillaume DORAI
+                                Fondateur et intervenant de LOG.in Prévention
+
+
+
+
+     Les jeunes par définition vivent dans l’instant présent.    Il est bon de rappeler aux jeunes que même une
+     Ils n’ont pas conscience et surtout n’ont pas envie de se   application comme Snapchat, qui se vante de ne
+     projeter dans un futur incertain. Toute la problématique    pas conserver les photos et vidéos en les rendant
+     d’Internet est que, même si juridiquement le droit à        éphémères, conserve dans ses centres de données
+     l’oubli existe, sur Internet et malgré le cadre du RGPD     une grande partie des informations que l’on décide de
+     (Règlement sur la protection des données personnelles),     publier et sur laquelle nous n’avons plus de contrôle.
+     ce droit à l’oubli n’existe pas.                            Afin que notre message passe le mieux auprès des
+     Chaque action que l’on peut avoir sur Internet et           jeunes, nous utilisons des captures d’écran liées à ces
+     les réseaux sociaux va probablement impacter                conditions générales d’utilisation, en ciblant certaines
+     notre e-dentité numérique et notre e-réputation.            phrases et certains mots. Nous les étayons de différents
+     Dans un futur proche ou lointain, cela peut avoir des       exemples leur permettant de prendre conscience qu’on
+     conséquences sur notre vie privée et/ou notre future        ne peut pas diffuser tout et n’importe quoi sur l’espace
+     vie professionnelle. En lisant les conditions générales     public : Internet.
+     d’utilisation des différentes applications et des
+                                                                 Afin de protéger son e-dentité numérique il est
+     réseaux sociaux que nous utilisons au quotidien, nous
+                                                                 important de mettre ses comptes en privé et d’utiliser
+     pouvons expliquer par la démonstration et de façon
+                                                                 un pseudo. Si la plupart des jeunes sont vigilants sur ce
+     très pragmatique que ces entreprises, appelées aussi
+                                                                 qu’ils diffusent sur eux, ils sont moins vigilants sur ce
+     réseaux sociaux, gardent et conservent l’intégralité
+                                                                 qu’ils diffusent des autres.
+     de nos messages, photos et vidéos. Ces entreprises
+     numériques se servent de ces données personnelles
+     afin de pouvoir contribuer financièrement au
+     développement de leurs activités.
+
+
+
+
+16
+                                                                                                                ÉDUCATION 2.0
+                            Vincent BERNARD
+                            Coordinateur de Bornybuzz Numérique
+                                                                                                            #hygiènenumérique
+
+
+
+
+Si les enfants et les adolescents sont généralement bien         Il y a donc un double travail à effectuer : une information
+informés sur les moyens de se protéger sur Internet, on          collective et un accompagnement individuel. Si la
+remarque cependant qu’ils sont davantage sensibilisés            première peut se faire dans le cadre d’interventions
+sur la manière de se protéger des autres utilisateurs,           spécialisées, le second est un accompagnement au jour
+au détriment du fonctionnement des applications qu’ils           le jour. Il doit être effectué par des personnes qui côtoient
+utilisent, ainsi que sur la collecte et l’utilisation de leurs   régulièrement les jeunes : les parents, les enseignants, les
+données personnelles.                                            éducateurs, les animateurs socio-culturels, etc. C’est pour
+Cela dit, être informé ne signifie pas mettre en application     cela que certaines voix s’élèvent contre la frilosité de la
+ses connaissances. On remarque également que les                 communauté éducative à intégrer le numérique dans ses
+mésusages reposent bien souvent sur des fragilités               enseignements ou ses projets. Le numérique n’est pas un
+et vulnérabilités individuelles comme le besoin de               domaine particulier avec des compétences à acquérir, il
+reconnaissance ou la faible estime de soi.                       est transversal à la société.
+                                                                 C’est donc l’affaire de tous !
+
+
+
+
+                            Thomas ROHMER
+                            Fondateur et Directeur de l’OPEN
+                            (Observatoire de la parentalité & de l’éducation numérique)
+
+
+
+
+Toutes les minutes sur Internet, les utilisateurs partagent      Pour autant, cette question de la prévention et de
+et diffusent 69 millions de messages sur WhatsApp,               l’accompagnement des jeunes générations dans la
+presque 700 000 stories sur Instagram, 200 millions              découverte et le décryptage des fausses promesses faites
+d’emails ou encore 500 heures de vidéos sur YouTube.             par les plateformes qu’ils utilisent concernant le droit
+Soyons clairs, cela concerne bien sûr des adolescents            à l’oubli est un axe souvent efficace pour les inciter à
+mais bon nombre d’adultes également.                             réfléchir et se poser les bonnes questions.
+                                                                 La plupart des jeunes ont en tête des exemples de
+Au milieu de cette diversité de pratiques, chacun semble
+                                                                 personnes connues qu’ils suivent sur les réseaux et qui ont
+oublier que malgré les jolies promesses faites par les
+                                                                 été victimes de piratage de leurs comptes et de diffusion
+acteurs du numérique ces traces demeurent difficilement
+                                                                 de contenus non souhaités.
+effaçables et accessibles à tous.
+                                                                 Un dernier argument de poids face à une génération
+Alors que l’on vient de fêter les 10 ans de Snapchat, il
+                                                                 qui aime remettre en question l’ordre établi, consiste à
+est toujours surprenant de constater que de nombreux
+                                                                 rappeler que cette collecte de données est aussi organisée
+jeunes (et moins jeunes) utilisateurs continuent de croire
+                                                                 par de nombreux États dont la France qui contraint
+à la fausse promesse à l’origine du succès de ce réseau
+                                                                 l’ensemble des acteurs du numérique à conserver pendant
+social : l’éphémérité des contenus postés.
+                                                                 plusieurs mois l’ensemble de nos données à des fins de
+Nous ne reviendrons pas sur la notion de conscience ou
+                                                                 sécurité nationale.
+non des contenus diffusés qui concernent tout autant les
+adultes que les plus jeunes à l’heure où un enfant sur trois
+en France possède une identité numérique créée par ses
+géniteurs avant même d’être sorti du ventre de sa mère…
+
+
+                                                                                                                                 17
+ÉDUCATION 2.0
+                                     J’aimerais soulever la question du consentement.
+#premièresfois                       Les jeunes peuvent être amenés à regarder des
+                                     images et des contenus numériques qu’ils ne
+                                     veulent pas regarder mais l’effet de groupe ne
+                                     leur donne pas le choix.
+                                     La question est alors de savoir comment donner
+                                     assez d’aplomb et de confiance à celui qui ne
+                                     souhaite pas regarder, pour arriver à le dire aux
+                                     autres et à se détourner des images ?                               Référente Famille
+                                                                                                        Centre Socioculturel
+                                                                                                            (11-15 ans)
+
+                             Marion HAZA-PERY,
+                             Psychologue clinicienne, chercheur
+
+
+
+
+      La question du consentement en groupe face aux                Peut-être faut-il poser la question différemment et
+      images dans les espaces numériques pose une question          réfléchir aux effets des images et contenus numériques,
+      complexe, à plusieurs niveaux. En effet, à l’adolescence,     même s’il est difficile d’anticiper les conséquences quand
+      le groupe joue un rôle très important et nombre               un jeune y est confronté. En effet, l’impact des images
+      d’expériences se réalisent à plusieurs. Les premières fois,   ne sera pas le même sur les enfants ou les adolescents,
+      par exemple, première cigarette, première bière, premier      du fait de leur niveau développemental ; et même entre
+      flirt, première transgression, sont souvent réalisées dans    adolescents, l’impact des images sera lié aux expériences
+      un contexte de groupe. De même, à l’ère du numérique,         de vie de chacun. Une image banale pour l’un pourra être
+      les premières expériences en ligne se réalisent souvent en    traumatique pour l’autre. Ainsi, il est compliqué de savoir
+      groupe : premier selfie, première vidéo diffusée, première    à l’avance quels pourraient être les effets d’une image sur
+      communauté de jeu, première collaboration en ligne, etc.      un enfant ou adolescent. C’est la confrontation à l’image
+                                                                    qui va permettre de créer du sens.
+      Comme toute autre activité hors ligne, le groupe joue
+      sur les attitudes adoptées par chacun de ses membres.         C’est là que le rôle des adultes, éducateurs au sens large,
+      Mais peut-on parler réellement d’une question de              va permettre d’accompagner les adolescents ou les
+      consentement ? En effet, l’adolescent qui adopte des          enfants en difficulté face à la brutalité qu’ils perçoivent
+      conduites en groupe, qui ne lui seraient pas forcément        dans certaines images. Ce qui peut être traumatique
+      venues de lui-même, peut toutefois être consentant :          pour un enfant ou adolescent réside davantage dans
+      c’est aussi ce qui construit son identité, dans le respect    l’impossibilité à créer un récit permettant de redonner du
+      bien évidemment de sa personne et des autres. Ainsi,          sens à l’image : en effet, une image a la caractéristique
+      un adolescent peut franchir le pas et fumer sa première       d’être brute, notamment quand elle est sans contexte et
+      cigarette par un effet groupal, tout comme regarder           isolée de tout sens.
+      une image pornographique, sans que la question du
+                                                                    Par ailleurs, il est important de dissocier le fait de
+      consentement ne se pose. Ceci exclut bien évidemment
+                                                                    regarder et de reproduire. C’est la confusion que l’on
+      la pratique du revenge porn, des nudes et autres
+                                                                    peut retrouver face aux images violentes ou de sexualité
+      diffusions d’images dégradantes ou compromettantes de
+                                                                    (pornographie). Mettre du sens sur les images permet
+      l’adolescent, telles qu’on les retrouve dans des situations
+                                                                    justement de se dégager de l’acte.
+      de harcèlement numérique. Là, la question du non-
+      consentement se pose d’emblée.
+
+
+
+
+ 18
+                                                                                                           ÉDUCATION 2.0
+
+                                                                                                             #premièresfois
+
+
+
+
+                        Vincent BERNARD
+                        Coordinateur de Bornybuzz Numérique
+
+
+
+
+Comment donner assez d’aplomb pour refuser une                Concernant les médias maintenant, il faut se rappeler les
+cigarette, boire de l’alcool ou tirer une bouffée sur         travaux de Sonia Livingstone (chercheuse qui a coordonné
+un joint ? Il serait facile de répondre à la question si      des recherches EU kids online*) lorsqu’elle conclut que
+les interdits ne suscitaient pas attraction et répulsion.     « l’offense ne fait pas le préjudice ». Effectivement, sur
+Il serait encore plus facile de répondre à la question si     le Web de jeunes utilisateurs peuvent être confrontés à
+les adolescents ne s’appuyaient pas sur le groupe de          des contenus inappropriés, mais pour la chercheuse il y
+pairs pour prendre des distances avec leur famille, s’ils     a une intrication des problématiques morales, juridiques
+ne s’appuyaient pas sur des contre-cultures pour se           et psychologiques qui empêche d’aborder sereinement
+détacher des valeurs que les adultes référents essaient       la situation. Qu’un jeune tombe inopinément sur un
+de leur transmettre. Ce travail d’autonomisation ne se        contenu lors de sa navigation ou que ce soient ses
+fait pas sans conflits : conflits avec l’entourage parfois,   camarades qui lui montrent, il faut que le jeune soit
+mais aussi conflits internes, lorsque les expérimentations    préalablement informé qu’il peut être confronté à des
+et les rites de passage rentrent en contradiction avec les    contenus qui vont lui déplaire, le choquer, le déstabiliser.
+normes et valeurs qui ont été transmises. C’est certes
+                                                              Il n’y a pas de réaction type dans ce genre de situation.
+déstabilisant, mais paradoxalement, c’est une étape
+                                                              Cependant, il ne faut pas négliger que même les enfants
+nécessaire qui permet de grandir.
+                                                              peuvent faire preuve de distance critique par rapport
+Du côté des adultes, la réponse n’est pas la même
+                                                              à ce qu’ils lisent, voient ou entendent. Cette prise
+selon que nous soyons parent, psychologue, éducateur
+                                                              de distance est un des objectifs de l’éducation aux
+spécialisé, animateur socio-culturel, etc. Chaque
+                                                              médias et à l’information. L’objectif de cette éducation
+protagoniste a dans sa trousse des outils qui lui sont
+                                                              est idéalement d’accompagner les jeunes, plutôt que
+propres. Certains vont pouvoir mettre en place des
+                                                              de les protéger de risques inévitables et bien souvent
+projets collectifs en vue de développer l’esprit critique,
+                                                              surestimés.
+d’autres vont avoir une approche préventive, d’autres
+vont s’appuyer sur la relation individuelle pour aider le
+jeune à développer des ressources internes et affirmer
+sa personnalité. Finalement, chacun a sa casquette, ses
+                                                              * http://www.eukidsonline.net/
+objectifs et ses méthodes.
+
+
+
+
+                                                                                                                         19
+ÉDUCATION 2.0                          Quelles peuvent être les conséquences d’une
+                                       posture parentale trop rigide vis-à-vis des
+#confiance
+                                       pratiques numériques ? Les effets attendus en
+                                       termes de prévention sont-ils au rendez-vous ?
+                                       Peut-on imaginer des effets contre-productifs
+                                       à cette vigilance légitime des parents ?
+                                                                                                                              Psychologue
+                                                                                                                        Structure médico-sociale
+                                                                                                                               (11-25 ans)
+
+                             Nadège LARCHER
+                             Directrice pédagogique de MyTwiga
+                             et dirigeante d’APcomm - Apprendre à Communiquer
+
+
+
+
+      La question du Digital Parenting, à savoir les attitudes        Car c’est, bien sûr, oublier l’environnement dans lequel
+      éducatives que les parents peuvent adopter avec leurs           vit son adolescent et notamment ses liens sociaux. La
+      enfants face aux médias digitaux, n’est pas récente.            problématique est d’ailleurs la même qu’avec le 1er verre
+      Elle s’est déjà posée depuis les années 1960 et a été           d’alcool ou la 1re cigarette : ces incitations ne sont pas
+      particulièrement étudiée dans le cas de l’impact de la          le fait d’inconnus croisés par hasard ; elles viennent de
+      télévision puis d’Internet sur les familles. Plusieurs styles   l’entourage proche, familial ou amical, de l’ado. Il en va
+      d’autorité parentale ont alors été analysés, du « laissez-      de même avec les 1res images pornographiques, ou le
+      faire » à la « restriction stricte », en passant par un         contenu violent, échangés sur le numérique : ils sont vus
+      accompagnement guidé. Ces styles se retrouvent pour             sur le smartphone du copain ou du grand cousin. L’ado est
+      ce qui concerne l’utilisation des smartphones. Dans de          alors placé face à une « double peine » : il est confronté
+      nombreuses études, une médiation parentale purement             à des images auxquelles il n’est pas préparé et dont il
+      restrictive est associée à une amplification des conflits       aurait besoin de débriefer, mais il ne peut pas en parler
+      familiaux et à un sentiment d’impuissance, à la fois chez       avec ses parents. En effet, ce serait reconnaître qu’il a pu
+      les parents et les enfants*.                                    manipuler l’objet interdit et qu’il a transgressé les règles
+      Face aux dangers du numérique et au risque d’utilisation        fixées par ses parents.
+      excessive des écrans, il peut sembler légitime, à certains      Dans le cas où un smartphone est tout de même confié
+      parents, d’exercer un contrôle strict, voire une interdiction   à l’adolescent, mais avec une restriction stricte de la
+      pure et simple d’accès aux écrans. Néanmoins, à moins           part de ses parents, un autre effet contre-productif est
+      d’aller vivre dans un lieu reculé de toute civilisation,        à craindre : habitué à être contrôlé par ses parents, le
+      interdire tout accès au numérique est devenu une                jeune n’apprend pas à s’autoréguler et à questionner ses
+      gageure : ne serait-ce que pour des raisons scolaires, l’ado    propres pratiques face aux écrans. Il risque juste de se
+      aura, à minima, accès à un ordinateur, peut-être partagé        montrer très inventif pour obtenir plus de libertés et de
+      avec d’autres membres de la famille, mais tout de même          mettre en place différentes « arnaques » pour y parvenir
+      accessible.                                                     (autre appareil caché, 2e compte utilisateur, etc.).
+      C’est donc sur l’interdit d’accès aux smartphones que           Une posture parentale trop restrictive et basée
+      des parents tentent d’exercer un contrôle strict. Les           principalement sur les interdits et le contrôle, semble donc
+      anciens téléphones, dits « à clapet », sont d’ailleurs          présenter plus de désavantages et de risques que l’inverse.
+      commercialisés à nouveau et permettent aux collégiens           Elle rassure peut-être momentanément les parents, mais
+      de rester en contact avec leurs parents en cas d’urgence.       ne peut pas être considérée comme préventive, en tout
+      Le parent espère ainsi protéger son ado de toute pratique       cas pour ce qui concerne les adolescents.
+      numérique. Si cette pratique peut encore avoir un effet
+      bénéfique au collège, elle devient caduque au lycée.            * Voir notamment les articles de Beyens, I., & Beullens, K. (2017). Parent–child
+                                                                      conflict about children’s tablet use: The role of parental mediation. 19 pp. 2075–
+                                                                      2093). New Media & Society et Padilla-Walker, L. M., Coyne, S. M., & Fraser, A.
+                                                                      M. (2012). Getting a high-speed family connection: Associations between family
+                                                                      media use and family connection. Family Relations, 61, 426–440.
+
+
+ 20
+   Réseaux sociaux
+
+#protectiondelenfance           #légitimité     #CNIL
+     #contagiosité      #analyse              #RGPD
+#hygiènenumérique         #premièresfois       #confiance
+
+
+
+
+                                                            21
+RÉSEAUX SOCIAUX                     Comment défendre l’interdiction de diffuser
+                                    de la pornographie sur les réseaux sociaux,
+#protectiondelenfance               quand les plateformes de streaming, qui se
+                                    définissent maintenant comme des types de
+                                    réseaux sociaux, le diffusent et en font même
+                                    le commerce ?
+
+                                                                                                        Référente Jeunesse
+                               Thomas ROHMER                                                             de Mission locale
+                               Fondateur et Directeur de l’OPEN                                             (16-30 ans)
+                               (Observatoire de la parentalité & de l’éducation numérique)
+
+
+      Depuis l’arrivée des premiers Tubes, ces fameuses             Notre étude relatait également que la pornographie était
+      plateformes de diffusion de contenus pornographiques          souvent recherchée par de nombreux adolescents en
+      (de type Youporn, etc.) au milieu des années 2000,            quête de questions légitimes sur la sexualité. Ce triste
+      l’accessibilité de ces contenus a connu un bond sans          constat met en exergue l’échec de l’éducation sexuelle et
+      précédent. On estime à plusieurs dizaines de milliards        affective en France, et les difficultés rencontrées par de
+      de vidéos vues chaque mois, partout dans le monde sur         nombreux adultes pour aborder ce sujet compliqué avec
+      l’ensemble de ces sites pour la plupart hébergés dans des     des jeunes de plus en plus demandeurs.
+      paradis fiscaux.                                              Depuis le 30 juillet 2020, grâce à nos actions, le code
+      Pendant de nombreuses décennies la pornographie, qui          pénal a été modifié et impose désormais à ces Tubes
+      n’a jamais été illégale dans notre pays (il est important     pornographiques de trouver par eux-mêmes des solutions
+      de le rappeler), était uniquement disponible au sein          techniques leur permettant de s’assurer de la majorité
+      d’espaces physiques (sex shop…) ou dématérialisés             des publics qui ont accès aux contenus qu’ils diffusent.
+      (chaines cryptées), donc peu ou difficilement accessible      Cette loi nous a ainsi permis de saisir en novembre 2020
+      aux mineurs.                                                  le président du CSA (Conseil Supérieur de l’Audiovisuel)
+      Comme souvent, Internet est venu changer la donne             en réclamant le blocage temporaire des 8 plus gros sites
+      et propose désormais, selon un modèle économique              pornographiques mondiaux tant que ces derniers ne
+      non payant, une facilité d’accès en quelques clics à ces      proposent pas de dispositifs efficients. Nous espérons une
+      contenus pour adultes.                                        victoire à venir dès 2022.
+      L’OPEN s’est particulièrement mobilisé depuis sa création     Concernant les réseaux sociaux, la plupart de ceux
+      pour entamer de nombreuses actions de plaidoyer et            qu’utilisent les adolescents en France disposent de
+      autres actions en justice afin de réclamer l’application et   conditions générales d’utilisation strictes bannissant
+      le respect des lois de protection de l’enfance en vigueur à   totalement la publication et la diffusion de ce type de
+      ce sujet, incarnées par le fameux article 227-24 du code      contenus. Pour autant, si un réseau social décidait de
+      pénal français.                                               diffuser des contenus à caractère pornographique, il serait
+      Notre objectif n’a jamais été de vouloir moraliser l’espace   donc tout à fait en mesure de le faire en toute légalité en
+      public ou de bannir la pornographie de notre pays. Nous       France. Dans cette situation, le réseau social aurait pour
+      n’avons jamais non plus franchi une ligne idéologique         responsabilité de s’assurer que ces contenus spécifiques
+      souvent promue par de nombreuses associations                 sont accessibles uniquement à des personnes majeures.
+      consistant à confondre prostitution et pornographie.          La pornographie, comme de nombreuses problématiques
+      L’enjeu se situe donc en aval pour les plateformes qui        de protection des jeunes sur les réseaux sociaux, incarne
+      doivent mettre en place un système de « vérification          parfaitement les difficultés auxquelles nous devons tous
+      d’âge efficace » permettant de s’assurer de la majorité des   faire face : comment rendre ces espaces numériques plus
+      personnes qui ont accès à ces contenus.                       sûrs en tenant compte de la vulnérabilité des enfants ?
+      Une étude publiée par nos soins en 2017 avec l’IFOP           La réponse ne passera notamment que par un cadre
+      montrait que l’âge de première exposition à ces contenus      juridique respecté par les acteurs du numérique et une
+      ne cessait de rajeunir et qu’en même temps, de très jeunes    mobilisation de l’ensemble de la communauté éducative
+      enfants étaient susceptibles d’y avoir accès en quelques      autour de ces enjeux incontournables.
+      clics sans avoir spécifiquement cherché ces contenus.
+
+
+ 22
+RÉSEAUX SOCIAUX                          Le public peut se déchaîner sur des débats
+                                         (toutes problématiques) sur les réseaux
+#légitimité                              sociaux, comment trouver les bons mots
+                                         pour désamorcer les conflits ?
+
+
+
+                                                                                                                             Secrétaire-Accueil
+                                 Vincent BERNARD                                                                            dans le médico-social
+                                 Coordinateur de Bornybuzz Numérique                                                             (11-25 ans)
+
+
+
+
+    Les réseaux sociaux sont des espaces privés où se                Cette démarche est d’autant plus pertinente lorsque
+    tiennent des discussions publiques. Ainsi, la première           la discussion est en rapport avec des fake news ou des
+    question à se poser est la légitimité d’y intervenir afin de     théories du complot. Ici, le but n’est pas de faire changer
+    désamorcer les conflits. Autrement dit, quelles sont les         d’avis les personnes croyantes, mais d’apporter des
+    raisons qui poussent quelqu’un à se positionner en tant          arguments aux indécis qui suivent les échanges sans
+    que médiateur entre un ou plusieurs individus ? Ensuite,         commenter.
+    on peut se poser la question des moyens dont l’individu
+                                                                     Les échanges en ligne sont des phénomènes de groupe.
+    en question dispose. Bien qu’ils soient des espaces privés
+                                                                     Quand la passion s’en mêle, il est difficile de faire entendre
+    les réseaux sociaux ne sont pas pour autant des zones de
+                                                                     raison aux protagonistes, et il n’y a finalement que le
+    non-droits. La loi s’applique sur les réseaux sociaux et des
+                                                                     groupe qui peut inverser la tendance. D’ailleurs, certains
+    infractions comme l’apologie du terrorisme, la négation ou
+                                                                     internautes se rassemblent et créent des groupes, dont
+    la minimisation de crimes contre l’humanité, l’incitation
+                                                                     l’objectif est de créer des armées « d’elfes pour contrer
+    à la haine raciale, l’incitation à la violence sexuelle ou
+                                                                     les trolls* » , comme par exemple, sur Facebook, la « team
+    sexiste, le harcèlement, la diffamation, etc. peuvent
+                                                                     riposte de SOS racisme » ou le groupe « JeSuisLà – Faire
+    donc être sanctionnés. Si pour la victime un dépôt de
+                                                                     d’Internet un meilleur endroit ».
+    plainte est possible, pour un témoin, il y a la possibilité de
+                                                                     En somme, il est difficile pour un individu isolé
+    signaler les contenus en question. Chaque réseau social a
+                                                                     d’intervenir sans entrer à son tour dans la polémique.
+    établi ses règles et procédures de signalement. Selon les
+                                                                     La solution ne peut venir que des plateformes avec
+    règles définies et la législation du pays de l’hébergeur, les
+                                                                     une modération manuelle mais irréaliste en raison du
+    contenus peuvent donc être supprimés. En dehors de ces
+                                                                     nombre de contenus et de commentaires, ou d’une
+    dispositifs d’encadrement de la liberté d’expression, rien
+                                                                     modération algorithmique forcément imparfaite. Reste
+    n’est prévu ou techniquement possible.
+                                                                     alors à questionner l’architecture technique des réseaux
+    On peut aussi, bien sûr, essayer de s’interposer dans la
+                                                                     sociaux, en envisageant des instances décentralisées où
+    discussion pour arrondir les angles, mais force est de
+                                                                     se connecteraient des communautés dont les membres
+    constater que ces initiatives ne font généralement, qu’au
+                                                                     se sentiraient responsables les uns des autres.
+    mieux rallonger des discussions qui déjà s’éternisent, ou
+    au pire renforcer les protagonistes dans leurs positions ou
+    convictions respectives. Aussi, s’il y a une chose à faire
+    dans ces circonstances, c’est de ne pas s’occuper des
+    acteurs de la discorde mais de penser à ceux qui lisent
+    les échanges, en faisant remarquer par un simple et bref
+    commentaire ou un GIF animé que les échanges vont trop
+    loin et que les règles de courtoisie élémentaire ne sont
+    pas respectées. Si d’autres internautes décident de faire
+    de même, par l’effet du nombre, il sera peut-être possible
+                                                                     *https://dompterlestrolls.fr/rejoindre-larmee-des-elfes-pour-contrer-les-trolls
+    de calmer le jeu.
+
+
+
+
+                                                                                                                                                   23
+RÉSEAUX SOCIAUX
+                                     Peut-on demander aux grands sites que sont
+                                     les réseaux sociaux de rendre des comptes,
+#CNIL
+                                     lorsqu’un jeune est victime de harcèlement
+                                     sur sa plateforme ? Quel recours ai-je si mon
+                                     droit au déréférencement ne s’applique pas
+                                     correctement ?
+
+                                                                                                           Référente Jeunesse
+                                                                                                            de Mission locale
+                               Thomas ROHMER                                                                   (16-30 ans)
+                               Fondateur et Directeur de l’OPEN
+                               (Observatoire de la parentalité & de l’éducation numérique)
+
+
+
+      Le phénomène du harcèlement en ligne est une                    prouver que ces réseaux avaient connaissance de la nature
+      thématique très présente dans l’espace public parfois           de ces contenus et ne les ont pas fait retirer rapidement,
+      peut-être trop. Selon certains acteurs de la prévention,        leur responsabilité peut être engagée.
+      le nombre de jeunes cyberharcelés serait en pleine              Pour rappel, la plupart des textes en vigueur qui
+      explosion, au point que certaines associations présentent       réglementent l’utilisation par les mineurs de ces outils
+      des études où l’on atteindrait environ 20% des jeunes en        numériques sont très clairs : il est interdit de s’inscrire
+      France.                                                         sur un réseau social avant 13 ans et entre 13 et 15 ans
+      Pourquoi une telle explosion et peut-on croire ces chiffres ?   seulement avec l’accord de leurs responsables légaux.
+      Sans aucun doute la surmédiatisation de ces violences           Nous savons tous que la réalité est tout autre et que de
+      en ligne et la surréaction des institutions qui souhaitent      nombreux jeunes sont présents sur les réseaux sociaux
+      montrer de manière légitime qu’elles s’emparent du sujet        alors qu’ils ne le devraient pas.
+      n’est pas aidante. Derrière ce mot se cachent souvent           Nous attirons la vigilance des adultes sur ce point précis.
+      des réalités différentes. Il n’est pas rare aujourd’hui         En cas de situation grave, comme du cyberharcèlement
+      d’entendre un jeune dire «J’ai été insulté par un pote sur      ou toute autre forme de cyberviolence, nous pensons
+      les réseaux, je suis victime de cyberharcèlement». Cette        que la possibilité de se retourner contre une plateforme
+      confusion entre cyberharcèlement et cyberviolence vient         pourrait être remise en cause à partir du moment où il est
+      naturellement gonfler ces chiffres.                             prouvé explicitement que l’enfant a triché sur son âge. En
+      En parallèle, la plupart des chercheurs ne sont toujours        effet, il serait facile d’invoquer pour ces acteurs, que si
+      pas tous d’accord sur une définition appropriée. Pour           l’enfant avait respecté les règles la situation ne se serait
+      Catherine Blaya, universitaire française qui participe          pas produite. C’est un point rarement évoqué mais qui a
+      depuis de nombreuses années à des études sur ce sujet,          son importance.
+      le cyberharcèlement se détermine notamment par sa               Enfin, concernant les difficultés rencontrées dans le
+      fréquence. Selon elle, on peut réellement utiliser ce           cadre d’une demande de déréférencement ou de mise
+      terme «à partir d’une agression par semaine pendant             en œuvre du nouveau droit à l’effacement, les personnes
+      au moins un mois». Elle précise par ailleurs que selon de       concernées peuvent adresser une demande officielle
+      nombreuses études menées à travers l’Europe, la France          auprès de la CNIL ou auprès du tribunal judiciaire de
+      se situerait dans la moyenne des pays européens soit            son domicile. Attention, ces saisines ne garantissent pas
+      environ 5% à 6% des jeunes âgés de 9 à 17 ans.                  forcément d’obtenir satisfaction, comme le rappellent les
+      Le profil des jeunes touchés est très variable et ne connaît    sites des institutions concernées.
+      pas spécialement de prisme socio-économique. Ces                Face à ces phénomènes, nous devons éviter de céder
+      situations semblent, d’après les études, toucher autant         à la panique médiatique et valoriser une éducation au
+      les filles que les garçons avec néanmoins une variable de       numérique des plus jeunes qui demeure trop imparfaite
+      taille : les filles sont plus souvent victimes de violence à    en France. Cela passera également par une mobilisation
+      caractère sexuel que les garçons.                               de l’ensemble des adultes et de la société autour de la
+      Quelle responsabilité pour les réseaux ?                        redéfinition d’un socle de valeurs communes.
+      D’une manière générale, les plateformes sont protégées
+      par un statut d’hébergeur. Toutefois, si l’on parvient à
+
+ 24
+RESEAUX SOCIAUX
+                                    Comment accompagner les jeunes dans
+#analyse                            la gestion des conflits qui ont lieu sur les
+                                    réseaux ?
+
+
+
+
+                                                                                                               Service
+                                                                                                         d’éducation spéciale
+                             Vincent BERNARD                                                            et de soins à domicile
+                             Coordinateur de Bornybuzz Numérique
+
+
+
+
+    Plusieurs aspects sont à considérer du côté du                   La place du professionnel dans le conflit doit également
+    professionnel, du côté de la relation avec les jeunes et         être analysée. Est-il témoin du conflit parce qu’en lien
+    du conflit.                                                      avec les jeunes sur les réseaux sociaux ? A-t-il été invité
+                                                                     dans la conversation ? Un jeune lui a-t-il transmis le lien
+    1 Du côté du professionnel, cela dépend avant tout
+                                                                     des échanges houleux ? A-t-il entendu une discussion à
+    de sa mission. Un animateur socioculturel ne sera
+                                                                     ce sujet IRL ? Ou un jeune est-il venu lui en parler ?
+    pas légitime à intervenir de la même manière qu’un
+                                                                     Selon la situation un niveau d’urgence peut être
+    éducateur spécialisé. Il faut être bien conscient de sa
+                                                                     envisagé. Lorsque la pression monte entre deux
+    fiche de poste, de ses compétences et du projet de sa
+                                                                     groupes rivaux et que des vidéos où l’on voit des armes
+    structure.
+                                                                     commencent à circuler, la réponse doit être immédiate
+    1 La nature et la qualité de la relation avec les                et sur le terrain. Lorsqu’il s’agit d’une embrouille dans
+    jeunes sont également à prendre en considération.                un groupe d’amis, la reprise éducative peut attendre.
+    L’accompagnement ne sera pas le même qu’il s’agisse              Il est aussi possible de contacter les protagonistes
+    de jeunes que l’on a en suivi, qu’il s’agisse de jeunes          individuellement ou envisager une confrontation en
+    qui fréquentent la structure ou de jeunes que l’on               groupe. Il est aussi envisageable de décider de ne rien
+    rencontre lors d’un travail de rue. De même, la qualité          entreprendre et laisser les jeunes faire leur propre
+    de la relation est à prendre en compte. Des jeunes avec          expérimentation des relations humaines.
+    qui une relation de confiance est installée ne requièrent
+                                                                     Ce sont tous ces paramètres qui sont à prendre en
+    pas la même approche que des jeunes avec qui on essaie
+                                                                     considération.
+    d’entrer en contact.
+                                                                     L’expérience de l’analyse de pratiques professionnelles
+    1 Le troisième aspect à prendre est la nature du                 nous apprend qu’il n’y a pas une méthode qui pourrait
+    conflit. Le conflit a-t-il éclos en ligne entre des jeunes qui   prendre en compte toutes les situations, et qu’il vaut
+    s’entendaient bien jusque-là ? Le conflit en ligne est-il la     mieux partir de la situation pour aboutir à sa résolution.
+    prolongation d’un conflit préexistant ? Est-ce un conflit
+                                                                     Ce n’est pas parce qu’ils sont numériques que les
+    interpersonnel ou une problématique de groupe ? Le
+                                                                     problèmes sont radicalement différents ou que les
+    conflit a-t-il éclos dans un groupe d’amis ou entre deux
+                                                                     moyens de les résoudre changent. Aussi, l’analyse de la
+    groupes rivaux ? Est-ce un conflit verbal ou y a-t-il eu (ou
+                                                                     situation en équipe reste le meilleur moyen de trouver
+    y a-t-il un risque de) passage à l’acte violent ?
+                                                                     la bonne solution.
+
+
+
+
+                                                                                                                                 25
+RÉSEAUX SOCIAUX                         Quelle est la réalité du #anti2010 ? Les médias
+                                        sont-ils dans leur rôle lorsqu’ils alertent sur de
+#contagiosité
+                                        telles pratiques ?
+                                                                                                           Équipe médico-sociale
+                                                                                                                ( 11-25 ans)
+
+
+                                        Est-ce que #anti2010 a pris une grosse ampleur
+                                        à cause des réseaux sociaux ou est-ce que cela a
+                                        plutôt aidé à lutter contre le harcèlement ?
+
+
+                                                                                                            Secrétaire-Accueil
+                                                                                                           dans le médico-social
+                                                                                                                (11-25 ans)
+
+
+
+                               Anna BISCH,
+                               Ecoutante à la ligne Non au harcèlement, le 3020
+
+
+
+
+      Au 3020, ligne nationale contre le harcèlement scolaire,      le site education.gouv.fr/non-au-harcelement, le 3018
+      nous avons pu constater que le nombre d’appels                (cyber harcèlement) et l’existence d’équipes dédiées
+      concernant le harcèlement d’enfants nés en 2010 a             au harcèlement dans certains établissements scolaires.
+      augmenté à la rentrée 2021. Il s’agissait davantage de        Cependant, les médias peuvent également avoir un rôle
+      harcèlement collectif qu’individuel : l’ensemble ou une       amplificateur et effrayer enfants et parents, s’ils traitent
+      partie des enfants nés en 2010 d’un établissement ou          le phénomène sur un mode angoissant et inéluctable
+      d’une classe subissaient des insultes, des menaces, voire     («Si votre enfant est né en 2010, il va forcément se faire
+      des coups d’enfants plus grands, sous le prétexte de leur     harceler !»)
+      année de naissance, ainsi que de leur niveau dans la          Le #anti2010 a effectivement pris de l’ampleur à cause
+      pratique d’un jeu vidéo populaire.                            des réseaux sociaux ; la rapidité de propagation y est
+      Les médias contribuent à alerter les adultes sur un           démultipliée ! En même temps, cela a permis de montrer
+      phénomène qui a pu leur échapper car les enfants ont          et d’expliquer à de nombreuses personnes en quoi
+      souvent des difficultés à se confier sur le harcèlement       consiste le harcèlement (une tentative de domination
+      qu’ils subissent. Cela permet de sensibiliser le grand        justifiée par n’importe quelle différence, ici l’année
+      public et en particulier les familles sur des situations de   de naissance), d’en faire un sujet plus facile à aborder
+      violences relationnelles dans les établissements (et sur      en famille ou dans d’autres groupes, et finalement de
+      les réseaux sociaux), ainsi que de leurs effets délétères     mobiliser beaucoup d’individus autour de la question
+      sur les jeunes. L’attention médiatique portée sur le          du harcèlement et d’élargir la réflexion et l’intelligence
+      harcèlement permet également de faire connaitre les           collective sur cette réalité.
+      ressources disponibles : le 3020 (harcèlement scolaire),
+
+
+
+
+ 26
+                                                                                                    RÉSEAUX SOCIAUX
+
+                         Thomas ROHMER                                                              #contagiosité
+                         Fondateur et Directeur de l’OPEN
+                         (Observatoire de la parentalité & de l’éducation numérique)
+
+
+
+
+Le hashtag #anti2010 est un phénomène qui a pris             Les médias, comme tout acteur à l’origine d’une source
+naissance à la rentrée 2021 et comme souvent a été           d’information, sont certes pleinement dans leur rôle
+maintes fois relayé et amplifié par les réseaux sociaux      lorsqu’ils évoquent ce type de phénomène à titre
+selon le principe de viralité au cœur de leur mode de        informatif. Néanmoins, nous pouvons regretter qu’une
+fonctionnement.                                              dimension éthique ne soit pas plus présente au sein
+Ce phénomène qui a connu une ampleur assez importante        de ces médias mainstream lorsqu’il s’agit de traiter
+n’est pas en soi quelque chose de nouveau, le principe       d’informations sensibles pouvant mettre potentiellement
+du harcèlement ou bizutage d’une classe d’âge sur une        en danger des enfants.
+autre plus jeune étant profondément ancré dans les           Comme souvent, l’emballement qui a suivi a pu inciter
+pratiques adolescentes depuis très longtemps.                certains médias à franchir la ligne jaune de l’information
+Pour autant, les réactions médiatiques puis                  à vocation préventive pour basculer dans une démarche
+institutionnelles qui en ont suivi illustrent parfaitement   incitative. Par le passé, ce phénomène s’est déjà produit
+les difficultés d’adaptation et la panique qui s’empare      de nombreuses fois à l’occasion de la promotion de
+de nombreux adultes lorsque la caisse de résonance des       certains défis sur Internet qui au final n’ont existé que
+réseaux se met en marche.                                    dans le fantasme des adultes (cf. bluewhale challenge).
+Sans nier l’importance du phénomène qui a occasionné         Il est urgent de réfléchir à la question éthique au sein
+plusieurs centaines de millions de vues sur certains         des messages à caractère informatif afin qu’ils jouent
+réseaux, nous sommes en droit de questionner la              pleinement leur rôle. Pour autant, attention à ne pas
+posture des adultes et des solutions relayées par les uns    céder au piège de l’émotion et de la surréaction dans
+et les autres.                                               laquelle les réseaux enferment les jeunes mais le plus
+                                                             souvent les adultes également.
+
+
+
+
+                                                                                                                     27
+RÉSEAUX SOCIAUX
+
+#contagiosité
+
+
+
+
+                            Marion HAZA-PERY,
+                            Psychologue clinicienne, chercheur
+
+
+
+
+   Le #anti2010 est avant tout une fabrication médiatique,         La particularité du #anti2010 est que ces attitudes
+   à durée de vie éphémère, nous l’avons bien vu. Il a             ont pris forme sur des réseaux sociaux, Twitter
+   permis de mettre le focus sur un phénomène classique :          et Instagram notamment, avec le fameux hashtag
+   le harcèlement scolaire. Or le harcèlement est un               (mot-clé), permettant une visibilité et une diffusion
+   processus qui n’est pas nouveau et a émergé bien avant          rapide d’un évènement. Toutefois, les rumeurs ou
+   le numérique (rappelons-nous La guerre des boutons !).          harcèlement n’existent que parce qu’on les diffuse.
+                                                                   Aussi, l’engouement médiatique et éducatif (cf. les mots
+   Le rejet des sixièmes par les plus grands du collège
+                                                                   mis dans les cahiers à destination des parents pour les
+   est un phénomène qui se remarque tous les ans. Le
+                                                                   informer) a eu un double effet : impliquer et sensibiliser
+   harcèlement se crée par la présence d’un trio : auteur(s),
+                                                                   les parents mais aussi diffuser et semer cette possibilité
+   victime, spectateur(s). Dans les espaces numériques,
+                                                                   chez d’autres adolescents.
+   ce trio se retrouve facilement, notamment avec des
+                                                                   Or il faut rappeler l’effet de groupe notable à
+   témoins multipliés du fait du caractère de diffusion
+                                                                   l’adolescence : l’adolescent se construit à travers le
+   virale et massive des textes, images et commentaires
+                                                                   regard des autres ; aussi, l’imitation et les identifications
+   sur les réseaux sociaux et de la facilité du like. L’illusion
+                                                                   sont de mise à cette période-là… Reproduire un acte
+   d’anonymat, caché derrière un pseudo et un écran,
+                                                                   d’humiliation ou de harcèlement peut faire partie
+   facilite aussi la désinhibition des auteurs et témoins.
+                                                                   des enjeux groupaux adolescents. Evidemment, il est
+                                                                   important d’accompagner les groupes de jeunes face à
+                                                                   leurs doutes identitaires pour leur permettre de trouver
+                                                                   des valeurs communes permettant la vie en collectivité.
+
+
+
+
+ 28
+RÉSEAUX SOCIAUX
+                                 Peut-on s’inscrire sur un réseau social avant
+#RGPD                            l’âge de 13 ans, avec le consentement de ses
+                                 parents et dans le respect de la loi française ?
+
+
+
+                                                                                                        Animateur
+                                                                                                        (11-25 ans)
+
+                            Arnaud GHEYSENS
+                            Président de MyTwiga
+
+
+
+
+   Le Règlement Général de Protection des Données (RGPD)          Cette responsabilité portée par les plateformes pose
+   est un règlement européen qui a été traduit dans la loi        deux problèmes. Comment vérifier l’âge des utilisateurs
+   française en mai 2018. Ce règlement a pour objectif de         sans aller trop loin dans la vie privée. A-t-on vraiment
+   mieux encadrer l’utilisation des données personnelles et       envie de communiquer l’ensemble des pièces d’identité
+   de définir les âges limites en dessous desquels il ne peut     des Français à Facebook ? Et certaines plateformes ont-
+   y avoir de traitement de données.                              elles vraiment envie de voir une grande partie de leurs
+                                                                  utilisateurs être bannis de leur réseau social ?
+   Ce règlement a fixé l’âge minimum pour l’accès aux
+                                                                  Pour l’instant, les plateformes démontrent leur bonne
+   réseaux sociaux, dont le modèle est l’utilisation des
+                                                                  volonté en développant des algorithmes qui, en fonction
+   données personnelles, à 13 ans. Et il a donné la possibilité
+                                                                  du comportement de l’utilisateur, peuvent détecter des
+   aux états membres de fixer un âge en dessous duquel,
+                                                                  enfants de moins de 13 ans, mais c’est évidemment très
+   l’accord des parents était nécessaire. La France a fait le
+                                                                  perfectible.
+   choix de fixer cet âge à 15 ans.
+   Donc, pour répondre à la question, même avec le                A noter qu’un projet de loi est actuellement examiné
+   consentement des parents, l’inscription à un réseau            pour mettre en place une autorité nationale qui
+   social d’un enfant de moins de 13 ans n’est pas dans           serait en charge de cette vérification et pourrait servir
+   le respect de la loi française. A noter que cette limite       d’intermédiaire. A suivre.
+   de 13 ans est également appliquée aux Etats-Unis qui           Il n’y a donc pas à ce jour de « videur » à l’entrée des
+   est un pays pourtant assez permissif sur l’utilisation des     réseaux sociaux qui vérifie réellement l’âge légal, et
+   données personnelles. Cela montre à quel point cette           nos enfants peuvent rentrer dans n’importe quel lieu
+   limite fait l’unanimité.                                       numérique réservé aux adultes en disant simplement :
+   Or aujourd’hui, près de 2/3 des ados de moins de 13            « C’est bon, j’ai l’âge légal. »
+   ans auraient au moins un compte sur un réseau social.
+                                                                  Ce sont donc les parents qui sont en première ligne
+   Il suffit en effet de déclarer une date de naissance qui
+                                                                  pour assurer ce cadre et montrer l’exemple. Outre la
+   corresponde à un âge supérieur à l’âge requis pour
+                                                                  portée symbolique de cautionner une fausse déclaration
+   s’inscrire.
+                                                                  pour son enfant, cela peut aussi avoir des conséquences
+   Ce sont les réseaux sociaux qui doivent s’assurer              concrètes sur l’utilisation de ses données personnelles,
+   que leurs utilisateurs ont bien l’âge légal. Pour les          ou sur l’exposition à des annonces qui ne sont pas
+   utilisateurs déclarant une fausse identité sur le réseau       adaptées à son âge.
+   social, ils s’exposent juste à être bannis de la plateforme
+   en question en ayant enfreint leur règlement.
+
+
+
+
+                                                                                                                         29
+30
+Jeux vidéo
+
+ #nuances                 #expérimentation
+            #captologie
+
+
+
+
+                                             31
+JEUX VIDÉO
+                                    Les discours des spécialistes concernant les
+#nuances                            jeux vidéo ne sont-ils pas trop alarmistes et
+                                    insuffisamment axés vers leurs bienfaits ?
+
+
+                                                                                                         Cheffe de bureau
+                                                                                                          médico-social
+                           Celia HODENT                                                                    (11-25 ans)
+                           Docteure en psychologie, spécialiste en expérience utilisateurs (UX)
+
+
+
+
+   Jouer est une activité primordiale pour le développement       Cela dit, certains jeux vidéo semblent être
+   de l’enfant. Le jeu vidéo doit donc avant tout être            particulièrement intéressants pour solliciter certaines
+   perçu comme une activité ludique sollicitant certaines         compétences. Par exemple, certains jeux vidéo d’action
+   compétences chez les joueurs en fonction du jeu. «Les          amélioreraient l’attention visuelle. D’autres études
+   jeux vidéo», en tant que catégorie uniforme, ne sont ni        explorent le potentiel bénéfique de certains jeux multi-
+   bons ni mauvais. Tout comme la nourriture, tout dépend         joueurs sur le comportement pro-social de leurs joueurs.
+   du type de jeu que l’on joue, du contexte et de la quantité.   La pratique de certains jeux (comme Animal Crossing :
+                                                                  New Horizons) a aussi été corrélée avec le bien-être
+   Malheureusement, la recherche s’est plutôt penchée
+                                                                  affectif. Les jeux vidéo ont également été étudiés pour
+   sur les effets potentiellement néfastes des jeux vidéo
+                                                                  leurs atouts en éducation. Il semble notamment que
+   jusqu’à présent. On s’inquiète notamment de leur impact
+                                                                  l’utilisation de jeux en classe comme Minecraft ou SimCity
+   sur le sommeil, ou de la pratique pathologique des
+                                                                  aurait un impact positif, grâce à la médiation apportée
+   jeux («addiction»). Malgré l’abondance d’études sur le
+                                                                  par les professeurs et éducateurs. Enfin, il semblerait
+   potentiel néfaste de ces jeux, il n’existe pas actuellement
+                                                                  que les jeux vidéo auraient le potentiel d’encourager la
+   de consensus scientifique et les débats continuent de
+                                                                  persévérance et «l’état d’esprit de croissance» (growth
+   faire rage. Tout le monde est néanmoins d’accord sur le
+                                                                  mindset), essentiels pour l’apprentissage.
+   fait qu’un enfant ne doit pas jouer excessivement aux
+   jeux vidéo au détriment de sa vie scolaire, sociale ou de      Les jeux vidéo ne sont pas une catégorie uniforme. En
+   son sommeil. Le sommeil est en effet primordial pour           fonction du joueur, du type de jeu et du contexte, ils
+   le développement du cerveau et la consolidation des            peuvent avoir un impact plutôt bénéfique, plutôt négatif
+   apprentissages ! L’enfant doit pouvoir jouer à des activités   ou neutre. Mais ils ont un potentiel intéressant pour le
+   diverses et variées, mais comme pour tout, l’excès n’est       bien-être et l’éducation qu’il serait temps de considérer.
+   jamais bon.
+
+
+
+
+ 32
+                                                                                                                     JEUX VIDÉO
+                        Marion HAZA-PERY,
+                        Psychologue clinicienne, chercheur                                                           #nuances
+
+
+
+
+Les discours médiatiques sur les jeux vidéo prennent             pas mauvais en tant que tel mais que l’usage excessif
+souvent parti en dépit des études scientifiques ou des           doit être examiné de près : c’est là que les spécialistes
+paroles des spécialistes sur le sujet. En effet, nombreux        peuvent constater le refuge dans le jeu vidéo pour fuir des
+sont les exemples où le jeu vidéo est nommé comme la             difficultés de la vie quotidienne (à l’école, dans la famille,
+cause de tous les maux. Prenons exemple de l’extrême             dans les relations aux autres, etc.).
+violence expliquée par la pratique de jeu vidéo violent. De      Aussi, pour résumer, le jeu vidéo peut amener le joueur
+même, le jeu vidéo est souvent qualifié dans les médias          à de l’imaginaire (beaucoup de jeux utilisent les émotions
+de « drogue », « cocaïne », etc. Aussi, l’accès aux discours     du joueur aujourd’hui), de la créativité (pensons à
+des spécialistes se fait rarement de façon directe. Or les       Minecraft), des liens sociaux, de la collaboration (par
+recherches qui commencent à être menées en sciences              exemple avec les jeux tels League of Legend, et tous les
+sociales concernant les effets des jeux vidéo montrent           MMORPG) et des engagements (remarquons l’évènement
+que l’objet d’étude est complexe.                                Zevent, engageant la communauté gamer pour une cause
+Les spécialistes comme les psychologues ou psychiatres           humanitaire). Mais le jeu vidéo est un objet ambivalent,
+portent des discours souvent mal interprétés dans les            comme tout outil, et il peut aussi amener à des pratiques
+médias. En effet, malgré tout ce qui est mis en avant            plus complexes, négatives et risquées (confrontation à
+des méfaits, dangers ou dérives du jeu vidéo, force est          des scènes inadaptées, insultes, violence, non-respect des
+de constater, avec les bilans annuels du S.E.L.L (Syndicat       autres, triche, harcèlement, etc.). Il est donc indispensable
+des Editeurs de Logiciels de Loisirs), l’usage grandissant       de penser les deux facettes du jeu vidéo en ne jetant un
+du jeu vidéo (public varié en âge, sexe, usages, etc.). Les      voile ni sur l’une ni sur l’autre.
+spécialistes reconnaissent alors que le jeu vidéo n’est
+
+
+
+                            Vincent BERNARD
+                            Coordinateur de Bornybuzz Numérique
+
+
+
+
+Bienfaits et méfaits sont les deux faces d’une même              à jouer à tel jeu plutôt qu’un autre n’est pas similaire. Face
+médaille. On constate assez facilement que les jeux              à des parents ou des professionnels inquiets, il ne faut
+vidéo sont souvent connotés négativement. Cependant,             pas chercher à convaincre des méfaits ou des bienfaits
+lorsqu’on s’intéresse à la recherche sur le sujet, on            des jeux vidéo en général, mais plutôt les aider à analyser
+remarque que les chercheurs qui étudient les jeux vidéo          la situation en fonction des jeux vidéo auxquels joue un
+aboutissent difficilement à un consensus, que ce soit pour       joueur en particulier. Par exemple, là où un adolescent va
+les effets supposés négatifs comme pour les aspects soi-         jouer à un jeu vidéo massivement multijoueur pour faire
+disant positifs.                                                 comme ses amis, un autre va se saisir de cette opportunité
+Pour contrebalancer les argumentaires qui insistent sur          pour trouver les amis qu’il n’a pas dans son entourage.
+les effets délétères des jeux vidéo, nous pourrions alors        Si les paniques morales concernant les jeux vidéo sont
+être tentés d’opposer systématiquement des bienfaits.            agaçantes, les discours qui enjolivent le média le sont
+Mais dresser une sorte de liste des « pour » et des « contre »   également. On a tendance à oublier que le jeu vidéo est
+est une fausse bonne idée, et ce pour plusieurs raisons :        un jeu et qu’on joue à des jeux parce que c’est fun ! Il
+tout d’abord parce que tous les jeux vidéo ne se valent pas.     peut bien sûr y avoir des applications intéressantes des
+Il existe une grande variété de jeux vidéo qui sollicitent       jeux vidéo dans l’apprentissage ou dans le soin, mais ces
+des compétences différentes ; et ensuite parce que les           bénéfices sont au service d’objectifs précis et ne doivent
+joueurs sont eux-mêmes différents et que leur motivation         pas servir à alimenter des querelles d’opinion.
+
+                                                                                                                                  33
+JEUX VIDÉO
+                                      Comment expliquer que les joueurs
+                                      retournent à un jeu vidéo qui semble leur
+#expérimentation
+                                      procurer des émotions contradictoires et
+                                      parfois extrêmes ? Colère envers les autres
+                                      joueurs, dévalorisation de soi après un échec.
+
+                                                                                                                   Équipe médico-sociale
+                                                                                                                        ( 11-25 ans)
+
+                               Nadège LARCHER
+                               Directrice pédagogique de MyTwiga
+                               et dirigeante d’APcomm - Apprendre à Communiquer
+
+
+
+
+      Une réponse immédiate s’impose quand on s’interroge           Outre le fait de procurer à nos ados du plaisir immédiat,
+      sur le pouvoir d’attraction et surtout de séduction           les jeux vidéo leur permettent également de satisfaire ses
+      particulièrement fort sur les ados que les jeux vidéo         autres besoins fondamentaux :
+      exercent sur nos ados : ils sont conçus ainsi. Notamment      Même s’il peut perdre, l’ado va chercher à améliorer sans
+      grâce aux apports des neurosciences, les concepteurs          cesse ses performances, et donc à satisfaire son besoin
+      de ces jeux font en sorte « d’envoûter » leurs joueurs,       de compétence. Il sera reconnu par les autres joueurs ou
+      en rendant leur attention captive, en leur accordant des      fera partie d’une Guilde, et pourra ainsi nourrir son besoin
+      rétributions immédiates, en troublant leur perception du      d’appartenance. Malgré les règles à suivre dans son jeu, il
+      temps.                                                        peut faire de nombreux choix et réaliser ainsi son besoin
+      Une autre approche permet également d’expliquer la            de liberté. Enfin, puisque la question de la survie est
+      fascination des écrans sur les ados. Ils leur permettent      virtuelle dans les jeux, son besoin de sécurité ne sera pas
+      de répondre massivement à leurs besoins fondamentaux.         réellement menacé.
+      Selon William Glasser, le psychiatre et chercheur             Bien sûr, le jeune joueur éprouvera des émotions
+      américain qui a travaillé sur le comportement humain          contradictoires, sera révolté de perdre et se montrera
+      et qui est à l’origine de la Théorie du choix1, les êtres     agressif verbalement envers les autres joueurs. Mais
+      humains cherchent par leurs actions conscientes et aussi      ces moments d’inconfort auront également un bénéficie
+      inconscientes à réaliser leurs besoins fondamentaux.          secondaire pour lui : à cette période de l’adolescence où
+      Ces besoins fondamentaux sont au nombre de 5, et              l’agressivité est à nouveau amplifiée et où les capacités
+      concernent tous les êtres humains, quels que que soient       d’inhibition sont fragilisées, les jeux vidéo vont lui offrir
+      leurs stades de vie :                                         un exutoire socialement plus acceptable que la cour de
+      1 le besoin de survie (avoir un toit sur la tête, à manger,   récréation ou le quartier.
+      à boire, connaître une sécurité affective) ;                  A l’instar de l’excellent film de Steven Spielberg Ready
+      1 le besoin d’appartenance (sentir qu’on fait partie d’un     Player One2 , les jeux vidéo peuvent donc offrir aux
+      groupe, que ce soit un groupe d’amis, de la famille, des      ados un refuge, une échappatoire et un sentiment de
+      collègues) ;                                                  pouvoir que la vie réelle ne leur offre peut-être pas.
+      1 le besoin de pouvoir et de compétence, dans un ou           D’où l’importance de nous interroger, nous éducateurs,
+      plusieurs domaines ;                                          sur la façon dont nous pouvons leur permettre de réaliser
+      1 Le besoin de liberté, de pouvoir faire des choix dans       leurs besoins fondamentaux, notamment ceux de liberté,
+      sa propre vie.                                                compétence et plaisir, dans leur vie quotidienne.
+      1 Enfin, le besoin de plaisir, qui est une nécessité pour
+      une vie épanouie (la joie étant la seule émotion que notre
+                                                                    1. La théorie du choix, William GLASSER, Chenelière/McGraw-Hill
+      cerveau cherche à reproduire volontairement).                 (1 janvier 1997)
+                                                                    2. Film de 2018, où Spielberg nous présente un monde futuriste au bord
+                                                                    du chaos. Les êtres humains se réfugient dans l’OASIS, univers virtuel
+                                                                    qu’ils n’arrivent plus à quitter.
+
+
+ 34
+                                                                                                                   JEUX VIDÉO
+
+                                                                                                            #expérimentation
+
+
+
+
+                        Marion HAZA-PERY,
+                        Psychologue clinicienne, chercheur
+
+
+
+
+Tout d’abord, il faut rappeler que le jeu vidéo est un           inédites est classique à cette période : pensons aux
+produit culturel à l’instar du cinéma, de la littérature,        expériences, fréquentes chez les jeunes, de confrontation
+de la bande-dessinée, etc., ce en tant que dixième art.          à des scénarios violents, lors de soirée partagée autour
+Il est entré à la Bibliothèque Nationale de France. Aussi,       de films d’horreur ; ici, c’est la peur recherchée dans un
+de plus en plus, le jeu vidéo, notamment indépendant,            contexte sécurisant qui crée une excitation et donne envie
+se construit avec un scenario élaboré, une esthétique            de poursuivre l’activité.
+travaillée, des sons bien mixés permettant une immersion
+                                                                 C’est la compréhension de l’ambivalence des émotions
+maximale du joueur et favorisant le gameplay.
+                                                                 qui nous éclaire ici : en effet, nos émotions sont toujours
+A partir de là, comme tout univers culturel fictionnel, le jeu   complexes et entremêlées. Dans le jeu vidéo, le joueur
+vidéo va produire des émotions chez celui qui le pratique,       va aussi tester des émotions du fait de ses relations aux
+ce, quels que soient son âge ou sa façon de jouer : si le jeu    autres, des victoires ou des défaites, mais aussi de la
+attire aujourd’hui autant de joueurs comme le prouvent           relation à son avatar. En effet, les études menées sur les
+les enquêtes annuelles du S.E.L.L., c’est bien parce qu’il       joueurs de jeux de rôles en ligne montrent clairement
+procure des émotions, à l’enfant ou à l’adulte, au joueur        l’empathie envers l’avatar, c’est-à-dire que le joueur
+occasionnel ou quotidien ; à l’homme ou à la femme.              projette ses propres émotions et les attribue à l’avatar, tout
+De façon générale, chacun d’entre nous est habité par des        comme il « ressent » ce que pourrait vivre le personnage
+émotions diverses fondamentalement contradictoires :             qu’il contrôle. Nous comprenons ici que même dans une
+nous sommes constamment traversés par des émotions               phase de jeu complexe, d’échecs ou de conflits avec un
+positives - du type de l’amour - ou négatives - du type          autre joueur, certaines émotions positives incitent le
+de la haine et de la violence. Nos activités de la vie           joueur à poursuivre son activité.
+courante, hors ligne ou en ligne, entrent en résonance
+                                                                 Enfin, il faut noter que ces émotions associées au monde
+avec nos émotions internes : elles peuvent les amplifier,
+                                                                 numérique qu’est le jeu vidéo restent cantonnée au
+les moduler ou encore permettre de les évacuer.
+                                                                 jeu, comme dans le sport : l’effet de décharge peut être
+À l’adolescence, tout particulièrement, de nouvelles
+                                                                 recherché pour expulser hors de soi notamment des
+émotions apparaissent, liées à la transformation brutale
+                                                                 émotions agressives. Le cadre du jeu vidéo permet de
+du corps avec la puberté et son cortège de changements.
+                                                                 contenir cela.
+Le désir de maitrise de ces éléments nouveaux par la
+confrontation à des situations entraînant des émotions
+
+
+
+
+                                                                                                                              35
+JEUX VIDÉO
+                                         L’OMS reconnait depuis 2018 l’addiction aux
+#captologie                              jeux vidéo, est-ce à dire que tous les joueurs
+                                         sont susceptibles de devenir addict ?
+                                         Existent-ils des facteurs de vulnérabilité chez
+                                         certains joueurs ? L’industrie du jeu vidéo
+                                         exploitent-elles ces failles ? Quels sont les
+                                         mécanismes utilisés pour rendre les jeux
+                                         «addictifs» ?
+                                                                                                                 Animateur
+                                                                                                                 (11-25 ans)
+
+
+
+
+                              Marion HAZA-PERY,
+                              Psychologue clinicienne, chercheur
+
+
+
+
+      La question de l’addiction est une question épineuse             En réalité, le diagnostic réel d’addiction aux jeux vidéo
+      concernant les jeux vidéo. En effet, les avis divergent entre    ne concerne, selon les addictologues eux-mêmes, qu’un
+      les spécialistes psychiatres, psychologues, addictologues.       pourcentage infime de joueurs. Le jeu vidéo en soi ne
+      En fait, il faut au préalable s’accorder pour parler de la       rend donc pas addict.
+      même chose. Effectivement, si l’on se réfère à l’OMS,            Quel fut alors l’intérêt de créer ce trouble spécifique pour
+      depuis 2019, est apparu le trouble du jeu vidéo (gaming          l’OMS ? Le diagnostic de gaming disorder ou d’addiction
+      disorder) qui nécessite pendant plus d’un an en résumé,          aux jeux vidéo permet en fait de repérer les pratiques
+      une pratique problématique (« comportement de jeu                problématiques de jeu et d’intervenir en prévention
+      persistant ou récurrent ») parasitant la vie professionnelle     d’autres troubles psychiques. C’est pour cela par exemple
+      ou scolaire, les relations familiales ou amicales, les projets   que se développent les dispositifs de consultations jeunes
+      et rattaché à de la souffrance. Plus précisément, doivent        consommateurs qui accueillent les joueurs de jeux vidéo
+      se repérer « 1) une altération du contrôle des jeux (par         aux pratiques excessives ou problématiques. Ainsi ces
+      exemple, apparition, fréquence, intensité, durée, fin,           consultations permettent d’accompagner des jeunes non
+      contexte) ; 2) accorder une priorité accrue au jeu dans la       suivis jusque-là et présentant par exemple des troubles
+      mesure où le jeu prime sur les autres intérêts de la vie et      dépressifs. La pratique du jeu vidéo et le qualificatif
+      les activités quotidiennes ; et 3) la poursuite ou l’escalade    d’addiction peuvent donc être une porte d’entrée vers du
+      du jeu malgré l’occurrence de conséquences négatives. »          soin lié à d’autres problématiques.
+
+
+
+
+ 36
+                                                                                                                             JEUX VIDÉO
+
+                                                                                                                             #captologie
+                          Serge TISSERON
+                          Psychiatre et président de l’association Trois, Six, Neuf, Douze
+
+
+
+
+Il existe en effet des facteurs de vulnérabilité                 ou non des objets considérés comme précieux, qui
+héréditaires, éducatifs et personnels. Les enfants               posent des problèmes éthiques et législatifs résolus
+en souffrance psychique avant de découvrir les outils            différemment selon les pays*; l’aversion à la perte ; et le
+numériques sont notamment plus enclins à développer des          biais des coûts irrécupérables (Sunk cost fallacy). Enfin, ce
+pratiques problématiques : les victimes de harcèlement           nouveau modèle de jeux donne une place centrale à la
+et de maltraitance physique et sexuelle, les victimes de         visibilité du joueur, notamment à travers des plateformes
+deuil et les enfants élevés par des parents en conflit ou en     comme Twitch, exploitant ainsi à son profit les habitudes
+souffrance, sociale et/ou psychique.                             des utilisateurs des réseaux sociaux.
+Mais les stratégies des fabricants jouent un rôle                Toutefois, alors que les stratégies de hasard et d’argent
+considérable en jouant sur ces fragilités. Ils développent       constituent l’essentiel des motivations des joueurs de ces
+une nouvelle science, « la captologie », et utilisent dans les   jeux, elles sont le plus souvent à la marge pour les joueurs
+jeux pour mineurs des stratégies dites de « rétention » qui      de jeux vidéo qui sont mus par d’autres motivations.
+ont fait leurs preuves dans les jeux de hasard et d’argent.      Mais seuls ceux qui auront la capacité de comprendre
+Notamment le FoMO (pour Fear of Missing Out), ou                 ces enjeux et d’en estimer les risques sauront prendre
+peur de manquer des événements exceptionnels ; l’effet           du recul et s’en protéger. La question principale devient
+de rareté ; la motivation par l’incertitude (Motivating          alors celle de l’information à donner aux utilisateurs
+Uncertainty Effect) dont les fameuses lootboxes, des             pour leur permettre d’agir de manière éclairée, ou de se
+boites achetées par le joueur et qui peuvent contenir            faire aider.
+
+
+                                                                 * Cerulli-Harms, A. et al. (2020, juillet). Loot boxes in online games and
+                                                                 their effect on consumers, in particular young consumers.
+                                                                 Consulté le 25 septembre 2020 sur https://www.europarl.europa.eu/
+                                                                 RegData/etudes/STUD/2020/652727/IPOL_STU(2020)652727_EN.pdf
+
+
+
+
+                                                                                                                                          37
+         Santé mentale
+
+     #gamingdisorder                #dynamiquefamiliale
+                 #ohmonbeaumiroir
+
+
+
+
+38
+SANTÉ MENTALE
+                                         Comment dissocier addiction aux écrans et
+#gamingdisorder                          consommation excessive des écrans ?
+
+
+
+                                                                                                                       Cheffe de bureau
+                             Serge TISSERON                                                                             médico-social
+                             Psychiatre et président de l’association Trois, Six, Neuf, Douze                            (11-25 ans)
+
+
+
+
+    Il n’existe pas pour la communauté scientifique                         En effet, le jeu vidéo peut être tout autant une pratique
+    « d’addiction aux écrans ». En revanche, l’Organisation                 socialisante et créative que désocialisante et compulsive.
+    Mondiale de la Santé (OMS) reconnait depuis 2019                        Cette distinction permet d’opposer les pratiques
+    l’existence d’un gaming disorder* (traduit sur le site                  pathologiques qui appauvrissent la vie et les pratiques
+    francophone de l’OMS par « trouble du jeu vidéo »), intégré             passionnelles qui l’enrichissent, même si c’est aux dépens
+    dans la 11e version de la Classification internationale des             d’autres activités. Le jeu devient problématique lorsque
+    maladies (CIM, en anglais ICD). Il est défini comme un                  le joueur ne joue plus pour y trouver du plaisir, mais pour
+    comportement de jeu, numérique ou vidéo, donnant une                    essayer de ne pas penser à une situation qui lui semble, à
+    priorité croissante au jeu sur les autres centres d’intérêts,           tort ou à raison, insoluble. Il peut s’agir d’une situation de la
+    et la poursuite ou l’escalade de l’activité malgré la                   vie quotidienne (deuil, rupture amoureuse, harcèlement,
+    survenue de conséquences négatives. Pour que l’on puisse                séparation des parents…), d’un trouble mental au début
+    parler d’addiction, le trouble doit exister depuis plus de              (psychose…), mais il s’agit le plus souvent de l’angoisse
+    12 mois avec des conséquences importantes : le joueur                   de la crise d’adolescence. Le joueur arrête en général de
+    est incapable de se détacher de son ordinateur, appareil                jouer lorsqu’il en sort, sauf bien sûr s’il existe un trouble
+    mobile ou console de jeu, au point d’abandonner toute                   mental sous-jacent.
+    vie sociale et de mettre en danger sa santé, mentale et/ou
+                                                                            En pratique, trois questions simples permettent de
+    physique. Tous les autres centres d’intérêt sont délaissés,
+                                                                            différencier un joueur excessif dont il n’y a pas lieu de
+    y compris le sommeil et les repas. Il n’est pas rare qu’il
+                                                                            s’inquiéter et un joueur excessif problématique.
+    y ait une pathologie psychiatrique sous-jacente : on
+                                                                            1 Le fait de jouer seul. Un joueur seul dans un jeu en
+    parle de comorbidité. L’OMS précise que cette addiction
+                                                                            réseau est également seul dans la cour de récréation.
+    est comportementale, différente d’une addiction à un
+                                                                            1 L’existence d’activités de création à l’intérieur des
+    produit toxique, car il n’y existe ni syndrome de sevrage
+                                                                            espaces numériques. Un enfant qui fait de la photographie
+    physiologique, ni risque de rechute, les adolescents
+                                                                            dans certains jeux, ou qui crée des petites animations, est
+    joueurs excessifs devenant en règle générale des joueurs
+                                                                            forcément un enfant socialisé car même s’il fait cela seul,
+    modérés et normaux. Cette définition exclut donc les
+                                                                            il l’utilise pour se valoriser dans son réseau social.
+    enfants et les adultes scolarisés/socialisés.
+                                                                            1 Le refus de penser à son avenir professionnel.
+    Pourtant, cette décision reste contestée. Beaucoup
+    d’auteurs préfèrent parler de « jeu problématique »,                    Pour nous résumer, un enfant qui joue le soir avec ses
+    pour éviter la confusion avec l’addiction aux substances                camarades de classe qu’il retrouve la journée à l’école, et
+    toxiques. Retenons que l’existence d’un temps important                 qui n’exclut pas de faire son métier dans les professions
+    de jeu ne suffit pas à définir une « addiction » au sens                du jeu vidéo, ne doit pas inquiéter. En revanche, à l’autre
+    donné au mot par l’OMS. C’est pourquoi beaucoup de                      extrême, un enfant qui joue seul, n’a aucune activité de
+    chercheurs conseillent aujourd’hui de « contextualiser »                création dans les mondes numériques et préfère jouer
+    le temps de jeu selon deux critères : la socialisation et la            plutôt que penser à son avenir devrait mobiliser la mise
+    créativité.                                                             en place d’une consultation médico psychologique.
+
+
+    * ONU (2018, janvier). Trouble du jeu vidéo. Consulté le 19 septembre
+    2020 sur https://www.who.int/features/qa/gaming-disorder/fr
+
+
+                                                                                                                                            39
+SANTÉ MENTALE
+                                      Une étude récente tend à démontrer que
+#ohmonbeaumiroir                      l’utilisation d’Instagram par les adolescentes
+                                      a des effets néfastes sur leur moral.
+                                      Est-ce une réalité ?
+
+                                                                                                                      Animateur
+                                                                                                                      (11-25 ans)
+
+
+
+
+                           Nadège LARCHER
+                           Directrice pédagogique de MyTwiga
+                           et dirigeante d’APcomm - Apprendre à Communiquer
+
+
+
+
+   Certaines études récentes, notamment une                      permettent de définir ces modèles : les influenceurs, les
+   commanditée par la société Facebook elle-même                 humoristes ou les figures de mode qu’il suit lui permettent
+   (et qui a fuité grâce à Frances Haugen), indiquent            de se créer de nouveaux repères, d’élargir un horizon dans
+   effectivement que les images véhiculées sur les réseaux       lequel il se sent souvent à l’étroit. Très rapidement, l’ado
+   sociaux pourraient impacter négativement 25 à 40% des         sélectionne ses centres d’intérêts, investit la majeure
+   adolescents en termes d’estime de soi.                        partie de son temps d’écran sur ses passions. Si l’intimité
+                                                                 de sa vie numérique est respectée, les réseaux sociaux lui
+   Néanmoins, et sans minimiser ces impacts, il semble
+                                                                 permettent d’ailleurs de se chercher, de s’interroger et de
+   intéressant de replacer ces éléments dans le contexte de
+                                                                 rentrer en contact avec d’autres univers très différents du
+   l’adolescence d’une part et celui du fonctionnement de
+                                                                 sien, sans subir le jugement ou le contrôle immédiat de
+   ces réseaux d’autre part :
+                                                                 son environnement immédiat.
+   Tout d’abord, ces études ne fournissent aucune
+                                                                 Néanmoins, le problème majeur reste les bulles de filtre
+   information sur l’estime de soi générale de ces ados et
+                                                                 ou de filtrage*, qui influencent le choix des contenus qui
+   sur la relation qu’ils entretiennent avec l’image d’eux-
+                                                                 lui sont proposés, et risquent de l’enfermer dans une
+   mêmes en dehors des écrans. L’adolescence est une
+                                                                 personnalisation isolée et orientée. C’est le risque par
+   période où l’estime de soi est particulièrement fragile et
+                                                                 exemple avec la question de l’anorexie, où les jeunes
+   des phénomènes tels que la dysmorphophobie, à savoir
+                                                                 s’interrogeant à ce sujet se voient proposer de plus en plus
+   une préoccupation exagérée sur un aspect disgracieux de
+                                                                 de contenus en lien avec cette question. De même que des
+   son corps, sont fréquents. L’ado est alors particulièrement
+                                                                 efforts commencent à être faits dans les publicités pour
+   sensible à cet aspect et scanne les images véhiculées sur
+                                                                 présenter plus de diversité, les réseaux sociaux doivent
+   les réseaux sociaux avec ce prisme particulier.
+                                                                 être challengés et éventuellement contraints à offrir la
+   Car le véritable impact est le rôle que peuvent jouer les
+                                                                 plus grande variété possible à leurs usagers.
+   réseaux sociaux dans la quête identificatoire des ados :
+   à cette période de la vie si particulière où l’ado cherche
+   à qui il veut ressembler (sachant uniquement qu’il ne         * Concept développé par Eli Pariser, The Filter Bubble, What the
+   veut pas être comme ses parents), les réseaux sociaux lui     Internet Is Hiding from You, New York, Penguin Press, 2011
+
+
+
+
+ 40
+                                                                                                                SANTÉ MENTALE
+                         Marion HAZA-PERY,
+                         Psychologue clinicienne, chercheur                                                  #ohmonbeaumiroir
+
+
+
+
+A l’entrée dans l’adolescence, c’est le corps qui est au-        soumise à son propre regard et au regard des autres,
+devant de la scène. Face aux transformations hormonales          notamment des pairs du même âge. L’attente d’un retour
+et physiologiques, les adolescents se trouvent dans la           sur cette image et ce qu’elle montre est importante, pour
+nécessité de faire avec ce corps nouveau. Deux solutions         conforter des choix identitaires de l’adolescent ou l’inciter
+s’offrent alors : apprivoiser et s’approprier cette nouveauté    à d’autres tentatives de mises en scène de soi.
+par diverses stratégies identitaires ou lutter et refuser ces    Les filtres en vogue sur ces applications agissent pour
+transformations. Evidemment le numérique aujourd’hui             les adolescents comme une possibilité de maîtriser des
+vient s’intriquer à ces deux attitudes envers le corps,          changements corporels, de façon transitoire, sans même
+embellissement ou non acceptation.                               les inscrire directement sur la peau ou dans la chair. Le
+Nous parlons en psychologie d’« image du corps » pour            tatouage apposé par un filtre engage bien évidemment
+évoquer la relation affective que chacun entretient              moins que celui réalisé chez le tatoueur !
+envers son corps propre. L’image est sollicitée depuis la        Remarquons, toutefois, que les modifications à volonté
+petite enfance et la constitution de son identité à travers      des photographies de soi peuvent amener les adolescents
+le reflet dans le miroir. Mais ce reflet se dote aujourd’hui     à des idéaux inatteignables, dans une quête sans fin de
+d’une nouvelle version, celle du miroir des écrans et des        perfection (grain de peau, forme et proportion du visage,
+photographies numériques.                                        symétrie, etc.). C’est là que Instagram peut, chez des
+Les photographies de soi, à but de partages sur les réseaux      adolescents déjà fragilisés et complexés, amplifier une
+sociaux (Instagram, Snapchat, Tik Tok, etc.), participent        souffrance.
+à la construction adolescente : l’image de soi est ainsi
+
+
+
+                              Vincent BERNARD
+                              Coordinateur de Bornybuzz Numérique
+
+
+
+
+Une étude en elle-même ne démontre pas grand-                    Cette question appelle une remarque concernant la
+chose. C’est l’analyse comparative de plusieurs études           culture scientifique des professionnels de la jeunesse,
+qui permet d’apporter un niveau de preuve suffisant.             mais aussi celle des journalistes. Trop souvent, des
+A l’heure actuelle, en ce qui concerne les effets des            études mal comprises viennent alimenter la panique
+réseaux sociaux sur le bien-être ou l’image de soi, les          morale sur le numérique et biaiser les représentations des
+recherches apportent des résultats contradictoires, si           professionnels et des parents.
+bien qu’on ne peut pas conclure à des effets néfastes qui
+                                                                 Cependant, ce n’est pas parce qu’il n’y a pas de preuve
+seraient généralisés. La difficulté d’aboutir à ce consensus
+                                                                 qu’il n’y a pas de problème. Ces problèmes relèvent
+scientifique provient du fait que les méthodologies
+                                                                 bien souvent de problématiques individuelles que le
+utilisées ne sont pas homogènes, un peu comme si on
+                                                                 numérique vient révéler ou amplifier. Être mal dans
+essayait de comparer des chèvres avec des choux. De plus,
+                                                                 sa peau ou pas à l’aise dans ses baskets est courant à
+l’étude dont il est question ici est un travail interne à Meta
+                                                                 l’adolescence. Il faut alors distinguer ce qui relève de l’aide
+(le groupe qui possède désormais Facebook, Instagram,
+                                                                 que l’on peut apporter à un adolescent en particulier, des
+WhatsApp et Messenger) qui n’a été ni évalué par d’autres
+                                                                 projets de prévention ou d’éducation aux médias que l’on
+chercheurs ni publié dans une revue scientifique. On peut
+                                                                 peut mettre en place.
+donc considérer que d’un point de vue académique, elle
+n’existe pas.
+
+                                                                                                                                   41
+SANTÉ MENTALE
+                                      Quand les parents interpellent, ils peuvent
+#dynamiquefamiliale                   dire «Mon ado est addict aux écrans»
+                                      et après quelques échanges nous nous
+                                      apercevons que non, pas forcément.
+                                      Comment dédramatiser auprès des parents ?
+
+                                                                                                              Secrétaire-Accueil
+                                                                                                             dans le médico-social
+                                                                                                                  (11-25 ans)
+
+                               Vincent BERNARD
+                               Coordinateur de Bornybuzz Numérique
+
+
+
+
+      Les jeux vidéo sont des médias fascinants et complexes.       Ainsi, c’est parce qu’ils sont funs et qu’ils permettent de
+      Parce que l’on peut interagir avec eux, ils permettent une    répondre à des besoins fondamentaux que les jeux vidéo
+      immersion qui occupe simultanément le corps et l’esprit.      sont largement plébiscités par les adolescents. Parfois
+      Jouer c’est « faire comme si », c’est donc tout à fait        aussi, ils peuvent être utilisés pour ne pas penser à ses
+      normal d’être absorbé par son jeu. Cependant, si jouer        problèmes. Toute la difficulté est alors de faire la différence
+      est considéré comme acceptable pour les enfants, ça l’est     entre un adolescent qui joue beaucoup parce qu’il est
+      beaucoup moins pour les adolescents et les adultes. Pour      passionné et un adolescent qui joue trop parce qu’il ne
+      ces derniers le fait de jouer est connoté négativement.       va pas bien et qu’il se réfugie dans ses jeux. De nombreux
+      Pourtant, près d’un adulte sur deux joue aux jeux vidéo.      conflits familiaux proviennent de cette confusion.
+      Le jeu est une source de distraction et dans certaines
+                                                                    Mais dans une situation comme dans l’autre se centrer
+      études les jeux vidéo sont corrélés positivement avec le
+                                                                    sur le jeu est la mauvaise option. Dans le premier cas, il est
+      bien-être.
+                                                                    éventuellement possible d’inciter l’adolescent à diversifier
+      Si les jeux vidéo participent au bien-être, c’est parce
+                                                                    ses activités et centres d’intérêts. Dans le second, il faut
+      qu’ils répondent à certains besoins psychologiques :
+                                                                    l’aider à résoudre ce qui le préoccupe. Se transformer en
+      le besoin de relations sociales lorsque le joueur joue en
+                                                                    gardien de l’horloge ne résoudra pas la problématique. Il
+      ligne ou relate ses exploits auprès de ses amis ; le besoin
+                                                                    est aussi vivement conseillé de s’intéresser à ses pratiques
+      d’accomplissement lorsque le joueur gagne une partie ou
+                                                                    vidéoludiques en discutant, ou mieux encore en jouant
+      finit un niveau ; le besoin d’autonomie qui s’exprime dans
+                                                                    avec. Les adolescents adorent généralement partager leur
+      la liberté d’action et la découverte d’univers pixélisés.
+                                                                    expérience et faire découvrir leur univers ludique. Ils sont
+      Ces besoins psychologiques sont exacerbés à                   également demandeurs de l’avis des adultes, cela leur
+      l’adolescence. Le besoin de relations sociales et             permet de se confronter à la norme.
+      d’autonomie, parce que l’adolescent s’appuie sur
+      ses pairs pour s’individuer, c’est-à-dire se séparer
+      symboliquement d’avec ses parents et sa famille ; le
+      besoin d’accomplissement pour soutenir l’estime de soi
+      souvent fragile à cet âge.
+
+
+
+
+ 42
+                                                                                                                SANTÉ MENTALE
+
+                                                                                                           #dynamiquefamiliale
+
+
+
+
+                           Marion HAZA-PERY,
+                           Psychologue clinicienne, chercheur
+
+
+
+
+Il est très courant depuis la démocratisation du numérique        Aussi, avec les parents, il convient de placer la question
+et l’accès à beaucoup de ressources online que chacun             des usages des jeux vidéo dans un questionnement plus
+devienne médecin ou psychiatre et s’autodiagnostique.             global, en se défocalisant du seul jeu vidéo pour interroger
+Parler d’addiction (comme de bipolarité ou d’hyperactivité)       le fonctionnement familial : quelles sont les causes de
+est bien porter un diagnostic. Or, chaque diagnostic              conflits dans la famille, quelles sont les interactions entre
+nécessite un certain nombre de critères pour en valider           chaque membre de la famille ? Quels sont les règles et
+l’existence. Concernant l’addiction aux jeux vidéo, le            cadres pour d’autres activités hors numérique ? Alors,
+diagnostic est encore plus complexe car cette terminologie        souvent, nous nous rendons compte que le jeu vidéo
+n’est pas reconnue par tous les psychiatres.                      cristallise d’autres tensions ou problématiques familiales :
+                                                                  le problème à traiter n’est donc pas spécifiquement
+Si l’on se réfère à l’OMS, depuis 2019, est apparu le trouble
+                                                                  la pratique du jeu mais la dynamique familiale qui a
+du jeu vidéo (gaming disorder) qui nécessite pendant
+                                                                  pu amener l’adolescent à ce type d’usage excessif ou
+plus d’un an en résumé, une pratique problématique
+                                                                  problématique.
+(« comportement de jeu persistant ou récurrent »)
+parasitant la vie professionnelle ou scolaire, les relations      Parler du jeu vidéo en famille, remettre des règles
+familiales ou amicales, les projets, et rattachée à de la         concernant les usages, diversifier les jeux vidéo,
+souffrance. Plus précisément, doivent se repérer :                permettra d’aborder différemment et d’avoir moins
+1 «une altération du contrôle des jeux (par exemple,              d’angoisses concernant les pratiques de jeu vidéo des
+apparition, fréquence, intensité, durée, fin, contexte)           adolescents. Il est important de considérer le jeu vidéo
+1 accorder une priorité accrue au jeu dans la mesure où           comme une activité parmi d’autres, activité devant
+le jeu prime sur les autres intérêts de la vie et les activités   être pratiquée de façon équilibrée au regard des autres
+quotidiennes                                                      sphères de la vie de l’adolescent (vie scolaire, familiale,
+1 la poursuite ou l’escalade du jeu malgré l’occurrence           sociale, autres loisirs, etc.). Il ne faut pas négliger le côté
+de conséquences négatives.»                                       social du jeu vidéo aujourd’hui, beaucoup de parties se
+                                                                  faisant en ligne, avec d’autres joueurs avec lesquels il
+En réalité le diagnostic réel d’addiction aux jeux vidéo
+                                                                  est indispensable d’échanger ou collaborer pour avancer
+ne concerne, selon les addictologues eux-mêmes, qu’un
+                                                                  dans le jeu.
+pourcentage infime de joueurs.
+                                                                  Tous ces éléments permettent d’accompagner les parents
+                                                                  dans d’autres questionnements que celui de l’addiction
+                                                                  aux jeux vidéo.
+
+
+
+
+                                                                                                                                43
+44
+      Intimité
+
+#expérimentation                  #consentement
+                   #estimedesoi
+
+
+
+
+                                                  45
+INTIMITÉ                            Que faut-il comprendre des adolescent·e·s qui se
+                                    déclarent en couple sur les réseaux sociaux alors
+#expérimentation                    qu’ils n’ont jamais rencontré charnellement la
+                                    personne en question ?
+
+
+
+                                    Comment faire prendre conscience aux jeunes
+                                    des risques encourus dans une rencontre IRL
+                                    (In Real Life) ?                                                        Équipe médico-sociale
+                                                                                                                 ( 11-25 ans)
+
+
+                             François HERBULOT
+                             Ecoutant sur FIL SANTE JEUNES
+
+
+
+
+   Pour ces adolescents, être en couple se joue sur une             Quant aux réseaux sociaux, ils sont le lieu d’une
+   autre scène que celle du corps : la scène psychique. Être        expérimentation de soi qui peut différer de celle de la vie
+   en couple est alors une conviction, celle que, quelque           IRL – on y montre un soi valorisant, valorisable, valorisé. Ils
+   part, quelqu’un pense à moi, à qui je pense moi aussi.           agissent aussi socialement comme une sorte d’institution
+   L’autre occupe une place dans mon esprit, il me préoccupe        où les choses s’officialisent. S’y déclarer « en couple » est
+   et réciproquement. Cette présence psychique donne une            une sorte de rituel social, un moyen de faire reconnaître
+   assise pour tenir et se tenir face aux difficultés de la vie     par les pairs les changements qui comptent à nos yeux.
+   adolescente.                                                     Alors, comment faire prendre conscience des risques ?
+   Cette manière d’être en couple révèle aussi des                  En disant la vérité, tout simplement ! Les informer, tout
+   inquiétudes, fréquentes à l’adolescence, concernant la           en légitimant leurs ressentis, sans dramatiser les choses :
+   sexualité. Sans rencontre, pas de caresses, de baisers,          les mauvaises rencontres sont possibles hélas, mais elles
+   ou de rapports sexuels. En éloignant le corps réel, c’est        ne sont pas assurées heureusement.
+   la rencontre avec le désir, tantôt débordant, tantôt             D’ailleurs, sans doute sont-ils plus conscients des risques
+   effractant, que ces adolescent.es ajournent.                     qu’on ne l’imagine. En les rappelant, on ouvre un espace
+   Ils s’épargnent également le risque d’une déception,             de parole possible dont les jeunes sauront se saisir s’ils se
+   celle de trouver le réel bien en-deçà de l’idéal. Ne pas         sentent en danger. C’est d’ailleurs ce qu’ils nous montrent
+   rencontrer l’autre, c’est se donner la possibilité de le rêver   en sollicitant Fil Santé Jeunes où, avec eux, on peut
+   davantage.                                                       préparer une rencontre potentielle IRL.
+
+
+
+
+ 46
+                          Vincent BERNARD                                                                           INTIMITÉ
+                          Coordinateur de Bornybuzz Numérique
+                                                                                                          #expérimentation
+
+
+
+A l’adolescence, les réseaux sociaux sont des espaces            D’une certaine manière, ce rituel amoureux montre que
+d’expérimentation de soi et des autres. Se déclarer en           les adolescents sont conscients des risques inhérents
+couple avec une personne que l’on n’a jamais rencontrée,         aux relations amoureuses (au moins celui d’avoir le cœur
+peut être compris comme une tentative de concilier la            brisé), même si cela ne les prémunit pas de l’idéalisation
+découverte des premiers émois amoureux avec l’angoisse           du ou de la partenaire. Contrairement à ce que les adultes
+qui s’y rapporte. Autrement dit, cela peut être un moyen         peuvent penser, les adolescents connaissent la part de
+d’expérimenter le sentiment amoureux en limitant le              fake relative aux relations en ligne et cette manière de
+risque de la déception, ou au moins s’aménager un temps          procéder constitue finalement une sorte de protection.
+de latence avant d’envisager une rencontre en chair et en
+                                                                 Cependant, il y a des situations où l’idéalisation
+os.
+                                                                 l’emporte. Dans ce cas la relation n’est généralement
+Afficher cette relation aux yeux des autres en se déclarant
+                                                                 pas symétrique et l’un des deux protagonistes cherche à
+en couple participe d’un double mouvement ; c’est
+                                                                 abuser de la naïveté ou la vulnérabilité de l’autre. Dans
+d’abord une officialisation de la relation, cela signifie que
+                                                                 ce contexte, le meilleur moyen pour casser l’idéalisation
+la personne n’est pas disponible pour un ou une autre, ce
+                                                                 est de ne jamais rencontrer quelqu’un que l’on n’a pas
+qui permet de rassurer le prétendant ou la prétendante ;
+                                                                 préalablement vu en « visio ». Le plus sûr étant tout de
+mais c’est aussi un test, c’est-à-dire une manière de
+                                                                 même que le premier rendez-vous se déroule dans un lieu
+recueillir des avis ou au moins des réactions qui vont
+                                                                 public.
+valider ou invalider la relation, parce qu’à l’adolescence
+l’avis des autres compte énormément.
+
+                                                                                                                    INTIMITÉ
+
+                            Thomas ROHMER
+                            Fondateur et Directeur de l’OPEN
+                            (Observatoire de la parentalité & de l’éducation numérique)
+
+
+
+Désormais les univers numériques constituent des                 couple» sur un réseau serait-il moins engageant que de se
+espaces de socialisation et de construction identitaire          le dire dans le «blanc des yeux». Cette opposition entre
+pour la plupart des adolescents. On teste la réaction des        monde réel et monde virtuel demeure souvent au cœur
+autres, on joue avec des représentations de son corps            des incompréhensions entre adultes et adolescents. A
+facilitées par l’utilisation de filtres numériques, qui sont     l’heure où de nombreux adultes eux-mêmes utilisent ces
+autant d’étapes nécessaires et utiles à la construction          réseaux pour y faire des rencontres réelles ou entretenir
+adolescente.                                                     des relations extra-conjugales en se cachant derrière des
+C’est également une période où l’on se questionne                pseudonymes, s’afficher en couple sur une plateforme
+beaucoup sur sa sexualité et sur sa capacité à plaire et à       numérique demeure un acte engageant qui doit être pris
+exister dans le regard de l’autre. La distanciation qu’offrent   au sérieux.
+les écrans permet à de nombreux jeunes d’entreprendre            Le passage des univers numériques à la rencontre
+des rapprochements en limitant la prise de risque de             physique est une continuité logique et quand on y pense,
+la rencontre réelle et les éventuelles déceptions qui en         mûrement réfléchie. Plutôt que de l’interdire, les adultes
+découlent.                                                       doivent plutôt contextualiser cette rencontre en termes
+La richesse et la diversité des relations qui se nouent sur      d’enjeux sécuritaires et de prudence en incitant les jeunes
+Snapchat, Instagram ou TikTok déstabilisent de nombreux          qui souhaitent franchir cette étape à privilégier des lieux
+adultes. Pour autant, ces stratégies de séduction                publics, s’assurer d’être joignables et de préférence ne
+numériques obéissent à des processus plus réfléchis              pas s’y rendre seuls.
+qu’il n’y paraît. Pour quelle raison afficher un statut «en
+
+                                                                                                                           47
+INTIMITÉ
+                                     Comment et vers qui accompagner un jeune
+#consentement                        ou une famille en cas de diffusion d’une image
+                                     de NUDE ?
+
+
+
+                            Thomas ROHMER                                                                   Service Éducatif
+                            Fondateur et Directeur de l’OPEN                                             Protection de l’enfance
+                            (Observatoire de la parentalité & de l’éducation numérique)                        (0-21 ans)
+
+
+
+
+      La pratique de l’envoi des nudes, qui consiste à adresser    garçons en reçoivent plus. Une iniquité existe cependant
+      à quelqu’un des photos ou des vidéos à caractère             dans les conséquences que peuvent engendrer ces
+      sexuel, est une pratique qui tend à se généraliser et à se   conduites. On peut en effet déplorer que de trop
+      banaliser.                                                   nombreuses jeunes filles soient victimes de situation de
+      Cette pratique parfois encore appelée par certains           harcèlement ou de revenge porn lorsque ces contenus
+      adultes sexting (contraction du mot sexe et texto) a         échappent, quelle qu’en soit la motivation.
+      été grandement popularisée et facilitée par l’arrivée du     Face à ces comportements, le piège dans lequel les
+      smartphone, outil numérique multimédia par excellence.       adultes tombent souvent consiste à moraliser ou juger
+      Derrière ces termes se cache pourtant une réalité très       cette pratique, ce qui occasionne souvent blocage et
+      éclectique en termes de pratiques et de contenus.            impossibilité de libérer la parole. Même si ces conduites
+      Certaines études menées dans différents pays dont            peuvent déranger, il est essentiel d’accompagner les
+      la Suisse ont montré que la réalité de ces nudes ne          victimes lorsque les situations dérapent pour leur
+      correspondait pas toujours à la représentation que les       permettre d’accepter leur statut de victime. D’un point de
+      adultes pouvaient en avoir. En effet, les pratiques et       vue préventif, rappeler les enjeux liés au consentement et
+      contenus sont très divers : simples photos érotiques ou      sensibiliser les jeunes aux risques de voir circuler un jour
+      photos/vidéos beaucoup plus crues, …                         ces images qui peuvent leur échapper demeure la clé.
+      Ces études mettent également en avant que ces pratiques      Tous les adultes sont-ils capables de le faire sans moraliser
+      concernent autant les filles que les garçons même si les     les pratiques, tel est l’enjeu.
+
+
+
+
+ 48
+                        Guillaume DORAI
+                                                                                                               INTIMITÉ
+                        Fondateur et intervenant de LOG.in Prévention
+                                                                                                        #consentement
+
+
+Savoir que son intimité a été dévoilée sur Internet est un   pas forcément quelqu’un de sa famille. Rappelons que
+événement traumatisant dans la vie d’un adolescent en        toutes les plaintes doivent être aujourd’hui prises en
+plein changement psychique et physique.                      considération. Il est aussi vivement conseillé aux jeunes,
+Nous constatons chaque jour la pauvreté de l’éducation       dès lors qu’ils se sentent victimes d’une quelconque
+à la sexualité et à la vie affective transmise par l’école   forme d’agression sur Internet, de garder un maximum
+et certaines familles. Il est à noter que si les questions   de preuves sous forme de capture d’écran avec les dates
+et les notions d’intimité, de sexualité ont été abordées     et heures. Il est très essentiel de dire aux jeunes d’agir
+dès très jeune au sein du foyer, les enfants auront plus     extrêmement rapidement sur ce genre d’affaire car plus
+de facilité à se confier lors de la diffusion de photos/     le temps passe plus les photos/vidéos ont des chances
+vidéos sur Internet et les réseaux sociaux. Les enfants      d’être dévoilées à des personnes non concernées, qui
+victimes d’agression sexuelle numérique se sentent, en       logiquement devraient bloquer et signaler ce contenu,
+règle générale, coupables et honteux. Il est important       mais qui parfois préfèrent partager ces informations
+de leur rappeler que le statut de victime ne doit pas être   empêchant dès lors la suppression définitive de ce
+relié à une quelconque forme de culpabilité. C’est aux       contenu. Des associations d’aide aux victimes comme
+agresseurs de se sentir coupables et pas aux victimes ;      E-enfance (3018) sont aujourd’hui en capacité d’écouter
+la peur doit changer de camp. L’enfant va devoir parler      et d’accompagner les jeunes dans les dépôts de plaintes.
+pour demander réparation et donc porter plainte aux          Il faut donc sensibiliser les jeunes et les encadrants
+autorités compétentes. Afin de pouvoir déposer cette         sur l’existence de ces numéros en précisant qu’ils sont
+plainte, il doit être accompagné d’un majeur qui n’est       anonymes et gratuits.
+
+
+
+
+                      Marion HAZA-PERY,
+                      Psychologue clinicienne, chercheur
+
+
+
+
+Les adolescents de notre siècle jouent avec les images et    un soutien pour accompagner la restauration de leur
+peuvent jouer avec des images de corps et les dénuder        image et leur place dans le lien aux autres. Ces images
+ou les transformer ; ces exercices de transformation         dénudées (ou nudes) doivent nécessairement alerter tout
+d’images n’impliquent pas directement les corps mais         adulte, afin de permettre de saisir quelle est leur nature
+peuvent toutefois gêner ou rendre vulnérables les            et comment l’adolescent y fait face. Ces images de corps
+personnes concernées si ces images sont diffusées au         nus et sexualisés sont fréquemment retrouvées chez
+grand public dans l’espace numérique. Mais le caractère      les adolescents ou adolescentes en grande souffrance,
+« indécidable » de l’image (l’image n’est pas d’origine      comme des symptômes de leur mal-être, de la négation
+mais transformée) peut ici aider l’individu à restaurer sa   de leur corps et du non-respect d’eux-mêmes. Aussi, le
+dignité.                                                     rôle des adultes est bien de signaler leurs inquiétudes
+D’autre part, certains adolescents vont réaliser eux-        quant aux usages problématiques d’images de sexualité.
+mêmes des images photographiques ou vidéos dénudés.          L’adolescent pourra alors être accompagné dans ces
+Ici, l’adolescent est engagé corporellement : la scène a     questions complexes et souvent taboues dans les familles
+bien existé. Ces images sont souvent partagées avec une      par des adultes référents extérieurs. Il faut également se
+personne proche (relation amoureuse) afin de tester          référer à la loi et aux autorités judiciaires qui pourront
+le lien et la confiance associés. Il arrive que ces images   sanctionner la diffusion de nudes. Le problème n’est donc
+sortent malheureusement du cercle privé pour atterrir        pas la réalisation de ces photographies mais bien leur
+sur la toile, comme dans des cas de harcèlement ou de        diffusion non consentie.
+revenge porn. Les jeunes alors pris en défaut nécessitent
+
+                                                                                                                          49
+INTIMITÉ
+                                            On entend parfois parler de la notion d’extimité,
+#estimedesoi                                faut-il comprendre que les adolescents ne font
+                                            plus de différence entre la sphère intime et la
+                                            sphère publique?
+
+                                                                                                                          Animateur
+                                                                                                                          (11-25 ans)
+
+                                    Nadège LARCHER
+                                    Directrice pédagogique de MyTwiga
+                                    et dirigeante d’APcomm - Apprendre à Communiquer
+
+
+
+
+      L’extimité est le fait de s’exposer et de partager                        Le problème n’est pas tant l’extimité que le manque de
+      certains éléments de son intimité pour mieux définir                      connaissance et surtout de contrôle de ses prérequis. En
+      sa propre personnalité et surtout renforcer son estime                    effet, quand il s’expose sur les réseaux, l’ado commet sans
+      de soi-même. Comme le rappelle M. Serge Tisseron,                         en avoir vraiment conscience deux erreurs majeures :
+      psychiatre et docteur en psychologie, l’extimité n’est                    1 Il part du principe que ses followers partagent le
+      pas un processus récent, ni problématique en soi. Il                      même système de valeurs que lui et qu’ils sont présents
+      n’est pas d’ailleurs l’apanage de l’adolescence. Sous la                  dans une position d’accueil bienveillante, ce qui est le cas
+      forme des témoignages, des reportages, des récits auto-                   de son entourage proche. Mais quand l’ado ne contrôle
+      biographiques, des blogs, les adultes participent eux aussi               pas ou plus la provenance de ses abonnés, le risque
+      à ce processus1.                                                          devient réel. Quand ses posts sont soumis au couperet des
+                                                                                commentaires, notamment ceux des trolls ou des haters,
+      Le numérique a diversifié les possibilités d’extimité pour
+                                                                                l’extimité devient bien sûr une exécution publique. C’est
+      les ados (blogs, réseaux sociaux, chaine YouTube, etc..).
+                                                                                pourquoi les évolutions récentes d’un grand nombre de
+      Les réseaux sociaux deviennent alors un vecteur de leur
+                                                                                réseaux sociaux, offrent de supprimer la possibilité des
+      recherche dans la construction de l’estime de soi. Grâce
+                                                                                commentaires ou de pouvoir bloquer certains mot-clés.
+      à leurs comptes, certains ados cherchent à contrôler leur
+                                                                                Encore faut-il être au courant de ces fonctionnalités et
+      image, à se montrer tels qu’ils aimeraient être. Ils peuvent
+                                                                                savoir comment les mettre en place.
+      alors partager leurs plus belles réalisations, communiquer
+                                                                                1 La 2e erreur tient au caractère dynamique de l’estime
+      sur leurs résultats sportifs ou leurs évènements « hors
+                                                                                de soi : pour bien se construire, l’estime de soi se doit
+      de l’ordinaire » d’une vie qui leur semble souvent bien
+                                                                                d’être multimodale (dans différents champs de la vie
+      routinière. Cette exposition, quand elle est contrôlée (et
+                                                                                de l’individu) et évolutive (avec la possibilité d’oublier,
+      les ados sont passés maîtres dans l’art des filtres et des
+                                                                                de se construire une mémoire sélective et positive). En
+      montages), fait partie de ce besoin « d’expression du soi
+                                                                                s’exposant sur les réseaux sociaux, et en y plaçant toutes
+      intime (..) au service de la création d’une intimité plus
+                                                                                ses attentes, le jeune prend donc ce double risque : que
+      riche2».
+                                                                                les likes et commentaires deviennent l’unique source de
+                                                                                sa vision de lui-même et surtout qu’il n’y ait pas d’oubli
+                                                                                possible face à ses erreurs de jugement ou de goût. D’où
+      1. L’existence du podcast EXTIMITE est un exemple parmi d’autres.
+      2. Serge Tisseron, L’intimité surexposée, 2001, Ramsay, (rééd Hachette,   les demandes actuelles des acteurs du numérique au droit
+      2003).                                                                    à un « oubli digital » ou même à une « virginité digitale ».
+
+
+
+
+ 50
+                                                                                                                           INTIMITÉ
+
+                                                                                                                      #estimedesoi
+
+
+
+
+                                   Serge TISSERON
+                                   Psychiatre et président de l’association Trois, Six, Neuf, Douze
+
+
+
+
+Le mot « extimité » est présent dans des romans du XXe                 Ce désir a toujours existé, mais le développement
+siècle et il a été commenté par Jacques Lacan en 1969                  d’Internet lui a donné une ampleur inégalée. Chacun
+dans son séminaire XVI. Pour lui, l’extimité concerne                  peut aujourd’hui prendre virtuellement le monde entier à
+le fait que rien ne soit jamais ni totalement intime, ni               témoin. Y a-t-il confusion pour autant ? Non, sauf défaut
+totalement public : tout dépend du point de vue que l’on               d’information ou trouble mental sous-jacent. D’ailleurs,
+choisit d’adopter.                                                     sur Internet, l’extimité est inséparable d’une mise en
+                                                                       scène. Ce n’est jamais son intimité que l’on expose, mais
+En septembre 2001, j’ai proposé* une autre définition
+                                                                       une intimité apprêtée selon des codes que les adolescents
+du mot, non plus topique (relative à des espaces),
+                                                                       découvrent très vite : une façon de sourire, d’adopter une
+mais dynamique. L’extimité serait le processus par
+                                                                       certaine posture plutôt qu’une autre…
+lequel chacun utilise les moyens d’expression et de
+communications qui lui sont disponibles, afin de                       La nouveauté est que chacun peut décider de placer le
+donner une dimension partagée à des éléments de son                    curseur là où il le souhaite. Avec Internet, ce n’est pas
+existence jusque-là gardés dans l’intimité. Ces éléments               le législateur qui décide de ce qui est intime et de ce qui
+peuvent concerner les pensées, les émotions ou les                     est public, comme dans l’espace social physique, mais
+comportements.                                                         chacun. Mais pour s’exercer sans risque, ce droit nécessite
+1 Ce désir est distinct de l’exhibitionnisme.                          d’être informé des pièges d’Internet ! C’est pourquoi il est
+L’exhibitionniste est en effet un cabotin répétitif qui                essentiel d’expliquer aux enfants les 3 règles de base de
+expose compulsivement ce dont il sait par expérience que               son utilisation :
+cela lui attirera l’intérêt, voire la fascination de son public.       1 tout ce qu’on y met peut y rester éternellement,
+Le désir d’extimité implique au contraire la capacité                  1 il ne faut jamais croire a priori ce que l’on y trouve
+d’affronter le risque d’être rejeté.                                   1 et, bien sûr, tout ce qu’on y met peut tomber dans
+1 Il est également différent du désir de partage qui                   le domaine public… et être éventuellement utilisé contre
+suppose une réciprocité : elle n’y est pas nécessaire.                 nous.
+1 Enfin, ce désir est complémentaire du désir d’intimité :             Ils doivent être informés que les règles du respect valables
+seul, celui-ci conduirait à toujours plus de repli ; seul, le          dans le monde physique le sont aussi sur Internet, ainsi
+désir d’extimité conduirait à la surexposition de soi.                 que le droit à l’intimité et le droit à l’image, et que le
+Son résultat attendu est un accroissement de l’estime de               harcèlement y est puni de la même façon.
+soi et un élargissement de son réseau relationnel.
+
+
+* Tisseron, S. (2001). L’intimité surexposée, Paris, Hachette, 2002.
+
+
+
+
+                                                                                                                                      51
+                      Coordination éditoriale       Les jeunes et le numérique
+                                Matthieu Aguesse    Des clefs pour les accompagner
+                     Coordinateur départemental
+             du réseau des Promeneurs du Net 79
+                 L’Agora - Maison des Adolescents   Pour aller plus loin
+                                        Emilie Ly   L’essentiel sur... les écrans
+          Chargée de projets et de documentation    Sélection d’outils pédagogiques, de sites, d’affiches, de vidéos
+                                                    0 irepsna.org/lessentiel-sur-01-lusage-des-ecrans-en-famille
+Ireps Nouvelle-Aquitaine, antenne des Deux-Sèvres
+            Coordinatrice du Réseau Addictions 79   Pour approfondir, consultez notre bibliographie destinée aux
+                                                    professionnels :
+                                 Contributions      0 irepsna.org/formations/nos-enfants-nos-ados-les-ecrans-
+                                                    et-nous
+                                Vincent Bernard
+                                       Anna Bisch
+                                                    Structures ressources en addictologie des Deux-Sèvres
+                                 Guillaume Dorai    0 https://irepsna.org/wp-content/uploads/2022/03/Struc-
+                               Arnaud Gheysens      tures-ressources-en-addictologie-79-mars-2022.pdf
+                               François Herbulot
+                                    Celia Hodent
+                                 Nadège Larcher
+                                Thomas Rohmer
+                                  Serge Tisseron
+                               Marion Haza-Pery     Cette publication a été réalisée par
+
+                                    Illustration    L’Agora·MDA                         Ireps Nouvelle-Aquitaine
+                                                    5 avenue de Limoges                 Antenne des Deux-Sèvres
+                                        Naïs Coq
+                                                    79 000 Niort                        5 avenue de Limoges
+                                                    Tél. 05 49 28 41 55                 79 000 Niort
+                 Graphisme et mise en page          agora@deux-sevres.fr                Tél. 05 49 28 30 25
+      Isabelle Demeurie, Ireps Nouvelle-Aquitaine                                       antenne79@irepsna.org
+
+
+                    Crédits visuels et photos                                                    Ireps
+                                          Pixabay                                        Nouvelle-Aquitaine
+                                                                                          Vers la santé pour tous
+                           Studiogstock / Freepik
+                                    Shutterstock
+
+
+
+
+                              Décembre 2021         Avec le soutien de
+

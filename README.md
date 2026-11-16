@@ -1,49 +1,74 @@
-# Happy Click — préversion Astro
+# Happy Click — préversion pédagogique Astro
 
-Reconstruction statique des pages publiques https://happy-click.fr/, /kit et /guides. Textes et direction artistique conservés : ciel orageux/bleu, cœur-curseur, ClickChesse, Josefin Sans et Ubuntu. Les 8 PDF et toutes les ressources chargées sont locaux.
+Nouvelle interface papier ivoire, encre marine, corail et turquoise, avec le cœur-curseur Happy Click et les polices locales ClickChesse/Josefin/Ubuntu. Treize pages statiques, quatre parcours de quiz (trois thèmes et l’ensemble), activités locales et documents accessibles sur le même site. L’ancienne interface est récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
-## Reprendre
+**Ne pas pousser avant le retour final du superviseur : le webhook de `feat/astro-preview` déclenche le déploiement.** Aucun changement d’infrastructure/DNS ni publication par cet exécutant.
+
+## Reprendre et vérifier
 
 ```bash
 cd /root/happyclick
 git switch feat/astro-preview
 npm ci
 npm run build
+npm test
+ss -ltnp 'sport = :4321'
+# Seulement si aucun serveur n’écoute déjà :
 npm run preview
-```
-
-Le serveur écoute sur `0.0.0.0:4321` ; ouvrir `http://localhost:4321` (ou `http://148.113.237.197:4321` depuis le réseau si accessible). Routes `/`, `/kit`, `/kit/`, `/guides`, `/guides/` (`trailingSlash: 'ignore'`). Vérifier si le port 4321 est déjà occupé avant de relancer le serveur. Pour travailler en mode rechargement : `npm run dev`.
-
-Vérification avec le serveur lancé :
-
-```bash
+# Dans un autre terminal, avec le serveur lancé :
 npm run verify -- --base-url http://127.0.0.1:4321
 ```
 
-Node >=22.12 pour installer ; les commandes npm utilisent le runtime Node 22.23.4 local verrouillé, requis par Astro 7.4.12. Python 3 et `pdfinfo` (poppler-utils) pour les vérifications. Le build seul requiert Node/npm. Dépendances verrouillées par package-lock.json.
+Serveur local : `0.0.0.0:4321`, soit `http://localhost:4321`. Depuis le réseau, `http://148.113.237.197:4321` si accessible. `npm run dev` sert à travailler avec rechargement. Les routes acceptent les formes avec et sans slash (`trailingSlash: ignore`). Ne pas démarrer un second serveur sur un autre port si 4321 est occupé.
 
-## Périmètre
+Node >=22.12 pour l’installation ; les scripts npm utilisent Node 22.23.4 local, verrouillé avec Astro 7.4.12. Python 3 et `pdfinfo` pour verify. Les tests Node utilisent LinkeDOM, sans navigateur. Pour reproduire les extractions seulement : `pdftotext`, `pdftoppm`, `tesseract` et les langues fra/eng, puis `OMP_THREAD_LIMIT=1 python3 scripts/extract-pdfs.py`.
 
-- HTML Astro statique, aucun JavaScript côté client, formulaire, analytics ou envoi.
-- `noindex, nofollow` sur les trois pages et `robots.txt` avec `Disallow: /`.
-- Trois liens internes et deux liens externes GATE conservés.
-- Liens ouvrir/télécharger et repli pour les appareils sans aperçu PDF intégré.
-- Header dans le flux et navigation repliable sur petits écrans, largeur des PDF bornée, animation désactivée si réduction des mouvements demandée.
-- Site original inchangé. La nouvelle préversion est raccordée à Coolify par le superviseur ; aucun changement d’infrastructure effectué par cet exécutant.
+## Parcours disponibles
 
-## Traçabilité
+| Route | Contenu |
+|---|---|
+| `/` | Accueil, thèmes, parcours enfants/familles/animateurs |
+| `/quiz` | Choix des thèmes et du parcours complet |
+| `/quiz/comportements` | 10 questions |
+| `/quiz/sante` | 8 questions |
+| `/quiz/ecologie` | 11 questions |
+| `/quiz/tout` | Les 29 cartes, 116 propositions |
+| `/mes-usages` | 11 questions, restitution descriptive sans diagnostic |
+| `/kit` | Textes d’origine et 6 PDF ; accès aux activités |
+| `/kit/reflexion` | 14 questions enseignants, notes temporaires |
+| `/kit/roles/addiction` | Écrans et équilibre : 6 rôles, 4 scènes |
+| `/kit/roles/cyberharcelement` | 6 rôles, 4 scènes |
+| `/kit/roles/desinformation` | 6 rôles, 4 scènes |
+| `/guides` | Étude parents (9 pages), guide jeunes (52 pages), résumés datés et crédits |
 
-- `source-snapshot/` : HTML/CSS originaux, jamais servis ; ils contiennent les commentaires et la référence de script cassée du site source comme preuve. Le script n’est pas repris dans la préversion.
-- `source-snapshot/assets.json` : URL, taille et SHA-256 des ressources téléchargées. La feuille locale `public/style.css` est adaptée ; les autres fichiers restent identiques octet pour octet.
-- `scripts/collect-assets.py` : collecte via curl ; la feuille originale est conservée dans le snapshot, sans écraser la feuille adaptée.
-- `tasks/todo.md`, `tasks/verification.md` : suivi et preuves reproductibles.
-- `.opencode/codebase_map.md` : cartographie pour reprise.
+Les quiz comportent choix multiples, validation, progression, retour, explications, pistes de discussion, nuances, références recto/verso, bilan et rejouer. Sans JavaScript, les cartes et leurs corrigés restent lisibles. Les activités gardent l’esprit de débat ; aucun classement ni barème de diagnostic.
 
-La validation responsive automatisée est une analyse des règles et dimensions CSS, pas une mesure par navigateur. OpenBot a effectué la revue navigateur : accueil desktop très fidèle ; accueil et kit mobile sans débordement de navigation ni de titres ; guides desktop avec PDF visibles et contenu correct. Il a aussi relancé build et verify avec succès.
+Les 8 PDF d’origine sont inchangés. Les liens ouvrir/télécharger sont toujours visibles ; les aperçus natifs s’ouvrent dans un volet. Les deux liens externes GATE sont conservés au pied de page et tous les textes de présentation d’origine sont présents, parfois dans un volet explicitement titré.
 
-## Infrastructure de la nouvelle préversion
+## Confidentialité et accessibilité
 
-Informations transmises par OpenBot (déploiement en cours sous sa supervision, disponibilité publique et HTTPS non encore confirmés) :
+- `noindex, nofollow` sur les 13 pages, `robots.txt` avec `Disallow: /`.
+- JavaScript ciblé sur les quiz et questionnaires seulement, modules locaux cacheables. Aucun compte, backend, analytics, appel réseau applicatif ni API de stockage.
+- Les choix et notes vivent uniquement dans la page ; remise à zéro et nettoyage à sa sortie. Aucun prénom ou renseignement d’identification demandé, aucun envoi de formulaire.
+- Navigation clavier, contrôles natifs, labels/fieldset, erreurs annoncées, focus après changement d’étape, reduced-motion, mise en page responsive et titres longs pouvant revenir à la ligne.
+- Statistiques attribuées et datées de 2021. Les formulations ambiguës ou non étayées des cartes sont signalées ; elles ne sont pas élevées au rang de faits universels ou de conseils médicaux/juridiques actuels.
+
+## Preuves et limites
+
+- `tasks/pdf-analysis.md` : analyse intégrale des 8 PDF, 156 pages, publics, enjeux, pédagogie, sources et limites.
+- `tasks/quiz-source-map.md` : correspondance des 29 questions et corrigés, pages et quadrants.
+- `tasks/pdf-text/` : textes complets, OCR et inventaire par page versionnés (~412 Ko).
+- `tasks/pdf-images/` : 16 cartes rendues individuellement et autres pages graphiques, disponibles localement pour OpenBot ; ~12 Mo ignorés par Git et reproductibles.
+- `tasks/verification.md` : rapport généré par verify (contenus, 8 empreintes PDF, noindex, liens/ancres et tous les assets HTTP).
+- `tasks/browser-review.md` : périmètre exact de la revue rapportée par OpenBot, y compris les points restant à vérifier.
+- `source-snapshot/` : HTML/CSS originaux non servis ; `assets.json` contient les 18 ressources et leurs SHA-256. Seule la feuille CSS originale est adaptée ; les autres ressources originales restent identiques.
+- `tasks/todo.md`, `tasks/lessons.md`, `.opencode/codebase_map.md` : suivi et reprise.
+
+Build : 13 pages. Tests : 10/10. Verify HTTP : 50 URLs, 276 références d’ancres/pages PDF, 26 blocs source et toutes les questions contrôlés. Ces vérifications ne sont pas une mesure visuelle. Aucun navigateur lancé par l’exécutant ; approbation finale en attente du superviseur.
+
+## Infrastructure transmise par OpenBot
+
+Configuration précédemment annoncée par OpenBot ; disponibilité publique/HTTPS non confirmées par l’exécutant :
 
 | Paramètre | Valeur |
 |---|---|
@@ -54,6 +79,6 @@ Informations transmises par OpenBot (déploiement en cours sous sa supervision, 
 | Build | Nixpacks : `npm ci` puis `npm run build` |
 | Service | Statique, répertoire `/dist`, port `80` |
 | Domaine initial | `happyclick.danhabib.dev` : NXDOMAIN constaté par OpenBot |
-| Domaine alternatif ajouté | `happyclick.app.danhabib.dev` : résout vers `72.61.167.104` selon OpenBot |
+| Domaine alternatif | `happyclick.app.danhabib.dev` : résolution 72.61.167.104 rapportée par OpenBot |
 
-Aucun DNS modifié. Le domaine alternatif utilise la résolution existante ; cela ne prouve pas que le site ou HTTPS soit opérationnel. Le superviseur suit le déploiement et vérifiera l’accès et le certificat. Les pushes sur la branche raccordée peuvent déclencher le webhook Coolify ; ne pas lancer de déploiement supplémentaire ni modifier l’infrastructure sans instruction.
+Le superviseur gère l’infrastructure. Une résolution DNS ne démontre pas la disponibilité du site ou du certificat. Aucun DNS ni site original modifié.

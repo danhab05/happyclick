@@ -1,0 +1,86 @@
+[
+  {
+    "id": "enseignant-1",
+    "section": "I. Numérisation de l’environnement scolaire et social",
+    "question": "Comment percevez-vous l’évolution de la relation au numérique chez les élèves ces dernières années ? Qu’est-ce qui vous semble avoir le plus changé (usages, posture, autonomie, dépendance..) ?",
+    "page": 1
+  },
+  {
+    "id": "enseignant-2",
+    "section": "I. Numérisation de l’environnement scolaire et social",
+    "question": "Pensez-vous que les usages numériques actuels renforcent ou affaiblissent les apprentissages scolaires ? N’hésitez pas à apporter des observations concrètes ou des exemples vécus.",
+    "page": 1
+  },
+  {
+    "id": "enseignant-3",
+    "section": "I. Numérisation de l’environnement scolaire et social",
+    "question": "À quels moments ou dans quelles situations observez-vous le plus clairement les effets délétères d’un usage numérique non régulé ? (Concentration, langage, gestion du temps, comportements, relations entre pairs…)",
+    "page": 1
+  },
+  {
+    "id": "enseignant-4",
+    "section": "II. Nature des problématiques rencontrées",
+    "question": "Constatez-vous des inégalités face au numérique dans votre établissement ou chez vos élèves ? (Accès, compétence, encadrement parental, compréhension critique…)",
+    "page": 2
+  },
+  {
+    "id": "enseignant-5",
+    "section": "II. Nature des problématiques rencontrées",
+    "question": "Selon vous, quels enjeux de santé mentale ou de développement personnel sont aujourd’hui sous-estimés dans le débat autour du numérique ?",
+    "page": 2
+  },
+  {
+    "id": "enseignant-6",
+    "section": "III. Rôle des acteurs éducatifs",
+    "question": "Quelle place le numérique devrait-il occuper dans les apprentissages ? Et quelle est selon vous la place qu’il occupe réellement aujourd’hui ?",
+    "page": 2
+  },
+  {
+    "id": "enseignant-7",
+    "section": "III. Rôle des acteurs éducatifs",
+    "question": "Quelles limites ou contradictions percevez-vous dans les discours institutionnels sur le “bon usage du numérique” ? (Entre injonctions à la maîtrise du numérique et les réalités du terrain)",
+    "page": 2
+  },
+  {
+    "id": "enseignant-8",
+    "section": "III. Rôle des acteurs éducatifs",
+    "question": "Quel rôle attendez-vous des familles dans ce travail éducatif ? Avez-vous l’impression qu’elles sont suffisamment formées ou conscientes des enjeux ?",
+    "page": 2
+  },
+  {
+    "id": "enseignant-9",
+    "section": "IV. Méthodes de prévention et de sensibilisation",
+    "question": "Quelles approches de sensibilisation vous semblent réellement efficaces auprès des élèves ? (Exemples : ateliers participatifs, récits d’élèves, analyse de cas réels, travail interdisciplinaire…)",
+    "page": 3
+  },
+  {
+    "id": "enseignant-10",
+    "section": "IV. Méthodes de prévention et de sensibilisation",
+    "question": "Y a-t-il des méthodes de sensibilisation que vous estimez inefficaces, voire contre-productives ? (Discours moralisateur, dramatisation excessive, outils trop théoriques…)",
+    "page": 3
+  },
+  {
+    "id": "enseignant-11",
+    "section": "IV. Méthodes de prévention et de sensibilisation",
+    "question": "Quelles compétences numériques vous semblent prioritaires à développer chez les jeunes ? (Savoir vérifier une information ? Réguler son temps d’écran ? Gérer sa vie privée ? Autodéfense numérique ?)",
+    "page": 3
+  },
+  {
+    "id": "enseignant-12",
+    "section": "V. Ressources, leviers et perspectives",
+    "question": "Quelles ressources ou formations souhaiteriez-vous voir mises à votre disposition pour accompagner les élèves sur ces enjeux ?",
+    "page": 3
+  },
+  {
+    "id": "enseignant-13",
+    "section": "V. Ressources, leviers et perspectives",
+    "question": "Si vous aviez un levier d’action à recommander à une institution (Éducation nationale, collectivité, association), lequel serait-il ? (Par exemple : créer des temps réguliers de déconnexion, travailler en binôme avec des médiateurs numériques, créer des modules transversaux…)",
+    "page": 3
+  },
+  {
+    "id": "enseignant-14",
+    "section": "V. Ressources, leviers et perspectives",
+    "question": "Enfin, quelle question sur le rapport des jeunes au numérique mériterait selon vous d’être posée davantage dans le débat public ?",
+    "page": 4
+  }
+]

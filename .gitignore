@@ -5,3 +5,6 @@ dist/
 .env
 .env.*
 .DS_Store
+
+# Reproducible OCR renders, retained locally for supervisor review (~12 MB).
+tasks/pdf-images/

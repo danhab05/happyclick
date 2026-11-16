@@ -1,0 +1,157 @@
+[
+  {
+    "id": "usage-1",
+    "question": "Quels appareils utilises-tu le plus souvent ?",
+    "options": [
+      "Un téléphone",
+      "Une tablette",
+      "Un ordinateur",
+      "Une télévision",
+      "Une console de jeux vidéo"
+    ],
+    "multiple": true,
+    "page": 1,
+    "exclusive": null
+  },
+  {
+    "id": "usage-2",
+    "question": "Quelles activités fais-tu le plus souvent sur les écrans ?",
+    "options": [
+      "Regarder des vidéos (Youtube...)",
+      "Regarder des films ou des séries (Netflix...)",
+      "Jouer aux jeux vidéo",
+      "Discuter avec des amis",
+      "Consulter les réseaux sociaux (TikTok, Instagram...)",
+      "Faire tes devoirs"
+    ],
+    "multiple": true,
+    "page": 1,
+    "exclusive": null
+  },
+  {
+    "id": "usage-3",
+    "question": "À quels moments de la journée utilises-tu les écrans ?",
+    "options": [
+      "Au réveil",
+      "En mangeant",
+      "Après l’école",
+      "Avant d’aller te coucher",
+      "Tout le temps"
+    ],
+    "multiple": true,
+    "page": 1,
+    "exclusive": null
+  },
+  {
+    "id": "usage-4",
+    "question": "À quels moments de la semaine utilises-tu les écrans ?",
+    "options": [
+      "Jamais ou presque jamais",
+      "Seulement le week-end",
+      "1 ou 2 jours par semaine",
+      "3 ou 4 jours par semaine",
+      "Presque tous les jours"
+    ],
+    "multiple": false,
+    "page": 1,
+    "exclusive": null
+  },
+  {
+    "id": "usage-5",
+    "question": "Possèdes-tu des appareils personnels ?",
+    "options": [
+      "Oui, un téléphone",
+      "Oui, une tablette",
+      "Oui, un ordinateur",
+      "Oui, une console de jeux vidéo",
+      "Oui, une télévision",
+      "Non"
+    ],
+    "multiple": true,
+    "page": 1,
+    "exclusive": 5
+  },
+  {
+    "id": "usage-6",
+    "question": "Tes parents surveillent-ils ton temps d’écran ?",
+    "options": [
+      "Oui, ils ont fixé des règles",
+      "Oui, mais pas tout le temps",
+      "Non, jamais"
+    ],
+    "multiple": false,
+    "page": 1,
+    "exclusive": null
+  },
+  {
+    "id": "usage-7",
+    "question": "Tes parents regardent-ils ce que tu fais sur les écrans ?",
+    "options": [
+      "Oui, ils ont mis en place un contrôle parental",
+      "Oui, ils sont toujours là quand j’utilise un écran",
+      "Oui, mais pas tout le temps",
+      "Non, jamais, ils me font confiance"
+    ],
+    "multiple": false,
+    "page": 1,
+    "exclusive": null
+  },
+  {
+    "id": "usage-8",
+    "question": "Si tu utilises les réseaux sociaux, lequel utilises-tu ?",
+    "options": [
+      "Je n’utilise pas les réseaux sociaux",
+      "Snapchat",
+      "Instagram",
+      "X/Twitter",
+      "TikTok",
+      "Facebook",
+      "Youtube",
+      "Autre"
+    ],
+    "multiple": true,
+    "page": 1,
+    "exclusive": 0
+  },
+  {
+    "id": "usage-9",
+    "question": "Les écrans t’empêchent-ils de faire autre chose ?",
+    "options": [
+      "Oui, je fais moins de sport",
+      "Oui, je passe moins de temps avec mes amis ou ma famille",
+      "Oui, je sors moins dehors",
+      "Oui, je passe moins de temps à faire une activité que j’aime",
+      "Non"
+    ],
+    "multiple": true,
+    "page": 1,
+    "exclusive": 4
+  },
+  {
+    "id": "usage-10",
+    "question": "Trouves-tu que tu passes trop de temps sur les écrans ?",
+    "options": [
+      "Oui",
+      "Non"
+    ],
+    "multiple": false,
+    "page": 1,
+    "exclusive": null
+  },
+  {
+    "id": "usage-11",
+    "question": "Quel est ton temps d’écran quotidien ?",
+    "options": [
+      "Je n’utilise pas les écrans",
+      "Moins d’1 heure",
+      "Entre 1 et 2 heures",
+      "Entre 2 et 4 heures",
+      "Entre 4 et 6 heures",
+      "Entre 6 et 8 heures",
+      "Plus de 8 heures"
+    ],
+    "multiple": false,
+    "page": 2,
+    "exclusive": null
+  }
+]

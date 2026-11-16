@@ -1,0 +1,67 @@
+{
+  "kit": {
+    "intro": {
+      "title": "Imprimables à destination des enseignants",
+      "paragraphs": [
+        "Le KIT Happy Click est un ensemble de documents à imprimer, à destination des enseignants (mais aussi des parents). Les activités ont été conçu pour un public d'enfants de niveau fin-primaire début-collège."
+      ]
+    },
+    "sections": [
+      {
+        "title": "Activitée - Quizz",
+        "paragraphs": [
+          "En classe, par petits groupes de 4 à 6, les élèves lisent une question portant sur une des trois catégories suivantes : comportements, écologie et santé. Ils s'interrogent ensuite sur chacune des réponses possibles, avant de retourner la carte afin de comprendre l'enjeu soulevé. L'accent n'est pas mis sur la réussite, mais sur le débat et la discussion."
+        ],
+        "subtitle": "Cartes à imprimer (format A4)"
+      },
+      {
+        "title": "Activitée - Jeu de rôle",
+        "paragraphs": [
+          "Les enfants sont répartis en groupes de 6, et chacun d'entre eux pioche une carte représentant son rôle durant le jeu. Ces rôles peuvent par exemple être celui d'un médecin scolaire, d'un parent, d'un enfant harcelé, d'un ami, ou autre.",
+          "Ensuite, à chaque tour, une situation est décrite, les enfants imaginent comment leur personnage réagirait à la situation, puis interprètent leur personnage.",
+          "Finalement, une fois le tour terminé, l'intervenant explique explicitement les leçons que les enfants pourraient tirer de la situation, puis en tire la suivante."
+        ],
+        "subtitle": "Cartes à imprimer (format A4)"
+      },
+      {
+        "title": "Questionnaire - Test de dépendance au numérique",
+        "paragraphs": [
+          "Ce questionnaire, à destination des enfants, permet de recueillir des informations sur leur usage du numérique et leur niveau de dépendance.",
+          "Ce questionnaire peut tout aussi bien être répondu de manière anonyme pour faciliter la liberté d'expression des enfants."
+        ],
+        "subtitle": "Pages à imprimer (format A4)"
+      },
+      {
+        "title": "Questionnaire - Enjeux du numérique à l'école",
+        "paragraphs": [
+          "Ce questionnaire, à destination des enseignants, permet de recueillir des informations sur les enjeux du numérique dans l'environnement scolaire."
+        ],
+        "subtitle": "Pages à imprimer (format A4)"
+      }
+    ]
+  },
+  "guides": {
+    "intro": {
+      "title": "Guides à destination des parents",
+      "paragraphs": [
+        "Nous mettons à disposition des parents et enseignants des ressources pour leurs permettre de mieux comprendre l'impact qu'a le numérique sur les plus jeunes."
+      ]
+    },
+    "sections": [
+      {
+        "title": "Étude - PARENTS, ENFANTS & NUMÉRIQUE",
+        "paragraphs": [
+          "Cette étude vise à mieux comprendre le rapport des jeunes au numérique. Elle regroupe des chiffres et des analyses, pour mieux cerner les habitudes numérique des plus jeunes, et comment ces dernières peuvent être encadrées."
+        ],
+        "subtitle": "Sources : OPEN, Unaf"
+      },
+      {
+        "title": "Guide - Les jeunes et le numérique",
+        "paragraphs": [
+          "Ce guide vise à donner des clés pour permettre parents et enseignants d'accompagner les jeunes dans leurs usages du numérique."
+        ],
+        "subtitle": "Sources : L’Agora·MDA de Niort, Ireps Nouvelle-Aquitaine"
+      }
+    ]
+  }
+}

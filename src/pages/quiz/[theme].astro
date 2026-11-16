@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import allQuestions from '../../data/quiz.json';
+export function getStaticPaths() {
+  const themes = [ ['comportements','Les bons réflexes','Comportements'], ['sante','Trouver son équilibre','Santé & attention'], ['ecologie','Derrière nos écrans','Écologie'], ['tout','Toutes les cartes','Le parcours complet'] ];
+  return themes.map(([theme,title,label])=>({params:{theme},props:{title,label,questions:allQuestions.filter(q=>theme==='tout'||q.theme===theme)}}));
+}
+const { title, label, questions } = Astro.props;
+---
+<Layout active="/quiz" title={title}>
+  <section class="wrap quiz-wrap page-intro"><p class="breadcrumb"><a href="/quiz">← Tous les quiz</a></p><p class="eyebrow">{label} · {questions.length} questions</p><h1>{title}</h1><p class="lead">Prends position, explique ton choix, puis retourne la carte. L’important, c’est la discussion.</p></section>
+  <section class="wrap quiz-wrap section compact" data-quiz>
+    <div class="quiz-progress"><span data-counter>Les {questions.length} cartes du parcours</span><span>Sans score · À ton rythme</span></div><label class="sr-only" for="quiz-progress">Cartes explorées</label><progress id="quiz-progress" max={questions.length} value="0"></progress>
+    <noscript><div class="callout">JavaScript est désactivé : toutes les cartes restent lisibles ci-dessous. Ouvre « Voir le corrigé » pour discuter de chaque réponse, ou <a href="/resources/kit/activite_cartes_a_imprimer.pdf">consulte le PDF</a>.</div></noscript>
+    {questions.map((q,index)=><article class="quiz-card" data-question={q.id} data-answers={q.answers.join(',')}>
+      <p class="eyebrow question-no">Question {index+1} / {questions.length}</p><h2 id={`${q.id}-title`} tabindex="-1">{q.question}</h2>
+      <p class="small">Choisis une ou plusieurs propositions. Tu peux en discuter avant de valider.</p>
+      <fieldset aria-labelledby={`${q.id}-title`}><legend class="sr-only">Tes choix pour cette question</legend>{q.options.map((option,i)=><label class="choice"><input type="checkbox" name={q.id} value={i} /><span><span class="choice-letter" aria-hidden="true">{String.fromCharCode(65+i)}.</span><span class="choice-text">{option}</span></span></label>)}</fieldset>
+      <div class="quiz-controls js-controls"><button type="button" class="button" data-action="validate" data-validate>Comparer au support</button><button type="button" class="button" data-action="next" data-next hidden>{index===questions.length-1 ? 'Voir mon bilan de discussion' : 'Question suivante →'}</button><button type="button" class="button secondary" data-action="previous" data-previous>← Précédente</button></div><p class="quiz-error" data-error role="alert"></p>
+      <details class="quiz-feedback" data-feedback><summary>Voir le corrigé et les explications du support</summary><div class="details-body" data-feedback-body><h3 tabindex="-1" data-feedback-title>Ce que propose la carte</h3><p class="quiz-answer">Réponse{q.answers.length>1?'s':''} du document : {q.answers.map(a=>String.fromCharCode(65+a)).join(' et ')}.</p><p class="small" data-comparison></p><p>{q.feedback}</p>{q.nuance && <div class="callout caution"><h3>À nuancer</h3><p>{q.nuance}</p></div>}<div class="callout"><p class="eyebrow">Pour en parler ensemble</p><p class="discussion">{q.discussion}</p></div><p class="source-note">Source : cartes Happy Click · <a href={`${q.source.file}#page=${q.source.page}`}>question p.{q.source.page}</a> · <a href={`${q.source.file}#page=${q.source.answerPage}`}>corrigé p.{q.source.answerPage}</a>. Les nuances et questions de discussion sont des ajouts éditoriaux.</p></div></details>
+    </article>)}
+    <section class="quiz-card quiz-end" data-end hidden><p class="eyebrow">Le début d’une conversation</p><h2 tabindex="-1">Des idées à emporter.</h2><p>Tu as exploré toutes les cartes de ce parcours. Quelle réponse t’a surpris ? Sur quel point le groupe n’était-il pas d’accord ?</p><p>Retrouve tes choix et les explications ci-dessous. Il n’y a ni classement ni note : l’objectif est de comprendre et d’en parler.</p><div class="actions"><button type="button" class="button" data-action="reset">Rejouer ce parcours ↻</button><a class="text-link" href="/quiz">Choisir un autre thème →</a></div><div class="review-list" data-review></div></section>
+    <p class="privacy-note">Tes choix restent dans cette page ouverte, sans stockage ni envoi. Rejouer ou quitter la page les efface.</p>
+  </section>
+  <script>
+    import { initQuiz } from '../../scripts/quiz.mjs';
+    initQuiz(document.querySelector('[data-quiz]'));
+  </script>
+</Layout>

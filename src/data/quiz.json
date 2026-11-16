@@ -1,0 +1,710 @@
+[
+  {
+    "id": "q01",
+    "theme": "comportements",
+    "question": "Pourquoi est-il important de choisir un mot de passe compliqué ?",
+    "options": [
+      "Parce que c'est amusant d'utiliser des chiffres et des lettres",
+      "Pour éviter que quelqu'un d'autre ne le devine et pirate mon compte",
+      "Parce que les mots de passe courts ne fonctionnent pas sur Internet",
+      "Pour montrer que je suis bon en informatique"
+    ],
+    "answers": [
+      1
+    ],
+    "feedback": "La carte compare le mot de passe à une clé : un mot trop simple est plus facile à deviner. Elle propose de mélanger lettres, chiffres et symboles et de garder le mot de passe dans un endroit sûr.",
+    "discussion": "Qu’est-ce qui rendrait un mot de passe facile à deviner pour quelqu’un qui te connaît ?",
+    "nuance": "",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 1,
+      "answerPage": 2,
+      "position": "HG",
+      "answerPosition": "BG"
+    }
+  },
+  {
+    "id": "q02",
+    "theme": "comportements",
+    "question": "Est-il prudent de partager mon nom complet, mon adresse ou mon numéro de téléphone sur Internet ?",
+    "options": [
+      "Non, parce que des inconnus pourraient utiliser ces informations pour me faire du mal",
+      "Oui, tout le monde le fait",
+      "Oui, mais seulement si je suis sur un site que je connais",
+      "Non, mais je peux le faire si mes parents sont d'accord"
+    ],
+    "answers": [
+      0
+    ],
+    "feedback": "Le document invite à garder ces informations privées : elles peuvent servir à te déranger ou à te nuire. La question vise leur partage en ligne, notamment avec des inconnus.",
+    "discussion": "À qui une publication pourrait-elle parvenir, au-delà de la personne à laquelle tu pensais ?",
+    "nuance": "Le support choisit A. Il ne distingue pas une publication publique d’une démarche encadrée avec un adulte ; le contexte de partage mérite donc d’être discuté.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 1,
+      "answerPage": 2,
+      "position": "HD",
+      "answerPosition": "BD"
+    }
+  },
+  {
+    "id": "q03",
+    "theme": "comportements",
+    "question": "Pourquoi faut-il demander à un adulte avant de faire un achat dans un jeu ou une application ?",
+    "options": [
+      "Parce qu'on ne peut pas utiliser un moyen de paiement sans l'autorisation de la personne qui le possède",
+      "Les jeux ne demandent jamais d'argent",
+      "Parce que certains achats coûtent très cher et peuvent être facturés sans que l'on s'en rende compte",
+      "Parce que si on achète sans demander, on risque de se faire bannir du jeu"
+    ],
+    "answers": [
+      0,
+      2
+    ],
+    "feedback": "Le corrigé retient l’autorisation de la personne qui paie et le risque de frais inattendus. Demander à un adulte permet de regarder ensemble ce qui est acheté et ce que cela coûte.",
+    "discussion": "Qu’aimerais-tu vérifier avec l’adulte avant de valider un achat ?",
+    "nuance": "",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 1,
+      "answerPage": 2,
+      "position": "BG",
+      "answerPosition": "HG"
+    }
+  },
+  {
+    "id": "q04",
+    "theme": "comportements",
+    "question": "Que peut-il arriver si je partage des photos de moi avec des inconnus sur Internet ?",
+    "options": [
+      "Ils pourront les garder pour eux",
+      "Rien, tout le monde partage des photos",
+      "Ils me remercieront pour les avoir partagées",
+      "Ils pourraient les utiliser sans ma permission"
+    ],
+    "answers": [
+      0,
+      3
+    ],
+    "feedback": "Une photo envoyée peut être conservée et utilisée sans ta permission. Le support recommande de garder ses photos privées et de les partager avec des personnes de confiance.",
+    "discussion": "Une fois la photo envoyée, qu’est-ce qui échappe à ton contrôle ?",
+    "nuance": "",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 1,
+      "answerPage": 2,
+      "position": "BD",
+      "answerPosition": "HD"
+    }
+  },
+  {
+    "id": "q05",
+    "theme": "comportements",
+    "question": "Est-il prudent d'accepter des demandes d'amis de personnes que je ne connais pas ?",
+    "options": [
+      "Non, car je ne sais pas qui elles sont vraiment, un profil sur un réseau social peut être trompeur",
+      "Oui, car cela augmente mon nombre d'amis",
+      "Oui, mais seulement si elles ont une photo de profil",
+      "Non, sauf si elles ont déjà parlé à mes amis"
+    ],
+    "answers": [
+      0
+    ],
+    "feedback": "Un profil peut être trompeur. Le verso souligne qu’une photo de profil ne suffit pas à identifier une personne et invite à la prudence face aux inconnus.",
+    "discussion": "Pourquoi le fait d’avoir des amis en commun ne répond-il pas à toutes les questions sur une personne ?",
+    "nuance": "La dernière option est imprimée C dans le PDF ; elle est repérée D ici, sans changer son texte.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 3,
+      "answerPage": 4,
+      "position": "HG",
+      "answerPosition": "BG"
+    }
+  },
+  {
+    "id": "q06",
+    "theme": "comportements",
+    "question": "Quel est, parmi ces exemples, le mot de passe le plus sécurisé ?",
+    "options": [
+      "123456",
+      "monnom2023",
+      "P@ssw0rd!84",
+      "azerty"
+    ],
+    "answers": [
+      2
+    ],
+    "feedback": "Parmi les quatre exemples, le corrigé choisit celui qui mélange lettres, chiffres et symboles. Il déconseille les suites très simples et les informations personnelles faciles à deviner.",
+    "discussion": "Pourquoi un exemple de mot de passe affiché publiquement ne devrait-il pas devenir ton propre mot de passe ?",
+    "nuance": "C’est une comparaison entre les exemples de la carte, pas une garantie de sécurité. La quatrième lettre imprimée C est normalisée en D ; le caractère de P@ssw0rd est un zéro.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 3,
+      "answerPage": 4,
+      "position": "HD",
+      "answerPosition": "BD"
+    }
+  },
+  {
+    "id": "q07",
+    "theme": "comportements",
+    "question": "Que dois-je faire si je reçois un e-mail avec une pièce jointe d'un inconnu ?",
+    "options": [
+      "L'ouvrir pour voir ce que c'est",
+      "Le montrer à un adulte avant de faire quoi que ce soit",
+      "Le transférer à mes amis pour avoir leur avis",
+      "C'est peut être une tentative de hameçonnage, je dois rester prudent"
+    ],
+    "answers": [
+      1,
+      3
+    ],
+    "feedback": "Le document conseille de demander l’avis d’un adulte avant d’ouvrir. Il explique que l’hameçonnage consiste à tenter de voler des informations en se faisant passer pour quelqu’un d’autre ; une pièce jointe peut aussi contenir un contenu dangereux.",
+    "discussion": "Qu’est-ce qui pourrait donner une apparence rassurante à un message pourtant suspect ?",
+    "nuance": "",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 3,
+      "answerPage": 4,
+      "position": "BG",
+      "answerPosition": "HG"
+    }
+  },
+  {
+    "id": "q08",
+    "theme": "comportements",
+    "question": "Que dois-je faire si quelqu'un m'insulte ou me harcèle en ligne ?",
+    "options": [
+      "En parler à un adulte de confiance et signaler la personne",
+      "Ignorer et garder ça pour moi",
+      "Répondre pour me défendre",
+      "Quitter Internet pour toujours"
+    ],
+    "answers": [
+      0
+    ],
+    "feedback": "Le support propose d’en parler à un adulte de confiance, parent ou enseignant, et de signaler la personne. Le but est d’obtenir du soutien plutôt que de rester seul face à la situation.",
+    "discussion": "Quel adulte pourrait t’aider à parler de ce qui s’est passé ?",
+    "nuance": "La carte emploie largement le mot cyberharcèlement. Elle ne permet pas à elle seule de qualifier juridiquement chaque situation ; l’aide reste le point central.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 3,
+      "answerPage": 4,
+      "position": "BD",
+      "answerPosition": "HD"
+    }
+  },
+  {
+    "id": "q09",
+    "theme": "comportements",
+    "question": "Si inoxtag_officiel m'envoie un message sur mon réseau social favori, ...",
+    "options": [
+      "Je discute avec lui, Inoxtag est vraiment sympa de parler avec moi !",
+      "Je lui demande des preuves pour être sûr que c'est le vrai.",
+      "Je bloque le compte, c'est peut-être un faux compte.",
+      "Je lui demande un 1v1 sur Fortnite."
+    ],
+    "answers": [
+      2
+    ],
+    "feedback": "La carte met en scène une usurpation de célébrité pour obtenir des informations ou de l’argent. Son corrigé choisit de bloquer le compte suspect.",
+    "discussion": "Quelles « preuves » un faux compte pourrait-il lui-même fabriquer ?",
+    "nuance": "B peut ouvrir un débat sur la vérification, mais le support retient C. Le nombre d’abonnés ou une pastille, cités au verso, ne constituent pas ici une preuve suffisante de l’identité.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 5,
+      "answerPage": 6,
+      "position": "HG",
+      "answerPosition": "BG"
+    }
+  },
+  {
+    "id": "q10",
+    "theme": "comportements",
+    "question": "Comment savoir si une information trouvée en ligne est fiable ?",
+    "options": [
+      "Vérifier si elle vient d'un site fiable et connu",
+      "En regardant si d'autres personnes l'ont partagée sur les réseaux sociaux",
+      "En cherchant d'autres sources qui confirment la même information",
+      "Je me fie à mon intuition : si ça semble vrai alors c'est sûrement le cas"
+    ],
+    "answers": [
+      0,
+      2
+    ],
+    "feedback": "Le document invite à identifier qui publie et à comparer avec d’autres sources. Le partage massif ou une impression personnelle ne suffisent pas à établir qu’une information est vraie.",
+    "discussion": "Les sources que tu compares apportent-elles des éléments différents, ou recopient-elles le même message ?",
+    "nuance": "",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 5,
+      "answerPage": 6,
+      "position": "HD",
+      "answerPosition": "BD"
+    }
+  },
+  {
+    "id": "q11",
+    "theme": "sante",
+    "question": "Comment certaines applications nous rendent-elles accros ?",
+    "options": [
+      "Elles utilisent des couleurs vives, des notifications et des sons pour capter notre attention et nous donner envie de revenir",
+      "Elles bloquent volontairement l'accès après un certain temps pour nous empêcher de trop les utiliser",
+      "En nous interdisant de nous connecter trop longtemps",
+      "C’est impossible de devenir accro"
+    ],
+    "answers": [
+      0
+    ],
+    "feedback": "Le verso décrit des dispositifs destinés à retenir l’attention : notifications, couleurs, sons et récompenses aléatoires comme les likes. La discussion porte sur ce qui nous donne envie de revenir dans une application.",
+    "discussion": "Quelle notification te détourne le plus facilement de ce que tu avais choisi de faire ?",
+    "nuance": "« Accros » est le mot de la carte, pas un diagnostic. Le guide Les jeunes et le numérique, p.36–39 et 42–43, distingue usage, contexte et difficultés.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 5,
+      "answerPage": 6,
+      "position": "BG",
+      "answerPosition": "HG"
+    }
+  },
+  {
+    "id": "q12",
+    "theme": "sante",
+    "question": "Combien d'heures les experts recommandent-ils de passer au maximum devant les écrans de loisir chaque jour ?",
+    "options": [
+      "1 heure",
+      "2 heures",
+      "5 heures",
+      "Autant que je veux, tant que je m'amuse"
+    ],
+    "answers": [
+      1
+    ],
+    "feedback": "Le corrigé du support indique environ deux heures hors temps scolaire pour les enfants de plus de six ans. Il associe ce repère au fait de garder du temps pour jouer, lire et pratiquer d’autres activités.",
+    "discussion": "Quelles activités voudrais-tu pouvoir garder dans ta journée, quel que soit le temps d’écran ?",
+    "nuance": "La carte ne nomme pas les experts ni la référence de ce seuil. Il s’agit de la réponse du document, pas d’une limite universelle ni d’un outil de diagnostic. Guide, p.39 et 42–43 : le contexte compte.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 5,
+      "answerPage": 6,
+      "position": "BD",
+      "answerPosition": "HD"
+    }
+  },
+  {
+    "id": "q13",
+    "theme": "sante",
+    "question": "Comment la surconsommation de vidéos courtes (TikTok, Youtube Shorts...) affecte-t-elle notre concentration ?",
+    "options": [
+      "Cela améliore notre capacité à travailler sans distractions",
+      "Cela peut entraîner une perte de concentration, il devient difficile de se concentrer sur des activités plus longues",
+      "Elles n'ont aucun impact sur le temps de concentration",
+      "Regarder des vidéos courtes en continu créent une sorte de “récompense rapide” à laquelle mon cerveau s’habitue"
+    ],
+    "answers": [
+      1,
+      3
+    ],
+    "feedback": "Le support explique la succession des vidéos par une recherche de récompenses rapides et la met en relation avec la difficulté à rester sur des tâches longues. Il introduit le vocabulaire de récompense et de dopamine.",
+    "discussion": "Après une série de vidéos, comment se passe le retour à une activité plus longue ?",
+    "nuance": "Le verso simplifie un mécanisme et ne cite pas d’étude précise. Ce n’est pas une conclusion médicale sur chaque personne ni une preuve qu’une vidéo produit toujours cet effet.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 7,
+      "answerPage": 8,
+      "position": "HG",
+      "answerPosition": "BG"
+    }
+  },
+  {
+    "id": "q14",
+    "theme": "sante",
+    "question": "Qu'est-ce que le syndrome FOMO (Fear Of Missing Out) et comment peut-il impacter notre bien-être ?",
+    "options": [
+      "C’est la peur de rater quelque chose d’important, ce qui peut entraîner du stress et une surconsommation des réseaux sociaux",
+      "C’est une maladie qui empêche de se souvenir des événements passés",
+      "C’est un trouble qui améliore la concentration et réduit l’anxiété sociale",
+      "C’est une peur irrationnelle qui pousse à éviter les écrans et les réseaux sociaux"
+    ],
+    "answers": [
+      0
+    ],
+    "feedback": "Le document définit le FOMO comme la peur de manquer une information, un événement ou une interaction. Il l’associe au fait de vérifier fréquemment son téléphone et au stress que cela peut occasionner.",
+    "discussion": "Comment pourrais-tu expliquer à tes amis que tu ne réponds pas toujours immédiatement ?",
+    "nuance": "Le mot « syndrome » vient du titre de la carte. Le quiz décrit une expérience possible, il n’attribue aucun trouble à la personne qui répond.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 7,
+      "answerPage": 8,
+      "position": "HD",
+      "answerPosition": "BD"
+    }
+  },
+  {
+    "id": "q15",
+    "theme": "sante",
+    "question": "Que peut-il m’arriver si je passe trop de temps sur les réseaux sociaux ?",
+    "options": [
+      "Rien, c'est juste pour s'amuser",
+      "Je deviendrai plus populaire",
+      "Je me sentirai triste ou me comparerai aux autres",
+      "Je deviendrai plus intelligent"
+    ],
+    "answers": [
+      2
+    ],
+    "feedback": "Le verso dit que la comparaison avec les publications des autres peut parfois rendre triste. Il rappelle que ce qui est montré en ligne ne reflète pas toujours toute la vie d’une personne.",
+    "discussion": "Qu’est-ce qu’une publication montre, et qu’est-ce qu’elle laisse hors du cadre ?",
+    "nuance": "L’option est formulée comme une certitude mais l’explication du PDF dit « peut parfois ». Le guide p.40–41 insiste aussi sur la diversité des situations.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 7,
+      "answerPage": 8,
+      "position": "BG",
+      "answerPosition": "HG"
+    }
+  },
+  {
+    "id": "q16",
+    "theme": "sante",
+    "question": "Qu'est-ce que la lumière bleue ?",
+    "options": [
+      "Une lumière visible qui a un niveau d'énergie élevé",
+      "Une lumière invisible émise uniquement par les écrans de téléphone",
+      "Une lumière qui aide à améliorer la vision nocturne",
+      "Une lumière qui peut endommager notre vue"
+    ],
+    "answers": [
+      0,
+      3
+    ],
+    "feedback": "La carte situe la lumière bleue dans la lumière visible et indique qu’elle est présente dans la lumière naturelle et les écrans. Le corrigé imprimé associe A et D.",
+    "discussion": "Quelles précisions faudrait-il connaître avant de comparer les effets de deux sources lumineuses ?",
+    "nuance": "La phrase du verso selon laquelle la lumière des écrans serait « plus intense » et dangereuse n’est pas étayée par une référence ou des conditions d’exposition. D est rapporté comme choix du support, pas comme preuve d’un dommage causé par tout écran.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 7,
+      "answerPage": 8,
+      "position": "BD",
+      "answerPosition": "HD"
+    }
+  },
+  {
+    "id": "q17",
+    "theme": "sante",
+    "question": "Que faut-il faire pour protéger ses yeux lorsqu'on regarde un écran ?",
+    "options": [
+      "Approcher son visage le plus près possible de l’écran pour voir les détails sans faire d’effort",
+      "On peut utiliser des lunettes avec un filtre anti lumière bleue",
+      "Eviter de regarder un écran très lumineux quand on est dans le noir",
+      "Faire des pauses régulières"
+    ],
+    "answers": [
+      1,
+      2,
+      3
+    ],
+    "feedback": "Le verso insiste sur les pauses et la distance à l’écran. Il retient également B et C et évoque un mode « lumière bleue ».",
+    "discussion": "À quel moment d’une activité pourrait-on prévoir une pause ensemble ?",
+    "nuance": "La question parle de lunettes alors que le verso parle d’un mode logiciel. Le document ne fournit pas de preuve de l’efficacité clinique d’un filtre ; ce quiz ne recommande pas un achat de lunettes.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 9,
+      "answerPage": 10,
+      "position": "HG",
+      "answerPosition": "BG"
+    }
+  },
+  {
+    "id": "q18",
+    "theme": "sante",
+    "question": "Pourquoi est-il déconseillé d'utiliser un écran juste avant de se coucher ?",
+    "options": [
+      "Parce que ça consomme trop de batterie",
+      "Parce que la lumière bleue des écrans peut empêcher de bien dormir",
+      "Parce que les écrans se mettent en veille automatiquement la nuit",
+      "Parce qu'il n'y a rien d'intéressant à regarder le soir"
+    ],
+    "answers": [
+      1
+    ],
+    "feedback": "Le document relie l’exposition lumineuse avant le coucher à l’endormissement et présente la mélatonine. Il propose une coupure des écrans avant de dormir.",
+    "discussion": "Quelle activité aimerais-tu garder pour la transition entre la journée et le coucher ?",
+    "nuance": "L’explication est simplifiée et l’horaire proposé dans le support n’est pas une prescription personnalisée. Le questionnaire sert à parler de ses habitudes, sans conclure sur la santé.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 9,
+      "answerPage": 10,
+      "position": "HD",
+      "answerPosition": "BD"
+    }
+  },
+  {
+    "id": "q19",
+    "theme": "ecologie",
+    "question": "Regarder une vidéo sur Internet pendant une heure produit l'équivalent en CO₂ de :",
+    "options": [
+      "Une voiture roulant 0,29 km",
+      "Un ventilateur de 75W utilisé pendant 6h",
+      "Rien du tout, le streaming est écologique",
+      "Une centrale électrique en fonctionnement"
+    ],
+    "answers": [
+      0,
+      1
+    ],
+    "feedback": "Le support donne ces deux équivalences pour rendre visible l’impact d’une activité numérique. L’idée pédagogique est que regarder une vidéo mobilise aussi une infrastructure matérielle.",
+    "discussion": "Quelles hypothèses faudrait-il préciser pour comparer une vidéo, une voiture et un ventilateur ?",
+    "nuance": "Ces équivalences ne sont pas datées et leur méthode n’est pas donnée. A et B sont les réponses imprimées, pas des valeurs universelles applicables à toute vidéo ou tout pays.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 9,
+      "answerPage": 10,
+      "position": "BG",
+      "answerPosition": "HG"
+    }
+  },
+  {
+    "id": "q20",
+    "theme": "ecologie",
+    "question": "Pourquoi est-il important de recycler un vieux téléphone portable ?",
+    "options": [
+      "Parce qu'il prend de la place dans mon tiroir",
+      "Parce que les magasins offrent de l'argent pour le recyclage",
+      "Parce qu'il ne fonctionne plus",
+      "Parce qu'il contient des matériaux précieux qui peuvent être réutilisés"
+    ],
+    "answers": [
+      3
+    ],
+    "feedback": "La carte cite l’or, le cuivre et l’aluminium comme exemples de matériaux récupérables. Elle relie le recyclage à la réutilisation des ressources pour fabriquer d’autres objets.",
+    "discussion": "Quelle différence faites-vous entre réparer, réutiliser et recycler ?",
+    "nuance": "Le verso affiche aussi « 15 % » de téléphones recyclés sans année, territoire ni source précise. Ce chiffre n’est pas repris comme statistique actuelle.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 9,
+      "answerPage": 10,
+      "position": "BD",
+      "answerPosition": "HD"
+    }
+  },
+  {
+    "id": "q21",
+    "theme": "ecologie",
+    "question": "Que puis-je faire pour réduire l'impact écologique de mes activités en ligne ?",
+    "options": [
+      "Regarder des vidéos en streaming toute la journée",
+      "Télécharger plus de fichiers pour éviter de les perdre",
+      "Éteindre mon ordinateur ou mon téléphone quand je ne les utilise pas",
+      "Envoyer le plus d'e-mails possible pour éviter le papier"
+    ],
+    "answers": [
+      2
+    ],
+    "feedback": "Le support propose d’éviter de laisser fonctionner les appareils inutilisés afin de consommer moins d’énergie. Son exemple invite à relier une habitude concrète à des ressources physiques.",
+    "discussion": "Dans quelles situations un appareil reste-t-il allumé sans que tu l’utilises ?",
+    "nuance": "",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 11,
+      "answerPage": 12,
+      "position": "HG",
+      "answerPosition": "BG"
+    }
+  },
+  {
+    "id": "q22",
+    "theme": "ecologie",
+    "question": "Comment le streaming vidéo contribue-t-il à la pollution ?",
+    "options": [
+      "Les vidéos sont stockées sur des serveurs qui consomment beaucoup d'électricité",
+      "Regarder des vidéos ne pollue pas du tout",
+      "Les écrans consomment de l'eau",
+      "Les vidéos sont trop longues à charger"
+    ],
+    "answers": [
+      0
+    ],
+    "feedback": "Le verso explique que les vidéos reposent sur des serveurs qui fonctionnent avec de l’électricité. Il introduit le data center pour montrer ce qui existe au-delà de l’écran visible.",
+    "discussion": "Quels équipements imagines-tu entre le lieu où une vidéo est stockée et ton écran ?",
+    "nuance": "Le document présente un mécanisme général, sans mesurer ici l’impact d’une vidéo particulière.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 11,
+      "answerPage": 12,
+      "position": "HD",
+      "answerPosition": "BD"
+    }
+  },
+  {
+    "id": "q23",
+    "theme": "ecologie",
+    "question": "D'où viennent les matériaux utilisés pour fabriquer les batteries de nos téléphones ?",
+    "options": [
+      "Ils sont fabriqués en laboratoire à partir de plastique recyclé",
+      "Ils proviennent de mines où l'on extrait des métaux rares",
+      "Ils sont principalement issus du sable des plages",
+      "Ils sont récoltés dans les fonds marins grâce à des plongeurs spécialisés"
+    ],
+    "answers": [
+      1
+    ],
+    "feedback": "Le support parle de mines et cite lithium, cobalt et tantale pour les appareils numériques. Il attire aussi l’attention sur les conditions de travail et sur l’extraction des ressources.",
+    "discussion": "Pourquoi regarder la fabrication change-t-il notre manière de parler d’un téléphone ?",
+    "nuance": "La question vise les batteries, mais le verso élargit aux appareils numériques. La liste de métaux ne doit pas être comprise comme la composition de chaque batterie.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 11,
+      "answerPage": 12,
+      "position": "BG",
+      "answerPosition": "HG"
+    }
+  },
+  {
+    "id": "q24",
+    "theme": "ecologie",
+    "question": "Combien de CO₂ est émis en moyenne pour fabriquer un smartphone ?",
+    "options": [
+      "Environ 5 kg CO₂e, c’est raisonnable",
+      "Environ 30 kg CO₂e, soit l’équivalent de 140 km en avion",
+      "Environ 80 kg CO₂e, soit l’équivalent de 357 km en avion",
+      "Environ 200 kg CO₂e, soit l’équivalent d’un aller-retour en avion entre Paris et New York"
+    ],
+    "answers": [
+      2
+    ],
+    "feedback": "Le verso indique 80,2 kg et met l’accent sur l’extraction et le transport des matériaux. Il utilise cette estimation pour discuter du poids de la fabrication dans le cycle de vie.",
+    "discussion": "Quelles différences entre deux téléphones pourraient faire varier une estimation de fabrication ?",
+    "nuance": "Les 80,2 kg, la part de 99 % et les équivalences aériennes ne sont pas accompagnés ici d’une étude, d’une date ou d’un périmètre. Ils ne constituent pas une moyenne actuelle vérifiée.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 11,
+      "answerPage": 12,
+      "position": "BD",
+      "answerPosition": "HD"
+    }
+  },
+  {
+    "id": "q25",
+    "theme": "ecologie",
+    "question": "Pourquoi certains matériaux utilisés dans les téléphones sont considérés comme rares ?",
+    "options": [
+      "Parce qu’ils existent en quantités limitées sur Terre et sont difficiles à extraire.",
+      "Parce qu’on ne sait pas encore comment les recycler.",
+      "Parce qu’ils se trouvent uniquement dans certains pays.",
+      "Parce qu’ils disparaissent après quelques années d’utilisation dans les appareils."
+    ],
+    "answers": [
+      0,
+      2
+    ],
+    "feedback": "La carte lie les ressources à l’effort d’extraction et à la concentration de la production dans certains pays. Elle prend le cobalt et le tantale comme exemples pour discuter de l’approvisionnement.",
+    "discussion": "Quelle différence y a-t-il entre présence dans le sol et production d’un matériau ?",
+    "nuance": "Le mot « uniquement » de C est plus absolu que le verso, qui parle de pays dominant la production. Le terme « rares » est utilisé de manière générale. Les photos sont créditées Swiss Info et Amnesty International p.14.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 13,
+      "answerPage": 14,
+      "position": "HG",
+      "answerPosition": "BG"
+    }
+  },
+  {
+    "id": "q26",
+    "theme": "ecologie",
+    "question": "L'intelligence artificielle consomme beaucoup de ressources pour fonctionner. Parmi ces réponses, laquelle vous paraît correcte ?",
+    "options": [
+      "Pour entraîner l’IA et pour l’utiliser, il faut consommer de très grandes quantités d’eau.",
+      "L’IA n’a pas besoin d’eau pour fonctionner !",
+      "La consommation d’eau de l’IA n’est pas très importante par rapport aux autres industries.",
+      "Ce sont uniquement des circuits d’air qui sont utilisés pour refroidir les datacenters."
+    ],
+    "answers": [
+      0
+    ],
+    "feedback": "Le verso relie les serveurs de l’IA à leur besoin de refroidissement et explique que certains circuits utilisent de l’eau. Il souligne lui-même que les estimations varient selon les pays et les conditions.",
+    "discussion": "Qu’aimerais-tu connaître d’une estimation avant de la partager : année, périmètre, méthode ?",
+    "nuance": "Le document cite Nature Communications et une projection de 5,4 milliards de m³ sans référence complète ni année cible. Ce chiffre n’est pas présenté ici comme une consommation actuelle mesurée.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 13,
+      "answerPage": 14,
+      "position": "HD",
+      "answerPosition": "BD"
+    }
+  },
+  {
+    "id": "q27",
+    "theme": "ecologie",
+    "question": "Combien d’énergie consomme un téléphone en une année d’utilisation ?",
+    "options": [
+      "L’équivalent d’une ampoule allumée 1 heure par jour.",
+      "L’équivalent d’une ampoule allumée en continu toute l’année.",
+      "L’équivalent d’un réfrigérateur en marche.",
+      "L’équivalent d’une console de jeux utilisée 3 heures par jour."
+    ],
+    "answers": [
+      1
+    ],
+    "feedback": "Le corrigé B est accompagné d’une estimation de 2 à 3 kWh par an et d’une explication du kilowattheure. Le support veut faire discuter la consommation d’un appareil puis celle de nombreux appareils.",
+    "discussion": "Peut-on comparer deux consommations sans connaître la puissance de l’ampoule et la durée d’utilisation ?",
+    "nuance": "L’équivalence avec une ampoule allumée toute l’année ne précise pas sa puissance et ne peut pas être validée telle quelle. On conserve le corrigé documentaire, sans en faire une bonne réponse absolue.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 13,
+      "answerPage": 14,
+      "position": "BG",
+      "answerPosition": "HG"
+    }
+  },
+  {
+    "id": "q28",
+    "theme": "ecologie",
+    "question": "Mon smartphone ne fonctionne plus, que va-t-il devenir ?",
+    "options": [
+      "Lorsque je le jette, il finit par se décomposer et disparaît naturellement en quelques années.",
+      "Il est récupéré et est ensuite entièrement recyclé pour fabriquer de nouveaux téléphones.",
+      "Si je le jette, il finit souvent dans des décharges, parfois à l’autre bout du monde.",
+      "Je peux l’envoyer à des réparateurs qui vont essayer de le remettre en bon état : c’est le reconditionnement."
+    ],
+    "answers": [
+      2,
+      3
+    ],
+    "feedback": "Le support oppose l’abandon de l’appareil à une tentative de réparation et de reconditionnement. Il rappelle que la récupération de tous les matériaux n’est pas automatique.",
+    "discussion": "Que peut-on chercher à savoir avant de décider qu’un appareil est définitivement inutilisable ?",
+    "nuance": "Les destinations de déchets décrites par le support ne sont pas le devenir de chaque téléphone. Photographie créditée France Info sur le verso p.14.",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 13,
+      "answerPage": 14,
+      "position": "BD",
+      "answerPosition": "HD"
+    }
+  },
+  {
+    "id": "q29",
+    "theme": "ecologie",
+    "question": "Pourquoi la fabrication des appareils numériques a-t-elle un impact sur l’eau ?",
+    "options": [
+      "Parce que l’extraction des matériaux pollue les rivières et les nappes phréatiques.",
+      "Parce que la fabrication des composants électroniques consomme énormément d’eau.",
+      "Parce qu’il faut beaucoup d’eau pour nettoyer les écrans avant leur vente.",
+      "Parce que les téléphones consomment de l’eau lorsqu’ils sont branchés."
+    ],
+    "answers": [
+      0,
+      1
+    ],
+    "feedback": "Le corrigé distingue la contamination possible de l’eau lors de l’extraction et l’eau nécessaire à la fabrication des composants. Il invite à penser la fabrication entière, pas seulement l’utilisation de l’appareil.",
+    "discussion": "Comment raconterais-tu le parcours d’un téléphone depuis ses matériaux jusqu’à ton usage ?",
+    "nuance": "",
+    "source": {
+      "file": "/resources/kit/activite_cartes_a_imprimer.pdf",
+      "page": 15,
+      "answerPage": 16,
+      "position": "HG",
+      "answerPosition": "BG"
+    }
+  }
+]

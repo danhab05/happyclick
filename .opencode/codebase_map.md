@@ -1,34 +1,47 @@
 # Cartographie — Happy Click
 
-## Projet
-Préversion Astro 7.4.12 statique, branche `feat/astro-preview`, dépôt privé `danhab05/happyclick`. Node 22.23.4 fourni en dépendance de développement locale : les scripts npm l’utilisent sans modifier Node global. Nouvelle préversion raccordée à Coolify par OpenBot : projet `yuhz20ol6ogbmzj1pol2r7pz`, application `ezv2qhhub0jjl6cg4zgkp8p8`, branche `feat/astro-preview`. Déploiement en cours supervisé par OpenBot ; accès public et HTTPS non confirmés. Nixpacks `npm ci` / `npm run build`, statique `/dist`, port 80. Domaines : `happyclick.danhabib.dev` NXDOMAIN ; `happyclick.app.danhabib.dev` ajouté, résout 72.61.167.104 selon OpenBot. Aucun DNS modifié. Voir README pour reprise infrastructure.
+## État et reprise
+Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt privé `danhab05/happyclick`, branche `feat/astro-preview`. **Aucun push avant revue finale OpenBot** : cette branche est raccordée au webhook Coolify. Ancienne DA au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
-## Entrées
-- `src/pages/index.astro` : accueil, logo animé et slogan source.
-- `src/pages/kit.astro` : textes source et 6 documents.
-- `src/pages/guides.astro` : textes source et 2 documents.
-- `src/layouts/Layout.astro` : head noindex/nofollow, navigation (3 internes, 2 GATE externes), footer.
-- `src/components/PdfDocument.astro` : aperçu natif, liens ouvrir/télécharger, repli sans plugin PDF.
-- `public/style.css` : CSS source localisé + adaptations responsive/accessibilité. Desktop >1100 px proche source ; header dans le flux ≤1100 px ; mise en page mobile ≤600 px.
-- `public/assets/` : images, icônes et polices originales.
-- `public/resources/` : 8 PDF binaires inchangés.
-- `public/robots.txt` : Disallow /.
+Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` avant de relancer). `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Pas de navigateur/Playwright par l’exécutant.
 
-## Preuves et outils
-- `source-snapshot/{index,kit,guides}.html`, `style.css` : relevé curl source, non servi.
-- `source-snapshot/assets.json` : 18 ressources, URL/taille/SHA-256 d’origine (CSS adaptée dans public).
-- `scripts/collect-assets.py` : téléchargement curl des références actives ; conserve le CSS original dans source-snapshot.
-- `scripts/verify.py` : textes, navigation, indexation, absence de scripts/formulaires, fichiers/hash/PDF, HTTP optionnel (incluant /kit/ et /guides/ sans redirection), rapport responsive calculé.
-- `tasks/todo.md` : tâches et review ; `tasks/verification.md` : preuves générées ; `tasks/lessons.md` : leçons de la revue (slash final et distinction DNS/disponibilité).
-- `README.md` : reprise et limites de validation.
+## Interface et routes (13 pages)
+- `src/layouts/Layout.astro` : langue, noindex, navigation Accueil/Quiz/Kit/Guides, footer et deux liens GATE originaux.
+- `src/pages/index.astro` : accueil éditorial, trois thèmes, parcours par publics.
+- `src/components/ThemeCards.astro` : liens/counts des thèmes.
+- `src/pages/quiz/index.astro` : choix ; `quiz/[theme].astro` : 4 parcours statiques, cartes SSR, feedback accessible sans JS.
+- `src/pages/mes-usages.astro` : 11 questions sans score ; `kit/reflexion.astro` : 14 questions ouvertes facultatives.
+- `src/pages/kit.astro` : textes source, six PDF, activités.
+- `src/pages/kit/roles/[theme].astro` : trois jeux × six rôles × quatre scènes, aides/débrief/pistes sourcées.
+- `src/pages/guides.astro` : deux guides, résumés/chapitres/datation/crédits et textes source.
+- `src/components/PdfDocument.astro` : liens ouvrir/télécharger permanents, aperçu natif en details et repli mobile.
+- `public/style.css` : DA ivoire/marine/corail/turquoise, polices locales, responsive 1100/800/480, focus/reduced-motion/césure des longs titres.
+- `public/assets/` : ressources d’origine ; `previews/` : deux couvertures extraites des guides.
+- `public/resources/` : huit PDF binaires inchangés ; `public/robots.txt` : Disallow /.
+- `astro.config.mjs` : static, slash ignore, host0.0.0.0 port4321, modules JS émis en fichiers (assetsInlineLimit0).
 
-## Commandes
-`npm ci` → `npm run build` → `npm run preview` (0.0.0.0:4321).
-`npm run verify -- --base-url http://127.0.0.1:4321` ; `npm audit`.
-Serveur de revue déjà présent sur 4321 à la livraison. Vérifier `ss -ltnp 'sport = :4321'` avant de relancer pour éviter un second serveur sur un autre port.
+## Données et interactions
+- `src/data/quiz.json` : 29 questions exactes, 116 choix, clés des réponses du document, feedback/nuance/discussion, pages et quadrants recto/verso. 10 comportements / 8 santé / 11 écologie.
+- `src/data/usage.json` : 11 questions et options, choix multiples/exclusifs, pages.
+- `src/data/teachers.json` : 14 questions, sections et pages.
+- `src/data/roles.json` : trois jeux, six rôles chacun, quatre scènes, aides, questions, pistes et références. Débriefs 12/12/7 ; absences de corrigé explicites.
+- `src/data/source-copy.json` : textes de présentation source kit/guides.
+- `src/lib/quiz-state.mjs` : progression, validation, retour, remise à zéro, comparaison sans note.
+- `src/scripts/quiz.mjs` : amélioration progressive DOM, focus, bilan, rejouer et nettoyage pagehide.
+- `src/lib/reflection.mjs` / `src/scripts/reflection.mjs` : exclusivité des choix, restitution descriptive, notes textContent, effacement. Aucun réseau/stockage ; pas de diagnostic.
 
-## Limites
-Les largeurs 320–1920 px du rapport sont déduites du CSS. Revue navigateur effectuée par OpenBot : accueil desktop très fidèle ; accueil/kit mobile sans débordement de navigation ni de titres ; guides desktop avec PDF visibles et contenu correct. Build et verify confirmés par OpenBot. Aucun navigateur utilisé par cet exécutant. La source comporte des coquilles conservées volontairement. Aucun formulaire inventé ; questionnaires = PDF uniquement.
+## Analyse et preuves
+- `source-snapshot/` : HTML/CSS curl source, non servi ; `assets.json` inventorie 18 ressources et SHA-256 (CSS adaptée, 17 autres originales inchangées).
+- `scripts/collect-assets.py` : collecte d’origine, ne pas relancer pour une modification d’interface.
+- `scripts/extract-pdfs.py` : pdftotext intégral, OCR des pages <260 caractères (tesseract fra+eng, pdftoppm180dpi). Reprise : `OMP_THREAD_LIMIT=1 python3 scripts/extract-pdfs.py`.
+- `tasks/pdf-text/` : textes/OCR/inventaire par page versionnés. `tasks/pdf-images/` : ~12 Mo de rendus locaux ignorés par Git, disponibles au superviseur.
+- `tasks/pdf-analysis.md` : couverture156pages, synthèse des8PDF et ambiguïtés ; `tasks/quiz-source-map.md` : matrice29cartes.
+- `tests/activities.test.mjs` : 10tests Node/LinkeDOM, aucune utilisation de navigateur ; build préalable nécessaire.
+- `scripts/verify.py` : 13routes, 26blocs source, contenu des quiz/questionnaires, navigation/noindex, scripts locaux ciblés, API de réseau/stockage interdites, 8PDF/156pages/hash, ancres/pages PDF, tous assets et variantes slash en HTTP.
+- `tasks/verification.md` : rapport généré (50URLs/276références au dernier contrôle) ; `tasks/browser-review.md` : retours visuels réels rapportés, séparés des contrôles automatiques.
+- `tasks/todo.md`, `tasks/lessons.md`, `README.md` : suivi, leçons et reprise.
 
-## Routage
-`astro.config.mjs` utilise `trailingSlash: ignore` : /kit et /kit/, /guides et /guides/ doivent tous répondre 200 en preview. Redémarrer le serveur local après un changement de configuration Astro.
+## Infrastructure et limites
+Coolify créé/configuré par OpenBot : projet `yuhz20ol6ogbmzj1pol2r7pz`, application `ezv2qhhub0jjl6cg4zgkp8p8`, branche dédiée, Nixpacks npmci/build, static /dist port80. Domaines et disponibilité : voir README ; aucune confirmation HTTPS ni action d’infrastructure par l’exécutant.
+
+Aucun compte/backend/formulaire envoyé/analytics/persistance. Les conseils/cartes ambigus sont attribués au support et nuancés ; guides de2021 explicitement datés. Revue finale navigateur en attente ; ne pas extrapoler des mesures CSS ou de l’ancienne interface. Tout commit inclut le trailer OpenBot demandé.

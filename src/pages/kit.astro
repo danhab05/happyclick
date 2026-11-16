@@ -1,53 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PdfDocument from '../components/PdfDocument.astro';
+import copy from '../data/source-copy.json';
+import roles from '../data/roles.json';
+const {intro,sections} = copy.kit;
 ---
-<Layout active="/kit">
-  <div id="semi-fullscreen">
-            <div id="secondary_page_title">
-                <h1>Le KIT</h1>
-                <h2>Happy Click</h2>
-            </div>
-
-        </div>
-  <main id="contenu" class="resources" tabindex="-1">
-            <h4>Imprimables à destination des enseignants</h4>
-            <div class="center_and_space_around">
-                <p>Le KIT Happy Click est un ensemble de documents à imprimer, à destination des enseignants (mais aussi des parents). Les activités ont été conçu pour un public d'enfants de niveau fin-primaire début-collège.</p>
-            </div>
-            <hr/>
-            <h3>Activitée - Quizz</h3>
-            <h5>Cartes à imprimer (format A4)</h5>
-            <div class="center_and_space_around">
-                <p>En classe, par petits groupes de 4 à 6, les élèves lisent une question portant sur une des trois catégories suivantes : comportements, écologie et santé. Ils s'interrogent ensuite sur chacune des réponses possibles, avant de retourner la carte afin de comprendre l'enjeu soulevé. L'accent n'est pas mis sur la réussite, mais sur le débat et la discussion.</p>
-            </div>
-            <PdfDocument src="/resources/kit/activite_cartes_a_imprimer.pdf" title="Quizz — cartes à imprimer" height={800} />
-            <hr/>
-            <h3>Activitée - Jeu de rôle</h3>
-            <h5>Cartes à imprimer (format A4)</h5>
-            <div class="center_and_space_around">
-                <p>Les enfants sont répartis en groupes de 6, et chacun d'entre eux pioche une carte représentant son rôle durant le jeu. Ces rôles peuvent par exemple être celui d'un médecin scolaire, d'un parent, d'un enfant harcelé, d'un ami, ou autre.</p>
-	            <p>Ensuite, à chaque tour, une situation est décrite, les enfants imaginent comment leur personnage réagirait à la situation, puis interprètent leur personnage.</p>
-	            <p>Finalement, une fois le tour terminé, l'intervenant explique explicitement les leçons que les enfants pourraient tirer de la situation, puis en tire la suivante.</p>
-            </div>
-            <PdfDocument src="/resources/kit/rp_addiction.pdf" title="Jeu de rôle — addiction" height={600} />
-            <PdfDocument src="/resources/kit/rp_cyberharcelement.pdf" title="Jeu de rôle — cyberharcèlement" height={600} />
-            <PdfDocument src="/resources/kit/rp_desinformation.pdf" title="Jeu de rôle — désinformation" height={600} />
-            <hr/>
-            <h3>Questionnaire - Test de dépendance au numérique</h3>
-            <h5>Pages à imprimer (format A4)</h5>
-            <div class="center_and_space_around">
-                <p>Ce questionnaire, à destination des enfants, permet de recueillir des informations sur leur usage du numérique et leur niveau de dépendance.</p>
-                <p>Ce questionnaire peut tout aussi bien être répondu de manière anonyme pour faciliter la liberté d'expression des enfants.</p>
-            </div>
-            <PdfDocument src="/resources/kit/test_numerico_dependance.pdf" title="Test de dépendance au numérique" height={600} />
-            <hr/>
-            <h3>Questionnaire - Enjeux du numérique à l'école</h3>
-            <h5>Pages à imprimer (format A4)</h5>
-            <div class="center_and_space_around">
-                <p>Ce questionnaire, à destination des enseignants, permet de recueillir des informations sur les enjeux du numérique dans l'environnement scolaire.</p>
-            </div>
-            <PdfDocument src="/resources/kit/questionnaire_enseignants.pdf" title="Enjeux du numérique à l’école" height={600} />
-            <hr />
-        </main>
+<Layout active="/kit" title="Le kit pédagogique">
+  <section class="wrap page-intro"><p class="eyebrow">Le KIT · Happy Click · Fin primaire / début collège</p><h1>Des idées à jouer.<br />Des échanges à <em>faire grandir.</em></h1><p class="lead">Prépare un atelier, distribue les rôles ou ouvre une discussion. Les six documents du kit sont ici, avec leurs versions à explorer en ligne.</p></section>
+  <div class="wrap section resource-layout">
+    <aside class="contents" aria-label="Sommaire du kit"><h2>Dans le kit</h2><a href="#cartes">01 · Les cartes quiz</a><a href="#roles">02 · Les jeux de rôles</a><a href="#usages">03 · Mes usages</a><a href="#enseignants">04 · Côté enseignants</a></aside>
+    <div class="resource-content">
+      <section class="resource-section"><h2>{intro.title}</h2>{intro.paragraphs.map(p=><p>{p}</p>)}<div class="callout"><h3>Le point de départ : la parole</h3><p>Pas de classement, ni de réponse personnelle à envoyer. Les cartes se discutent, les scènes se jouent, les questionnaires servent à réfléchir.</p></div></section>
+      <section class="resource-section" id="cartes"><p class="eyebrow">01 / 29 cartes · 3 thèmes · Groupes de 4 à 6</p><h2>Choisir, expliquer, débattre.</h2><div class="original-copy"><h3>{sections[0].title}</h3><p class="resource-meta">{sections[0].subtitle}</p>{sections[0].paragraphs.map(p=><p>{p}</p>)}</div><a class="button" href="/quiz">Jouer les cartes en ligne ↗</a><PdfDocument src="/resources/kit/activite_cartes_a_imprimer.pdf" title="Quizz — cartes à imprimer" height={800} /><p class="source-note">16 pages · 10 cartes comportements, 8 santé, 11 écologie. Les corrigés documentaires et leurs limites sont explicités dans les quiz.</p></section>
+      <section class="resource-section" id="roles"><p class="eyebrow">02 / Trois histoires · Six rôles · Quatre scènes</p><h2>Et si on changeait de place ?</h2><div class="original-copy"><h3>{sections[1].title}</h3><p class="resource-meta">{sections[1].subtitle}</p>{sections[1].paragraphs.map(p=><p>{p}</p>)}</div><div class="role-links">{roles.map(r=><a class="role-link" href={`/kit/roles/${r.slug}`}><div><strong>{r.title}</strong><span>6 rôles · 4 tours · {r.pages} pages source</span></div><span aria-hidden="true">↗</span></a>)}</div>{roles.map(r=><PdfDocument src={r.file} title={`Jeu de rôle — ${r.slug === 'addiction' ? 'addiction' : r.slug === 'cyberharcelement' ? 'cyberharcèlement' : 'désinformation'}`} />)}</section>
+      <section class="resource-section" id="usages"><p class="eyebrow">03 / Onze questions pour soi</p><h2>Regarder ses habitudes,<br />ouvrir la conversation.</h2><p>Appareils, activités, moments de la journée : un parcours pour décrire ses usages et choisir ce dont on aimerait parler. Aucune note, aucun diagnostic.</p><div class="callout"><p>Le PDF s’intitule « Test de dépendance au numérique », mais ne fournit pas de barème validé. La version en ligne est une réflexion personnelle, sans prénom ni envoi.</p></div><a class="button" href="/mes-usages">Faire le point sur mes usages ↗</a><details><summary>Présentation du document d’origine</summary><div class="details-body"><h3>{sections[2].title}</h3><p>{sections[2].subtitle}</p>{sections[2].paragraphs.map(p=><p>{p}</p>)}</div></details><PdfDocument src="/resources/kit/test_numerico_dependance.pdf" title="Test de dépendance au numérique" /></section>
+      <section class="resource-section" id="enseignants"><p class="eyebrow">04 / Quatorze questions ouvertes</p><h2>Prendre du recul<br />sur sa pratique.</h2><p>Apprentissages, inégalités, rôle des familles et méthodes de sensibilisation : un carnet de réflexion issu du questionnaire enseignants.</p><a class="button" href="/kit/reflexion">Ouvrir mon carnet de réflexion ↗</a><div class="original-copy"><h3>{sections[3].title}</h3><p class="resource-meta">{sections[3].subtitle}</p>{sections[3].paragraphs.map(p=><p>{p}</p>)}</div><p class="privacy-note">Ici, les notes restent seulement dans la page ouverte. Il n’y a pas de collecte ni de statistiques produites à partir des réponses.</p><PdfDocument src="/resources/kit/questionnaire_enseignants.pdf" title="Enjeux du numérique à l’école" /></section>
+    </div>
+  </div>
 </Layout>

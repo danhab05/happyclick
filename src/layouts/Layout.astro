@@ -1,13 +1,7 @@
 ---
-interface Props { active: '/' | '/kit' | '/guides'; }
-const { active } = Astro.props;
-const links = [
-  { href: '/', label: 'Accueil' },
-  { href: '/kit', label: 'Le KIT' },
-  { href: '/guides', label: 'Guides' },
-  { href: 'https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/', label: '2024-2025' },
-  { href: 'https://www.telecom-sudparis.eu/ecole/gestion-apprentissage-travail-en-equipe/', label: "Qu'est-ce qu'un GATE® ?" },
-];
+interface Props { active: string; title?: string; }
+const { active, title = 'Le numérique, ça se discute' } = Astro.props;
+const links = [ ['/', 'Accueil'], ['/quiz', 'Quiz'], ['/kit', 'Kit pédagogique'], ['/guides', 'Guides'] ];
 ---
 <!doctype html>
 <html lang="fr">
@@ -15,7 +9,8 @@ const links = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Happy Click - GATE 2025/2026</title>
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>{title} — Happy Click</title>
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
     <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
@@ -23,21 +18,26 @@ const links = [
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
-    <header>
-      <div class="header_name">
-        <img src="/assets/images/LogoBasseRes.png" id="header_logo" width="444" height="463" alt="" />
-        <span class="header-title">Happy Click</span>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Happy Click, accueil">
+          <img src="/assets/images/LogoBasseRes.png" width="444" height="463" alt="" />
+          <span>Happy Click<span class="brand-sub">Le numérique en confiance</span></span>
+        </a>
+        <nav aria-label="Navigation principale">
+          {links.map(([href, label]) => <a href={href} aria-current={href === active ? 'page' : undefined}>{label}</a>)}
+        </nav>
+        <a class="header-action" href="/quiz">À toi de jouer <span aria-hidden="true">↗</span></a>
       </div>
-      <nav aria-label="Navigation principale">
-        {links.map(({ href, label }) => (
-          <a href={href} class:list={{ highlighted: href === active }}
-             aria-current={href === active ? 'page' : undefined}
-             target={href.startsWith('https:') ? '_blank' : undefined}
-             rel={href.startsWith('https:') ? 'noopener noreferrer' : undefined}>{label}</a>
-        ))}
-      </nav>
     </header>
-    <slot />
-    <footer><span>Happy Click - Campagne 2025-2026</span></footer>
+    <main id="contenu" tabindex="-1"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div><a class="brand" href="/"><img src="/assets/images/LogoBasseRes.png" width="444" height="463" alt="" /><span>Happy Click</span></a><p>Des questions pour comprendre.<br />Des échanges pour avancer.</p><p class="small">Happy Click - Campagne 2025-2026</p></div>
+        <div><h2>Explorer ensemble</h2><a href="/quiz">Les 29 cartes du quiz</a><a href="/mes-usages">Faire le point sur mes usages</a><a href="/kit/reflexion">Le carnet des enseignants</a><a href="/guides">Les guides et leurs sources</a></div>
+        <div><h2>Le projet</h2><a href="https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/" target="_blank" rel="noopener noreferrer">2024-2025 <span class="sr-only">(nouvel onglet)</span> ↗</a><a href="https://www.telecom-sudparis.eu/ecole/gestion-apprentissage-travail-en-equipe/" target="_blank" rel="noopener noreferrer">Qu'est-ce qu'un GATE® ? <span class="sr-only">(nouvel onglet)</span> ↗</a><p class="small">Une démarche de discussion, sans compte ni envoi de réponses.</p></div>
+      </div>
+      <div class="wrap footer-bottom"><span>Comprendre · Échanger · Choisir</span><span>Préversion · Indexation désactivée</span></div>
+    </footer>
   </body>
 </html>

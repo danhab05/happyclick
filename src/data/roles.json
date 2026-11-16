@@ -1,0 +1,311 @@
+[
+  {
+    "slug": "addiction",
+    "title": "Écrans et équilibre",
+    "pages": 28,
+    "file": "/resources/kit/rp_addiction.pdf",
+    "roles": [
+      {
+        "name": "L’élève accro",
+        "text": "Description : Tu as reçu un nouveau téléphone il y a quelques semaines. Depuis, tu passes beaucoup de temps dessus : jeux, vidéos, réseaux sociaux… Tu joues même tard le soir et tu arrives fatigué en classe. Comportement à adopter : Parle souvent de ton téléphone. Montre que tu es fatigué (bâillements, manque d’attention). Si quelqu’un te dit d’arrêter, tu peux répondre : « C’est pas grave, je gère ! » ou « T’es pas ma mère ! ». Objectif caché : Tu ne veux pas qu’on t’empêche d’utiliser ton téléphone.",
+        "page": 1
+      },
+      {
+        "name": "L’ami inquiet",
+        "text": "Description : Tu étais content pour ton ami quand il a eu son téléphone, mais maintenant il est toujours dessus et ne joue plus avec toi. Tu remarques qu’il est fatigué et distant. Comportement à adopter : Essaie de lui parler gentiment : « Tu devrais dormir plus… ». Montre que tu es triste de ne plus passer de temps avec lui. Tu peux insister un peu, mais sans être méchant. Objectif caché : Tu veux qu’il comprenne que c’est dangereux et qu’il revienne jouer avec toi.",
+        "page": 2
+      },
+      {
+        "name": "Le parent",
+        "text": "Description : Tu as offert le téléphone à ton enfant sans connaître tous les risques. Tu vois qu’il se couche tard et qu’il est fatigué. Tu veux qu’il dorme plus tôt. Comportement à adopter : Parle calmement : « Je suis inquiet, tu dors trop tard… ». Tu peux proposer des règles : « Pas d’écran après 21h ». Si ton enfant se braque, reste calme ou montre que tu es triste. Objectif caché : Tu veux protéger ton enfant sans le fâcher.",
+        "page": 3
+      },
+      {
+        "name": "Le professeur",
+        "text": "Description : Tu remarques que l’élève est fatigué et ses notes baissent. Tu sais que les écrans peuvent être dangereux. Comportement à adopter : Parle sérieusement : « Tes résultats chutent, il faut agir ». Explique pourquoi c’est important de dormir et de travailler. Tu peux être ferme mais bienveillant. Objectif caché : Tu veux qu’il comprenne que ses études sont importantes.",
+        "page": 4
+      },
+      {
+        "name": "Le témoin neutre",
+        "text": "Description : Comportement à adopter : Écoute attentivement. À la fin, dis ce que tu as remarqué : « Il est vraiment fatigué… ». Objectif caché : Tu dois être honnête et aider à trouver une solution.",
+        "page": 5
+      },
+      {
+        "name": "Le médecin scolaire",
+        "text": "Description : Tu connais les effets des écrans sur la santé : fatigue, stress, troubles du sommeil. Tu es là pour expliquer les risques. Comportement à adopter : Parle comme un expert : « Les écrans trop tard empêchent de bien dormir ». Donne des conseils simples : « Fixe des horaires, fais du sport ». Objectif caché : Tu veux convaincre l’élève et ses parents de changer leurs habitudes.",
+        "page": 6
+      }
+    ],
+    "rounds": [
+      {
+        "title": "Une nuit sur le téléphone",
+        "page": 8,
+        "context": "L’élève raconte qu’il a passé toute la nuit à jouer ou regarder des vidéos et explique qu’il est fatigué. Son ami le met en garde : « Tu ne devrais pas faire ça trop souvent ».",
+        "participants": "Élève accro : parle de sa nuit sur son téléphone, montre qu’il est fatigué. Ami inquiet : essaie de le convaincre que ce n’est pas bon pour lui.",
+        "help": "Idées d’interprétation : Élève accro : Continue à regarder ton téléphone pendant la discussion. Dis des phrases comme : « J’ai joué toute la nuit, c’était trop bien ! » « Je suis crevé mais ça valait le coup » « T’es pas ma mère ! » (si on te fait la remarque). Ami inquiet : Essaie de convaincre calmement : « Tu devrais dormir plus… » « Tu vas être KO en cours » Tu peux insister un peu, mais sans être méchant.",
+        "helpPage": 9,
+        "questions": [
+          "Quels signes montrent qu’on passe trop de temps sur les écrans ?",
+          "Que pourrait faire l’élève pour mieux gérer son temps d’écran ?",
+          "Pourquoi est-ce important de dormir suffisamment ?"
+        ],
+        "debriefPage": 11,
+        "answerPage": 12,
+        "lesson": "Discuter des signes décrits dans la scène, des activités délaissées et de la place du sommeil. Le support propose un cadre et l’aide d’un adulte."
+      },
+      {
+        "title": "Le professeur s’inquiète",
+        "page": 13,
+        "context": "Après la discussion avec son ami, le cours commence. L’élève manque plusieurs fois de s’endormir. À la pause, le professeur le convoque : il a remarqué ses notes qui chutent et sa fatigue, et il sait que l’élève a un smartphone.",
+        "participants": "Élève accro : fatigué, essaie de se justifier. Professeur : inquiet, veut lui faire comprendre les conséquences.",
+        "help": "Idées d’interprétation : Professeur : Préviens l’élève que ses résultats sont en chute libre. Argumente sur : L’obligation scolaire jusqu’à 16 ans. Les difficultés à trouver un travail sans diplôme. Tu peux être ferme ou bienveillant, selon ton style. Élève accro : Essaie de minimiser le problème : « Beaucoup ont réussi sans finir le lycée ! » « Ce n’est pas si grave… » Tu peux te braquer ou rester calme, au choix. Option fun : Transforme la scène en débat houleux ou en discussion calme où l’élève commence à prendre conscience du problème.",
+        "helpPage": 14,
+        "questions": [
+          "Que pourrait faire l’élève pour améliorer la situation ?",
+          "Quels indices montrent qu’il ne veut pas reconnaître le problème ?",
+          "Pourquoi est-ce important d’écouter les conseils du professeur ?"
+        ],
+        "debriefPage": 16,
+        "answerPage": 17,
+        "lesson": "Relever ce que dit l’élève pour minimiser la situation. Discuter d’un planning, des priorités et de l’aide que peut apporter le professeur."
+      },
+      {
+        "title": "Une discussion avec la famille",
+        "page": 18,
+        "context": "Après la discussion avec le professeur, celui-ci convoque le parent de l’élève accro et un témoin. Le professeur explique le lien entre la possession du téléphone et la fatigue chronique de l’élève. Le témoin donne des exemples des actions de l’élève. Les parents réagissent.",
+        "participants": "Professeur : explique calmement son hypothèse. Parent : réagit (accord ou colère). Élève accro : peut être penaud ou s’insurger. Témoin neutre : rapporte ce qu’il a observé.",
+        "help": "17  Idées d’interprétation : Professeur : Explique calmement le lien entre fatigue et usage du téléphone. Demande des témoignages au témoin. Parent : Peut s’insurger : « On critique mon éducation ?! » Peut être d’accord et s’excuser : « J’aurais dû agir plus tôt… » Peut demander : « Pourquoi tu m’as menti sur tes notes ? » Élève accro : Peut être penaud ou se braquer : « Je veux pas qu’on me mette des règles ! » Témoin neutre : Décrit ce qu’il a vu : « Il joue tout le temps, même en récré ». Option fun : Ajoute des émotions fortes (colère, tristesse, surprise) pour rendre la scène vivante.",
+        "helpPage": 19,
+        "questions": [
+          "Quels signes dans le comportement de l’élève montrent qu’il a du mal à contrôler son usage des écrans ?",
+          "Quelles actions concrètes peuvent aider à réduire son temps d’écran ?",
+          "Pourquoi est-il important que les parents et le professeur travaillent ensemble ?"
+        ],
+        "debriefPage": 21,
+        "answerPage": 22,
+        "lesson": "Le document invite à des règles progressives, des activités alternatives et un dialogue sans culpabilisation. Il met l’accent sur la coopération famille/école."
+      },
+      {
+        "title": "La consultation",
+        "page": 23,
+        "context": "Après la réunion avec le professeur, le parent décide d’emmener son enfant voir un médecin spécialiste des addictions. Le médecin explique les risques liés à l’usage excessif des écrans : sommeil, vue, stress.",
+        "participants": "Médecin scolaire : expert, explique les dangers et propose des solutions. Parent : veut comprendre et protéger son enfant. Élève accro : peut être réticent ou coopératif.",
+        "help": "21  Idées d’interprétation : Médecin scolaire : Explique les risques : « Trop d’écrans = troubles du sommeil, fatigue, stress ». Donne des conseils simples : « Fixe des horaires », « Fais du sport », « Pas d’écran avant le coucher ». Essaie de créer un lien avec l’enfant en parlant de ses passions : « Tu aimes le foot ? Le manque de sommeil peut te fatiguer pour jouer ». Parent : Peut être inquiet : « Je veux qu’il comprenne pourquoi on met des règles ». Pose des questions : « Quels sont les risques si ça continue ? ». Élève accro : Peut être réticent : « Je ne veux pas qu’on m’interdise mon téléphone ! ». Ou commencer à comprendre : « Je ne savais pas que ça pouvait me rendre malade ». Option fun : Ajoute des émotions (colère, surprise, soulagement) pour rendre la scène vivante.",
+        "helpPage": 24,
+        "questions": [
+          "Quelles solutions médicales et pratiques peuvent aider à réduire l’usage excessif des écrans ?",
+          "Quels risques pour la santé si on continue à utiliser les écrans sans limite ?",
+          "Pourquoi est-il important de consulter un professionnel dans ce cas ?"
+        ],
+        "debriefPage": 26,
+        "answerPage": 27,
+        "lesson": "Dans cette fiction, le médecin propose un accompagnement adapté. Les horaires et durées cités dans le PDF sont des exemples du support, pas des prescriptions à appliquer aux participants."
+      }
+    ],
+    "sources": "11   Sources :\nOMS, Santé publique France\nPlan d’action\ngouvernemental « Pour un\nusage raisonné des écrans\n»)\nSanté publique France\nMILDECA\nPlan national « Pour un\nusage raisonné des écrans\n»)\nÉtudes sur les mécanismes\nde défense dans l’addiction\ncomportementale, INSERM\nÉducation nationale –\nPrévention des addictions\nnumériques\n(Ministère de la Santé"
+  },
+  {
+    "slug": "cyberharcelement",
+    "title": "Agir face au cyberharcèlement",
+    "pages": 24,
+    "file": "/resources/kit/rp_cyberharcelement.pdf",
+    "roles": [
+      {
+        "name": "L’élève harcelé",
+        "text": "Description : La rentrée était il y peu, et les groupes de classes sur les différentes plateformes se sont crées. On se moque de toi de plus en plus sur les groupe et en vrai. Comportement à adopter :  Triste, et aimerai être accepté sans qu’on se moque de lui Montre que tu ne vas pas spécialement bien . Si quelqu’un te demande ce qu’il se passe, tu peux avoir tendance à vouloir cacher la situation.",
+        "page": 1
+      },
+      {
+        "name": "L’ami inquiet",
+        "text": "Description : Tu constates les moqueries sur le groupe classe, mais tu n’es pas encore sur des effets sur ton camarade. Tu t’inquiètes malgré tout pour lui. Comportement à adopter : Tu essaies d’aider ton ami en lui parlant et en le réconfortant. Tu peux éventuellement pousser afin que ce dernier parle de ses problèmes. Montre que tu es la pour lui et que ton ami peut compter sur toi. Tu peux insister un peu sans pour autant devenir invasif.",
+        "page": 2
+      },
+      {
+        "name": "Le parent",
+        "text": "Description : Tu constates que ton enfant parle de moins en moins à la maison, qu’il s’enferme dans sa chambre et est affecté par ce qu’il voit sur son téléphone. Comportement à adopter : Parle calmement : « Je suis inquiet, tu as l’air triste ces derniers temps ». Montre qu’il peut compter sur toi pour le soutenir sans craindre d’être jugé. Si ton enfant se braque, reste calme ou montre que tu es triste. Objectif caché : Tu veux protéger ton enfant.",
+        "page": 3
+      },
+      {
+        "name": "Le professeur",
+        "text": "Description : Tu remarques que l’élève est triste et ses notes baissent. Tu vois souvent les gens rirent autour de lui. Comportement à adopter : Parle sérieusement : « Tu as de soucis dans la récréation ou à la maison ? ». Explique pourquoi c’est important de se confier et de parler de ses problèmes. Tu peux être bienveillant sans le forcer à parler. Objectif caché : Tu veux qu’il comprenne qu’il est soutenue quelque soit la situation.",
+        "page": 4
+      },
+      {
+        "name": "Le harceleur",
+        "text": "Description : Tu es à l’origine des moqueries successives en ligne du harcelé. Tu n’as pas l’impression d’être méchant car tu n’es pas conscient de l’impact de tes mots. Comportement à adopter :  Moqueur sans pour autant être violent. À la fin, tu peux prendre conscience de l’impact de tes mots. Objectif caché : Tu cherches inconsciemment à avoir de l’attention.",
+        "page": 5
+      },
+      {
+        "name": "Le CPE",
+        "text": "Description : Tu es responsable de la sensibilisation et de la sanction des étudiants. Tu sais reconnaître les signes qu’un enfant est harcelé. Comportement à adopter :  Sois ferme et compréhensif. Agi en conséquence de ce qu’on te dit, pour faire évoluer la situation. Objectif caché : Tu veux convaincre l’élève harcelé d’en parler et faire comprendre au harceleur le poids de ses actes.",
+        "page": 6
+      }
+    ],
+    "rounds": [
+      {
+        "title": "À la maison",
+        "page": 8,
+        "context": "Le harcelé est enfermé dans sa chambre depuis longtemps, et le parent s’inquiéte. Il se rend alors dans la chambre de son enfant, qui s’empresse d’essuyer ses larmes. Le parent tente alors de comprendre ce qu’il se passe.",
+        "participants": "Élève harcelé : est enfermé dans sa chambre, sur son téléphone et désespéré. Le parent : essaie de comprendre ce qui ne va pas.",
+        "help": "Idées d’interprétation : Élève harcelé : Peut se braquer ou s’ouvrir très légèrement à la discussion. Exemple : « Je suis juste un peu fatigué » « Quelqu’un a été méchant avec moi aujourd’hui. » Le parent : Essaie de comprendre ce qu’il se passe. Tu peux insister un peu, mais ton enfant risque de se braquer.",
+        "helpPage": 9,
+        "questions": [
+          "Que peut faire un parent pour aider son enfant victime de cyberharcèlement ?",
+          "Pourquoi l’enfant peut avoir du mal à en parler ?",
+          "Quels sont les dangers si on garde le silence ?"
+        ],
+        "debriefPage": 10,
+        "answerPage": 11,
+        "lesson": "Le support recommande d’écouter sans juger, de rappeler à l’enfant qu’il n’est pas responsable, de conserver des preuves et de solliciter les adultes de l’école."
+      },
+      {
+        "title": "Le retour à l’école",
+        "page": 12,
+        "context": "Le harcelé est de retour à l’école le lendemain de la discussion la discussion avec son parent, une mine fatiguée et triste au visage. Son ami vient alors le voir pour lui demander ce qu’il se passe. Le harceleur lui fait alors passer un mauvais moment.",
+        "participants": "Élève harcelé : fatigué et triste, il veut juste que tout s’arrête. Ami inquiet : inquiet pour son ami, il tente de le soutenir Harceleur : pas conscient de ses actes, il vient “faire une blague”.",
+        "help": "13  Idées d’interprétation : Élève harcelé : Il a une mine triste, et ne souhaite parler à personne. Ami inquiet : Essaie de soutenir son ami, de savoir ce qu’il se passe. Essaie de faire rire son ami plutôt que de lui poser la question de comment il va, ca dépend de toi. Harceleur : Voit l’élève dont il s’est moqué et peut venir lui parler, gentiment ou pour refaire un blague, car il n’est pas forcément conscient du poids de ses actes et trouve ça “drôle”.",
+        "helpPage": 13,
+        "questions": [
+          "Comment l’ami peut-il soutenir efficacement le harcelé ?",
+          "Que peut faire l’élève harcelé pour se protéger et obtenir de l’aide ?",
+          "Pourquoi est-ce important de signaler le harcèlement ?"
+        ],
+        "debriefPage": 14,
+        "answerPage": 15,
+        "lesson": "L’ami peut soutenir sans minimiser. Le PDF évoque le blocage, la conservation de preuves et le signalement aux adultes et à la plateforme."
+      },
+      {
+        "title": "Le professeur écoute",
+        "page": 16,
+        "context": "Après avoir eu leur premier cours de la journée, le professeur remarque la mine fatiguée prolongé de l’élève harcelé. Il va alors le voir pour lui demander si tout se passe bien à la maison et à l’école. Son ami, avec lui à ce moment, le regarde inquiet et le harcelé répond alors.",
+        "participants": "Le professeur : s’inquiète pour l’élève en voyant sa mine épuisé Le harcelé : un peu inquiet de cette convocation soudaine , il va discuter à reculons L’ami de confiance du harcelé : il vient soutenir son ami et l’encourager à se confier.",
+        "help": "17  Idées d’interprétation : Professeur : S’inquiète en voyant que son élève et triste et fatigué Il tente de comprendre ce qui se passe tout en restant bienveillant, mais ne force pas non plus. Ami inquiet: il tente de convaincre son ami de parler, en lui disant par exemple que rien ne va changer si il n’agit pas. Élève harcelé : Peut s’ouvrir à la discussion comme se braquer et dire qu’il s’est simplement couché tard la veille.",
+        "helpPage": 17,
+        "questions": [
+          "Que peut faire le professeur pour aider efficacement l’élève harcelé ?",
+          "Comment l’ami peut-il soutenir son camarade sans parler à sa place ?",
+          "Pourquoi est-il important de respecter la parole et le rythme de la victime ?"
+        ],
+        "debriefPage": 18,
+        "answerPage": 19,
+        "lesson": "Le document insiste sur le respect de la parole et du rythme de l’élève, le soutien de l’ami et la mobilisation de l’équipe éducative."
+      },
+      {
+        "title": "Le rendez-vous avec le CPE",
+        "page": 20,
+        "context": "Suite à l’interaction avec le professeur, ce dernier, inquiet, a pris rendez vous pour le harcelé avec le CPE (même si ce dernier a refusé de parler pour décrire la situation). L’élève se retrouve alors devant le CPE, et ce dernier remarque les différents signe qui permettent d’identifier qu’un élève est dans une situation compliquée, qu’il suppose être du cyberharcèlement, car ce type de harcèlement est très répandu.",
+        "participants": "Le harcelé : mis face à ses responsabilité, ce dernier décide de se confier Le CPE : professionnel, ce dernier gère la situation en rassurant l’enfant et en lui expliquant quoi faire et ce qu’il va se passer.",
+        "help": "Idées d’interprétation : Le CPE : Voit les signes de fatigue mental et physique de l’enfant. Pose des questions afin de comprendre en profondeur ce qu’il se passe. Le convainc de parler en expliquant les risques de se braquer dans le cas de harcèlement Fini par donner les conseils sur ce qu’il faut faire à la maison et convoque le harceleur. L’élève harcelé : Peut se braquer au début, et refuser la discussion. Après avoir entendu les arguments sur les conséquences plausibles du harcèlement, ce dernier décide de se livrer. Option: Ajoute des émotions (surprise, soulagement) pour rendre la scène vivante.",
+        "helpPage": 21,
+        "questions": [
+          "Quelles sanctions légales peuvent s’appliquer en cas de cyberharcèlement ?",
+          "Pourquoi faut-il garder la confidentialité et assurer un suivi ?",
+          "Quels actions doivent mettre en place les CPE pour protéger l’élève ?"
+        ],
+        "debriefPage": 22,
+        "answerPage": 23,
+        "lesson": "Le débrief met en avant la protection, la confidentialité et le suivi. Les mentions de sanctions dans le PDF sont des références du support ; cette activité ne tranche pas la qualification juridique d’une situation."
+      }
+    ],
+    "sources": "Sources :\nCNIL\nCybermalveillance.gouv.fr\nMinistère Éducation nationale\nUNICEF\nÉducation aux écrans\nOMS\nMinistère Éducation nationale – Plan pHARe,\nGuide NonAuHarcèlement\nOMS-Santé mentale et cyberharcèlement\nService-public.fr\nCode pénal"
+  },
+  {
+    "slug": "desinformation",
+    "title": "Remonter à la source",
+    "pages": 21,
+    "file": "/resources/kit/rp_desinformation.pdf",
+    "roles": [
+      {
+        "name": "L’élève désinformé",
+        "text": "Description : Très curieux, ce dernier se renseigne sur plein de sujet. Sa source d’information principale est internet, mais il n’a pas encore conscience que tout ce qui s’y trouve n’est pas forcément réel. Comportement à adopter :  Curieux et enthousiaste, il adore partager ces découvertes avec ces camarades Il n’apprécie pas forcément qu’on lui dise que ces informations sont fausses, alors qu’il sait ce qu’il a lu..",
+        "page": 1
+      },
+      {
+        "name": "L’ami",
+        "text": "Description : Ami de cet élève très curieux, ce dernier apprécie beaucoup écouter ces anecdotes. Il ne se questionne pas forcément sur la véracité des propos, mais soutient son ami. Comportement à adopter :  Tu soutiens ton ami et essaie de calmer les débats qui vont arriver, ou pas. Tu es attentif et tu cherches toujours des solutions pacifistes.",
+        "page": 2
+      },
+      {
+        "name": "L’élève informé",
+        "text": "Description : Tu as surpris une discussion entre l’élève désinformé et son ami, mais tu es renseigné sur le sujet de l’information. Comportement à adopter :  Avide de faire régner la vérité, tu interviens lorsque tu entends une information fausse afin de rétablir la vérité. Parfois sans filtre, tes interventions peuvent sembler étrange. Tu ne t’arrête pas tant que raison n’a pas été entendu.",
+        "page": 3
+      },
+      {
+        "name": "Le professeur",
+        "text": "Description : Professeur érudit, ce dernier à beaucoup de culture général et aime enseigner. Comportement à adopter : Calme et lucide, ce dernier va régler les conflits de manière pacifique et ludique. Conscient des risques sur internet, il peut donner des conseils sur son utilisation. Tu peux être bienveillant ou ferme. Objectif : Faire prendre conscience au élèves des risques de désinformation sur internet",
+        "page": 4
+      },
+      {
+        "name": "Le parent",
+        "text": "Description : Très fier de son enfant qui adore se cultiver sur internet, ces derniers n’ont cependant pas conscience des risques de désinformation. Comportement à adopter :  Fier de son enfant et ouvert d’esprit, il est impliqué dans la vie scolaire de son enfant. À la fin, tu prends conscience des risques de désinformation sur internet.",
+        "page": 5
+      },
+      {
+        "name": "L’expert numérique",
+        "text": "Description : Travaillant dans le domaine du numérique, tu es pleinement conscient des risques sur internet. L’école a fait appel à toi afin de sensibiliser les jeunes au dangers de la désinformation. Tu es l’expert de ce jeu. Comportement à adopter :  Bienveillant, ce dernier informe parents et enfant des dangers de la désinformation. Objectif : Faire prendre conscience aux parents et enfants que tout ce qui est sur internet n’est pas forcément vrai.",
+        "page": 6
+      }
+    ],
+    "rounds": [
+      {
+        "title": "La fake news",
+        "page": 8,
+        "context": "L’élève désinformé a vu une information sur internet la veille, et va la raconter à son camarade. Le camarade réagit à l’information et l’élève informé sur le sujet surprend alors la conversation et intervient dans la discussion.",
+        "participants": "L’élève désinformé : très curieux, il raconte sa découverte à son camarade. Son camarade : attentif, ce dernier boit les paroles de son ami. L’élève informé : érudit sur le sujet, ce dernier intervient.",
+        "help": "09  Idées d’interprétation : Élève désinformé : raconte avec enthousiasme la découverte qu’il a faite la veille. Le sujet de la découverte peut être quelconque. L’ami : ce dernier, attentif, peut trouver quelque chose de louche dans l’histoire de son camarade tout comme boire ses paroles et poser des questions pour en savoir plus. L’élève informé: ses parents travaillent sur le sujet (ou il s’est renseigné dessus avec ces parents) et il affirme avec certitude que les faits racontés sont des balivernes. Il raconte alors sa version. Idée fun : un débat houleux pour savoir qui a raison peut alors s’engager. Attention à rester dans le respect et ne pas perdre de temps.",
+        "helpPage": 9,
+        "questions": [
+          "Quels indices montrent qu’une information sur internet peut être fausse ?",
+          "Quels sont les propos qui vous ont semblé incohérent dans l’histoire du désinformé ?",
+          "Pensez-vous que l’on peut facilement éviter les fausses informations ?"
+        ],
+        "debriefPage": 10,
+        "answerPage": 11,
+        "lesson": "Regarder le titre, les incohérences et la provenance. Pour l’histoire inventée par le groupe, le document dit « À vous de jouer ! » : il n’y a pas de corrigé unique."
+      },
+      {
+        "title": "En quête du professeur",
+        "page": 12,
+        "context": "Le l’élève désinformé, son camarde et l’élève informé vont alors voir le professeur en quête de vérité sur le débat qui a fait rage dans la cour de récréation. Le professeur explique alors à l’élève désinformé que tout ce qu’on voit sur internet n’est pas forcément vrai. S’ensuit alors une discussion pour que tout le monde soit d’accord.",
+        "participants": "Le professeur : habitué à faire des recherches pour ces cours, ce dernier vient clore le débat L’élève informé sur le sujet : vient pour prouver son point L’élève désinformé : vient pour prouver son point",
+        "help": "Idées d’interprétation : Les deux élèves peuvent continuer le débat précédent et s’arrêter pour demander l’avis du professeur. Élève désinformé : Il tient bien à prouver son point, et se montre obstiné. Il peut cependant se calmer et accepter son manque d’attention quant à l’information fausse qu’il a lu après l’intervention du professeur. Élève informé : De même, ce dernier veut prouver son point. Professeur : Décide de faire une recherche pour mettre tout le monde d’accord. Ici, tu peux tomber sur le site du désinformé en premier si tu le souhaite, mais confronter les incohérences et la source, ou donner la bonne information directement.",
+        "helpPage": 13,
+        "questions": [],
+        "debriefPage": null,
+        "answerPage": null,
+        "lesson": "Le PDF ne fournit pas de débrief distinct pour ce tour. Proposition d’animation : raconter ce que la recherche du professeur a changé dans la discussion."
+      },
+      {
+        "title": "La révélation",
+        "page": 14,
+        "context": "Suite à l’interaction sur la désinformation, le professeur décide donc d’inviter une connaissance experte sur l’information en ligne afin que ce dernier explique aux parents et aux enfants les dangers de la désinformation ainsi que comment s’en prémunir.",
+        "participants": "Le parent : attentif, ce dernier souhaite apprendre à se renseigner. L’expert du numérique : au centre de la scène, ce dernier explique les dangers de la désinformation, pourquoi s’en protéger et comment. Une carte est mise à votre disposition pour mener cette mission à bien. Le professeur : attentif, il va assister l’expert. L’élève désinformé : assiste à la réunion, et peut poser des questions. Le camarde : idem L’élève informé :idem",
+        "help": "Idées d’interprétation : Professeur : Peut assister et aider son camarade expert numérique à faire la présentation. Tous les élèves présent dans la scène : peut ici poser des questions. Toute intervention pour y répondre est la bienvenue, même si ce n’est pas l’expert. L’expert numérique : Présente les différentes informations sur la carte de manière vivante et cohérente. C’est un exercice difficile mais très formateur.",
+        "helpPage": 15,
+        "questions": [
+          "Quelles étapes simples peut-on suivre pour vérifier si une information est vraie ?",
+          "Quels indices montrent qu’un discours ou une info n’est pas logique ?",
+          "Pourquoi est-il dangereux de partager une info sans la vérifier ?"
+        ],
+        "debriefPage": 16,
+        "answerPage": 17,
+        "lesson": "Le document invite à identifier l’auteur, la date et le contexte, à comparer les sources et à repérer les contradictions avant de partager."
+      },
+      {
+        "title": "La nouvelle recherche",
+        "page": 18,
+        "context": "Suite à la réunion, l’élève désinformé et le parent se retourve alors à la maison, et les deux décident de faire une recherche ensemble pour tenter d’appliquer les conseils qui ont été données lors de la réunion.",
+        "participants": "Le parent : impliqué, ce dernier souhaite mettre en pratique avec son enfant les conseils qui ont été donnés. L’élève désinformé : bien déterminé à ne plus se faire avoir par de fausses informations, ce derniers souhaite mettre en pratique les conseils pour en faire une habitude.",
+        "help": "19  Idées d’interprétation : Le but est ici de mettre en pratique les conseils précédemment vue. Si vous en avez la possibilité, faites une recherche sur le sujet de votre choix. Appliquer alors, sans vous aider de la carte “Expert numérique” au début, les conseils que vous avez retenues. Après cela, vérifiez tous ensemble que les conseils ont bien été respectés. Félicitation ! Vous venez de faire une recherche approfondie. Si vous ne pouvez pas faire de recherche, faites un point récapitulatif de tous les conseils donnés, et vérifiez que vous les avez tous.",
+        "helpPage": 19,
+        "questions": [
+          "recherche était-elle réussie ? Avez vous réussi à vous souvenir de tous les conseils ?"
+        ],
+        "debriefPage": 20,
+        "answerPage": null,
+        "lesson": "Le PDF pose une question ouverte et n’ajoute pas de corrigé. Comparez ensemble la recherche effectuée aux conseils de la carte expert, p.7."
+      }
+    ],
+    "sources": "Sources :\nGouvernement français –\nLutter contre les fake\nnews\nUNESCO – Compétences\nMIL\nCNIL\nUNESCO – Éducation aux\nmédias\nMinistère de l’Éducation\nnationale\nGouvernement français –\nInfo.gouv.fr\nUNESCO"
+  }
+]
