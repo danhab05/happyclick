@@ -1,0 +1,13 @@
+---
+interface Props { src: string; title: string; height: number; }
+const { src, title, height } = Astro.props;
+---
+<div class="pdf-document">
+  <div class="pdf-actions">
+    <a href={src} target="_blank" rel="noopener noreferrer" aria-label={`Ouvrir le PDF : ${title}`}>Ouvrir le PDF</a>
+    <a href={src} download aria-label={`Télécharger le PDF : ${title}`}>Télécharger — {title}</a>
+  </div>
+  <object data={src} type="application/pdf" width="100%" height={height} aria-label={title}>
+    <p>L’aperçu n’est pas disponible sur cet appareil. <a href={src}>Ouvrir « {title} » (PDF)</a>.</p>
+  </object>
+</div>

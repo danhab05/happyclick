@@ -1,0 +1,398 @@
+@font-face {
+  font-family: ClickChesse;
+  src: url("/assets/fonts/Click-Cheese.otf");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Josefin Sans Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 700;
+  src: url(/assets/fonts/josefin-sans-latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/assets/fonts/ubuntu-latin-400-normal.woff2) format('woff2'),
+       url(/assets/fonts/ubuntu-latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+body {
+    font-family: ClickChesse, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background: url("/assets/images/background_image.png") no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    margin: 0;
+
+}
+
+header {
+    display: flex;
+    background-color: #26262680;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid #646464;
+    overflow: hidden;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-title {
+    font-size: 2em;
+    color : #fff;
+}
+
+#header_logo {
+    box-sizing: content-box;
+    width: 50px;
+    height: auto;
+
+    padding-right: 10px;
+}
+
+.header_name {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+
+
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 1.2em;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+*
+{
+    color: #fff;
+    font-family: ClickChesse;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#fullscreen
+{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+    flex-direction: column;
+}
+
+#semi-fullscreen
+{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 95vh;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    background-color: #26262680;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    backdrop-filter: blur(16px);
+    border-top: 1px solid #646464;
+}
+
+a {
+    transition-duration: 0.2s;
+}
+
+a:hover, .highlighted
+{
+    text-shadow: 0 0 10px #fff;
+
+}
+
+#secondary_page_title h1 {
+    font-size: 4em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+#secondary_page_title h2 {
+    font-size: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+main.resources h3
+{
+    font-size: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0em;
+}
+
+main.resources
+{
+    background-color: #fff;
+    border-radius: 60px 60px 0px 0px;
+    padding-top: 3em;
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+main.resources *
+{
+    color: #000;
+}
+
+main.resources hr
+{
+    width: 100%;
+    border-color: #000;
+    border-top-width: 3px;
+    border-bottom-width: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+main.resources h4 {
+    font-size: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 0em;
+}
+
+main.resources h5 {
+    font-size: 1.2em;
+    color:#646464;
+
+
+}
+
+main.resources p {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    text-align: justify;
+    font-family: "Ubuntu", "Josefin Sans Variable";
+}
+
+.column_flex_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row_flex_box {
+
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.center_and_space_around {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center_and_space_around p {
+    text-indent: 2em;
+}
+
+
+
+
+
+
+
+.heartbeat {
+	-webkit-animation: heartbeat 3s ease-in-out infinite both;
+	        animation: heartbeat 3s ease-in-out infinite both;
+}
+
+#logo
+{
+    width: 200px;
+    height: auto;
+}
+
+
+
+
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+
+
+/* Responsive and accessibility additions; desktop source proportions retained. */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 110px; }
+body { min-width: 0; }
+@font-face { font-family: ClickChesse; src: url('/assets/fonts/Click-Cheese.otf') format('opentype'); font-weight: 400; font-display: swap; }
+main.resources { width: 100%; padding-bottom: 1px; }
+.center_and_space_around { width: 100%; }
+main.home { margin: 0; padding: 0; background: transparent; }
+main.home * { color: #fff; }
+header { gap: 16px; padding-inline: 20px; }
+.header_name { flex-shrink: 0; }
+nav { flex-wrap: wrap; justify-content: center; }
+nav a { padding-block: 6px; }
+#first_page_title, #secondary_page_title { max-width: 100%; }
+#fullscreen, #semi-fullscreen { padding-inline: 20px; }
+img { max-width: 100%; }
+.pdf-document { margin-block: 20px; }
+.pdf-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 12px; }
+.pdf-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; border: 1px solid #646464; border-radius: 6px; font-family: 'Ubuntu', 'Josefin Sans Variable', sans-serif; font-size: 1rem; line-height: 1.4; }
+.pdf-actions a:hover { background: #f0f0f0; text-shadow: none; }
+object { display: block; max-width: 100%; border: 0; }
+a:focus-visible { outline: 3px solid #64bce3; outline-offset: 4px; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 2000; transform: translateY(-200%); padding: 12px; background: #262626; }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 1100px) {
+  header { position: relative; flex-direction: column; gap: 8px; padding: 12px 16px; }
+  nav { gap: 4px 16px; }
+  nav a { margin: 0; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  #fullscreen { min-height: calc(100svh - 160px); padding-block: 40px; }
+  #semi-fullscreen { min-height: 75svh; padding-block: 40px; }
+  main.resources { padding-inline: 10%; }
+}
+@media (max-width: 600px) {
+  /* A fixed viewport layer keeps both halves of the sky on long PDF pages. */
+  body { background: #467585; isolation: isolate; }
+  body::before { content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: url('/assets/images/background_image.png') no-repeat center top / cover; }
+  .header-title { font-size: 1.75em; }
+  #header_logo { width: 44px; }
+  nav { font-size: 1rem; gap: 0 14px; }
+  h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+  #logo { width: 160px; }
+  #first_page_title h2 { font-size: clamp(1.125rem, 4.8vw, 1.5rem); line-height: 1.4; }
+  #secondary_page_title h1 { font-size: clamp(2rem, 10vw, 3rem); overflow-wrap: anywhere; }
+  #secondary_page_title h2 { font-size: 1.6rem; }
+  main.resources { padding: 32px 20px 1px; border-radius: 32px 32px 0 0; }
+  main.resources h4 { font-size: 1.65rem; }
+  main.resources h3 { font-size: 1.35rem; }
+  main.resources h5 { font-size: 1.1rem; }
+  .center_and_space_around { padding-inline: 0; }
+  main.resources p { font-size: 1.05rem; line-height: 1.55; text-align: left; text-indent: 0; }
+  .pdf-actions { flex-direction: column; }
+  .pdf-actions a { overflow-wrap: anywhere; }
+  /* Native mobile PDF support varies: direct open/download stays visible. */
+  object { height: 420px; }
+  footer { padding-inline: 20px; font-size: .9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heartbeat { animation: none; }
+  a { transition: none; }
+}

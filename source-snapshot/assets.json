@@ -1,0 +1,110 @@
+[
+  {
+    "source": "https://happy-click.fr/assets/fonts/Click-Cheese.otf",
+    "local": "/assets/fonts/Click-Cheese.otf",
+    "bytes": 59284,
+    "sha256": "da5e77e1d668c77c7dff6f66ecdc8be8bf01acd90f0145839a64339cc27f0dcb"
+  },
+  {
+    "source": "https://happy-click.fr/assets/icons/apple-touch-icon.png",
+    "local": "/assets/icons/apple-touch-icon.png",
+    "bytes": 15016,
+    "sha256": "dd858c34818ca2356ae95644cc05af59327d3343aec6d875461d14c9503fa423"
+  },
+  {
+    "source": "https://happy-click.fr/assets/icons/favicon-96x96.png",
+    "local": "/assets/icons/favicon-96x96.png",
+    "bytes": 5773,
+    "sha256": "bde8102b9654a8aaf642c9704b79875e14db432fd8ced73d1028cb0a1906fb91"
+  },
+  {
+    "source": "https://happy-click.fr/assets/icons/favicon.ico",
+    "local": "/assets/icons/favicon.ico",
+    "bytes": 15086,
+    "sha256": "3e2d5fce8d69f36c4c7fca190c564148f1f548785bea96fff9b91ff96f1bf5f6"
+  },
+  {
+    "source": "https://happy-click.fr/assets/images/LogoBasseRes.png",
+    "local": "/assets/images/LogoBasseRes.png",
+    "bytes": 33776,
+    "sha256": "eb7a2dc4dcdecccebc756a8f0e36b0f9ce4b9073ba0eaf27ce4a68ffc59f6f2f"
+  },
+  {
+    "source": "https://happy-click.fr/assets/images/background_image.png",
+    "local": "/assets/images/background_image.png",
+    "bytes": 2463657,
+    "sha256": "1223a78bfe5af2d4de0fbc572a90c2754af37e23c8f72d0797a4f65e996be882"
+  },
+  {
+    "source": "https://cdn.jsdelivr.net/fontsource/fonts/josefin-sans:vf@latest/latin-wght-normal.woff2",
+    "local": "/assets/fonts/josefin-sans-latin-wght-normal.woff2",
+    "bytes": 28528,
+    "sha256": "21efe1559a026f9ad7f880772917faa3a621186688e8e79e0568e4308c0bafa9"
+  },
+  {
+    "source": "https://cdn.jsdelivr.net/fontsource/fonts/ubuntu@latest/latin-400-normal.woff",
+    "local": "/assets/fonts/ubuntu-latin-400-normal.woff",
+    "bytes": 17340,
+    "sha256": "4ed830600afe65057c2c165013dd64968b3d4fd3c358e7a0d0c2fc8762f632ff"
+  },
+  {
+    "source": "https://cdn.jsdelivr.net/fontsource/fonts/ubuntu@latest/latin-400-normal.woff2",
+    "local": "/assets/fonts/ubuntu-latin-400-normal.woff2",
+    "bytes": 34924,
+    "sha256": "dabae363ac0ae6c3b2a137a32f7132b42520a8af252f87aa6c2198f2a79cf91c"
+  },
+  {
+    "source": "https://happy-click.fr/resources/guides/guide_jeune_et_numerique.pdf",
+    "local": "/resources/guides/guide_jeune_et_numerique.pdf",
+    "bytes": 5279873,
+    "sha256": "0038126275f1741502519b9566ca5636c51dac09a6895f102fd83baf89a96834"
+  },
+  {
+    "source": "https://happy-click.fr/resources/guides/guide_parents.pdf",
+    "local": "/resources/guides/guide_parents.pdf",
+    "bytes": 655421,
+    "sha256": "4afbbc4e0101dc28c2527802e7976151439b41df4b599fb6fc240e28bd98d596"
+  },
+  {
+    "source": "https://happy-click.fr/resources/kit/activite_cartes_a_imprimer.pdf",
+    "local": "/resources/kit/activite_cartes_a_imprimer.pdf",
+    "bytes": 12267427,
+    "sha256": "e6011ead90daaa29d69e6f013e331a508e8c940f5831420a0cc5b4e707a1b4d2"
+  },
+  {
+    "source": "https://happy-click.fr/resources/kit/questionnaire_enseignants.pdf",
+    "local": "/resources/kit/questionnaire_enseignants.pdf",
+    "bytes": 51779,
+    "sha256": "1fbf236ec41aaaab4b0e9677c0faab2cf273f325b5fb08045e9c0611ba37867a"
+  },
+  {
+    "source": "https://happy-click.fr/resources/kit/rp_addiction.pdf",
+    "local": "/resources/kit/rp_addiction.pdf",
+    "bytes": 10973077,
+    "sha256": "c954745ecabbbd5f0a54a3bbdcf2e2c01c2a8009ebf86b44c1db2732b2eb09c0"
+  },
+  {
+    "source": "https://happy-click.fr/resources/kit/rp_cyberharcelement.pdf",
+    "local": "/resources/kit/rp_cyberharcelement.pdf",
+    "bytes": 9698538,
+    "sha256": "bdaf0476e328bb1dc30c6b575b7add35ab8ffe822f9f20372835220e32a9c2ea"
+  },
+  {
+    "source": "https://happy-click.fr/resources/kit/rp_desinformation.pdf",
+    "local": "/resources/kit/rp_desinformation.pdf",
+    "bytes": 7826609,
+    "sha256": "a5f8757553722734990e8b3405fef9d95fe1a7c6776d07131b2af662b4d586ed"
+  },
+  {
+    "source": "https://happy-click.fr/resources/kit/test_numerico_dependance.pdf",
+    "local": "/resources/kit/test_numerico_dependance.pdf",
+    "bytes": 911191,
+    "sha256": "840532b90dc891ecdc0e2a0bdf65fe9bcb7ccc50f3ce79bdc5d678eb91c6536b"
+  },
+  {
+    "source": "https://happy-click.fr/style.css",
+    "local": "/style.css",
+    "bytes": 8022,
+    "sha256": "eb3958f7ea9016c9bcb9b69cf28daa33df1157eaf5ae7e6b05782313d04f1057"
+  }
+]

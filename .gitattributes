@@ -1,0 +1,9 @@
+*.pdf binary
+*.png binary
+*.ico binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+# Preserve the public-source evidence byte for byte, including original whitespace.
+source-snapshot/*.html -text -whitespace
+source-snapshot/*.css -text -whitespace

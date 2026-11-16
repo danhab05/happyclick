@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PdfDocument from '../components/PdfDocument.astro';
+---
+<Layout active="/kit">
+  <div id="semi-fullscreen">
+            <div id="secondary_page_title">
+                <h1>Le KIT</h1>
+                <h2>Happy Click</h2>
+            </div>
+
+        </div>
+  <main id="contenu" class="resources" tabindex="-1">
+            <h4>Imprimables à destination des enseignants</h4>
+            <div class="center_and_space_around">
+                <p>Le KIT Happy Click est un ensemble de documents à imprimer, à destination des enseignants (mais aussi des parents). Les activités ont été conçu pour un public d'enfants de niveau fin-primaire début-collège.</p>
+            </div>
+            <hr/>
+            <h3>Activitée - Quizz</h3>
+            <h5>Cartes à imprimer (format A4)</h5>
+            <div class="center_and_space_around">
+                <p>En classe, par petits groupes de 4 à 6, les élèves lisent une question portant sur une des trois catégories suivantes : comportements, écologie et santé. Ils s'interrogent ensuite sur chacune des réponses possibles, avant de retourner la carte afin de comprendre l'enjeu soulevé. L'accent n'est pas mis sur la réussite, mais sur le débat et la discussion.</p>
+            </div>
+            <PdfDocument src="/resources/kit/activite_cartes_a_imprimer.pdf" title="Quizz — cartes à imprimer" height={800} />
+            <hr/>
+            <h3>Activitée - Jeu de rôle</h3>
+            <h5>Cartes à imprimer (format A4)</h5>
+            <div class="center_and_space_around">
+                <p>Les enfants sont répartis en groupes de 6, et chacun d'entre eux pioche une carte représentant son rôle durant le jeu. Ces rôles peuvent par exemple être celui d'un médecin scolaire, d'un parent, d'un enfant harcelé, d'un ami, ou autre.</p>
+	            <p>Ensuite, à chaque tour, une situation est décrite, les enfants imaginent comment leur personnage réagirait à la situation, puis interprètent leur personnage.</p>
+	            <p>Finalement, une fois le tour terminé, l'intervenant explique explicitement les leçons que les enfants pourraient tirer de la situation, puis en tire la suivante.</p>
+            </div>
+            <PdfDocument src="/resources/kit/rp_addiction.pdf" title="Jeu de rôle — addiction" height={600} />
+            <PdfDocument src="/resources/kit/rp_cyberharcelement.pdf" title="Jeu de rôle — cyberharcèlement" height={600} />
+            <PdfDocument src="/resources/kit/rp_desinformation.pdf" title="Jeu de rôle — désinformation" height={600} />
+            <hr/>
+            <h3>Questionnaire - Test de dépendance au numérique</h3>
+            <h5>Pages à imprimer (format A4)</h5>
+            <div class="center_and_space_around">
+                <p>Ce questionnaire, à destination des enfants, permet de recueillir des informations sur leur usage du numérique et leur niveau de dépendance.</p>
+                <p>Ce questionnaire peut tout aussi bien être répondu de manière anonyme pour faciliter la liberté d'expression des enfants.</p>
+            </div>
+            <PdfDocument src="/resources/kit/test_numerico_dependance.pdf" title="Test de dépendance au numérique" height={600} />
+            <hr/>
+            <h3>Questionnaire - Enjeux du numérique à l'école</h3>
+            <h5>Pages à imprimer (format A4)</h5>
+            <div class="center_and_space_around">
+                <p>Ce questionnaire, à destination des enseignants, permet de recueillir des informations sur les enjeux du numérique dans l'environnement scolaire.</p>
+            </div>
+            <PdfDocument src="/resources/kit/questionnaire_enseignants.pdf" title="Enjeux du numérique à l’école" height={600} />
+            <hr />
+        </main>
+</Layout>
