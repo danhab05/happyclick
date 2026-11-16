@@ -2,7 +2,7 @@
 
 Commande : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`
 
-Contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.
+La section de contrôle générée ci-dessous correspond au build local. Le complément public en fin de document consigne les résultats rapportés par OpenBot. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.
 
 ## Pages, contenu et interactions
 
@@ -44,3 +44,17 @@ Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptée
 Les 10 tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
 
 Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.
+
+
+## Complément documentaire — validation publique par le superviseur
+
+Ce complément consigne les preuves transmises par OpenBot, sans nouvelle exécution réseau ou infrastructure par l’exécutant. Il est également conservé dans README et `tasks/browser-review.md` ; une régénération par `scripts/verify.py` réécrit ce rapport automatique.
+
+- Déploiement Coolify `zamd0grrvoe11mumcyfvaycq` : **finished**, commit `6dab746`.
+- `https://happyclick.app.danhabib.dev` : **accessible en HTTPS, certificat valide**, confirmé par OpenBot.
+- Commande exécutée par OpenBot : `npm run verify -- --base-url https://happyclick.app.danhabib.dev`.
+- Résultat public : **50 URLs HTTP 200 identiques au build, 276 références vérifiées**.
+- Navigateur public : quiz santé joué, feedback OK.
+- Navigateur local : `/quiz/tout` terminé, 29 questions, 29 résumés, premier choix multiple, aucun débordement à 1920 px.
+
+`happyclick.danhabib.dev` reste NXDOMAIN. A `happyclick` → `72.61.167.104` autorisé par Dan mais **pas encore ajouté** ; OpenBot vérifie l’accès name.com, déconnecté sans identifiant de connexion enregistré. Aucun changement DNS par l’exécutant. Mise à jour documentaire uniquement, commit local sans push.

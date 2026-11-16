@@ -2,7 +2,7 @@
 
 Nouvelle interface papier ivoire, encre marine, corail et turquoise, avec le cœur-curseur Happy Click et les polices locales ClickChesse/Josefin/Ubuntu. Treize pages statiques, quatre parcours de quiz (trois thèmes et l’ensemble), activités locales et documents accessibles sur le même site. L’ancienne interface est récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
-**Revue finale approuvée : OpenBot autorise le push de `feat/astro-preview` pour cette seule préversion Happy Click.** Le webhook peut déclencher le déploiement, supervisé par OpenBot avec HTTPS. Aucun appel d’infrastructure ni changement DNS par cet exécutant. Le commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` est conservé.
+**Préversion accessible : https://happyclick.app.danhabib.dev**, HTTPS et certificat valide confirmés par OpenBot sur le commit déployé `6dab746`. Le push autorisé a été effectué ; **ce nouveau suivi documentaire reste local, sans push**, pour éviter un déploiement uniquement documentaire. Aucun appel d’infrastructure ni changement DNS par cet exécutant. Le commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` est conservé.
 
 ## Reprendre et vérifier
 
@@ -60,15 +60,15 @@ Les 8 PDF d’origine sont inchangés. Les liens ouvrir/télécharger sont toujo
 - `tasks/pdf-text/` : textes complets, OCR et inventaire par page versionnés (~412 Ko).
 - `tasks/pdf-images/` : 16 cartes rendues individuellement et autres pages graphiques, disponibles localement pour OpenBot ; ~12 Mo ignorés par Git et reproductibles.
 - `tasks/verification.md` : rapport généré par verify (contenus, 8 empreintes PDF, noindex, liens/ancres et tous les assets HTTP).
-- `tasks/browser-review.md` : périmètre exact de la revue rapportée par OpenBot, y compris les points restant à vérifier.
+- `tasks/browser-review.md` : périmètre exact de la revue locale et publique rapportée par OpenBot.
 - `source-snapshot/` : HTML/CSS originaux non servis ; `assets.json` contient les 18 ressources et leurs SHA-256. Seule la feuille CSS originale est adaptée ; les autres ressources originales restent identiques.
 - `tasks/todo.md`, `tasks/lessons.md`, `.opencode/codebase_map.md` : suivi et reprise.
 
-Build : 13 pages. Tests : 10/10. Verify HTTP : 50 URLs, 276 références d’ancres/pages PDF, 26 blocs source et toutes les questions contrôlés. Ces vérifications ne sont pas une mesure visuelle. Aucun navigateur lancé par l’exécutant. OpenBot a approuvé la revue finale : correctif du titre à 320 px, pages accueil/kit/guides/quiz écologie à 1920 px sans débordement, lien d’évitement au clavier, sélection/restitution/effacement du questionnaire d’usage et saisie/relecture/effacement des 14 champs enseignants. Voir `tasks/browser-review.md` pour les mesures et le périmètre exact. La validation locale ne confirme pas la disponibilité publique ou HTTPS.
+Build : 13 pages. Tests : 10/10. Verify HTTP : 50 URLs, 276 références d’ancres/pages PDF, 26 blocs source et toutes les questions contrôlés. Ces vérifications ne sont pas une mesure visuelle. Aucun navigateur lancé par l’exécutant. OpenBot a approuvé la revue finale : correctif du titre à 320 px, pages accueil/kit/guides/quiz écologie à 1920 px sans débordement, lien d’évitement au clavier, sélection/restitution/effacement du questionnaire d’usage et saisie/relecture/effacement des 14 champs enseignants. Voir `tasks/browser-review.md` pour les mesures et le périmètre exact. OpenBot a ensuite confirmé la disponibilité publique et le certificat HTTPS valide, joué le quiz santé sur le domaine public (feedback OK) et terminé `/quiz/tout` en navigateur local : 29 questions, 29 résumés, premier choix multiple, aucun débordement à 1920 px.
 
 ## Infrastructure transmise par OpenBot
 
-Configuration précédemment annoncée par OpenBot ; disponibilité publique/HTTPS non confirmées par l’exécutant :
+Déploiement et accès public confirmés par OpenBot ; constats consignés ici sans nouvel appel d’infrastructure par l’exécutant :
 
 | Paramètre | Valeur |
 |---|---|
@@ -78,7 +78,10 @@ Configuration précédemment annoncée par OpenBot ; disponibilité publique/HTT
 | Branche | `feat/astro-preview` |
 | Build | Nixpacks : `npm ci` puis `npm run build` |
 | Service | Statique, répertoire `/dist`, port `80` |
-| Domaine initial | `happyclick.danhabib.dev` : NXDOMAIN constaté par OpenBot |
-| Domaine alternatif | `happyclick.app.danhabib.dev` : résolution 72.61.167.104 rapportée par OpenBot |
+| Déploiement | `zamd0grrvoe11mumcyfvaycq` : `finished`, commit `6dab746` |
+| Domaine initial | `happyclick.danhabib.dev` : reste NXDOMAIN ; enregistrement A autorisé mais pas encore ajouté |
+| Domaine accessible | `https://happyclick.app.danhabib.dev` : accessible en HTTPS, certificat valide selon OpenBot |
 
-Le superviseur gère l’infrastructure. Une résolution DNS ne démontre pas la disponibilité du site ou du certificat. Aucun DNS ni site original modifié.
+OpenBot a exécuté `npm run verify -- --base-url https://happyclick.app.danhabib.dev` : **50 URLs HTTP 200 identiques au build et 276 références vérifiées**. Ce contrôle public est distinct de la vérification locale et du test navigateur du quiz santé.
+
+Dan a autorisé l’enregistrement **A `happyclick` → `72.61.167.104`** pour `happyclick.danhabib.dev`. **Il n’a pas encore été ajouté** : OpenBot vérifie l’accès à name.com, dont la session est déconnectée et sans identifiant de connexion enregistré. Le domaine initial reste NXDOMAIN. L’exécutant documente cet état uniquement ; aucun changement DNS ni modification du site original.

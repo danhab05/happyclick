@@ -21,7 +21,7 @@
 - Un rebuild a transitoirement échoué sur un chunk de prérendu absent ; le rebuild complet suivant a réussi, puis toutes les réponses HTTP ont été comparées aux fichiers générés.
 
 ## Contraintes et reprise
-Déploiement de la nouvelle préversion en cours sous supervision OpenBot ; aucune action de déploiement ou d’infrastructure par cet exécutant. Aucun DNS ni site original modifié. Pas de navigateur externe par cet exécutant. Chaque commit porte le trailer OpenBot demandé.
+Déploiement de la nouvelle préversion confirmé `finished` par OpenBot sur le commit `6dab746` ; domaine alternatif accessible en HTTPS avec certificat valide. Aucun appel d’infrastructure par cet exécutant. Ce suivi documentaire reste local, sans push. Aucun DNS ni site original modifié. Pas de navigateur externe par cet exécutant. Chaque commit porte le trailer OpenBot demandé.
 
 ```bash
 cd /root/happyclick
@@ -42,16 +42,16 @@ Dépôt privé créé après vérification d’absence via connecteur, API gh et
 ## Retour de revue et infrastructure
 - [x] Documenter la revue navigateur réussie d’OpenBot et ses contrôles build/verify.
 - [x] Documenter Coolify : projet `yuhz20ol6ogbmzj1pol2r7pz`, app `ezv2qhhub0jjl6cg4zgkp8p8`, branche `feat/astro-preview`, Nixpacks `npm ci` / `npm run build`, statique `/dist`, port 80.
-- [x] Documenter les domaines transmis : `happyclick.danhabib.dev` NXDOMAIN ; `happyclick.app.danhabib.dev` ajouté et résolvant 72.61.167.104. Aucun DNS modifié ; accès public/HTTPS non confirmés.
+- [x] Documenter les domaines transmis : `happyclick.danhabib.dev` NXDOMAIN ; `happyclick.app.danhabib.dev` ajouté et résolvant 72.61.167.104. Accès public HTTPS et certificat valide ensuite confirmés par OpenBot sur le domaine alternatif ; domaine initial toujours NXDOMAIN, A autorisé mais pas encore ajouté.
 - [x] Remplacer `trailingSlash: never` par `ignore` ; rebuild réussi et quatre variantes /kit et /guides avec/sans slash vérifiées HTTP 200 sans redirection.
 
-Le superviseur gère le déploiement en cours. Aucun appel de déploiement ni changement d’infrastructure à effectuer par cet exécutant ; un push sur la branche raccordée peut activer le webhook existant.
+Le superviseur a confirmé le déploiement `zamd0grrvoe11mumcyfvaycq` terminé sur `6dab746`. Aucun appel de déploiement ni changement d’infrastructure à effectuer par cet exécutant ; un push sur la branche raccordée peut activer le webhook existant.
 
 Le serveur local a été redémarré après modification de la configuration Astro : `0.0.0.0:4321`, PID 2872878 au contrôle. Aucun appel à Coolify ni modification des domaines dans ce correctif.
 
 # Mission 2 — contenus et nouvelle interface
 
-Ancienne interface récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`. Implémentation conservée au commit `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3`. Push initialement suspendu pendant la revue, désormais explicitement autorisé par OpenBot pour cette seule préversion.
+Ancienne interface récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`. Implémentation conservée au commit `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3`. Push autorisé effectué jusqu’à `6dab746` après la revue finale. Ce nouveau suivi documentaire est conservé localement, sans push.
 
 - [x] Extraire/lire les 156 pages des huit PDF ; OCR et images pour les pages graphiques ; rapport tasks/pdf-analysis.md.
 - [x] Inventorier toutes les questions, options, explications et références des cartes ; expliciter les ambiguïtés.
@@ -82,6 +82,18 @@ Ancienne interface récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a
 - [x] Recevoir le recontrôle du titre à 320 px et la revue finale ; questionnaires validés, choix multiples couverts par les tests. Build, 10 tests et verify50URLs/276références revérifiés par OpenBot.
 - [x] Recevoir l’autorisation finale explicite du push de `feat/astro-preview`, limitée à la préversion Happy Click. Le push est la seule action de livraison autorisée à l’exécutant ; le superviseur gère Coolify et HTTPS.
 
-Livraison Git : conserver `0fc4fb9`, ajouter le commit de preuves avec trailer OpenBot, pousser sans force sur `origin feat/astro-preview`, puis comparer le hash local à `git ls-remote origin refs/heads/feat/astro-preview`. Le résultat du push et le hash final sont rapportés dans le bilan de livraison.
+Livraison Git réalisée : `0fc4fb9` conservé, commit de preuves `6dab746a80281eac645146e1b9d6c308d2ac60af` avec trailer OpenBot, push sans force sur `origin feat/astro-preview` ; hash local/distant identique vérifié. Le présent complément documentaire ajoute un commit local sans push.
 
 Reprise : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Ne pas redémarrer un second serveur si 4321 est déjà occupé. Ancienne DA récupérable au commit précisé en tête de mission.
+
+
+## Confirmation publique et suivi DNS
+
+- [x] Consigner la confirmation OpenBot : Coolify `zamd0grrvoe11mumcyfvaycq` **finished**, commit `6dab746`.
+- [x] Consigner l’accès à `https://happyclick.app.danhabib.dev` en HTTPS avec certificat valide, confirmé par OpenBot.
+- [x] Consigner la vérification publique exécutée par OpenBot : `npm run verify -- --base-url https://happyclick.app.danhabib.dev`, **50 URLs HTTP 200 identiques au build / 276 références**.
+- [x] Consigner le quiz santé joué sur le domaine public, feedback OK, et le parcours local `/quiz/tout` terminé avec 29 résumés, premier choix multiple et aucun débordement à 1920 px.
+- [x] Documenter l’autorisation Dan : A `happyclick` → `72.61.167.104`, **pas encore ajouté**. `happyclick.danhabib.dev` reste NXDOMAIN.
+- [ ] Suivi réservé au superviseur : accès name.com (session déconnectée, aucun identifiant de connexion enregistré), ajout de l’enregistrement autorisé puis vérification du domaine initial. Aucune action DNS demandée à l’exécutant.
+
+Cette mise à jour concerne uniquement README, carte, todo, verification et browser-review. Aucun code modifié, aucun test/build relancé pour ces changements documentaires, aucun push ni appel d’infrastructure.
