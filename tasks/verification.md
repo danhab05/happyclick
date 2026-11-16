@@ -39,7 +39,7 @@ Contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la 
 
 ## Responsive et limites de cette vérification
 
-Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Voir `tasks/browser-review.md` pour les vérifications réalisées par OpenBot et celles encore en attente.
+Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Voir `tasks/browser-review.md` pour le périmètre exact de la revue finale approuvée par OpenBot.
 
 Les 10 tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
 

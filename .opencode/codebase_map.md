@@ -1,7 +1,7 @@
 # Cartographie — Happy Click
 
 ## État et reprise
-Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt privé `danhab05/happyclick`, branche `feat/astro-preview`. **Aucun push avant revue finale OpenBot** : cette branche est raccordée au webhook Coolify. Ancienne DA au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
+Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt privé `danhab05/happyclick`, branche `feat/astro-preview`. **Revue finale approuvée ; push explicitement autorisé par OpenBot pour cette seule préversion** : cette branche est raccordée au webhook Coolify. Commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` conservé, documentation ajoutée dans un commit suivant. Ancienne DA au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
 Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` avant de relancer). `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Pas de navigateur/Playwright par l’exécutant.
 
@@ -44,4 +44,4 @@ Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` a
 ## Infrastructure et limites
 Coolify créé/configuré par OpenBot : projet `yuhz20ol6ogbmzj1pol2r7pz`, application `ezv2qhhub0jjl6cg4zgkp8p8`, branche dédiée, Nixpacks npmci/build, static /dist port80. Domaines et disponibilité : voir README ; aucune confirmation HTTPS ni action d’infrastructure par l’exécutant.
 
-Aucun compte/backend/formulaire envoyé/analytics/persistance. Les conseils/cartes ambigus sont attribués au support et nuancés ; guides de2021 explicitement datés. Revue finale navigateur en attente ; ne pas extrapoler des mesures CSS ou de l’ancienne interface. Tout commit inclut le trailer OpenBot demandé.
+Aucun compte/backend/formulaire envoyé/analytics/persistance. Les conseils/cartes ambigus sont attribués au support et nuancés ; guides de2021 explicitement datés. Revue finale navigateur approuvée par OpenBot : voir `tasks/browser-review.md` pour les mesures 320/1920 px, focus initial et questionnaires. Ne pas extrapoler au-delà de ce périmètre ; déploiement et HTTPS restent supervisés par OpenBot. Tout commit inclut le trailer OpenBot demandé.

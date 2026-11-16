@@ -51,7 +51,7 @@ Le serveur local a été redémarré après modification de la configuration Ast
 
 # Mission 2 — contenus et nouvelle interface
 
-Ancienne interface récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`. Aucun push : branche raccordée au webhook.
+Ancienne interface récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`. Implémentation conservée au commit `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3`. Push initialement suspendu pendant la revue, désormais explicitement autorisé par OpenBot pour cette seule préversion.
 
 - [x] Extraire/lire les 156 pages des huit PDF ; OCR et images pour les pages graphiques ; rapport tasks/pdf-analysis.md.
 - [x] Inventorier toutes les questions, options, explications et références des cartes ; expliciter les ambiguïtés.
@@ -60,7 +60,7 @@ Ancienne interface récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a
 - [x] Auto-questionnaire sans diagnostic ni score inventé ; réflexion enseignants locale ; jeux de rôles sur site.
 - [x] Guides résumés avec pages/sources ; conserver textes, liens et huit documents.
 - [x] Vérifications de contenu, tests d’interaction sans navigateur, build et HTTP sur 4321.
-- [x] Documentation/cartographie à jour ; commit local préparé avec trailer OpenBot. NE PAS POUSSER avant revue superviseur.
+- [x] Documentation/cartographie à jour ; commit d’implémentation local avec trailer OpenBot conservé. Preuves de revue finale consignées dans un nouveau commit.
 
 
 ## Review de la mission 2
@@ -73,13 +73,15 @@ Ancienne interface récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a
 - Verify : 50 URLs HTTP 200 identiques au build sans redirection, 276 ancres/pages PDF, 26 blocs source, intégralité des questions/options/feedback. Noindex sur toutes les pages, huit empreintes PDF inchangées, 156 pages confirmées par pdfinfo. Modules JS locaux et ciblés désormais autorisés, réseau/stockage applicatif toujours contrôlés comme absents.
 - Modules servis séparément pour vérification/cache : quiz environ 3,8 Ko, réflexion environ 3,2 Ko + deux points d’entrée de 92 octets. Aucun JS sur accueil, guides, kit ou rôles.
 - `npm audit --omit=dev` : 0 vulnérabilité. `git diff --check` : OK.
-- Revue navigateur par OpenBot : accueil 1280/390 approuvé ; 10 cartes comportements, bilan et rejouer OK ; images OK sur 11 routes à 320. Débordement isolé du titre Cyberharcèlement corrigé par césure/retour à la ligne. Mesure après correction et autres interactions en attente de son retour ; détails dans `tasks/browser-review.md`.
+- Revue navigateur par OpenBot : accueil 1280/390 approuvé ; 10 cartes comportements, bilan et rejouer OK ; images OK sur 11 routes à 320. Débordement isolé du titre Cyberharcèlement corrigé par césure/retour à la ligne. Recontrôle final à 320 px : scrollWidth305/innerWidth320, sans débordement. Accueil/kit/guides/quiz écologie à 1920 px sans débordement ; tabulation initiale vers « Aller au contenu » avec outline solid. Questionnaires usage et enseignants (14 champs) validés pour sélection/saisie, restitution/relecture et effacement. Détails dans `tasks/browser-review.md`.
 - Rendus OCR (~12 Mo) ignorés par Git mais conservés localement pour revue et reproductibles. Textes/OCR/inventaire (~412 Ko), rapport et matrice versionnés.
-- Aucun push ni action d’infrastructure. Serveur existant sur 0.0.0.0:4321, PID 2872878 au contrôle, réponses comparées au build courant.
+- Aucun push pendant l’implémentation et la revue ; autorisation finale reçue ensuite. Aucune action d’infrastructure. Serveur existant sur 0.0.0.0:4321, PID 2872878 au contrôle, réponses comparées au build courant.
 
 ## Suite supervisée
 
-- [ ] Recevoir le résultat du contrôle du titre à 320 px et la revue finale multi-réponses/questionnaires.
-- [ ] Push uniquement après autorisation finale explicite du superviseur ; pas de publication pendant la revue.
+- [x] Recevoir le recontrôle du titre à 320 px et la revue finale ; questionnaires validés, choix multiples couverts par les tests. Build, 10 tests et verify50URLs/276références revérifiés par OpenBot.
+- [x] Recevoir l’autorisation finale explicite du push de `feat/astro-preview`, limitée à la préversion Happy Click. Le push est la seule action de livraison autorisée à l’exécutant ; le superviseur gère Coolify et HTTPS.
+
+Livraison Git : conserver `0fc4fb9`, ajouter le commit de preuves avec trailer OpenBot, pousser sans force sur `origin feat/astro-preview`, puis comparer le hash local à `git ls-remote origin refs/heads/feat/astro-preview`. Le résultat du push et le hash final sont rapportés dans le bilan de livraison.
 
 Reprise : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Ne pas redémarrer un second serveur si 4321 est déjà occupé. Ancienne DA récupérable au commit précisé en tête de mission.
