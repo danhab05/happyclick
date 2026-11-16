@@ -54,6 +54,8 @@ for route, expected in (('/',0),('/kit',6),('/guides',2)):
     assert downloads == original_pdfs
     pdf_count += len(downloads)
     urls.add(route)
+    if route != "/":
+        urls.add(route + "/")
     for tag, a in page.elements:
         for attr in ('href', 'src', 'data'):
             target = a.get(attr, '')
@@ -92,10 +94,12 @@ for url in sorted(urls):
         with urlopen(args.base_url.rstrip('/')+url, timeout=30) as response:
             data = response.read()
             assert response.status == 200
+            assert response.geturl() == args.base_url.rstrip('/')+url, f'Redirection inattendue : {url}'
             assert data == disk.read_bytes(), f'Réponse différente : {url}'
             if url.endswith('.pdf'):
                 assert 'application/pdf' in response.headers.get('Content-Type','')
 report.append(f'{len(urls)} URLs locales vérifiées sur disque' + (' et en HTTP 200 ; réponses identiques aux fichiers du build.' if args.base_url else '.'))
+report.append('Routes avec et sans slash final contrôlées : `/kit`, `/kit/`, `/guides`, `/guides/` (sans redirection en mode HTTP).')
 report += ['', '## Analyse responsive sans navigateur', '', 'Dimensions déduites des règles CSS (pas des mesures de rendu). Navigation flexible avec retour à la ligne ; header dans le flux ≤ 1100 px ; titres fluides ≤ 600 px ; PDF et images bornés au conteneur ; liens PDF toujours visibles.', '', '| Écran (px) | Colonne PDF (px) | Texte (px) | Header |', '|---:|---:|---:|---|']
 for width in (320,375,390,600,768,1024,1280,1440,1920):
     if width <= 600:
@@ -109,6 +113,6 @@ for width in (320,375,390,600,768,1024,1280,1440,1920):
         paragraph = content * .8
     assert 0 < paragraph <= content <= width
     report.append(f'| {width} | {content:.0f} | {paragraph:.0f} | {"dans le flux" if width <= 1100 else "fixe"} |')
-report += ['', 'Revue navigateur mobile/desktop et fidélité visuelle finale : à effectuer par OpenBot/superviseur. Aucun navigateur utilisé par cet exécutant.', '', 'Les deux liens GATE externes sont conservés exactement ; ils ne sont pas des ressources chargées automatiquement.']
+report += ['', 'Revue navigateur effectuée par OpenBot, selon son compte rendu : accueil desktop très fidèle ; accueil et kit mobile sans débordement de navigation ni de titres ; guides desktop avec PDF visibles et contenu correct. Build et verify également relancés avec succès par OpenBot. Aucun navigateur utilisé par cet exécutant.', '', 'Les deux liens GATE externes sont conservés exactement ; ils ne sont pas des ressources chargées automatiquement.']
 (ROOT/'tasks/verification.md').write_text('\n'.join(report)+'\n')
 print('\n'.join(report))

@@ -16,7 +16,8 @@ Commande : `npm run build && npm run verify -- --base-url http://127.0.0.1:4321`
 
 ## Ressources et HTTP
 
-22 URLs locales vérifiées sur disque et en HTTP 200 ; réponses identiques aux fichiers du build.
+24 URLs locales vérifiées sur disque et en HTTP 200 ; réponses identiques aux fichiers du build.
+Routes avec et sans slash final contrôlées : `/kit`, `/kit/`, `/guides`, `/guides/` (sans redirection en mode HTTP).
 
 ## Analyse responsive sans navigateur
 
@@ -34,6 +35,6 @@ Dimensions déduites des règles CSS (pas des mesures de rendu). Navigation flex
 | 1440 | 864 | 691 | fixe |
 | 1920 | 1152 | 922 | fixe |
 
-Revue navigateur mobile/desktop et fidélité visuelle finale : à effectuer par OpenBot/superviseur. Aucun navigateur utilisé par cet exécutant.
+Revue navigateur effectuée par OpenBot, selon son compte rendu : accueil desktop très fidèle ; accueil et kit mobile sans débordement de navigation ni de titres ; guides desktop avec PDF visibles et contenu correct. Build et verify également relancés avec succès par OpenBot. Aucun navigateur utilisé par cet exécutant.
 
 Les deux liens GATE externes sont conservés exactement ; ils ne sont pas des ressources chargées automatiquement.

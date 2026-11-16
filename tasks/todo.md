@@ -12,16 +12,16 @@
 ## Review
 - Build Astro 7.4.12 : 3 pages statiques générées ; runtime Node 22.23.4 local au projet.
 - `npm audit` : 0 vulnérabilité après mise à jour d’Astro et des dépendances.
-- `npm run verify -- --base-url http://127.0.0.1:4321` : 22 URLs HTTP 200, réponses identiques au build.
+- `npm run verify -- --base-url http://127.0.0.1:4321` : 24 URLs HTTP 200 (dont /kit/ et /guides/), réponses identiques au build.
 - Tous les textes actifs source conservés ; 5 liens de navigation identiques sur chaque page.
 - 8 PDF valides via pdfinfo, SHA-256 identiques aux originaux ; liens ouvrir et télécharger disponibles sur mobile.
 - 18 ressources source inventoriées, aucune ressource distante chargée automatiquement.
-- CSS analysé de 320 à 1920 px ; revue navigateur volontairement laissée au superviseur.
+- CSS analysé de 320 à 1920 px ; revue navigateur effectuée par OpenBot : accueil desktop très fidèle, accueil/kit mobile sans débordement de navigation ni de titres, guides desktop avec PDF visibles et contenu correct. Build et verify relancés avec succès par OpenBot.
 - Le serveur sur 4321 a été lancé par le superviseur pendant le travail et sert bien le build final ; le second processus temporaire ouvert par l’exécutant sur 4322 a été arrêté.
 - Un rebuild a transitoirement échoué sur un chunk de prérendu absent ; le rebuild complet suivant a réussi, puis toutes les réponses HTTP ont été comparées aux fichiers générés.
 
 ## Contraintes et reprise
-Aucun déploiement, DNS ou changement du site original. Pas de navigateur externe. Chaque commit porte le trailer OpenBot demandé.
+Déploiement de la nouvelle préversion en cours sous supervision OpenBot ; aucune action de déploiement ou d’infrastructure par cet exécutant. Aucun DNS ni site original modifié. Pas de navigateur externe par cet exécutant. Chaque commit porte le trailer OpenBot demandé.
 
 ```bash
 cd /root/happyclick
@@ -34,7 +34,17 @@ npm run preview
 npm run verify -- --base-url http://127.0.0.1:4321
 ```
 
-Preuves détaillées : `tasks/verification.md`. Revue visuelle finale mobile/desktop : OpenBot/superviseur.
+Preuves détaillées : `tasks/verification.md`. Revue visuelle mobile/desktop effectuée par OpenBot (périmètre ci-dessus).
 
 ## Livraison GitHub
 Dépôt privé créé après vérification d’absence via connecteur, API gh et liste des dépôts du compte. Branche `feat/astro-preview` poussée ; commit d’implémentation `d50a2c5be3597d8ccba5a8eb503c301083915b80` vérifié identique sur origin. Le commit de suivi clôt cette checklist. Tous les commits incluent le trailer OpenBot.
+
+## Retour de revue et infrastructure
+- [x] Documenter la revue navigateur réussie d’OpenBot et ses contrôles build/verify.
+- [x] Documenter Coolify : projet `yuhz20ol6ogbmzj1pol2r7pz`, app `ezv2qhhub0jjl6cg4zgkp8p8`, branche `feat/astro-preview`, Nixpacks `npm ci` / `npm run build`, statique `/dist`, port 80.
+- [x] Documenter les domaines transmis : `happyclick.danhabib.dev` NXDOMAIN ; `happyclick.app.danhabib.dev` ajouté et résolvant 72.61.167.104. Aucun DNS modifié ; accès public/HTTPS non confirmés.
+- [x] Remplacer `trailingSlash: never` par `ignore` ; rebuild réussi et quatre variantes /kit et /guides avec/sans slash vérifiées HTTP 200 sans redirection.
+
+Le superviseur gère le déploiement en cours. Aucun appel de déploiement ni changement d’infrastructure à effectuer par cet exécutant ; un push sur la branche raccordée peut activer le webhook existant.
+
+Le serveur local a été redémarré après modification de la configuration Astro : `0.0.0.0:4321`, PID 2872878 au contrôle. Aucun appel à Coolify ni modification des domaines dans ce correctif.

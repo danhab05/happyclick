@@ -12,7 +12,7 @@ npm run build
 npm run preview
 ```
 
-Le serveur écoute sur `0.0.0.0:4321` ; ouvrir `http://localhost:4321` (ou `http://148.113.237.197:4321` depuis le réseau si accessible). Routes `/`, `/kit`, `/guides`. Pour travailler en mode rechargement : `npm run dev`.
+Le serveur écoute sur `0.0.0.0:4321` ; ouvrir `http://localhost:4321` (ou `http://148.113.237.197:4321` depuis le réseau si accessible). Routes `/`, `/kit`, `/kit/`, `/guides`, `/guides/` (`trailingSlash: 'ignore'`). Vérifier si le port 4321 est déjà occupé avant de relancer le serveur. Pour travailler en mode rechargement : `npm run dev`.
 
 Vérification avec le serveur lancé :
 
@@ -29,7 +29,7 @@ Node >=22.12 pour installer ; les commandes npm utilisent le runtime Node 22.23.
 - Trois liens internes et deux liens externes GATE conservés.
 - Liens ouvrir/télécharger et repli pour les appareils sans aperçu PDF intégré.
 - Header dans le flux et navigation repliable sur petits écrans, largeur des PDF bornée, animation désactivée si réduction des mouvements demandée.
-- Aucun déploiement, DNS ou changement du site original. Le push de cette préversion n’est raccordé à aucun hébergement.
+- Site original inchangé. La nouvelle préversion est raccordée à Coolify par le superviseur ; aucun changement d’infrastructure effectué par cet exécutant.
 
 ## Traçabilité
 
@@ -39,4 +39,21 @@ Node >=22.12 pour installer ; les commandes npm utilisent le runtime Node 22.23.
 - `tasks/todo.md`, `tasks/verification.md` : suivi et preuves reproductibles.
 - `.opencode/codebase_map.md` : cartographie pour reprise.
 
-La validation responsive automatisée est une analyse des règles et dimensions CSS, pas une mesure par navigateur. La revue visuelle mobile/desktop appartient au superviseur OpenBot.
+La validation responsive automatisée est une analyse des règles et dimensions CSS, pas une mesure par navigateur. OpenBot a effectué la revue navigateur : accueil desktop très fidèle ; accueil et kit mobile sans débordement de navigation ni de titres ; guides desktop avec PDF visibles et contenu correct. Il a aussi relancé build et verify avec succès.
+
+## Infrastructure de la nouvelle préversion
+
+Informations transmises par OpenBot (déploiement en cours sous sa supervision, disponibilité publique et HTTPS non encore confirmés) :
+
+| Paramètre | Valeur |
+|---|---|
+| Coolify | https://deploy.danhabib.dev |
+| Projet | `yuhz20ol6ogbmzj1pol2r7pz` |
+| Application | `ezv2qhhub0jjl6cg4zgkp8p8` |
+| Branche | `feat/astro-preview` |
+| Build | Nixpacks : `npm ci` puis `npm run build` |
+| Service | Statique, répertoire `/dist`, port `80` |
+| Domaine initial | `happyclick.danhabib.dev` : NXDOMAIN constaté par OpenBot |
+| Domaine alternatif ajouté | `happyclick.app.danhabib.dev` : résout vers `72.61.167.104` selon OpenBot |
+
+Aucun DNS modifié. Le domaine alternatif utilise la résolution existante ; cela ne prouve pas que le site ou HTTPS soit opérationnel. Le superviseur suit le déploiement et vérifiera l’accès et le certificat. Les pushes sur la branche raccordée peuvent déclencher le webhook Coolify ; ne pas lancer de déploiement supplémentaire ni modifier l’infrastructure sans instruction.
