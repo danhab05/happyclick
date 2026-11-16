@@ -7,7 +7,7 @@
 - [x] Vérifier build, URLs, ressources, liens PDF et règles mobile/desktop.
 - [x] Rendre la préversion disponible sur 0.0.0.0:4321 pour la revue OpenBot.
 - [x] Vérifier/créer le dépôt GitHub privé danhab05/happyclick.
-- [ ] Committer et pousser feat/astro-preview, vérifier la concordance du hash distant.
+- [x] Committer et pousser feat/astro-preview, vérifier la concordance du hash distant.
 
 ## Review
 - Build Astro 7.4.12 : 3 pages statiques générées ; runtime Node 22.23.4 local au projet.
@@ -35,3 +35,6 @@ npm run verify -- --base-url http://127.0.0.1:4321
 ```
 
 Preuves détaillées : `tasks/verification.md`. Revue visuelle finale mobile/desktop : OpenBot/superviseur.
+
+## Livraison GitHub
+Dépôt privé créé après vérification d’absence via connecteur, API gh et liste des dépôts du compte. Branche `feat/astro-preview` poussée ; commit d’implémentation `d50a2c5be3597d8ccba5a8eb503c301083915b80` vérifié identique sur origin. Le commit de suivi clôt cette checklist. Tous les commits incluent le trailer OpenBot.
