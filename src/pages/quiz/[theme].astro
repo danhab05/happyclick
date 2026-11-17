@@ -33,10 +33,11 @@ const letter = (i: number) => String.fromCharCode(65 + i);
         <p class="small" data-comparison></p>
         <p>{q.feedback}</p>
         <div class="talk"><h4>À toi d’en parler</h4><p class="discussion">{q.discussion}</p></div>
-        <div class="for-adults">
-          {q.nuance && <><h4>Pour les adultes : une nuance</h4><p>{q.nuance}</p></>}
+        <details class="for-adults">
+          <summary>{q.nuance ? 'Pour les adultes : une nuance et la source' : 'Pour les adultes : la source'}</summary>
+          {q.nuance && <p>{q.nuance}</p>}
           <p class="source-note">Carte Happy Click : <a href={`${q.source.file}#page=${q.source.page}`}>question page {q.source.page}</a>, <a href={`${q.source.file}#page=${q.source.answerPage}`}>réponse page {q.source.answerPage}</a>. La nuance et la question pour en parler sont ajoutées par le site.</p>
-        </div>
+        </details>
       </div></div></details>
     </article>)}
     <section class="quiz-card quiz-end" data-end hidden>

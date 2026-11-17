@@ -14,7 +14,17 @@ export function initQuiz(root) {
   const summary = root.querySelector('[data-review]');
   root.classList.add('enhanced');
   root.dataset.ready = 'true';
-  function focus(element) { element?.focus(); }
+  const view = root.ownerDocument.defaultView;
+  const media = query => Boolean(view?.matchMedia?.(query).matches);
+  // Bring the whole card to the top of the screen, then focus without a second jump.
+  // Side by side (wide screens) the card top is the reference; stacked (phones) the focused heading is.
+  function focus(element) {
+    const card = element?.closest('[data-question],[data-end]');
+    if (card && media('(min-width: 900px)')) {
+      card.scrollIntoView?.({ block: 'start', behavior: media('(prefers-reduced-motion: reduce)') ? 'auto' : 'smooth' });
+      element.focus({ preventScroll: true });
+    } else element?.focus();
+  }
   function render() {
     cards.forEach((card,index) => {
       card.hidden = session.finished || index !== session.index;

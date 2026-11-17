@@ -205,3 +205,6 @@ Refonte « table de jeu » complète sur les 15 pages (correctif de densité mob
 
 ## Retour Dan sur le quiz — tout sur un écran
 Haut de page quiz resserré, compteur de carte affiché une seule fois, réponses en 2 colonnes dès 900 px. Une fois la carte retournée : question et réponses à gauche, dos de la carte à droite (classe `is-flipped` ajoutée par `quiz.mjs`). Sur téléphone, la carte reste empilée. Build 15 pages, tests 18/18, verify 65 URLs. Rendu non mesuré par l'exécutant.
+
+## Retour Dan : après « Retourner la carte », la page ne descendait pas
+Sur ordinateur, la carte est ramenée en haut de l'écran à chaque action (retourner, suivante, d'avant, rejouer). Sur téléphone, le focus sur le dos de la carte fait défiler. Nuance et source rangées dans un volet « Pour les adultes » fermé. Build, tests 18/18, verify 65 URLs.
