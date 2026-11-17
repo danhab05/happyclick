@@ -4,7 +4,7 @@
 
 Demande de Dan après `969d467` : « Adapte le site au logo ». Le logo officiel et la DA papier étaient incohérents. Inspection visuelle directe de `public/assets/2027/logo-512.png` : bleu ciel, cœur rouge, mains blanches, contours et curseur noirs/blancs. Le PNG reste inchangé, sans redessin ni recoloration.
 
-Base publique `969d467` confirmée par OpenBot le 17 novembre 2026 : Coolify `enbdelpmy0pbqsspjzvmfr79` finished, 60 URLs HTTPS identiques au build, projet/FAQ navigateur bons. Dépôt public. **Ces constats concernent la base, pas cette refonte locale. Aucun push avant revue OpenBot.**
+Base publique `969d467` confirmée par OpenBot le 17 novembre 2026 : Coolify `enbdelpmy0pbqsspjzvmfr79` finished, 60 URLs HTTPS identiques au build, projet/FAQ navigateur bons. Dépôt public. **Ces constats concernent la base. La refonte 259697a a depuis été approuvée par OpenBot, avec publication autorisée ; revue détaillée ci-dessous.**
 
 ## Système visuel livré
 
@@ -61,7 +61,7 @@ Lecture du CSS et des contraintes de grille, sans navigateur ni mesure de scroll
 | 1440 px | 1240 px | Hero en deux colonnes, thèmes/publics en trois colonnes |
 | 1920 px | 1240 px | Conteneur borné et largeurs de lecture inchangées |
 
-Ce sont des dimensions déduites des règles, **pas des rendus approuvés**. Le lecteur PDF intégré dépend du navigateur ; les liens ouvrir/télécharger restent accessibles hors aperçu.
+Ce tableau décrit des dimensions déduites des règles. Les mesures réelles et captures approuvées ensuite par OpenBot sont consignées dans la section de revue ci-dessous. Le lecteur PDF intégré dépend du navigateur ; les liens ouvrir/télécharger restent accessibles hors aperçu.
 
 ## Vérifications exécutées le 17 novembre 2026
 
@@ -96,10 +96,24 @@ Le vérificateur n’a perdu aucune assertion. Seuls ses textes de rapport disti
 - [x] Données et documents inchangés ; contrôles de contenu maintenus.
 - [x] Contrastes calculés, règles responsive analysées, reduced-motion.
 - [x] Build/tests/verify et bilan ; commit local avec trailer OpenBot, aucun push.
-- [ ] Revue visuelle et clavier OpenBot de cette nouvelle DA à 320/390/768/1440/1920.
+- [x] Revue visuelle OpenBot à 320/390/768/1440/1920 et contrôle du focus sur le feedback ; périmètre exact et limites ci-dessous.
 
 ## Fichiers et reprise
 
 `public/style.css` porte le système complet. `src/layouts/Layout.astro`, `src/components/ThemeCards.astro`, accueil/projet et les introductions kit/guides/quiz/carnet portent les changements de structure. Les autres routes héritent des composants partagés. README, carte, todo, leçons, rapports de vérification et historiques de publication/revue sont actualisés.
 
-Ancien rendu récupérable dans `969d467`, sans maintenir une seconde DA en parallèle. Dernier commit et état exact : `git log -1 --format=full && git status --short --branch`. Ne pas pousser : le webhook déploie. Aucun appel infra/DNS, navigateur ou Playwright par l’exécutant. Limite restante : la revue réelle du rendu et du clavier par OpenBot, distincte des tests DOM et calculs ci-dessus.
+Ancien rendu récupérable dans `969d467`, sans maintenir une seconde DA en parallèle. Dernier commit et état exact : `git log -1 --format=full && git status --short --branch`. Push de la branche autorisé après la revue de 259697a : le webhook déploie et OpenBot en suit le résultat. Aucun appel infra/DNS, navigateur ou Playwright par l’exécutant. La revue ne couvre pas exhaustivement chaque état à chaque taille.
+
+## Revue de 259697a approuvée par OpenBot — 17 novembre 2026
+
+Preuves transmises par le superviseur, sans navigateur lancé par l’exécutant :
+
+- Build **15 pages**, tests **14/14**, verify **60 URLs / 288 références** exécutés par OpenBot, tous avec exit 0. Comparaison à `969d467` : données, scripts applicatifs, bibliothèques, assets, PDF et fichiers package inchangés.
+- **Les 15 routes à 320 et 1920 px** : aucun débordement ; navigation mobile présente et dans le viewport ; logos chargés. Les deux couvertures des guides, en chargement différé, ont été chargées après défilement ; aucune image cassée.
+- **À 390, 768 et 1440 px**, cinq routes contrôlées : `/`, `/quiz/comportements`, `/kit`, `/kit/roles/cyberharcelement`, `/projet-2027`. Aucun débordement ni navigation coupée.
+- Captures réellement vues : accueil à **1920 et 320 px**, cartes thèmes à **1920 px**, feedback quiz à **1920 px**, guides à **320 px**, projet à **768 px**, kit à **1440 px**. Rendu jugé cohérent bleu ciel/blanc/rouge ; Ubuntu lisible.
+- Quiz comportements : validation sans choix → erreur attendue ; sélection visible sur fond bleu clair ; validation → fieldset verrouillé, feedback ouvert et focus sur son titre ; aucun débordement constaté.
+
+**Revue approuvée et publication de la seule préversion autorisée**, via push de `origin feat/astro-preview` incluant `259697a` et le commit documentaire de revue. OpenBot suit le déploiement Coolify ; cette approbation ne prouve pas encore le nouveau déploiement terminé.
+
+Limite : ce contrôle n’est pas un audit exhaustif de chaque état à chaque taille, ni de toutes les interactions au clavier. Les tests DOM et preuves des versions précédentes restent distincts de ces observations réelles.

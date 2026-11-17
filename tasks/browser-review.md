@@ -54,8 +54,16 @@ Aucun navigateur par l’exécutant. À cette étape, nouveautés locales non po
 
 OpenBot confirme la publication Coolify finished `enbdelpmy0pbqsspjzvmfr79`, 60 URLs HTTPS identiques au build, projet/FAQ en navigateur bons. Cela clôt l’état local de la mission GATE précédente.
 
-## Nouvelle DA autour du logo — revue attendue
+## Revue de 259697a approuvée par OpenBot — 17 novembre 2026
 
-Le changement de palette, typographie, composition et composants invalide toute extrapolation visuelle des anciennes revues. Aucun rendu de cette refonte n’a encore été approuvé par OpenBot. Build et tests DOM locaux ne mesurent pas les débordements réels.
+Preuves transmises par le superviseur, sans navigateur lancé par l’exécutant :
 
-À revoir sur `http://localhost:4321` : accueil à 320/390/768/1440/1920 ; navigation et logo ; quiz multi-choix, validation, erreurs, disabled, feedback, bilan/rejouer ; titres longs des jeux à 320 ; PDF kit/guides ; questionnaires ; projet/équipe et FAQ ; focus clavier et lien d’évitement. Spec, contrastes et bilan : `tasks/design-2027.md`. Aucun push avant cette revue.
+- Build **15 pages**, tests **14/14**, verify **60 URLs / 288 références** exécutés par OpenBot, tous avec exit 0. Comparaison à `969d467` : données, scripts applicatifs, bibliothèques, assets, PDF et fichiers package inchangés.
+- **Les 15 routes à 320 et 1920 px** : aucun débordement ; navigation mobile présente et dans le viewport ; logos chargés. Les deux couvertures des guides, en chargement différé, ont été chargées après défilement ; aucune image cassée.
+- **À 390, 768 et 1440 px**, cinq routes contrôlées : `/`, `/quiz/comportements`, `/kit`, `/kit/roles/cyberharcelement`, `/projet-2027`. Aucun débordement ni navigation coupée.
+- Captures réellement vues : accueil à **1920 et 320 px**, cartes thèmes à **1920 px**, feedback quiz à **1920 px**, guides à **320 px**, projet à **768 px**, kit à **1440 px**. Rendu jugé cohérent bleu ciel/blanc/rouge ; Ubuntu lisible.
+- Quiz comportements : validation sans choix → erreur attendue ; sélection visible sur fond bleu clair ; validation → fieldset verrouillé, feedback ouvert et focus sur son titre ; aucun débordement constaté.
+
+**Revue approuvée et publication de la seule préversion autorisée**, via push de `origin feat/astro-preview` incluant `259697a` et le commit documentaire de revue. OpenBot suit le déploiement Coolify ; cette approbation ne prouve pas encore le nouveau déploiement terminé.
+
+Limite : ce contrôle n’est pas un audit exhaustif de chaque état à chaque taille, ni de toutes les interactions au clavier. Les tests DOM et preuves des versions précédentes restent distincts de ces observations réelles.

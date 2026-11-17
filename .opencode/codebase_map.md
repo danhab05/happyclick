@@ -1,7 +1,7 @@
 # Cartographie — Happy Click
 
 ## État et reprise
-Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt public `danhab05/happyclick`, branche `feat/astro-preview`. **Base publique `969d467` confirmée par OpenBot le 17 novembre 2026**, Coolify `enbdelpmy0pbqsspjzvmfr79` finished, 60 URLs HTTPS identiques au build et projet/FAQ vérifiés en navigateur. **Nouvelle DA autour du logo : locale, sans push avant revue OpenBot.** Le webhook de cette branche déploie. Versions antérieures conservées dans Git : `0fc4fb9`, `6dab746`, `cc71f4a`.
+Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt public `danhab05/happyclick`, branche `feat/astro-preview`. **Base publique `969d467` confirmée par OpenBot le 17 novembre 2026**, Coolify `enbdelpmy0pbqsspjzvmfr79` finished, 60 URLs HTTPS identiques au build et projet/FAQ vérifiés en navigateur. **DA 259697a approuvée par OpenBot, push de la préversion autorisé avec le commit de preuves ; nouveau déploiement suivi par OpenBot, résultat encore à confirmer.** Le webhook de cette branche déploie. Versions antérieures conservées dans Git : `0fc4fb9`, `6dab746`, `cc71f4a`.
 
 Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` avant de relancer). `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Pas de navigateur/Playwright par l’exécutant.
 
@@ -65,4 +65,4 @@ Aucun compte/backend/formulaire envoyé/analytics/persistance. Les conseils/cart
 - `tasks/gate-2027.md` : bilan/provenance/limites ; `gate-2027-assets.json`, `gate-2027-archives.json`, `gate-2027-onepager.json` : empreintes et couverture ; `gate-2027-text/` : textes complets V1/V2.
 - Revue OpenBot locale : accueil1920 logos/rendu bon ; projet320 sans débordement ; FAQ lien/ouverture des rôles OK ; addiction mobile référencesV2 et troisPDF présents.
 
-Nouveautés GATE publiées sur 969d467, selon confirmation OpenBot. La nouvelle refonte graphique est distincte : elle reste locale et attend sa revue. Aucun changement de données, PDF, PNG ni scripts applicatifs pendant la refonte. Conserver les preuves publiques durables et ne pas leur attribuer une validation du nouveau rendu.
+Nouveautés GATE publiées sur 969d467, selon confirmation OpenBot. La refonte graphique 259697a est distincte : sa revue est approuvée et sa publication autorisée. Voir `tasks/browser-review.md` pour les mesures réelles sur 15 routes à 320/1920 et cinq routes à 390/768/1440, ainsi que les limites. Aucun changement de données, PDF, PNG ni scripts applicatifs pendant la refonte. Conserver les preuves publiques durables et ne pas leur attribuer une validation du nouveau rendu.

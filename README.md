@@ -2,7 +2,7 @@
 
 Interface construite autour du logo officiel 2027 : bleu ciel, blanc, encre sombre et rouge, typographie locale Ubuntu, grand logo à l’accueil, cartes et contrôles communs aux **15 pages**. Les 29 questions, 116 choix, trois jeux de rôles, questionnaires et dix PDF restent intacts. La DA précédente est récupérable au commit `969d467` ; l’ancienne reproduction au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
-**Cette refonte est locale, committée sans push et en attente de revue visuelle OpenBot.** Elle est disponible sur le serveur de revue `0.0.0.0:4321`. Spécification, couverture et preuves : [tasks/design-2027.md](tasks/design-2027.md).
+**Refonte 259697a approuvée par OpenBot ; publication de la préversion autorisée.** Le résultat du nouveau déploiement reste à confirmer par le superviseur. Elle est disponible sur le serveur de revue `0.0.0.0:4321`. Spécification, couverture et preuves : [tasks/design-2027.md](tasks/design-2027.md).
 
 **Base publique confirmée par OpenBot le 17 novembre 2026 :** [happyclick.danhabib.dev](https://happyclick.danhabib.dev), commit `969d467`, déploiement Coolify `enbdelpmy0pbqsspjzvmfr79` terminé, 60 URLs HTTPS identiques au build, projet et FAQ vérifiés en navigateur. Dépôt public : [danhab05/happyclick](https://github.com/danhab05/happyclick). La validation de cette base ne valide pas le nouveau rendu local.
 
@@ -68,7 +68,7 @@ Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajou
 - `tasks/design-2027.md` : nouvelle DA, couverture des composants, contrastes calculés, analyse responsive et checklist de revue.
 - `tasks/verification.md` : rapport régénéré par verify ; 60 URLs HTTP 200 identiques au build, 288 références, 26 blocs source, toutes les questions, 10 PDF / 204 pages et empreintes.
 - `tasks/public-verification.md` : preuves publiques durables, maintenues manuellement et jamais réécrites par verify.
-- `tasks/browser-review.md` : retours réels du superviseur, séparés par version. La refonte actuelle attend sa propre revue.
+- `tasks/browser-review.md` : retours réels du superviseur, séparés par version. La revue de 259697a est approuvée ; périmètre exact et limites consignés.
 - `tasks/pdf-analysis.md`, `tasks/quiz-source-map.md` : analyse des huit PDF historiques / 156 pages et correspondance des 29 cartes. `tasks/pdf-text/` contient les extractions/OCR ; rendus temporaires dans `tasks/pdf-images/`, ignorés par Git.
 - `source-snapshot/` : HTML/CSS originaux non servis, inventaire et hashes ; les ressources historiques restent disponibles même lorsqu’elles ne sont plus utilisées visuellement.
 - `tasks/todo.md`, `tasks/lessons.md`, `.opencode/codebase_map.md` : suivi et reprise.
@@ -89,4 +89,4 @@ Build : **15 pages**. Tests : **14/14**, y compris progression complète des qua
 | Domaine principal | `https://happyclick.danhabib.dev` |
 | Domaine alternatif | `https://happyclick.app.danhabib.dev` |
 
-DNS et HTTPS ont été configurés et vérifiés par OpenBot. Les détails datés (A, TTL, résolveurs, certificat et déploiements précédents) restent dans [tasks/public-verification.md](tasks/public-verification.md). Aucun appel d’infrastructure, changement DNS ni push pendant cette refonte. Attendre la revue visuelle et l’autorisation explicite avant de pousser cette branche.
+DNS et HTTPS ont été configurés et vérifiés par OpenBot. Les détails datés (A, TTL, résolveurs, certificat et déploiements précédents) restent dans [tasks/public-verification.md](tasks/public-verification.md). Aucun appel d’infrastructure ni changement DNS par l’exécutant. Après revue approuvée de 259697a, le push de cette branche avec les preuves documentaires est autorisé. OpenBot suit Coolify ; ne pas confondre approbation visuelle et déploiement terminé.

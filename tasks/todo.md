@@ -139,4 +139,14 @@ Base `969d467`, branche `feat/astro-preview` propre et synchronisée avant modif
 
 Feuille CSS entièrement réécrite autour du PNG officiel : ciel/blanc/encre/rouge et Ubuntu ; accueil recomposé, thème partagé sur les 15 pages et états interactifs. Ancienne DA récupérable dans 969d467. Données, JS, dépendances et assets inchangés. Build 15 pages, tests 14/14, verify 60 URLs HTTP200 identiques / 288 références ; 10 PDF / 204 pages et hashes préservés. Contrastes calculés, CSS analysé avec PostCSS, diff contrôlé. Spec, couverture et preuves : `tasks/design-2027.md`.
 
-Base publique 969d467 confirmée par OpenBot et documents de reprise actualisés. Cette refonte est committée localement avec trailer OpenBot, sans push ; revue visuelle OpenBot encore attendue, aucune ancienne approbation transposée. Serveur existant 0.0.0.0:4321 prêt pour cette revue. Aucun navigateur ou appel d’infrastructure par l’exécutant.
+Base publique 969d467 confirmée par OpenBot et documents de reprise actualisés. Livraison initiale au commit 259697a avec trailer OpenBot, sans push à cette étape ; la revue a ensuite été approuvée, voir finalisation ci-dessous. Serveur existant 0.0.0.0:4321 prêt pour cette revue. Aucun navigateur ou appel d’infrastructure par l’exécutant.
+
+## Finalisation de la revue 259697a — publication autorisée
+
+- [x] Consigner les preuves exactes OpenBot et les limites de couverture dans design/browser-review ; actualiser les documents de reprise.
+- [x] Actualiser uniquement les textes du rapport verify et régénérer le rapport local, sans changer les contrôles.
+- [x] Commit documentaire avec trailer OpenBot puis push autorisé de feat/astro-preview, incluant 259697a ; confirmer le hash distant et l’arbre propre. Déploiement suivi par OpenBot, aucun appel infra par l’exécutant.
+
+Revue 259697a approuvée : 15 routes à 320/1920 sans débordement ; cinq routes à 390/768/1440 sans débordement/navigation coupée ; logos et deux couvertures chargés ; captures vues et quiz comportements (erreur vide, sélection, verrouillage, feedback/focus) validés. Build15/tests14/verify60URLs288refs exit0 par OpenBot. Périmètre exact : `tasks/browser-review.md` et `tasks/design-2027.md`. Pas d’audit exhaustif chaque état/taille. Publication autorisée, suivi du déploiement laissé au superviseur.
+
+Verify relancé par l’exécutant après mise à jour des textes du rapport : exit0, 60 URLs / 288 références. Contrôles inchangés, aucun code applicatif modifié. Livraison Git : commit documentaire après 259697a, push sans force sur la branche dédiée ; hash distant et état Git contrôlés dans le compte rendu de livraison. Aucun résultat Coolify anticipé.
