@@ -171,3 +171,10 @@ Bilan cache : CSS déplacée identiquement et importée par Astro, URL `/_astro/
 Mesures OpenBot avant correction à 390×844 : header193px, hero941px, premier CTA y582, second y646, logo y775/h258, grille thèmes y1407. Cibles : header72–88px, CTA principal avant y400–450, première entrée thème vers y650–800 au plus. L’absence de débordement ne suffit pas ; aucune mesure de rendu par l’exécutant.
 
 Bilan mobile : header/menu natif, hero court et cartes compactes ; sommaires et footer repliables via composant partagé, densité des quiz/documents/équipe revue. Aucun nouveau JS ni changement de données/PDF. Build15/tests18/verify60URLs319refs réussis, CSS hashée `/_astro/Layout.BRIgqk92.css`, diff sans erreur. Commit local trailer OpenBot ; aucun push. Les cibles de position/hauteur restent à mesurer dans le navigateur du superviseur : `tasks/mobile-review.md`.
+
+## Livraison mobile approuvée — 6ed6231
+
+- [x] Consigner la revue OpenBot dans mobile-review/browser-review : à390 header77/hero333/CTA290/thèmes540 ; à320 header77/CTA318/thèmes591 ; 15routes sans overflow aux deux tailles, menu/quiz/kit et cinq pages desktop validés dans le périmètre rapporté.
+- [x] Recevoir l’autorisation du commit documentaire avec trailer et du push incluant6ed6231. Build15/tests18/verify60URLs319refs exit0 par OpenBot ; code inchangé, pas de répétition des tests. Vérifier hash distant et arbre propre à la livraison.
+
+Limites : pas d’audit exhaustif des états/appareils ; déploiement/public/CSS versionnée suivis par OpenBot, aucun appel infra par l’exécutant.

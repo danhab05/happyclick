@@ -4,7 +4,7 @@
 
 Dan : « Le site est pas fou du tt sur mobile ». À 390×844, OpenBot mesure sur la DA précédente : header **193 px**, hero **941 px**, premier CTA **y582**, second **y646**, logo **y775 / h258**, première grille de thèmes **y1407**. L’absence d’overflow ne rend pas cette composition efficace. Les anciennes approbations du responsive ne valent pas validation de cette nouvelle composition.
 
-Base `80ae3e2` poussée, correction de cache conservée. Cette mission reste **locale, sans push avant nouvelle revue**. Aucun navigateur/Playwright ni appel d’infrastructure par l’exécutant.
+Base `80ae3e2` poussée, correction de cache conservée. Livraison initiale locale ; **revue 6ed6231 désormais approuvée et push autorisé**, mesures ci-dessous. Aucun navigateur/Playwright ni appel d’infrastructure par l’exécutant.
 
 ## Composition implémentée
 
@@ -20,7 +20,7 @@ Base `80ae3e2` poussée, correction de cache conservée. Cette mission reste **l
 
 `ResponsiveDisclosure.astro` porte les sommaires et groupes de footer : les deux présentations ont exactement les mêmes liens via slot, sans stockage ni JS. Les titres et contenus pédagogiques ne sont pas supprimés. Les descriptions du hero sont redistribuées dans le bloc de discussion ; aucun changement aux données pédagogiques.
 
-## Mesures à effectuer par OpenBot
+## Cibles initiales de la revue OpenBot
 
 Les valeurs ci-dessous sont des **cibles**, pas des observations d’un navigateur par l’exécutant. Le CSS fixe des tailles et espacements, mais le rendu réel dépend notamment des retours à la ligne.
 
@@ -49,6 +49,16 @@ Parcours de revue :
 - Verify local : **60 URLs HTTP 200 identiques au build / 319 références**. Les 31 références supplémentaires viennent des sommaires présents en versions desktop/mobile ; elles pointent vers les mêmes ancres. Les 288 précédentes restent couvertes.
 - Verify contrôle les cinq destinations et le lien actif de chaque navigation séparément. CSS hashée, ressources locales/MIME, noindex, 26 blocs source, 29 questions/116 choix, 11 usages, 14 enseignants, trois jeux et dix PDF/204 pages toujours contrôlés.
 - Données, scripts/lib applicatifs, assets/PDF et fichiers package inchangés par rapport à 80ae3e2. Aucun nouveau module client.
-- Serveur local existant réutilisé sur `0.0.0.0:4321`. Aucun push autorisé pour cette composition avant revue ; commit local avec trailer OpenBot.
+- Serveur local existant réutilisé sur `0.0.0.0:4321`. Revue approuvée ensuite et push autorisé ; commit avec trailer OpenBot.
 
-Reprise : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Résultats détaillés dans `tasks/verification.md`. **Revue réelle OpenBot encore attendue** ; ne pas conclure que les cibles sont atteintes sur la seule base des contrôles automatisés.
+Reprise : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Résultats détaillés dans `tasks/verification.md`. **Revue réelle OpenBot approuvée ci-dessous** ; ses mesures sont distinctes des contrôles automatisés.
+
+## Revue réelle 6ed6231 approuvée — OpenBot, 17 novembre 2026
+
+- **390×844** : header **77 px** (avant193), hero **333 px** (avant941), CTA **y290 / y342** (principal avant582), grille thèmes **y540** (avant1407). Capture accueil nette et compacte, premier thème visible ; **15 routes sans overflow**, header77.
+- **320×800** : header **77 px**, CTA principal **y318**, thèmes **y591** ; **15 routes sans overflow**. Menu ouvert au clic, cinq liens de **48 px**, clic Quiz → `/quiz` ; à320, Entrée sur summary referme le menu.
+- **Quiz comportements390** : question **y401**, choix **y535** ; sélection/validation → feedback ouvert, focus sur titre, aucun overflow ; capture feedback lisible. **Kit390** : capture vue, « Dans le kit » replié, textes/boutons lisibles.
+- **Desktop1920** : accueil/quiz/kit/guides/projet sans overflow, cinq liens de navigation visibles, sans régression de composition constatée.
+- Build **15 pages**, tests **18/18**, verify **60 URLs / 319 références**, tous exit0 par OpenBot. Code inchangé pour ce complément documentaire ; tests non relancés par l’exécutant.
+
+**Publication de la préversion autorisée**, incluant6ed6231 et ce commit documentaire. Pas d’audit exhaustif de tous les états/appareils. OpenBot vérifie le déploiement, l’accès public et la CSS versionnée ; aucun résultat de déploiement anticipé, aucun appel infra par l’exécutant.
