@@ -1,61 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ThemeCards from '../components/ThemeCards.astro';
 import Doodle from '../components/Doodle.astro';
-import games from '../data/roles.json';
-const pictures = { addiction: 'addiction', cyberharcelement: 'cyberharcelement', desinformation: 'desinformation' } as const;
 ---
-<Layout active="/">
+<Layout active="/" title="Un projet pour bien utiliser le numérique">
   <div class="wrap">
-    <section class="board home-board" aria-labelledby="home-title">
-      <div class="board-intro">
-        <h1 id="home-title">Tire une carte, on en parle&nbsp;!</h1>
-        <p>Choisis un paquet, réponds, puis retourne la carte.</p>
+    <section class="board project-board" aria-labelledby="home-title">
+      <div>
+        <h1 id="home-title">Aider les enfants à bien utiliser le numérique</h1>
+        <p class="lead">Happy Click est un projet d’étudiants de Télécom SudParis. Nous préparons des jeux et des interventions pour parler des écrans avec les élèves de primaire et de collège, et nous partageons nos outils avec les enseignants et les parents.</p>
+        <p class="motto">« Le numérique n’est pas mauvais… il suffit d’en faire bon usage. »</p>
+        <div class="actions"><a class="button" href="/projet-2027">Découvrir le projet</a><a class="button secondary" href="/kit">Le kit pour les enseignants</a></div>
       </div>
-      <ThemeCards />
-      <a class="board-all" href="/quiz/tout"><Doodle name="tout" size={40} />Les 29 cartes mélangées</a>
+      <img src="/assets/2027/logo-512.png" width="512" height="551" alt="Logo officiel Happy Click : un cœur, deux mains et un curseur" fetchpriority="high" />
     </section>
   </div>
 
-  <section class="wrap section" aria-labelledby="games-title">
-    <div class="home-section-head">
-      <h2 id="games-title">Change de place</h2>
-      <p>Trois histoires à jouer à six. Chacun reçoit un personnage, puis on discute après chaque scène.</p>
+  <section class="wrap section narrow" aria-labelledby="what-title">
+    <h2 id="what-title">Happy Click, qu’est-ce que c’est ?</h2>
+    <p>Happy Click est mené par des étudiants de première année de Télécom SudParis, dans le cadre du programme GATE® (Gestion et Apprentissage du Travail en Équipe). Le projet a été commandé par Loïc Bernable, diplômé de Télécom SudParis en 2000, directeur technique et co-fondateur de LOG.</p>
+    <p>Chaque année, une nouvelle équipe reprend le projet. Elle va à la rencontre des élèves, crée des activités pour parler de santé, d’environnement et de comportement en ligne, et met ces outils à disposition de tous.</p>
+    <p class="source-note"><a href="https://www.telecom-sudparis.eu/ecole/gestion-apprentissage-travail-en-equipe/" target="_blank" rel="noopener noreferrer">Qu’est-ce que le programme GATE® ? <span class="sr-only">(nouvel onglet)</span><span aria-hidden="true">↗</span></a></p>
+  </section>
+
+  <section class="wrap section compact narrow" aria-labelledby="history-title">
+    <h2 id="history-title">Ce que le projet a déjà fait</h2>
+    <div class="edition-history">
+      <article><h3>2024–2025 : dans les classes</h3><p>370 élèves rencontrés dans 5 établissements (un collège et quatre écoles). L’équipe a créé un test sur les usages du numérique, un jeu de cartes et des fiches d’activité. Le projet a reçu le Prix exceptionnel du GATE.</p><a href="https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/" target="_blank" rel="noopener noreferrer">Voir le bilan 2024-2025 <span class="sr-only">(nouvel onglet)</span><span aria-hidden="true">↗</span></a></article>
+      <article><h3>2025–2026 : le kit Happy Click</h3><p>Des documents à imprimer pour les interventions dans les écoles et collèges : cartes quiz, trois jeux de rôles, deux questionnaires, et des guides pour les parents.</p><a href="/kit">Voir le kit</a></article>
+      <article><h3>2026–2027 : Happy Click 2027</h3><p>Une nouvelle équipe, un nouveau logo, deux nouvelles versions du jeu « Écrans et équilibre », et ce site pour retrouver tous les outils.</p><a href="/projet-2027#equipe">Rencontrer l’équipe</a></article>
     </div>
-    <ul class="scenes">
-      {games.map(g => <li><a class="scene" href={`/kit/roles/${g.slug}`}><Doodle name={pictures[g.slug as keyof typeof pictures]} size={84} /><span><strong>{g.title}</strong><span>6 personnages, 4 scènes</span></span></a></li>)}
+  </section>
+
+  <section class="wrap section compact" aria-labelledby="tools-title">
+    <h2 id="tools-title">Nos outils, pour tous</h2>
+    <ul class="for-whom">
+      <li><Doodle name="classe" size={64} /><h3>Pour les enseignants</h3><p>Le kit à imprimer : cartes, jeux de rôles et questionnaires, avec la façon de les animer en classe.</p><a class="text-link" href="/kit">Ouvrir le kit</a></li>
+      <li><Doodle name="maison" size={64} /><h3>Pour les parents</h3><p>Deux guides pour comprendre les usages des enfants et en parler à la maison.</p><a class="text-link" href="/guides">Lire les guides</a></li>
+      <li><Doodle name="tout" size={64} /><h3>En plus : les quiz en ligne</h3><p>Les 29 cartes du quiz, à jouer sur le site, seul ou en famille.</p><a class="text-link" href="/quiz">Jouer aux quiz</a></li>
     </ul>
-    <div class="mirror">
-      <Doodle name="usages" size={88} />
-      <div><h2>Mes écrans et moi</h2><p>Onze petites questions pour regarder tes habitudes. Rien n’est noté, rien n’est envoyé.</p></div>
-      <a class="button secondary" href="/mes-usages">Répondre aux questions</a>
-    </div>
-  </section>
-
-  <section class="grownups section" aria-labelledby="grownups-title">
-    <div class="wrap grownups-grid">
-      <div class="grownups-intro">
-        <h2 id="grownups-title">Pour les adultes qui accompagnent</h2>
-        <p>Parent ou enseignant, tu trouveras ici comment jouer avec les enfants, les documents à imprimer et des repères pour en parler.</p>
-        <ul class="reassure">
-          <li>Pas de compte, rien n’est enregistré.</li>
-          <li>Pas de score : le but est de discuter.</li>
-          <li>Chaque réponse renvoie à la page du document d’origine.</li>
-        </ul>
-      </div>
-      <ul class="paths">
-        <li><a class="path" href="/faq#famille"><Doodle name="maison" size={48} /><strong>Jouer à la maison</strong><span>Ouvrir une carte avec son enfant et écouter son avis.</span></a></li>
-        <li><a class="path" href="/kit"><Doodle name="classe" size={48} /><strong>Animer une séance en classe</strong><span>Cartes à imprimer, jeux de rôles et questionnaires.</span></a></li>
-        <li><a class="path" href="/guides"><Doodle name="livre" size={48} /><strong>Lire les guides pour les parents</strong><span>Une étude et un guide de 2021, résumés chapitre par chapitre.</span></a></li>
-        <li><a class="path" href="/faq"><Doodle name="carnet" size={48} /><strong>Questions fréquentes</strong><span>Pour qui, quels PDF, que deviennent les réponses.</span></a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="wrap section compact">
-    <div class="edition-note">
-      <img src="/assets/2027/logo-128.png" width="128" height="138" alt="Logo Happy Click 2027 : un cœur, deux mains et un curseur" loading="lazy" />
-      <p>Happy Click 2027 est préparé par une nouvelle équipe, avec deux versions du jeu « Écrans et équilibre ». <a class="text-link" href="/projet-2027">Découvrir le projet et l’équipe</a></p>
-    </div>
   </section>
 </Layout>

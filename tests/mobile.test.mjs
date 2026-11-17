@@ -19,7 +19,7 @@ test('all pages provide a native closed mobile menu with the same five destinati
     const nav = menu.querySelector('nav');
     assert.equal(menu.firstElementChild.getAttribute('aria-controls'), nav.id);
     assert.equal(nav.getAttribute('aria-label'), 'Navigation principale mobile');
-    assert.deepEqual(destinations(nav), ['/', '/quiz', '/kit', '/guides', '/projet-2027']);
+    assert.deepEqual(destinations(nav), ['/', '/projet-2027', '/kit', '/guides', '/quiz']);
     assert.deepEqual(destinations(nav), destinations(doc.querySelector('.desktop-navigation')));
     assert.equal(nav.querySelector('[aria-current="page"]').getAttribute('href'), doc.querySelector('.desktop-navigation [aria-current="page"]').getAttribute('href'));
     assert.equal(nav.querySelectorAll('[tabindex="-1"]').length, 0);

@@ -25,7 +25,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## CSS actifs versionnés
 
-- `/_astro/Doodle.I3r-scvP.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/Doodle.AHKypdzW.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 
 ## Documents et empreintes source
 

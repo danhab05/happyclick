@@ -382,6 +382,7 @@ textarea { display: block; width: 100%; min-height: 120px; padding: 12px 14px; b
 .project-board { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 40px; align-items: center; }
 .project-board h1 { max-width: 14ch; }
 .project-board img { width: 100%; max-width: 260px; }
+.motto { margin-top: 18px; font-family: var(--display); font-weight: 500; font-size: 1.25rem; }
 .for-whom { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin: 0; padding: 0; list-style: none; }
 .for-whom li { margin: 0; }
 .for-whom .doodle { width: 64px; height: 64px; margin-bottom: 10px; }

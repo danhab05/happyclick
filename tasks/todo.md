@@ -198,3 +198,7 @@ Refonte « table de jeu » complète sur les 15 pages (correctif de densité mob
 
 - [x] Consigner les preuves et limites OpenBot (redesign-enfants, browser-review) et actualiser le texte de verify.
 - [x] Commit documentaire avec trailer OpenBot, sans lien de session ; push de feat/astro-preview incluant 52115d2. Aucun appel infra par l’exécutant.
+
+## Retour Dan après publication de 271fd3c — remettre le projet au centre
+
+« J'ai rien compris […] Les quiz c'était en plus […] Faut quand même parler du projet. » Accueil refait autour du projet (ce que c'est, porteurs, bilan 2024–2025 et 2025–2026, outils ; quiz en dernier, présentés comme un plus). Menu dans l'ordre du site officiel : Accueil, Le projet, Le kit, Guides, Quiz (ordre adapté dans verify et le test mobile). Bilan 2024–2025 ajouté sur la page projet. Sources : `tasks/projet-sources.md`. Build 15 pages, tests 18/18, verify 65 URLs / 319 références. Commit local, sans push avant revue.

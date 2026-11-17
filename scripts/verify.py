@@ -92,7 +92,7 @@ for route, page in sorted(pages.items()):
     expected_active = '/projet-2027' if route in ('/projet-2027', '/faq') else '/quiz' if route.startswith('/quiz') or route == '/mes-usages' else '/kit' if route.startswith('/kit') else route
     assert len(page.nav_groups) == 2, f'Navigation desktop/mobile absente : {route}'
     for navigation in page.nav_groups:
-        assert [a['href'] for a in navigation] == ['/', '/quiz', '/kit', '/guides', '/projet-2027'], route
+        assert [a['href'] for a in navigation] == ['/', '/projet-2027', '/kit', '/guides', '/quiz'], route
         assert [a['href'] for a in navigation if a.get('aria-current') == 'page'] == [expected_active], route
     assert any(tag == 'html' and a.get('lang') == 'fr' for tag, a in page.elements), route
     assert any(tag == 'meta' and a.get('name') == 'robots' and a.get('content') == 'noindex, nofollow' for tag, a in page.elements), route
