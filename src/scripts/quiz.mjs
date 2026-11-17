@@ -19,6 +19,7 @@ export function initQuiz(root) {
     cards.forEach((card,index) => {
       card.hidden = session.finished || index !== session.index;
       const validated = session.validated.has(index);
+      card.classList.toggle('is-flipped', validated);
       card.querySelector('fieldset').disabled = validated;
       card.querySelectorAll('input').forEach(input => { input.checked = session.selections[index].includes(Number(input.value)); });
       const feedback = card.querySelector('[data-feedback]');

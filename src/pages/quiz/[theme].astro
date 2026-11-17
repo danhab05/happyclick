@@ -15,9 +15,9 @@ const { theme, title, topic, picture, questions } = Astro.props;
 const letter = (i: number) => String.fromCharCode(65 + i);
 ---
 <Layout active="/quiz" title={title}>
-  <div class="wrap quiz-wrap page-intro">
+  <div class="wrap quiz-wrap page-intro quiz-head">
     <p class="breadcrumb"><a href="/quiz">Changer de paquet</a></p>
-    <div class="theme-head"><Doodle name={picture as any} size={92} /><div><h1>{title}</h1><p class="small">{questions.length} cartes. {topic}</p></div></div>
+    <div class="theme-head"><Doodle name={picture as any} size={64} /><div><h1>{title}</h1><p class="small">{questions.length} cartes. {topic}</p></div></div>
   </div>
   <section class:list={['wrap quiz-wrap section compact quiz-table', `deck-${theme}`]} data-quiz aria-label={`Paquet ${title}`}>
     <div class="quiz-progress"><span data-counter>Les {questions.length} cartes du paquet</span><span>Pas de note, prends ton temps.</span></div><label class="sr-only" for="quiz-progress">Cartes retournées</label><progress id="quiz-progress" max={questions.length} value="0"></progress>

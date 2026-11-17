@@ -202,3 +202,6 @@ Refonte « table de jeu » complète sur les 15 pages (correctif de densité mob
 ## Retour Dan après publication de 271fd3c — remettre le projet au centre
 
 « J'ai rien compris […] Les quiz c'était en plus […] Faut quand même parler du projet. » Accueil refait autour du projet (ce que c'est, porteurs, bilan 2024–2025 et 2025–2026, outils ; quiz en dernier, présentés comme un plus). Menu dans l'ordre du site officiel : Accueil, Le projet, Le kit, Guides, Quiz (ordre adapté dans verify et le test mobile). Bilan 2024–2025 ajouté sur la page projet. Sources : `tasks/projet-sources.md`. Build 15 pages, tests 18/18, verify 65 URLs / 319 références. Commit local, sans push avant revue.
+
+## Retour Dan sur le quiz — tout sur un écran
+Haut de page quiz resserré, compteur de carte affiché une seule fois, réponses en 2 colonnes dès 900 px. Une fois la carte retournée : question et réponses à gauche, dos de la carte à droite (classe `is-flipped` ajoutée par `quiz.mjs`). Sur téléphone, la carte reste empilée. Build 15 pages, tests 18/18, verify 65 URLs. Rendu non mesuré par l'exécutant.
