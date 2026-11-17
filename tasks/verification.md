@@ -43,10 +43,10 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Responsive et limites de cette vérification
 
-Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Voir `tasks/browser-review.md` pour le périmètre exact de la revue finale approuvée par OpenBot.
+Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. La refonte autour du logo est en attente de revue visuelle OpenBot : voir `tasks/design-2027.md` et `tasks/browser-review.md`.
 
 Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
 
-Preuves publiques du commit déployé 6dab746 : `tasks/public-verification.md` (document durable non réécrit). Les nouveautés 2027 locales ne sont pas couvertes par cette ancienne validation.
+Base publique 969d467 confirmée par OpenBot : `tasks/public-verification.md` (document durable non réécrit). Cette nouvelle DA reste locale sans push et ne bénéficie pas de la validation visuelle de la base.
 
 Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.

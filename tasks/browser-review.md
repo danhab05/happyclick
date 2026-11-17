@@ -1,4 +1,4 @@
-# Revue navigateur — nouvelle interface
+# Revue navigateur — historique par version
 
 Compte rendu final transmis par OpenBot, superviseur. Aucun navigateur utilisé par l’exécutant. Les résultats ci-dessous sont ceux rapportés par le superviseur ; ils ne prétendent pas couvrir toutes les combinaisons de routes, appareils et interactions.
 
@@ -48,4 +48,14 @@ Retour transmis par OpenBot pendant la mission, distinct des preuves publiques d
 - FAQ : lien depuis le projet fonctionnel ; ouverture « Comment distribuer les rôles ? » OK.
 - Jeu addiction mobile : références V2/pages et trois PDF présents.
 
-Aucun navigateur par l’exécutant. Nouveautés locales non poussées ; build15pages,14tests et verify60URLs/288références. Rapport complet : `tasks/gate-2027.md`.
+Aucun navigateur par l’exécutant. À cette étape, nouveautés locales non poussées ; build15pages,14tests et verify60URLs/288références. Rapport complet : `tasks/gate-2027.md`.
+
+## Base 969d467 publiée — confirmation OpenBot du 17 novembre 2026
+
+OpenBot confirme la publication Coolify finished `enbdelpmy0pbqsspjzvmfr79`, 60 URLs HTTPS identiques au build, projet/FAQ en navigateur bons. Cela clôt l’état local de la mission GATE précédente.
+
+## Nouvelle DA autour du logo — revue attendue
+
+Le changement de palette, typographie, composition et composants invalide toute extrapolation visuelle des anciennes revues. Aucun rendu de cette refonte n’a encore été approuvé par OpenBot. Build et tests DOM locaux ne mesurent pas les débordements réels.
+
+À revoir sur `http://localhost:4321` : accueil à 320/390/768/1440/1920 ; navigation et logo ; quiz multi-choix, validation, erreurs, disabled, feedback, bilan/rejouer ; titres longs des jeux à 320 ; PDF kit/guides ; questionnaires ; projet/équipe et FAQ ; focus clavier et lien d’évitement. Spec, contrastes et bilan : `tasks/design-2027.md`. Aucun push avant cette revue.

@@ -123,3 +123,20 @@ Complément superviseur reçu pendant l’implémentation : comparer aussi les s
 Analyse complète V1/V2 (24pages chacune), comparaison des95pages d’archives,16images JPEG cartes identiques, cinq logos inspectés. `tasks/gate-2027.md` détaille provenance, couverture, exclusions et différences. V2 par défaut, V1 variante, archive28pages ; six rôles/quatre tours/douze questions conservés. Page projet, FAQ, équipe confirmée et logo PNG officiel intégrés sans modifier la DA globale ni les29questions.
 
 Build15pages ;14tests réussis ; verify60URLs200/288références,10PDF/204pages/hash. Revue OpenBot : accueil1920logos/rendu bon, projet320logos sans débordement, FAQ ouverture des rôles OK, jeu addiction mobile référencesV2 et troisPDF présents. Aucun navigateur par l’exécutant. Commit local avec trailer, aucun push ni infrastructure.
+
+# Mission 4 — refonte DA autour du logo officiel2027
+
+Base `969d467`, branche `feat/astro-preview` propre et synchronisée avant modifications. Publication de cette base confirmée par OpenBot : Coolify `enbdelpmy0pbqsspjzvmfr79` finished,60URLs HTTPS identiques au build, projet/FAQ vus en navigateur. Dépôt désormais public. La nouvelle refonte reste locale jusqu’à revue, aucun push.
+
+- [x] Écrire la spec visuelle et checklist dans `tasks/design-2027.md` après inspection du vrai PNG ; enregistrer la leçon utilisateur.
+- [x] Remplacer intégralement la feuille de style par un système bleu ciel/blanc/encre/rouge et Ubuntu ; supprimer les anciens artifices du markup.
+- [x] Recomposer accueil, header/footer et cartes thèmes ; harmoniser les15pages et tous les états interactifs/accessibles.
+- [x] Contrôler conservation des données/documents/ancres, contrastes et règles responsive320–1920 sans navigateur.
+- [x] Build,14tests existants et verify local ; ajuster les assertions uniquement pour le nouveau rendu, conserver les garanties de contenu.
+- [x] Actualiser contexte déployé, index et documents ; écrire le bilan de refonte et les limites ; commit trailer OpenBot, sans push.
+
+## Bilan mission 4 — refonte locale, 17 novembre 2026
+
+Feuille CSS entièrement réécrite autour du PNG officiel : ciel/blanc/encre/rouge et Ubuntu ; accueil recomposé, thème partagé sur les 15 pages et états interactifs. Ancienne DA récupérable dans 969d467. Données, JS, dépendances et assets inchangés. Build 15 pages, tests 14/14, verify 60 URLs HTTP200 identiques / 288 références ; 10 PDF / 204 pages et hashes préservés. Contrastes calculés, CSS analysé avec PostCSS, diff contrôlé. Spec, couverture et preuves : `tasks/design-2027.md`.
+
+Base publique 969d467 confirmée par OpenBot et documents de reprise actualisés. Cette refonte est committée localement avec trailer OpenBot, sans push ; revue visuelle OpenBot encore attendue, aucune ancienne approbation transposée. Serveur existant 0.0.0.0:4321 prêt pour cette revue. Aucun navigateur ou appel d’infrastructure par l’exécutant.

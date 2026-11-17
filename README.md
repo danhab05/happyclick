@@ -1,14 +1,16 @@
 # Happy Click — préversion pédagogique Astro
 
-Nouvelle interface papier ivoire, encre marine, corail et turquoise, avec le cœur-curseur Happy Click et les polices locales ClickChesse/Josefin/Ubuntu. Quinze pages statiques locales, quatre parcours de quiz (trois thèmes et l’ensemble), activités locales et documents accessibles sur le même site. L’ancienne interface est récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
+Interface construite autour du logo officiel 2027 : bleu ciel, blanc, encre sombre et rouge, typographie locale Ubuntu, grand logo à l’accueil, cartes et contrôles communs aux **15 pages**. Les 29 questions, 116 choix, trois jeux de rôles, questionnaires et dix PDF restent intacts. La DA précédente est récupérable au commit `969d467` ; l’ancienne reproduction au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
-**Préversion accessible : https://happyclick.danhabib.dev**, DNS et HTTPS avec certificat valide confirmés par OpenBot le **17 novembre 2026**, sur le commit déployé `6dab746`. Le domaine alternatif `https://happyclick.app.danhabib.dev` a également été validé par le superviseur. Le push autorisé a été effectué ; **ce nouveau suivi documentaire reste local, sans push**, pour éviter un déploiement uniquement documentaire. Aucun appel d’infrastructure ni changement DNS par cet exécutant. Le commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` est conservé.
+**Cette refonte est locale, committée sans push et en attente de revue visuelle OpenBot.** Elle est disponible sur le serveur de revue `0.0.0.0:4321`. Spécification, couverture et preuves : [tasks/design-2027.md](tasks/design-2027.md).
 
-## Nouveautés locales — Happy Click2027
+**Base publique confirmée par OpenBot le 17 novembre 2026 :** [happyclick.danhabib.dev](https://happyclick.danhabib.dev), commit `969d467`, déploiement Coolify `enbdelpmy0pbqsspjzvmfr79` terminé, 60 URLs HTTPS identiques au build, projet et FAQ vérifiés en navigateur. Dépôt public : [danhab05/happyclick](https://github.com/danhab05/happyclick). La validation de cette base ne valide pas le nouveau rendu local.
 
-**Aucun push de cette mission** : les nouveautés restent locales pour revue. Le déploiement public confirmé ci-dessous reste au commit6dab746. DA et29quiz conservés ; logo officiel PNG transparent, page projet/FAQ, équipe confirmée sans contacts et supports addictionV2/V1 de24pages. Le jeu complet garde ses six rôles/quatre tours/douze questions ; l’ancien PDF28pages est disponible en archive.
+## Édition Happy Click 2027
 
-Rapport complet : [tasks/gate-2027.md](tasks/gate-2027.md), provenance et hashes : `tasks/gate-2027-assets.json`, comparaison des six archives : `tasks/gate-2027-archives.json`. Les originaux Drive sont hors dépôt ; documents de gestion, contacts, finances, neuf portraits et onepager historique ne sont pas publiés. Revue navigateur locale2027 rapportée par OpenBot dans `tasks/browser-review.md`.
+Logo officiel PNG, projet/FAQ, équipe confirmée sans contacts, supports addiction V2/V1 de 24 pages. V2 par défaut, V1 variante photographique et archive précédente de 28 pages ; six rôles, quatre tours et douze questions conservés.
+
+Rapport de provenance : [tasks/gate-2027.md](tasks/gate-2027.md), hashes : `tasks/gate-2027-assets.json`, comparaison des six archives : `tasks/gate-2027-archives.json`. Documents de gestion, contacts, finances, portraits et liens Drive privés ne sont pas publiés.
 
 ## Reprendre et vérifier
 
@@ -55,7 +57,7 @@ Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajou
 
 ## Confidentialité et accessibilité
 
-- `noindex, nofollow` sur les 13 pages, `robots.txt` avec `Disallow: /`.
+- `noindex, nofollow` sur les 15 pages, `robots.txt` avec `Disallow: /`.
 - JavaScript ciblé sur les quiz et questionnaires seulement, modules locaux cacheables. Aucun compte, backend, analytics, appel réseau applicatif ni API de stockage.
 - Les choix et notes vivent uniquement dans la page ; remise à zéro et nettoyage à sa sortie. Aucun prénom ou renseignement d’identification demandé, aucun envoi de formulaire.
 - Navigation clavier, contrôles natifs, labels/fieldset, erreurs annoncées, focus après changement d’étape, reduced-motion, mise en page responsive et titres longs pouvant revenir à la ligne.
@@ -63,38 +65,28 @@ Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajou
 
 ## Preuves et limites
 
-- `tasks/pdf-analysis.md` : analyse intégrale des 8 PDF, 156 pages, publics, enjeux, pédagogie, sources et limites.
-- `tasks/quiz-source-map.md` : correspondance des 29 questions et corrigés, pages et quadrants.
-- `tasks/pdf-text/` : textes complets, OCR et inventaire par page versionnés (~412 Ko).
-- `tasks/pdf-images/` : 16 cartes rendues individuellement et autres pages graphiques, disponibles localement pour OpenBot ; ~12 Mo ignorés par Git et reproductibles.
-- `tasks/verification.md` : rapport généré par verify (contenus, 8 empreintes PDF, noindex, liens/ancres et tous les assets HTTP), réécrit à chaque exécution.
-- `tasks/public-verification.md` : preuves publiques durables, maintenues manuellement ; DNS, certificat, déploiements et contrôles du superviseur. Ce fichier n’est pas réécrit par verify.
-- `tasks/browser-review.md` : périmètre exact de la revue locale et publique rapportée par OpenBot.
-- `source-snapshot/` : HTML/CSS originaux non servis ; `assets.json` contient les 18 ressources et leurs SHA-256. Seule la feuille CSS originale est adaptée ; les autres ressources originales restent identiques.
+- `tasks/design-2027.md` : nouvelle DA, couverture des composants, contrastes calculés, analyse responsive et checklist de revue.
+- `tasks/verification.md` : rapport régénéré par verify ; 60 URLs HTTP 200 identiques au build, 288 références, 26 blocs source, toutes les questions, 10 PDF / 204 pages et empreintes.
+- `tasks/public-verification.md` : preuves publiques durables, maintenues manuellement et jamais réécrites par verify.
+- `tasks/browser-review.md` : retours réels du superviseur, séparés par version. La refonte actuelle attend sa propre revue.
+- `tasks/pdf-analysis.md`, `tasks/quiz-source-map.md` : analyse des huit PDF historiques / 156 pages et correspondance des 29 cartes. `tasks/pdf-text/` contient les extractions/OCR ; rendus temporaires dans `tasks/pdf-images/`, ignorés par Git.
+- `source-snapshot/` : HTML/CSS originaux non servis, inventaire et hashes ; les ressources historiques restent disponibles même lorsqu’elles ne sont plus utilisées visuellement.
 - `tasks/todo.md`, `tasks/lessons.md`, `.opencode/codebase_map.md` : suivi et reprise.
 
-Build local2027 : 15 pages. Tests : 14/14. Verify HTTP local : 60 URLs, 288 références d’ancres/pages PDF, 26 blocs source et toutes les questions contrôlés. Ces vérifications ne sont pas une mesure visuelle. Aucun navigateur lancé par l’exécutant. OpenBot a approuvé la revue finale : correctif du titre à 320 px, pages accueil/kit/guides/quiz écologie à 1920 px sans débordement, lien d’évitement au clavier, sélection/restitution/effacement du questionnaire d’usage et saisie/relecture/effacement des 14 champs enseignants. Voir `tasks/browser-review.md` pour les mesures et le périmètre exact. OpenBot a ensuite confirmé la disponibilité publique et le certificat HTTPS valide, joué le quiz santé sur le domaine public (feedback OK) et terminé `/quiz/tout` en navigateur local : 29 questions, 29 résumés, premier choix multiple, aucun débordement à 1920 px.
+Build : **15 pages**. Tests : **14/14**, y compris progression complète des quatre parcours, choix multiples, feedback, bilan/rejouer et restitution/effacement des questionnaires. Aucun navigateur/Playwright lancé par l’exécutant ; les calculs de contraste et l’analyse des règles CSS ne remplacent pas une mesure du rendu à 320–1920 px.
 
 ## Infrastructure transmise par OpenBot
-
-Déploiement et accès public confirmés par OpenBot ; constats consignés ici sans nouvel appel d’infrastructure par l’exécutant :
 
 | Paramètre | Valeur |
 |---|---|
 | Coolify | https://deploy.danhabib.dev |
 | Projet | `yuhz20ol6ogbmzj1pol2r7pz` |
 | Application | `ezv2qhhub0jjl6cg4zgkp8p8` |
-| Branche | `feat/astro-preview` |
+| Branche | `feat/astro-preview` — webhook de déploiement |
 | Build | Nixpacks : `npm ci` puis `npm run build` |
-| Service | Statique, répertoire `/dist`, port `80` |
-| Dernier déploiement confirmé | `1rbbwrx32ragmtnltqbirebp` : `finished`, commit `6dab746` ; redéploiement API par OpenBot |
-| Domaine principal | `https://happyclick.danhabib.dev` : DNS 72.61.167.104, HTTPS 200 avec validation TLS sans bypass |
-| Domaine alternatif | `https://happyclick.app.danhabib.dev` : accessible en HTTPS, certificat valide selon OpenBot |
+| Service | Statique, `/dist`, port `80` |
+| Dernier déploiement confirmé | `enbdelpmy0pbqsspjzvmfr79` : `finished`, commit `969d467` |
+| Domaine principal | `https://happyclick.danhabib.dev` |
+| Domaine alternatif | `https://happyclick.app.danhabib.dev` |
 
-OpenBot a exécuté `npm run verify -- --base-url https://happyclick.app.danhabib.dev` : **50 URLs HTTP 200 identiques au build et 276 références vérifiées**. Ce contrôle public est distinct de la vérification locale et du test navigateur du quiz santé.
-
-Le **17 novembre 2026**, OpenBot a ajouté chez Name.com, après connexion Google avec le compte de Dan, le seul enregistrement autorisé **A `happyclick.danhabib.dev` → `72.61.167.104`, TTL 300** : aucun doublon, autres enregistrements présents. Les quatre NS autoritatifs `ns1hwy.name.com`, `ns2hjl.name.com`, `ns3qty.name.com`, `ns4cjp.name.com` ainsi que `1.1.1.1` et `8.8.8.8` ont répondu 72.61.167.104 selon ses contrôles.
-
-Un certificat au mauvais nom a été résolu par le redéploiement Coolify indiqué ci-dessus. Certificat observé : **CN/SAN `happyclick.danhabib.dev`**, émetteur **Let’s Encrypt YR2**, valable du **17 novembre 2026 au 15 février 2027**. OpenBot a obtenu HTTPS 200 avec validation TLS sans bypass, puis exécuté `npm run verify -- --base-url https://happyclick.danhabib.dev` : **50 URLs HTTP 200 identiques au build, 276 références**, incluant les huit PDF et les assets. Sur ce domaine exact, il a confirmé l’accueil noindex et testé la sélection et le feedback du quiz comportements.
-
-Les preuves et l’historique du précédent état DNS sont conservés durablement dans [tasks/public-verification.md](tasks/public-verification.md). Aucun code ni infrastructure modifié par l’exécutant ; finalisation documentaire committée localement sans push.
+DNS et HTTPS ont été configurés et vérifiés par OpenBot. Les détails datés (A, TTL, résolveurs, certificat et déploiements précédents) restent dans [tasks/public-verification.md](tasks/public-verification.md). Aucun appel d’infrastructure, changement DNS ni push pendant cette refonte. Attendre la revue visuelle et l’autorisation explicite avant de pousser cette branche.

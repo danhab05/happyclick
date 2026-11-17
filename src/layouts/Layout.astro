@@ -21,22 +21,22 @@ const links = [ ['/', 'Accueil'], ['/quiz', 'Quiz'], ['/kit', 'Kit pédagogique'
       <div class="header-inner">
         <a class="brand" href="/" aria-label="Happy Click, accueil">
           <img src="/assets/2027/logo-128.png" width="128" height="138" alt="" />
-          <span>Happy Click<span class="brand-sub">Édition 2026–2027</span></span>
+          <span class="brand-name">Happy Click<span class="brand-sub">Apprendre ensemble · 2027</span></span>
         </a>
         <nav aria-label="Navigation principale">
           {links.map(([href, label]) => <a href={href} aria-current={href === active ? 'page' : undefined}>{label}</a>)}
         </nav>
-        <a class="header-action" href="/quiz">À toi de jouer <span aria-hidden="true">↗</span></a>
+        <a class="header-action" href="/quiz">Jouer un quiz <span aria-hidden="true">→</span></a>
       </div>
     </header>
     <main id="contenu" tabindex="-1"><slot /></main>
     <footer class="site-footer">
       <div class="wrap footer-grid">
-        <div><a class="brand" href="/"><img src="/assets/2027/logo-128.png" width="128" height="138" alt="" /><span>Happy Click</span></a><p>Des questions pour comprendre.<br />Des échanges pour avancer.</p><p class="small"><a href="/projet-2027">Happy Click 2027 · 2026–2027</a></p><p class="small">Archives : Happy Click - Campagne 2025-2026</p></div>
+        <div><a class="brand" href="/"><img src="/assets/2027/logo-128.png" width="128" height="138" alt="" /><span class="brand-name">Happy Click<span class="brand-sub">Édition 2026–2027</span></span></a><p>Des questions pour comprendre.<br />Des échanges pour avancer.</p><p class="small"><a href="/projet-2027">Happy Click 2027 · 2026–2027</a></p><p class="small">Archives : Happy Click - Campagne 2025-2026</p></div>
         <div><h2>Explorer ensemble</h2><a href="/quiz">Les 29 cartes du quiz</a><a href="/mes-usages">Faire le point sur mes usages</a><a href="/kit/reflexion">Le carnet des enseignants</a><a href="/guides">Les guides et leurs sources</a></div>
         <div><h2>Le projet</h2><a href="/projet-2027">L’édition 2026–2027</a><a href="/faq">Questions fréquentes</a><a href="https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/" target="_blank" rel="noopener noreferrer">2024-2025 <span class="sr-only">(nouvel onglet)</span> ↗</a><a href="https://www.telecom-sudparis.eu/ecole/gestion-apprentissage-travail-en-equipe/" target="_blank" rel="noopener noreferrer">Qu'est-ce qu'un GATE® ? <span class="sr-only">(nouvel onglet)</span> ↗</a><p class="small">Une démarche de discussion, sans compte ni envoi de réponses.</p></div>
       </div>
-      <div class="wrap footer-bottom"><span>Comprendre · Échanger · Choisir</span><span>Préversion · Indexation désactivée</span></div>
+      <div class="wrap footer-bottom"><span>Happy Click 2027 · Comprendre et échanger</span><span>Préversion · Indexation désactivée</span></div>
     </footer>
   </body>
 </html>

@@ -1,6 +1,6 @@
 # Preuves publiques durables — Happy Click
 
-## État confirmé le 17 novembre 2026
+## Historique DNS / TLS — confirmation initiale du 17 novembre 2026
 
 Compte rendu du superviseur OpenBot, consigné par l’exécutant sans nouveau contrôle réseau, navigateur ou appel d’infrastructure. Ce document est maintenu manuellement : `scripts/verify.py` ne le réécrit pas. Le rapport automatique `tasks/verification.md` peut être régénéré sans perdre ces preuves.
 
@@ -39,6 +39,12 @@ Le domaine alternatif `https://happyclick.app.danhabib.dev` avait déjà été c
 
 Le parcours `/quiz/tout` avait également été terminé en navigateur local : **29 questions, 29 résumés, premier choix multiple, aucun débordement à 1920 px**. Les autres preuves de revue sont conservées dans `tasks/browser-review.md`.
 
-## État Git et responsabilité
+## Historique Git à la finalisation documentaire précédente
 
-Le commit déployé reste `6dab746` ; `0fc4fb9` et `a7a3b4e` sont conservés dans l’historique local. La présente finalisation documentaire ajoute un commit local avec trailer OpenBot, **sans push**, afin de ne pas déclencher un déploiement documentaire. Aucun code, DNS, service ou certificat modifié par l’exécutant.
+À cette étape, le commit déployé était `6dab746` ; `0fc4fb9` et `a7a3b4e` sont conservés dans l’historique local. La présente finalisation documentaire ajoute un commit local avec trailer OpenBot, **sans push**, afin de ne pas déclencher un déploiement documentaire. Aucun code, DNS, service ou certificat modifié par l’exécutant.
+
+## Publication GATE 2027 — confirmation OpenBot du 17 novembre 2026
+
+État le plus récent transmis par le superviseur : dépôt désormais public [danhab05/happyclick](https://github.com/danhab05/happyclick), branche `feat/astro-preview`, commit `969d4670eb9028f308ea5d6e1f037c62841cefaa`. Coolify **`enbdelpmy0pbqsspjzvmfr79` finished** sur ce commit. **60 URLs HTTPS identiques au build** ; projet et FAQ validés en navigateur. Build 15 pages / tests 14 / verify 60 URLs et 288 références également revérifiés par OpenBot avant publication.
+
+La refonte visuelle demandée ensuite par Dan est locale et non poussée. Ces preuves publiques concernent la base 969d467, pas le nouveau rendu. Aucun nouveau contrôle public ni appel d’infrastructure par l’exécutant pour consigner ce retour.
