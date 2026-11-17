@@ -25,6 +25,7 @@ class Page(HTMLParser):
     def __init__(self, html):
         super().__init__()
         self.elements, self.text, self.nav, self.source_blocks = [], [], [], []
+        self.nav_groups = []
         self.in_nav = False
         self.capture = None
         self.feed(html)
@@ -34,8 +35,10 @@ class Page(HTMLParser):
         self.elements.append((tag, attrs))
         if tag == 'nav':
             self.in_nav = True
+            self.nav_groups.append([])
         if tag == 'a' and self.in_nav:
             self.nav.append(attrs)
+            self.nav_groups[-1].append(attrs)
         if tag in ('p', 'h3', 'h4', 'h5'):
             self.capture = (tag, [])
 
@@ -87,8 +90,10 @@ for route, page in sorted(pages.items()):
     html = disk_for(route).read_text()
     text = normalize(' '.join(page.text))
     expected_active = '/projet-2027' if route in ('/projet-2027', '/faq') else '/quiz' if route.startswith('/quiz') or route == '/mes-usages' else '/kit' if route.startswith('/kit') else route
-    assert [a['href'] for a in page.nav] == ['/', '/quiz', '/kit', '/guides', '/projet-2027'], route
-    assert [a['href'] for a in page.nav if a.get('aria-current') == 'page'] == [expected_active], route
+    assert len(page.nav_groups) == 2, f'Navigation desktop/mobile absente : {route}'
+    for navigation in page.nav_groups:
+        assert [a['href'] for a in navigation] == ['/', '/quiz', '/kit', '/guides', '/projet-2027'], route
+        assert [a['href'] for a in navigation if a.get('aria-current') == 'page'] == [expected_active], route
     assert any(tag == 'html' and a.get('lang') == 'fr' for tag, a in page.elements), route
     assert any(tag == 'meta' and a.get('name') == 'robots' and a.get('content') == 'noindex, nofollow' for tag, a in page.elements), route
     assert any(tag == 'meta' and a.get('name') == 'viewport' for tag, a in page.elements), route
@@ -234,7 +239,7 @@ report += ['', '## Ressources et HTTP', '',
            f'{len(urls)} URLs contrôlées sur disque' + (' et par HTTP 200 sans redirection, réponses identiques au build.' if args.base_url else ' ; contrôle HTTP non demandé.'),
            f'{len(fragments)} références à des ancres HTML/pages PDF vérifiées. Les {len(pages)-1} routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.', '',
            '## Responsive et limites de cette vérification', '',
-           'Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. La refonte 259697a a été approuvée en navigateur par OpenBot, selon le périmètre et les limites consignés dans `tasks/design-2027.md` et `tasks/browser-review.md`.', '',
+           'Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, menu mobile natif et sommaires repliables, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Le responsive de 259697a a été contrôlé mais sa composition mobile a ensuite été jugée trop longue. La nouvelle composition attend la revue OpenBot ; voir `tasks/mobile-review.md` et les preuves historiques dans `tasks/design-2027.md` et `tasks/browser-review.md`.', '',
            'Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.', '',
            'Publication dcb3136 confirmée par OpenBot : `tasks/public-verification.md`. Cache CSS obsolète observé ensuite en navigateur persistant ; correction par URL hashée contrôlée ici. Recontrôle du nouveau déploiement et du navigateur persistant attendu du superviseur.', '',
            'Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.']

@@ -1,13 +1,15 @@
 # Cartographie — Happy Click
 
 ## État et reprise
+**Mission courante : composition mobile après 80ae3e2, locale et sans push avant revue.** Rapport/cibles : `tasks/mobile-review.md`. La précédente absence d’overflow ne démontre pas la qualité mobile.
 Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt public `danhab05/happyclick`, branche `feat/astro-preview`. **Base publique `969d467` confirmée par OpenBot le 17 novembre 2026**, Coolify `enbdelpmy0pbqsspjzvmfr79` finished, 60 URLs HTTPS identiques au build et projet/FAQ vérifiés en navigateur. **DA publiée via dcb3136 (Coolify ib2ibihlxhvxqcz9fk3wm1r3 finished, verify HTTPS 60 URLs / 288 refs par OpenBot), mais cache CSS stable obsolète observé sur navigateur persistant. Correction par pipeline CSS hashé, push autorisé ; nouveau contrôle navigateur/déploiement par OpenBot attendu.** Le webhook de cette branche déploie. Versions antérieures conservées dans Git : `0fc4fb9`, `6dab746`, `cc71f4a`.
 
 Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` avant de relancer). `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Pas de navigateur/Playwright par l’exécutant.
 
 ## Interface et routes (15 pages locales, édition2026–2027)
-- `src/layouts/Layout.astro` : langue, noindex, navigation Accueil/Quiz/Kit/Guides/Projet, footer et deux liens GATE originaux.
+- `src/layouts/Layout.astro` : langue, noindex, navigation Accueil/Quiz/Kit/Guides/Projet en desktop et menu mobile natif, footer et deux liens GATE originaux.
 - `src/pages/index.astro` : hero bleu ciel avec grand logo officiel, trois thèmes, parcours par publics, édition 2027.
+- `src/components/ResponsiveDisclosure.astro` : même contenu en sidebar/groupe desktop et volet mobile natif fermé, utilisé par sommaires/footer ; aucune logique JS.
 - `src/components/ThemeCards.astro` : liens/counts des thèmes.
 - `src/pages/quiz/index.astro` : choix ; `quiz/[theme].astro` : 4 parcours statiques, cartes SSR, feedback accessible sans JS.
 - `src/pages/mes-usages.astro` : 11 questions sans score ; `kit/reflexion.astro` : 14 questions ouvertes facultatives.
@@ -15,7 +17,7 @@ Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` a
 - `src/pages/kit/roles/[theme].astro` : trois jeux × six rôles × quatre scènes, aides/débrief/pistes sourcées.
 - `src/pages/guides.astro` : deux guides, résumés/chapitres/datation/crédits et textes source.
 - `src/components/PdfDocument.astro` : liens ouvrir/télécharger permanents, aperçu natif en details et repli mobile.
-- `src/styles/site.css` : importée par Layout et émise sous `/_astro/*.hash.css` ; système unique bleu ciel/blanc/encre/rouge, Ubuntu locale, composants et états interactifs ; responsive 1100/800/480, focus/reduced-motion/césure. Ancienne feuille remplacée entièrement, sans surcharges héritées.
+- `src/styles/site.css` : importée par Layout et émise sous `/_astro/*.hash.css` ; système unique bleu ciel/blanc/encre/rouge, Ubuntu locale, composants et états interactifs ; responsive 1100/800/360, composition mobile dédiée, focus/reduced-motion/césure. Ancienne feuille remplacée entièrement, sans surcharges héritées.
 - `public/assets/` : ressources d’origine ; `previews/` : deux couvertures extraites des guides.
 - `public/resources/` : huit PDF historiques inchangés + deux originaux2027 ; `public/robots.txt` : Disallow /.
 - `astro.config.mjs` : static, slash ignore, host0.0.0.0 port4321, CSS externe hashée (`build.inlineStylesheets: never`), modules JS émis en fichiers (assetsInlineLimit0).
@@ -37,9 +39,10 @@ Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` a
 - `tasks/pdf-text/` : textes/OCR/inventaire par page versionnés. `tasks/pdf-images/` : ~12 Mo de rendus locaux ignorés par Git, disponibles au superviseur.
 - `tasks/pdf-analysis.md` : couverture156pages, synthèse des8PDF et ambiguïtés ; `tasks/quiz-source-map.md` : matrice29cartes.
 - `tests/activities.test.mjs` : 10tests Node/LinkeDOM, aucune utilisation de navigateur ; build préalable nécessaire.
+- `tests/mobile.test.mjs` : deux tests de structure native, cinq destinations/état courant et conservation des liens/ancres/IDs des sommaires/footer. Total 18 tests.
 - `tests/styles.test.mjs` : CSS hashée sur les 15 pages, stabilité du hash et changement effectif sur modification CSS via builds Astro isolés.
 - `scripts/verify.py` : CSS actifs hashés, ressources/MIME/octet HTTP, archive CSS historique contrôlée séparément ; 15routes, 26blocs source, contenu des quiz/questionnaires, navigation/noindex, scripts locaux ciblés, API de réseau/stockage interdites, 10PDF/204pages/hash, ancres/pages PDF, tous assets et variantes slash en HTTP.
-- `tasks/verification.md` : rapport généré (60URLs/288références au contrôle local2027) ; `tasks/browser-review.md` : retours visuels réels rapportés, séparés des contrôles automatiques.
+- `tasks/verification.md` : rapport généré (60URLs/319références au contrôle local mobile) ; `tasks/browser-review.md` : retours visuels réels rapportés, séparés des contrôles automatiques.
 - `tasks/public-verification.md` : preuves publiques durables (DNS, TLS, déploiements, verify et navigateur), maintenues manuellement et jamais réécrites par verify.
 - `tasks/design-2027.md` : spec DA, couverture, contrastes calculés et limites de revue.
 - `tasks/todo.md`, `tasks/lessons.md`, `README.md` : suivi, leçons et reprise.
@@ -62,7 +65,7 @@ Aucun compte/backend/formulaire envoyé/analytics/persistance. Les conseils/cart
 - `public/resources/kit/2027/` : deux PDF originaux de24pages ; `public/assets/2027/` : quatre dérivés du vrai PNG sans fond, utilisés dans marque/favicon/édition.
 - `scripts/prepare-gate-assets.py` : métadonnées PNG retirées, dérivés sans redessin, copie des deux PDF et inventaire SHA-256. Pillow seulement pour préparation, pas pour build.
 - `scripts/compare-gate-archives.py` : comparaison des95pages et16JPEG incorporés des cartes. Originaux requis hors dépôt `/tmp/happyclick-gate-2027`.
-- `tests/gate-2027.test.mjs` : quatre tests supplémentaires ; 14 tests pédagogiques ; total 16 avec les deux tests CSS.
+- `tests/gate-2027.test.mjs` : quatre tests supplémentaires ; 14 tests pédagogiques ; total 18 avec les tests CSS et mobile.
 - `tasks/gate-2027.md` : bilan/provenance/limites ; `gate-2027-assets.json`, `gate-2027-archives.json`, `gate-2027-onepager.json` : empreintes et couverture ; `gate-2027-text/` : textes complets V1/V2.
 - Revue OpenBot locale : accueil1920 logos/rendu bon ; projet320 sans débordement ; FAQ lien/ouverture des rôles OK ; addiction mobile référencesV2 et troisPDF présents.
 

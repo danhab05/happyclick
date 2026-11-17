@@ -121,3 +121,7 @@ Limite : ce contrôle n’est pas un audit exhaustif de chaque état à chaque t
 ## Suivi du cache après publication
 
 La DA reste approuvée et inchangée. Après déploiement dcb3136, OpenBot constate cependant un ancien CSS en cache sur le domaine public malgré un verify HTTPS réussi. Correction de la livraison CSS, pas du design : voir `tasks/css-cache.md`. Recontrôle public du navigateur persistant attendu.
+
+## Correction de composition mobile après 80ae3e2
+
+L’absence de débordement de la DA précédente ne valait pas validation de l’accès aux actions. Les mesures OpenBot à390×844 montrent header193px et grille y1407. La composition mobile est reprise avec menu natif, hero court, cartes compactes et sommaires/footer repliables. Les spécifications de navigation toujours visible, grand hero mobile et espacements ci-dessus décrivent la version initiale. La nouvelle spec/couverture/cibles est dans `tasks/mobile-review.md` ; revue réelle attendue, aucun push.

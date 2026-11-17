@@ -1,4 +1,5 @@
 ---
+import ResponsiveDisclosure from '../../../components/ResponsiveDisclosure.astro';
 import Layout from '../../../layouts/Layout.astro';
 import PdfDocument from '../../../components/PdfDocument.astro';
 import games from '../../../data/roles.json';
@@ -9,7 +10,7 @@ const { game } = Astro.props;
 <Layout active="/kit" title={game.title}>
   <section class="wrap page-intro"><p class="breadcrumb"><a href="/kit#roles">← Kit pédagogique / Jeux de rôles</a></p><p class="eyebrow">6 personnages · 4 scènes · Un adulte pour accompagner</p><h1>{game.title}</h1>{game.slug==='addiction' && <p class="edition-label">Happy Click 2027 · Édition 2026–2027 · V2</p>}<p class="lead">Distribuez les rôles, jouez une scène, puis faites une pause pour en discuter. Les personnages sont fictifs : personne n’a à raconter son histoire personnelle.</p></section>
   <div class="wrap section resource-layout">
-    <aside class="contents" aria-label="Sommaire du jeu"><h2>Votre séance</h2><a href="#personnages">Choisir les rôles</a>{game.rounds.map((r,i)=><a href={`#tour-${i+1}`}>Tour {i+1} · {r.title}</a>)}<a href="#document">Le document complet</a></aside>
+    <aside class="contents" aria-label="Sommaire du jeu"><ResponsiveDisclosure title="Votre séance"><a href="#personnages">Choisir les rôles</a>{game.rounds.map((r,i)=><a href={`#tour-${i+1}`}>Tour {i+1} · {r.title}</a>)}<a href="#document">Le document complet</a></ResponsiveDisclosure></aside>
     <div class="resource-content">
       <div class="callout"><h3>Avant de commencer</h3><p>Choisissez un rôle par personne. Lisez sa carte, jouez le contexte, puis laissez chacun expliquer son point de vue. Un participant peut préférer observer. Ces modalités facilitent l’animation ; les pages source restent accessibles à chaque étape.</p></div>
       {game.slug==='cyberharcelement' && <div class="callout caution"><h3>Écouter sans mettre la pression</h3><p>Le débrief p.19 recommande de respecter la parole et le rythme de la personne. Nous retenons cette posture pour l’animation, même lorsque certaines formulations du scénario sont plus insistantes. La victime n’est pas responsable du harcèlement (p.11).</p></div>}

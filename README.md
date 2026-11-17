@@ -1,5 +1,7 @@
 # Happy Click — préversion pédagogique Astro
 
+**Correction mobile locale après 80ae3e2, sans push avant revue OpenBot.** Header/menu compact, hero raccourci, cartes et parcours plus denses, sommaires/footer natifs repliables. Mesures réelles et cibles : [tasks/mobile-review.md](tasks/mobile-review.md). La correction du cache CSS reste active.
+
 Interface construite autour du logo officiel 2027 : bleu ciel, blanc, encre sombre et rouge, typographie locale Ubuntu, grand logo à l’accueil, cartes et contrôles communs aux **15 pages**. Les 29 questions, 116 choix, trois jeux de rôles, questionnaires et dix PDF restent intacts. La DA précédente est récupérable au commit `969d467` ; l’ancienne reproduction au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
 **Refonte 259697a approuvée par OpenBot ; publication de la préversion autorisée.** Déploiement dcb3136 confirmé terminé par OpenBot, puis anomalie de cache CSS constatée en navigateur persistant. Correction par CSS hashée en cours de livraison ; recontrôle public attendu. Elle est disponible sur le serveur de revue `0.0.0.0:4321`. Spécification, couverture et preuves : [tasks/design-2027.md](tasks/design-2027.md).
@@ -66,14 +68,14 @@ Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajou
 ## Preuves et limites
 
 - `tasks/design-2027.md` : nouvelle DA, couverture des composants, contrastes calculés, analyse responsive et checklist de revue.
-- `tasks/verification.md` : rapport régénéré par verify ; 60 URLs HTTP 200 identiques au build, 288 références, 26 blocs source, toutes les questions, 10 PDF / 204 pages et empreintes.
+- `tasks/verification.md` : rapport régénéré par verify ; 60 URLs HTTP 200 identiques au build, 319 références (sommaires desktop/mobile inclus), 26 blocs source, toutes les questions, 10 PDF / 204 pages et empreintes.
 - `tasks/public-verification.md` : preuves publiques durables, maintenues manuellement et jamais réécrites par verify.
 - `tasks/browser-review.md` : retours réels du superviseur, séparés par version. La revue de 259697a est approuvée ; périmètre exact et limites consignés.
 - `tasks/pdf-analysis.md`, `tasks/quiz-source-map.md` : analyse des huit PDF historiques / 156 pages et correspondance des 29 cartes. `tasks/pdf-text/` contient les extractions/OCR ; rendus temporaires dans `tasks/pdf-images/`, ignorés par Git.
 - `source-snapshot/` : HTML/CSS originaux non servis, inventaire et hashes ; les ressources historiques restent disponibles même lorsqu’elles ne sont plus utilisées visuellement.
 - `tasks/todo.md`, `tasks/lessons.md`, `.opencode/codebase_map.md` : suivi et reprise.
 
-Build : **15 pages**. Tests : **16/16**, dont deux tests de versionnement CSS, ainsi que progression complète des quatre parcours, choix multiples, feedback, bilan/rejouer et restitution/effacement des questionnaires. Aucun navigateur/Playwright lancé par l’exécutant ; les calculs de contraste et l’analyse des règles CSS ne remplacent pas une mesure du rendu à 320–1920 px.
+Build : **15 pages**. Tests : **18/18**, dont deux tests de versionnement CSS et deux de navigation/disclosures, ainsi que progression complète des quatre parcours, choix multiples, feedback, bilan/rejouer et restitution/effacement des questionnaires. Aucun navigateur/Playwright lancé par l’exécutant ; les calculs de contraste et l’analyse des règles CSS ne remplacent pas une mesure du rendu à 320–1920 px.
 
 ## Infrastructure transmise par OpenBot
 

@@ -6,17 +6,17 @@ import ThemeCards from '../components/ThemeCards.astro';
   <section class="welcome">
     <div class="wrap home-hero">
       <div class="hero-copy">
-        <p class="edition-badge">Happy Click 2027 · Édition 2026–2027</p>
+        <p class="edition-badge">Happy Click 2027</p>
         <h1>Le numérique,<br />on en parle <em>ensemble ?</em></h1>
-        <p class="lead">Des quiz et des jeux de rôles pour comprendre nos usages, poser des questions et faire ses propres choix. À découvrir en classe ou en famille.</p>
-        <div class="actions"><a class="button" href="/quiz">Commencer un quiz <span aria-hidden="true">→</span></a><a class="button secondary" href="/kit">Découvrir le kit pédagogique</a></div>
+        <p class="lead">Des quiz et des jeux pour parler du numérique, en classe ou en famille.</p>
+        <div class="actions"><a class="button" href="/quiz">Commencer un quiz <span aria-hidden="true">→</span></a><a class="button secondary hero-secondary" href="/kit">Le kit pédagogique <span aria-hidden="true">→</span></a></div>
         <ul class="hero-benefits" aria-label="L’esprit Happy Click"><li>Sans compte</li><li>Sans classement</li><li>À ton rythme</li></ul>
       </div>
       <div class="hero-logo"><img src="/assets/2027/logo-512.png" width="512" height="551" alt="Logo officiel Happy Click : un cœur, deux mains et un curseur" fetchpriority="high" /><p>Un clic pour apprendre.<br /><strong>Une discussion pour comprendre.</strong></p></div>
     </div>
   </section>
-  <section class="wrap section" aria-labelledby="themes-title">
-    <div class="section-heading"><div><p class="eyebrow">Les quiz Happy Click</p><h2 id="themes-title">Trois thèmes.<br />29 questions à partager.</h2></div><p>Choisis un thème, prends position, puis découvre les explications et leurs nuances. Plusieurs réponses sont parfois possibles.</p></div>
+  <section class="wrap section home-themes" aria-labelledby="themes-title">
+    <div class="section-heading"><div><p class="eyebrow">Les quiz Happy Click</p><h2 id="themes-title">Choisis ton thème.</h2></div><p>29 questions à discuter. Choisis tes réponses, puis découvre les explications et leurs nuances.</p></div>
     <ThemeCards />
   </section>
   <section class="audience-section section">
@@ -33,6 +33,6 @@ import ThemeCards from '../components/ThemeCards.astro';
   </section>
   <section class="wrap section compact discussion-section">
     <div><p class="eyebrow">La discussion fait partie du jeu</p><h2>Chaque avis compte.</h2></div>
-    <div><p class="lead">Les cartes invitent à débattre en petits groupes de 4 à 6. Chaque quiz donne accès à la page du document d’origine. L’objectif est de comprendre, pas de gagner.</p><p class="original-motto">Le NUMÉRIQUE n'est pas mauvais ...<br /><strong>Il suffit d'en faire BON USAGE</strong></p><a class="text-link" href="/kit#roles">Découvrir les trois jeux de rôles <span aria-hidden="true">→</span></a></div>
+    <div><p class="lead">Les cartes invitent à débattre en petits groupes de 4 à 6, pour comprendre nos usages, poser des questions et faire ses propres choix. Chaque quiz donne accès à la page du document d’origine. Plusieurs réponses sont parfois possibles. L’objectif est de comprendre, pas de gagner.</p><p class="original-motto">Le NUMÉRIQUE n'est pas mauvais ...<br /><strong>Il suffit d'en faire BON USAGE</strong></p><a class="text-link" href="/kit#roles">Découvrir les trois jeux de rôles <span aria-hidden="true">→</span></a></div>
   </section>
 </Layout>

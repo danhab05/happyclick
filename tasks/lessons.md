@@ -13,3 +13,4 @@
 - Retour Dan « Adapte le site au logo […] c’est moche » : un nouveau logo implique de réévaluer palette, typographie, formes et composition globale. Ne pas plaquer le symbole sur une DA héritée incohérente ; définir un système partagé et revoir chaque famille de pages, y compris les états interactifs.
 
 - Cache CSS : une URL stable peut servir d’anciens styles à un navigateur persistant avec du nouveau HTML, même si verify HTTP retourne les bons octets. Importer les styles via Astro pour une URL avec hash de contenu ; contrôler chaque CSS actif et ses ressources dans le build/HTTP. Ni rafraîchissement forcé ni timestamp variable comme correctif.
+- Retour mobile Dan : absence d’overflow ≠ qualité mobile. Recomposer la hiérarchie, limiter la hauteur du header/hero et mesurer l’accès aux actions dans le premier écran ; ne pas simplement empiler les sections desktop. Consigner les positions réelles des CTA/cartes, puis faire valider le parcours au pouce et au clavier.

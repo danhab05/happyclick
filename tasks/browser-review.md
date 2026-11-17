@@ -73,3 +73,9 @@ Limite : ce contrôle n’est pas un audit exhaustif de chaque état à chaque t
 Déploiement Coolify `ib2ibihlxhvxqcz9fk3wm1r3` **finished** sur `dcb3136`. Verify public HTTPS exécuté par OpenBot : **60 URLs / 288 références identiques au build, exit0**. Toutefois, son navigateur persistant a reçu le nouveau HTML avec l’ancien `/style.css` en cache : capture ivoire/Click Cheese et ancien traitement du hero malgré les nouveaux textes. La DA locale validée reste correcte.
 
 Correction autorisée : versionner l’URL CSS par hash de contenu au build. Le contrôle HTTP ne remplace pas le test de navigation avec cache existant. Le recontrôle du navigateur persistant et du nouveau déploiement appartient à OpenBot ; aucun succès de cette correction en public n’est encore affirmé. Voir `tasks/css-cache.md`.
+
+## Retour Dan mobile après 80ae3e2 — nouvelle revue nécessaire
+
+À 390×844, OpenBot mesure header193px, hero941px, CTA principal y582, secondaire y646, logo y775/h258 et grille thèmes y1407. L’ancienne validation d’absence de débordement est insuffisante pour juger la qualité mobile. Dan demande une composition plus compacte, pensée pour accéder vite aux actions.
+
+Correction locale : menu natif, hero raccourci, cartes plus denses, sommaires/footer repliables et rythme mobile réduit. Aucun push avant validation. Le détail des cibles et du parcours à tester se trouve dans `tasks/mobile-review.md`. Aucune nouvelle mesure réelle ni approbation du rendu de cette correction n’est encore rapportée.

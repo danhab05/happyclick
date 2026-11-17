@@ -1,4 +1,5 @@
 ---
+import ResponsiveDisclosure from '../components/ResponsiveDisclosure.astro';
 import Layout from '../layouts/Layout.astro';
 import PdfDocument from '../components/PdfDocument.astro';
 import copy from '../data/source-copy.json';
@@ -15,7 +16,7 @@ const chapters=[
 <Layout active="/guides" title="Guides d’utilisation du numérique">
   <section class="wrap page-intro"><p class="eyebrow">Guides d'utilisation du numérique</p><h1>Des guides pour<br /><em>accompagner les jeunes.</em></h1><p class="lead">Deux documents pour prendre du recul sur les usages des jeunes et trouver de quoi nourrir la discussion.</p></section>
   <div class="wrap section resource-layout">
-    <aside class="contents" aria-label="Sommaire des guides"><h2>À lire</h2><a href="#etude">L’étude parents / enfants</a><a href="#guide">Le guide des professionnels</a><a href="#credits">Sources et crédits</a></aside>
+    <aside class="contents" aria-label="Sommaire des guides"><ResponsiveDisclosure title="À lire"><a href="#etude">L’étude parents / enfants</a><a href="#guide">Le guide des professionnels</a><a href="#credits">Sources et crédits</a></ResponsiveDisclosure></aside>
     <div class="resource-content">
       <section class="resource-section"><h2>{copy.guides.intro.title}</h2>{copy.guides.intro.paragraphs.map(p=><p>{p}</p>)}<div class="callout"><h3>Lire avec la date en tête</h3><p>Ces documents décrivent un contexte de 2021. Les statistiques, services et références juridiques qu’ils mentionnent ne sont pas présentés ici comme des données actuelles.</p></div></section>
       <article class="resource-section" id="etude">

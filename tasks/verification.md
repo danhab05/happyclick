@@ -25,7 +25,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## CSS actifs versionnés
 
-- `/_astro/Layout.CMnZyUAi.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/Layout.BRIgqk92.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 
 ## Documents et empreintes source
 
@@ -43,11 +43,11 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 ## Ressources et HTTP
 
 60 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
-288 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
+319 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
 
 ## Responsive et limites de cette vérification
 
-Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. La refonte 259697a a été approuvée en navigateur par OpenBot, selon le périmètre et les limites consignés dans `tasks/design-2027.md` et `tasks/browser-review.md`.
+Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, menu mobile natif et sommaires repliables, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Le responsive de 259697a a été contrôlé mais sa composition mobile a ensuite été jugée trop longue. La nouvelle composition attend la revue OpenBot ; voir `tasks/mobile-review.md` et les preuves historiques dans `tasks/design-2027.md` et `tasks/browser-review.md`.
 
 Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
 
