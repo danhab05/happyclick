@@ -23,6 +23,10 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 - `/quiz/tout` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
 - 26 blocs de textes originaux contrôlés ; 29 cartes intégrales dans leur thème et dans le parcours complet ; 11 questions d’usage et 14 questions enseignants.
 
+## CSS actifs versionnés
+
+- `/_astro/Layout.CMnZyUAi.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+
 ## Documents et empreintes source
 
 - `guide_jeune_et_numerique.pdf` : 52 pages, 5,279,873 octets ; SHA-256 `0038126275f1741502519b9566ca5636c51dac09a6895f102fd83baf89a96834` identique à la source.
@@ -47,6 +51,6 @@ Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptée
 
 Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
 
-Base publique 969d467 confirmée par OpenBot : `tasks/public-verification.md` (document durable non réécrit). Revue de la nouvelle DA 259697a approuvée séparément par OpenBot et publication autorisée ; résultat du nouveau déploiement encore à confirmer par le superviseur.
+Publication dcb3136 confirmée par OpenBot : `tasks/public-verification.md`. Cache CSS obsolète observé ensuite en navigateur persistant ; correction par URL hashée contrôlée ici. Recontrôle du nouveau déploiement et du navigateur persistant attendu du superviseur.
 
 Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.

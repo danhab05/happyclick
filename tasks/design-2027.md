@@ -100,7 +100,7 @@ Le vérificateur n’a perdu aucune assertion. Seuls ses textes de rapport disti
 
 ## Fichiers et reprise
 
-`public/style.css` porte le système complet. `src/layouts/Layout.astro`, `src/components/ThemeCards.astro`, accueil/projet et les introductions kit/guides/quiz/carnet portent les changements de structure. Les autres routes héritent des composants partagés. README, carte, todo, leçons, rapports de vérification et historiques de publication/revue sont actualisés.
+`src/styles/site.css` porte désormais le même système complet, sans changement de contenu : import Astro pour URL hashée (correction de cache après dcb3136). `src/layouts/Layout.astro`, `src/components/ThemeCards.astro`, accueil/projet et les introductions kit/guides/quiz/carnet portent les changements de structure. Les autres routes héritent des composants partagés. README, carte, todo, leçons, rapports de vérification et historiques de publication/revue sont actualisés.
 
 Ancien rendu récupérable dans `969d467`, sans maintenir une seconde DA en parallèle. Dernier commit et état exact : `git log -1 --format=full && git status --short --branch`. Push de la branche autorisé après la revue de 259697a : le webhook déploie et OpenBot en suit le résultat. Aucun appel infra/DNS, navigateur ou Playwright par l’exécutant. La revue ne couvre pas exhaustivement chaque état à chaque taille.
 
@@ -117,3 +117,7 @@ Preuves transmises par le superviseur, sans navigateur lancé par l’exécutant
 **Revue approuvée et publication de la seule préversion autorisée**, via push de `origin feat/astro-preview` incluant `259697a` et le commit documentaire de revue. OpenBot suit le déploiement Coolify ; cette approbation ne prouve pas encore le nouveau déploiement terminé.
 
 Limite : ce contrôle n’est pas un audit exhaustif de chaque état à chaque taille, ni de toutes les interactions au clavier. Les tests DOM et preuves des versions précédentes restent distincts de ces observations réelles.
+
+## Suivi du cache après publication
+
+La DA reste approuvée et inchangée. Après déploiement dcb3136, OpenBot constate cependant un ancien CSS en cache sur le domaine public malgré un verify HTTPS réussi. Correction de la livraison CSS, pas du design : voir `tasks/css-cache.md`. Recontrôle public du navigateur persistant attendu.

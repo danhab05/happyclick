@@ -11,3 +11,5 @@
 - Des hashes PDF différents ne prouvent pas un nouveau contenu : comparer texte, pagination et rendus ; pour les cartes sans texte, comparer les images incorporées. Distinguer archives de promotion et nouveautés.
 - Consigner les preuves publiques dans un document durable indépendant du rapport que verify régénère.
 - Retour Dan « Adapte le site au logo […] c’est moche » : un nouveau logo implique de réévaluer palette, typographie, formes et composition globale. Ne pas plaquer le symbole sur une DA héritée incohérente ; définir un système partagé et revoir chaque famille de pages, y compris les états interactifs.
+
+- Cache CSS : une URL stable peut servir d’anciens styles à un navigateur persistant avec du nouveau HTML, même si verify HTTP retourne les bons octets. Importer les styles via Astro pour une URL avec hash de contenu ; contrôler chaque CSS actif et ses ressources dans le build/HTTP. Ni rafraîchissement forcé ni timestamp variable comme correctif.

@@ -48,3 +48,9 @@ Le parcours `/quiz/tout` avait également été terminé en navigateur local : *
 État le plus récent transmis par le superviseur : dépôt désormais public [danhab05/happyclick](https://github.com/danhab05/happyclick), branche `feat/astro-preview`, commit `969d4670eb9028f308ea5d6e1f037c62841cefaa`. Coolify **`enbdelpmy0pbqsspjzvmfr79` finished** sur ce commit. **60 URLs HTTPS identiques au build** ; projet et FAQ validés en navigateur. Build 15 pages / tests 14 / verify 60 URLs et 288 références également revérifiés par OpenBot avant publication.
 
 La refonte visuelle demandée ensuite par Dan est locale et non poussée. Ces preuves publiques concernent la base 969d467, pas le nouveau rendu. Aucun nouveau contrôle public ni appel d’infrastructure par l’exécutant pour consigner ce retour.
+
+## dcb3136 publié, cache CSS persistant — retour OpenBot
+
+Déploiement Coolify `ib2ibihlxhvxqcz9fk3wm1r3` **finished** sur `dcb3136`. Verify public HTTPS exécuté par OpenBot : **60 URLs / 288 références identiques au build, exit0**. Toutefois, son navigateur persistant a reçu le nouveau HTML avec l’ancien `/style.css` en cache : capture ivoire/Click Cheese et ancien traitement du hero malgré les nouveaux textes. La DA locale validée reste correcte.
+
+Correction autorisée : versionner l’URL CSS par hash de contenu au build. Le contrôle HTTP ne remplace pas le test de navigation avec cache existant. Le recontrôle du navigateur persistant et du nouveau déploiement appartient à OpenBot ; aucun succès de cette correction en public n’est encore affirmé. Voir `tasks/css-cache.md`.

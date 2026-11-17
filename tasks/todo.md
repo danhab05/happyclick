@@ -150,3 +150,13 @@ Base publique 969d467 confirmée par OpenBot et documents de reprise actualisés
 Revue 259697a approuvée : 15 routes à 320/1920 sans débordement ; cinq routes à 390/768/1440 sans débordement/navigation coupée ; logos et deux couvertures chargés ; captures vues et quiz comportements (erreur vide, sélection, verrouillage, feedback/focus) validés. Build15/tests14/verify60URLs288refs exit0 par OpenBot. Périmètre exact : `tasks/browser-review.md` et `tasks/design-2027.md`. Pas d’audit exhaustif chaque état/taille. Publication autorisée, suivi du déploiement laissé au superviseur.
 
 Verify relancé par l’exécutant après mise à jour des textes du rapport : exit0, 60 URLs / 288 références. Contrôles inchangés, aucun code applicatif modifié. Livraison Git : commit documentaire après 259697a, push sans force sur la branche dédiée ; hash distant et état Git contrôlés dans le compte rendu de livraison. Aucun résultat Coolify anticipé.
+
+## Correction cache CSS après dcb3136
+
+- [x] Importer la CSS via Astro avec fichier externe hashé, retirer le lien stable actif et adapter le traitement du manifeste historique.
+- [x] Contrôler les CSS actifs sur les 15 pages, leurs ressources et HTTP ; ajouter une régression ciblée contre le retour à /style.css.
+- [x] Build/tests/verify local, leçon et preuves de publication/cause ; commit trailer OpenBot, push autorisé et hash distant. Aucun appel infra ni navigateur par l’exécutant.
+
+Retour OpenBot : déploiement dcb3136 `ib2ibihlxhvxqcz9fk3wm1r3` finished ; verify public HTTPS 60 URLs / 288 références identiques au build, exit0. Un navigateur persistant conserve cependant l’ancien /style.css avec le nouveau HTML. Le contrôle HTTP sans cache ne reproduit pas cet état client. Corriger l’identité de la ressource au build, sans nouvelle refonte.
+
+Bilan cache : CSS déplacée identiquement et importée par Astro, URL `/_astro/Layout.CMnZyUAi.css` sur 15 pages ; archive CSS source toujours vérifiée, /style.css absent du build. Build15/tests16/verify60URLs288refs réussis. Rapport `tasks/css-cache.md`. Publication autorisée ; confirmation du nouveau déploiement et navigateur persistant laissée à OpenBot.

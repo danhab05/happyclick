@@ -2,7 +2,7 @@
 
 Interface construite autour du logo officiel 2027 : bleu ciel, blanc, encre sombre et rouge, typographie locale Ubuntu, grand logo à l’accueil, cartes et contrôles communs aux **15 pages**. Les 29 questions, 116 choix, trois jeux de rôles, questionnaires et dix PDF restent intacts. La DA précédente est récupérable au commit `969d467` ; l’ancienne reproduction au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
-**Refonte 259697a approuvée par OpenBot ; publication de la préversion autorisée.** Le résultat du nouveau déploiement reste à confirmer par le superviseur. Elle est disponible sur le serveur de revue `0.0.0.0:4321`. Spécification, couverture et preuves : [tasks/design-2027.md](tasks/design-2027.md).
+**Refonte 259697a approuvée par OpenBot ; publication de la préversion autorisée.** Déploiement dcb3136 confirmé terminé par OpenBot, puis anomalie de cache CSS constatée en navigateur persistant. Correction par CSS hashée en cours de livraison ; recontrôle public attendu. Elle est disponible sur le serveur de revue `0.0.0.0:4321`. Spécification, couverture et preuves : [tasks/design-2027.md](tasks/design-2027.md).
 
 **Base publique confirmée par OpenBot le 17 novembre 2026 :** [happyclick.danhabib.dev](https://happyclick.danhabib.dev), commit `969d467`, déploiement Coolify `enbdelpmy0pbqsspjzvmfr79` terminé, 60 URLs HTTPS identiques au build, projet et FAQ vérifiés en navigateur. Dépôt public : [danhab05/happyclick](https://github.com/danhab05/happyclick). La validation de cette base ne valide pas le nouveau rendu local.
 
@@ -73,7 +73,7 @@ Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajou
 - `source-snapshot/` : HTML/CSS originaux non servis, inventaire et hashes ; les ressources historiques restent disponibles même lorsqu’elles ne sont plus utilisées visuellement.
 - `tasks/todo.md`, `tasks/lessons.md`, `.opencode/codebase_map.md` : suivi et reprise.
 
-Build : **15 pages**. Tests : **14/14**, y compris progression complète des quatre parcours, choix multiples, feedback, bilan/rejouer et restitution/effacement des questionnaires. Aucun navigateur/Playwright lancé par l’exécutant ; les calculs de contraste et l’analyse des règles CSS ne remplacent pas une mesure du rendu à 320–1920 px.
+Build : **15 pages**. Tests : **16/16**, dont deux tests de versionnement CSS, ainsi que progression complète des quatre parcours, choix multiples, feedback, bilan/rejouer et restitution/effacement des questionnaires. Aucun navigateur/Playwright lancé par l’exécutant ; les calculs de contraste et l’analyse des règles CSS ne remplacent pas une mesure du rendu à 320–1920 px.
 
 ## Infrastructure transmise par OpenBot
 
@@ -85,8 +85,14 @@ Build : **15 pages**. Tests : **14/14**, y compris progression complète des qua
 | Branche | `feat/astro-preview` — webhook de déploiement |
 | Build | Nixpacks : `npm ci` puis `npm run build` |
 | Service | Statique, `/dist`, port `80` |
-| Dernier déploiement confirmé | `enbdelpmy0pbqsspjzvmfr79` : `finished`, commit `969d467` |
+| Dernier déploiement confirmé | `ib2ibihlxhvxqcz9fk3wm1r3` : `finished`, commit `dcb3136` |
 | Domaine principal | `https://happyclick.danhabib.dev` |
 | Domaine alternatif | `https://happyclick.app.danhabib.dev` |
 
 DNS et HTTPS ont été configurés et vérifiés par OpenBot. Les détails datés (A, TTL, résolveurs, certificat et déploiements précédents) restent dans [tasks/public-verification.md](tasks/public-verification.md). Aucun appel d’infrastructure ni changement DNS par l’exécutant. Après revue approuvée de 259697a, le push de cette branche avec les preuves documentaires est autorisé. OpenBot suit Coolify ; ne pas confondre approbation visuelle et déploiement terminé.
+
+## Cache des styles
+
+La feuille canonique est `src/styles/site.css`, importée par `Layout.astro`. Astro produit un fichier externe avec hash de contenu (`/_astro/Layout.CMnZyUAi.css` au build de cette correction) : même contenu, même URL ; CSS modifiée, nouvelle URL. L’ancien `/style.css` n’est plus émis. Les ressources CSS restent locales sous `/assets`.
+
+Le manifeste historique est préservé : sa CSS est contrôlée dans `source-snapshot/style.css`, ses autres ressources restent vérifiées dans le build. Verify inspecte chaque CSS actif sur les 15 pages, son nom hashé, ses ressources, son MIME et ses octets HTTP. Deux tests ciblés couvrent le chargement et le changement réel du hash. Détails, cause et preuves : `tasks/css-cache.md`. Aucune nouvelle refonte ni configuration d’infrastructure.

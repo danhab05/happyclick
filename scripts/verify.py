@@ -77,6 +77,7 @@ source_home = Page((ROOT / 'source-snapshot/index.html').read_text())
 gate_links = [a['href'] for a in source_home.nav if a['href'].startswith('https://')]
 assert len(gate_links) == 2
 urls, fragments = {'/robots.txt'}, []
+active_stylesheets = set()
 report = ['# Vérification de la nouvelle interface et des activités', '',
           'Commande : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`', '',
           'Édition 2026–2027 : contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.', '',
@@ -113,6 +114,12 @@ for route, page in sorted(pages.items()):
         assert len(downloads) == len(expected_documents) and set(downloads) == set(expected_documents), f'Documents source modifiés : {route}'
         objects = [a['data'] for tag, a in page.elements if tag == 'object']
         assert len(objects) == len(expected_documents) and set(objects) == set(expected_documents)
+    styles = [a.get('href', '') for tag, a in page.elements if tag == 'link' and a.get('rel') == 'stylesheet']
+    assert styles, f'CSS actif absent : {route}'
+    assert not any(tag == 'style' for tag, _ in page.elements), f'CSS inline non audité : {route}'
+    for stylesheet in styles:
+        assert re.fullmatch(r'/_astro/[^/]+\.[A-Za-z0-9_-]{8,}\.css', stylesheet), f'CSS sans hash de contenu : {route} {stylesheet}'
+        active_stylesheets.add(stylesheet)
     scripts = [a for tag, a in page.elements if tag == 'script']
     interactive = route.startswith('/quiz/') or route in ('/mes-usages', '/kit/reflexion')
     assert len(scripts) == int(interactive), f'JavaScript hors périmètre : {route}'
@@ -159,10 +166,16 @@ for filename, route, expected in [('usage', '/mes-usages', 11), ('teachers', '/k
             assert normalize(option) in text
 report.append(f'- {source_block_count} blocs de textes originaux contrôlés ; 29 cartes intégrales dans leur thème et dans le parcours complet ; 11 questions d’usage et 14 questions enseignants.')
 
-css = (DIST / 'style.css').read_text()
-for target in re.findall(r'url\([\s\'\"]*([^\)\'\"\s]+)', css):
-    assert target.startswith('/'), f'Ressource CSS distante : {target}'
-    urls.add(target)
+report += ['', '## CSS actifs versionnés', '']
+for stylesheet in sorted(active_stylesheets):
+    css = disk_for(stylesheet).read_text()
+    assert '@import' not in css, f'Import CSS non audité : {stylesheet}'
+    for target in re.findall(r'url\([\s\'\"]*([^\)\'\"\s]+)', css):
+        parsed = urlsplit(target)
+        assert target.startswith('/') and not parsed.netloc and not parsed.query and not parsed.fragment, f'Ressource CSS non locale : {target}'
+        urls.add(target)
+    report.append(f'- `{stylesheet}` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.')
+assert not (DIST / 'style.css').exists(), 'Ancienne URL CSS stable encore émise'
 assert (DIST / 'robots.txt').read_text().strip() == 'User-agent: *\nDisallow: /'
 # Client modules must stay local and ephemeral; DOM tests separately exercise their behavior.
 for script in list((ROOT / 'src/scripts').glob('*.mjs')) + list((ROOT / 'src/lib').glob('*.mjs')) + list((DIST / '_astro').glob('*.js')):
@@ -176,10 +189,14 @@ expected_pages = {'activite_cartes_a_imprimer.pdf': 16, 'rp_addiction.pdf': 28,
                   'addiction-v1.pdf': 24, 'addiction-v2.pdf': 24}
 pdf_pages = {}
 for item in manifest:
+    if item['local'] == '/style.css':
+        # Historical source is preserved for provenance, never used as a runtime stylesheet.
+        original = (ROOT / 'source-snapshot/style.css').read_bytes()
+        assert hashlib.sha256(original).hexdigest() == item['sha256'], 'CSS source historique altérée'
+        continue
     path = DIST / item['local'].lstrip('/')
     data = path.read_bytes()
-    if item['local'] != '/style.css':
-        assert hashlib.sha256(data).hexdigest() == item['sha256'], f'Source binaire altérée : {path}'
+    assert hashlib.sha256(data).hexdigest() == item['sha256'], f'Source binaire altérée : {path}'
     if path.suffix == '.pdf':
         assert data.startswith(b'%PDF-'), path
         info = subprocess.check_output(['pdfinfo', str(path)], text=True)
@@ -209,6 +226,8 @@ for url in sorted(urls):
         with urlopen(expected_url, timeout=30) as response:
             assert response.status == 200 and response.geturl() == expected_url, f'Statut/redirection : {url}'
             assert response.read() == disk.read_bytes(), f'HTTP différent du build : {url}'
+            if url in active_stylesheets:
+                assert 'text/css' in response.headers.get('Content-Type', ''), url
             if url.endswith('.pdf'):
                 assert 'application/pdf' in response.headers.get('Content-Type', ''), url
 report += ['', '## Ressources et HTTP', '',
@@ -217,7 +236,7 @@ report += ['', '## Ressources et HTTP', '',
            '## Responsive et limites de cette vérification', '',
            'Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. La refonte 259697a a été approuvée en navigateur par OpenBot, selon le périmètre et les limites consignés dans `tasks/design-2027.md` et `tasks/browser-review.md`.', '',
            'Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.', '',
-           'Base publique 969d467 confirmée par OpenBot : `tasks/public-verification.md` (document durable non réécrit). Revue de la nouvelle DA 259697a approuvée séparément par OpenBot et publication autorisée ; résultat du nouveau déploiement encore à confirmer par le superviseur.', '',
+           'Publication dcb3136 confirmée par OpenBot : `tasks/public-verification.md`. Cache CSS obsolète observé ensuite en navigateur persistant ; correction par URL hashée contrôlée ici. Recontrôle du nouveau déploiement et du navigateur persistant attendu du superviseur.', '',
            'Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.']
 (ROOT / 'tasks/verification.md').write_text('\n'.join(report) + '\n')
 print('\n'.join(report))

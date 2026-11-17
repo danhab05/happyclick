@@ -67,3 +67,9 @@ Preuves transmises par le superviseur, sans navigateur lancé par l’exécutant
 **Revue approuvée et publication de la seule préversion autorisée**, via push de `origin feat/astro-preview` incluant `259697a` et le commit documentaire de revue. OpenBot suit le déploiement Coolify ; cette approbation ne prouve pas encore le nouveau déploiement terminé.
 
 Limite : ce contrôle n’est pas un audit exhaustif de chaque état à chaque taille, ni de toutes les interactions au clavier. Les tests DOM et preuves des versions précédentes restent distincts de ces observations réelles.
+
+## dcb3136 publié, cache CSS persistant — retour OpenBot
+
+Déploiement Coolify `ib2ibihlxhvxqcz9fk3wm1r3` **finished** sur `dcb3136`. Verify public HTTPS exécuté par OpenBot : **60 URLs / 288 références identiques au build, exit0**. Toutefois, son navigateur persistant a reçu le nouveau HTML avec l’ancien `/style.css` en cache : capture ivoire/Click Cheese et ancien traitement du hero malgré les nouveaux textes. La DA locale validée reste correcte.
+
+Correction autorisée : versionner l’URL CSS par hash de contenu au build. Le contrôle HTTP ne remplace pas le test de navigation avec cache existant. Le recontrôle du navigateur persistant et du nouveau déploiement appartient à OpenBot ; aucun succès de cette correction en public n’est encore affirmé. Voir `tasks/css-cache.md`.
