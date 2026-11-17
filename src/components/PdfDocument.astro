@@ -3,13 +3,14 @@ interface Props { src: string; title: string; height?: number; }
 const { src, title, height = 700 } = Astro.props;
 ---
 <div class="pdf-document">
+  <p class="pdf-title">{title}</p>
   <div class="pdf-actions">
-    <a class="button secondary" href={src} target="_blank" rel="noopener noreferrer" aria-label={`Ouvrir le PDF : ${title} (nouvel onglet)`}>Consulter le PDF <span aria-hidden="true">↗</span></a>
-    <a class="text-link" href={src} download aria-label={`Télécharger le PDF : ${title}`}>Télécharger <span aria-hidden="true">↓</span></a>
+    <a class="button secondary" href={src} target="_blank" rel="noopener noreferrer" aria-label={`Ouvrir le PDF : ${title} (nouvel onglet)`}>Ouvrir le PDF <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href={src} download aria-label={`Télécharger le PDF : ${title}`}>Télécharger</a>
   </div>
-  <details class="pdf-preview"><summary>Aperçu du document : {title}</summary>
+  <details class="pdf-preview"><summary>Voir l’aperçu ici</summary>
     <object data={src} type="application/pdf" width="100%" height={height} aria-label={title}>
-      <p>L’aperçu n’est pas disponible sur cet appareil. <a href={src}>Ouvrir « {title} » (PDF)</a>.</p>
+      <p>L’aperçu ne s’affiche pas sur cet appareil. <a href={src}>Ouvrir « {title} » (PDF)</a>.</p>
     </object>
   </details>
 </div>

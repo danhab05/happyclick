@@ -39,10 +39,10 @@ export function initReflection(root) {
       if(isUsage){
         const checked=[...field.querySelectorAll('input')].filter(input=>input.checked);
         answers[field.dataset.field]=checked.map(input=>Number(input.value));
-        response=checked.map(input=>input.closest('label').querySelector('span').textContent).join(' · ');
+        response=checked.map(input=>input.closest('label').querySelector('span').textContent).join(' ; ');
       }else response=field.querySelector('textarea').value.trim();
       const dt=root.ownerDocument.createElement('dt');dt.textContent=title;
-      const dd=root.ownerDocument.createElement('dd');dd.textContent=response || 'Non renseigné — tu peux laisser cette question de côté.';
+      const dd=root.ownerDocument.createElement('dd');dd.textContent=response || 'Pas de réponse : tu peux laisser cette question de côté.';
       list.append(dt,dd);
     });
     if(isUsage)usagePrompts(answers).forEach(prompt=>{

@@ -2,22 +2,67 @@
 import ResponsiveDisclosure from '../components/ResponsiveDisclosure.astro';
 import Layout from '../layouts/Layout.astro';
 import PdfDocument from '../components/PdfDocument.astro';
+import AddictionDocuments from '../components/AddictionDocuments.astro';
+import Doodle from '../components/Doodle.astro';
 import copy from '../data/source-copy.json';
 import roles from '../data/roles.json';
-import AddictionDocuments from '../components/AddictionDocuments.astro';
 const {intro,sections} = copy.kit;
+const pictures = { addiction: 'addiction', cyberharcelement: 'cyberharcelement', desinformation: 'desinformation' } as const;
+const Original = (i: number) => sections[i];
 ---
-<Layout active="/kit" title="Le kit pédagogique">
-  <section class="wrap page-intro"><p class="eyebrow">Le KIT · Happy Click · Fin primaire / début collège</p><h1>Le kit pour apprendre<br />et <em>échanger.</em></h1><p class="lead">Prépare un atelier, distribue les rôles ou ouvre une discussion. Les supports des activités sont ici, avec leurs versions à explorer en ligne. Happy Click 2027 apporte deux nouvelles présentations du jeu « Écrans et équilibre ».</p></section>
-  <div class="wrap edition-strip"><p><strong>Édition 2026–2027</strong> · Un kit pour animer en autonomie, en classe ou en famille.</p><a href="/projet-2027">Découvrir Happy Click 2027 →</a></div>
+<Layout active="/kit" title="Jeux et kit à imprimer">
+  <div class="wrap read-head">
+    <div>
+      <p class="audience">Pour les enseignants, les animateurs et les parents</p>
+      <h1>Les jeux et le kit à imprimer</h1>
+      <p class="lead">Les cartes du quiz, trois jeux de rôles et deux questionnaires. Chaque activité se joue en ligne ou sur papier, pour la fin du primaire et le début du collège.</p>
+    </div>
+    <Doodle name="classe" size={112} />
+  </div>
   <div class="wrap section resource-layout">
-    <aside class="contents" aria-label="Sommaire du kit"><ResponsiveDisclosure title="Dans le kit"><a href="#cartes">01 · Les cartes quiz</a><a href="#roles">02 · Les jeux de rôles</a><a href="#usages">03 · Mes usages</a><a href="#enseignants">04 · Côté enseignants</a></ResponsiveDisclosure></aside>
+    <aside class="contents" aria-label="Sommaire du kit"><ResponsiveDisclosure title="Dans le kit"><a href="#cartes">Les cartes du quiz</a><a href="#roles">Les jeux de rôles</a><a href="#usages">Mes écrans et moi</a><a href="#enseignants">Le carnet des enseignants</a></ResponsiveDisclosure></aside>
     <div class="resource-content">
-      <section class="resource-section"><h2>{intro.title}</h2>{intro.paragraphs.map(p=><p>{p}</p>)}<div class="callout"><h3>Le point de départ : la parole</h3><p>Pas de classement, ni de réponse personnelle à envoyer. Les cartes se discutent, les scènes se jouent, les questionnaires servent à réfléchir.</p></div></section>
-      <section class="resource-section" id="cartes"><p class="eyebrow">01 / 29 cartes · 3 thèmes · Groupes de 4 à 6</p><h2>Choisir, expliquer, débattre.</h2><div class="original-copy"><h3>{sections[0].title}</h3><p class="resource-meta">{sections[0].subtitle}</p>{sections[0].paragraphs.map(p=><p>{p}</p>)}</div><a class="button" href="/quiz">Jouer les cartes en ligne ↗</a><PdfDocument src="/resources/kit/activite_cartes_a_imprimer.pdf" title="Quizz — cartes à imprimer" height={800} /><p class="source-note">16 pages · 10 cartes comportements, 8 santé, 11 écologie. Les corrigés documentaires et leurs limites sont explicités dans les quiz.</p></section>
-      <section class="resource-section" id="roles"><p class="eyebrow">02 / Trois histoires · Six rôles · Quatre scènes</p><h2>Et si on changeait de place ?</h2><div class="original-copy"><h3>{sections[1].title}</h3><p class="resource-meta">{sections[1].subtitle}</p>{sections[1].paragraphs.map(p=><p>{p}</p>)}</div><div class="role-links">{roles.map(r=><a class="role-link" href={`/kit/roles/${r.slug}`}><div><strong>{r.title}</strong><span>6 rôles · 4 tours · {r.pages} pages source</span></div><span aria-hidden="true">↗</span></a>)}</div>{roles.map(r=>r.slug==='addiction' ? <AddictionDocuments /> : <PdfDocument src={r.file} title={`Jeu de rôle — ${r.slug === 'addiction' ? 'addiction' : r.slug === 'cyberharcelement' ? 'cyberharcèlement' : 'désinformation'}`} />)}</section>
-      <section class="resource-section" id="usages"><p class="eyebrow">03 / Onze questions pour soi</p><h2>Regarder ses habitudes,<br />ouvrir la conversation.</h2><p>Appareils, activités, moments de la journée : un parcours pour décrire ses usages et choisir ce dont on aimerait parler. Aucune note, aucun diagnostic.</p><div class="callout"><p>Le PDF s’intitule « Test de dépendance au numérique », mais ne fournit pas de barème validé. La version en ligne est une réflexion personnelle, sans prénom ni envoi.</p></div><a class="button" href="/mes-usages">Faire le point sur mes usages ↗</a><details><summary>Présentation du document d’origine</summary><div class="details-body"><h3>{sections[2].title}</h3><p>{sections[2].subtitle}</p>{sections[2].paragraphs.map(p=><p>{p}</p>)}</div></details><PdfDocument src="/resources/kit/test_numerico_dependance.pdf" title="Test de dépendance au numérique" /></section>
-      <section class="resource-section" id="enseignants"><p class="eyebrow">04 / Quatorze questions ouvertes</p><h2>Prendre du recul<br />sur sa pratique.</h2><p>Apprentissages, inégalités, rôle des familles et méthodes de sensibilisation : un carnet de réflexion issu du questionnaire enseignants.</p><a class="button" href="/kit/reflexion">Ouvrir mon carnet de réflexion ↗</a><div class="original-copy"><h3>{sections[3].title}</h3><p class="resource-meta">{sections[3].subtitle}</p>{sections[3].paragraphs.map(p=><p>{p}</p>)}</div><p class="privacy-note">Ici, les notes restent seulement dans la page ouverte. Il n’y a pas de collecte ni de statistiques produites à partir des réponses.</p><PdfDocument src="/resources/kit/questionnaire_enseignants.pdf" title="Enjeux du numérique à l’école" /></section>
+      <section class="resource-section">
+        <h2>{intro.title}</h2>{intro.paragraphs.map(p=><p>{p}</p>)}
+        <div class="callout"><h3>Tout commence par la parole</h3><p>Pas de classement, rien à envoyer. Les cartes se discutent, les scènes se jouent, les questionnaires servent à réfléchir. Happy Click 2027 ajoute deux nouvelles présentations du jeu « Écrans et équilibre » : <a href="/projet-2027">voir le projet</a>.</p></div>
+      </section>
+
+      <section class="resource-section" id="cartes">
+        <div class="section-picture"><Doodle name="tout" size={72} /><h2>Les cartes du quiz</h2></div>
+        <p>29 cartes en trois paquets : 10 sur les comportements, 8 sur la santé, 11 sur l’écologie. En classe, par groupes de 4 à 6.</p>
+        <div class="actions"><a class="button" href="/quiz">Jouer les cartes en ligne</a></div>
+        <details><summary>Le texte d’origine du kit</summary><div class="details-body original-copy"><h3>{Original(0).title}</h3><p class="resource-meta">{Original(0).subtitle}</p>{Original(0).paragraphs.map(p=><p>{p}</p>)}</div></details>
+        <PdfDocument src="/resources/kit/activite_cartes_a_imprimer.pdf" title="Quizz — cartes à imprimer" height={800} />
+        <p class="source-note">16 pages. Sur le site, chaque carte renvoie à ses pages, et les limites de certaines réponses sont signalées.</p>
+      </section>
+
+      <section class="resource-section" id="roles">
+        <div class="section-picture"><Doodle name="addiction" size={72} /><h2>Les jeux de rôles</h2></div>
+        <p>Six joueurs, un personnage chacun, quatre scènes. Après chaque scène, on s’arrête pour en parler. Les personnages sont inventés : personne ne raconte sa vie.</p>
+        <ul class="kit-play">{roles.map(r=><li><a class="role-link" href={`/kit/roles/${r.slug}`}><Doodle name={pictures[r.slug as keyof typeof pictures]} size={64} /><strong>{r.title}</strong><span>6 rôles, 4 scènes, document de {r.pages} pages</span></a></li>)}</ul>
+        <details><summary>Le texte d’origine du kit</summary><div class="details-body original-copy"><h3>{Original(1).title}</h3><p class="resource-meta">{Original(1).subtitle}</p>{Original(1).paragraphs.map(p=><p>{p}</p>)}</div></details>
+        <div class="documents"><h3>Les documents à imprimer</h3>
+          {roles.map(r=>r.slug==='addiction' ? <AddictionDocuments /> : <PdfDocument src={r.file} title={`Jeu de rôle — ${r.slug === 'cyberharcelement' ? 'cyberharcèlement' : 'désinformation'}`} />)}
+        </div>
+      </section>
+
+      <section class="resource-section" id="usages">
+        <div class="section-picture"><Doodle name="usages" size={72} /><h2>Mes écrans et moi</h2></div>
+        <p>Onze questions pour décrire ses appareils, ses activités et ses moments d’écran, puis choisir de quoi parler avec un adulte. Pas de note, pas de diagnostic.</p>
+        <div class="callout caution"><p>Le PDF s’appelle « Test de dépendance au numérique », mais il ne donne aucun barème validé. En ligne, c’est une réflexion personnelle, sans prénom ni envoi.</p></div>
+        <div class="actions"><a class="button" href="/mes-usages">Répondre aux questions</a></div>
+        <details><summary>Le texte d’origine du kit</summary><div class="details-body original-copy"><h3>{Original(2).title}</h3><p class="resource-meta">{Original(2).subtitle}</p>{Original(2).paragraphs.map(p=><p>{p}</p>)}</div></details>
+        <PdfDocument src="/resources/kit/test_numerico_dependance.pdf" title="Test de dépendance au numérique" />
+      </section>
+
+      <section class="resource-section" id="enseignants">
+        <div class="section-picture"><Doodle name="carnet" size={72} /><h2>Le carnet des enseignants</h2></div>
+        <p>Quatorze questions ouvertes sur les apprentissages, les inégalités, le rôle des familles et la façon de sensibiliser. Pour réfléchir seul ou en équipe.</p>
+        <div class="actions"><a class="button" href="/kit/reflexion">Ouvrir le carnet</a></div>
+        <details><summary>Le texte d’origine du kit</summary><div class="details-body original-copy"><h3>{Original(3).title}</h3><p class="resource-meta">{Original(3).subtitle}</p>{Original(3).paragraphs.map(p=><p>{p}</p>)}</div></details>
+        <p class="privacy-note">En ligne, les notes restent dans la page ouverte. Rien n’est collecté, aucune statistique n’est produite.</p>
+        <PdfDocument src="/resources/kit/questionnaire_enseignants.pdf" title="Enjeux du numérique à l’école" />
+      </section>
     </div>
   </div>
 </Layout>

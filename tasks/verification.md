@@ -25,7 +25,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## CSS actifs versionnés
 
-- `/_astro/Layout.BRIgqk92.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/Doodle.I3r-scvP.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 
 ## Documents et empreintes source
 
@@ -42,15 +42,15 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Ressources et HTTP
 
-60 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
+65 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
 319 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
 
 ## Responsive et limites de cette vérification
 
-Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, menu mobile natif et sommaires repliables, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Le responsive de 259697a a été contrôlé mais sa composition mobile a ensuite été jugée trop longue. La nouvelle composition attend la revue OpenBot ; voir `tasks/mobile-review.md` et les preuves historiques dans `tasks/design-2027.md` et `tasks/browser-review.md`.
+Analyse des règles CSS seulement : conteneur borné à 1180 px, paquets en une colonne sous 800 px, menu mobile natif et sommaires repliables, images/PDF bornés, cibles d’au moins 44 px, focus visibles et reduced-motion (retournement de carte désactivé). Aucun navigateur lancé : ces contrôles ne mesurent pas le rendu. La refonte « table de jeu » attend la revue OpenBot ; voir `tasks/redesign-enfants.md`. Les mesures de `tasks/mobile-review.md` concernent la version précédente.
 
 Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
 
-Publication dcb3136 confirmée par OpenBot : `tasks/public-verification.md`. Cache CSS obsolète observé ensuite en navigateur persistant ; correction par URL hashée contrôlée ici. Recontrôle du nouveau déploiement et du navigateur persistant attendu du superviseur.
+Base publique e8bf224 confirmée par OpenBot : `tasks/public-verification.md`. La CSS reste importée par Astro avec un hash de contenu, contrôlé ici.
 
 Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.

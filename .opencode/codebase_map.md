@@ -1,23 +1,24 @@
 # Cartographie — Happy Click
 
 ## État et reprise
-**Mission courante : composition mobile après 80ae3e2, locale et sans push avant revue.** Rapport/cibles : `tasks/mobile-review.md`. La précédente absence d’overflow ne démontre pas la qualité mobile.
+**Mission courante : refonte « table de jeu » pour enfants et parents (Claude, 17 novembre 2026), locale, sans push avant revue OpenBot.** Spec/sources/limites : `tasks/redesign-enfants.md`. Base publique `e8bf224` (Coolify `wdxwyrajcelfqzyq047q9i54` finished, 60 URLs/319 refs, constat OpenBot) ; elle ne valide pas la refonte.
 Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt public `danhab05/happyclick`, branche `feat/astro-preview`. **Base publique `969d467` confirmée par OpenBot le 17 novembre 2026**, Coolify `enbdelpmy0pbqsspjzvmfr79` finished, 60 URLs HTTPS identiques au build et projet/FAQ vérifiés en navigateur. **DA publiée via dcb3136 (Coolify ib2ibihlxhvxqcz9fk3wm1r3 finished, verify HTTPS 60 URLs / 288 refs par OpenBot), mais cache CSS stable obsolète observé sur navigateur persistant. Correction par pipeline CSS hashé, push autorisé ; nouveau contrôle navigateur/déploiement par OpenBot attendu.** Le webhook de cette branche déploie. Versions antérieures conservées dans Git : `0fc4fb9`, `6dab746`, `cc71f4a`.
 
 Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` avant de relancer). `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Pas de navigateur/Playwright par l’exécutant.
 
 ## Interface et routes (15 pages locales, édition2026–2027)
-- `src/layouts/Layout.astro` : langue, noindex, navigation Accueil/Quiz/Kit/Guides/Projet en desktop et menu mobile natif, footer et deux liens GATE originaux.
-- `src/pages/index.astro` : hero bleu ciel avec grand logo officiel, trois thèmes, parcours par publics, édition 2027.
+- `src/layouts/Layout.astro` : langue, noindex, préchargement Fredoka, navigation Accueil/Quiz/Jeux et kit/Guides parents/Le projet (mêmes 5 URLs) en desktop et menu mobile natif, bouton Jouer, footer et deux liens GATE originaux.
+- `src/pages/index.astro` : plateau ciel « Tire une carte, on en parle ! » avec les trois paquets, jeux de rôles (« Change de place »), Mes écrans et moi, coin des adultes, note édition 2027.
+- `src/components/Doodle.astro` : dessins SVG inline au trait du logo (paquets, jeux, questionnaires, pictos adultes), décoratifs (aria-hidden).
 - `src/components/ResponsiveDisclosure.astro` : même contenu en sidebar/groupe desktop et volet mobile natif fermé, utilisé par sommaires/footer ; aucune logique JS.
-- `src/components/ThemeCards.astro` : liens/counts des thèmes.
+- `src/components/ThemeCards.astro` : trois paquets empilés (li porte inclinaison et cartes arrière, lien = face), noms, sujets et nombres de cartes.
 - `src/pages/quiz/index.astro` : choix ; `quiz/[theme].astro` : 4 parcours statiques, cartes SSR, feedback accessible sans JS.
 - `src/pages/mes-usages.astro` : 11 questions sans score ; `kit/reflexion.astro` : 14 questions ouvertes facultatives.
 - `src/pages/kit.astro` : textes source, huit PDF (dont V2/V1/ancienne archive addiction), activités.
 - `src/pages/kit/roles/[theme].astro` : trois jeux × six rôles × quatre scènes, aides/débrief/pistes sourcées.
 - `src/pages/guides.astro` : deux guides, résumés/chapitres/datation/crédits et textes source.
 - `src/components/PdfDocument.astro` : liens ouvrir/télécharger permanents, aperçu natif en details et repli mobile.
-- `src/styles/site.css` : importée par Layout et émise sous `/_astro/*.hash.css` ; système unique bleu ciel/blanc/encre/rouge, Ubuntu locale, composants et états interactifs ; responsive 1100/800/360, composition mobile dédiée, focus/reduced-motion/césure. Ancienne feuille remplacée entièrement, sans surcharges héritées.
+- `src/styles/site.css` : importée par Layout et émise sous `/_astro/*.hash.css` ; tokens ciel/encre/cœur/soleil/feuille, Fredoka + Andika locales (OFL, `public/assets/fonts/LICENSE-*`), trait encre et ombre « carte posée » réservés aux objets manipulés, pages de lecture calmes ; carte quiz et dos de carte (animation de retournement désactivée en reduced-motion) ; responsive 1100/800/360, focus, impression.
 - `public/assets/` : ressources d’origine ; `previews/` : deux couvertures extraites des guides.
 - `public/resources/` : huit PDF historiques inchangés + deux originaux2027 ; `public/robots.txt` : Disallow /.
 - `astro.config.mjs` : static, slash ignore, host0.0.0.0 port4321, CSS externe hashée (`build.inlineStylesheets: never`), modules JS émis en fichiers (assetsInlineLimit0).

@@ -28,12 +28,12 @@ export function initQuiz(root) {
       card.querySelector('[data-next]').hidden = !validated;
       card.querySelector('[data-previous]').disabled = index === 0;
       card.querySelector('[data-comparison]').textContent = validated
-        ? session.matches(index) ? 'Tes choix rejoignent le corrigé du support. Prenons le temps de l’examiner.' : 'Tes choix diffèrent du corrigé du support. Comparons les raisonnements.'
+        ? session.matches(index) ? 'Tu as choisi comme la carte. Explique pourquoi à quelqu’un.' : 'La carte propose autre chose. Lis pourquoi, puis dis ce que tu en penses.'
         : '';
     });
     end.hidden = !session.finished;
     progress.value = session.validated.size;
-    counter.textContent = session.finished ? `${cards.length} cartes explorées` : `Carte ${session.index+1} sur ${cards.length}`;
+    counter.textContent = session.finished ? `${cards.length} cartes explorées, paquet terminé` : `Carte ${session.index+1} sur ${cards.length}`;
     if (session.finished) {
       summary.replaceChildren();
       cards.forEach((card,index) => {
@@ -44,7 +44,7 @@ export function initQuiz(root) {
         body.className = 'details-body';
         const selection = root.ownerDocument.createElement('p');
         const labels = [...card.querySelectorAll('.choice-text')];
-        selection.textContent = `Tes choix : ${session.selections[index].map(value => labels[value].textContent).join(' · ')}`;
+        selection.textContent = `Tes réponses : ${session.selections[index].map(value => labels[value].textContent).join(' ; ')}`;
         body.append(selection);
         const feedback = card.querySelector('[data-feedback-body]').cloneNode(true);
         feedback.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
@@ -67,7 +67,7 @@ export function initQuiz(root) {
     const card = cards[session.index];
     if (action === 'validate') {
       if (!session.validate()) {
-        card.querySelector('[data-error]').textContent = 'Choisis au moins une proposition avant de comparer au support.';
+        card.querySelector('[data-error]').textContent = 'Choisis au moins une réponse avant de retourner la carte.';
         focus(card.querySelector('input'));
         return;
       }

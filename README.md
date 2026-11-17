@@ -1,12 +1,10 @@
 # Happy Click — préversion pédagogique Astro
 
-**Correction mobile locale après 80ae3e2, sans push avant revue OpenBot.** Header/menu compact, hero raccourci, cartes et parcours plus denses, sommaires/footer natifs repliables. Mesures réelles et cibles : [tasks/mobile-review.md](tasks/mobile-review.md). La correction du cache CSS reste active.
+**Refonte « table de jeu » locale (17 novembre 2026), sans push avant revue OpenBot.** Retour de Dan sur la version précédente : « trop pro et ia slope » pour un site destiné aux enfants et aux parents. Le site devient une table de jeu : paquets de cartes à choisir, carte à retourner, dessins SVG au trait du logo. Les adultes ont un coin dédié et des pages de lecture plus calmes. Typographies OFL locales Fredoka (titres) et Andika (texte). Plan, sources GitHub suivies, tokens, autocritique et limites : [tasks/redesign-enfants.md](tasks/redesign-enfants.md). Les 29 questions, 116 choix, trois jeux de rôles, questionnaires et dix PDF restent intacts. CSS toujours importée par Astro avec hash de contenu.
 
-Interface construite autour du logo officiel 2027 : bleu ciel, blanc, encre sombre et rouge, typographie locale Ubuntu, grand logo à l’accueil, cartes et contrôles communs aux **15 pages**. Les 29 questions, 116 choix, trois jeux de rôles, questionnaires et dix PDF restent intacts. La DA précédente est récupérable au commit `969d467` ; l’ancienne reproduction au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
+**Base publique au 17 novembre 2026 (constat OpenBot) :** [happyclick.danhabib.dev](https://happyclick.danhabib.dev), commit `e8bf224`, déploiement Coolify `wdxwyrajcelfqzyq047q9i54` terminé, 60 URLs HTTPS identiques au build / 319 références, menu compact et accès aux thèmes mesurés à 390 et 320 px. Ces constats techniques ne valident pas la refonte locale. Dépôt public : [danhab05/happyclick](https://github.com/danhab05/happyclick).
 
-**Refonte 259697a approuvée par OpenBot ; publication de la préversion autorisée.** Déploiement dcb3136 confirmé terminé par OpenBot, puis anomalie de cache CSS constatée en navigateur persistant. Correction par CSS hashée en cours de livraison ; recontrôle public attendu. Elle est disponible sur le serveur de revue `0.0.0.0:4321`. Spécification, couverture et preuves : [tasks/design-2027.md](tasks/design-2027.md).
-
-**Base publique confirmée par OpenBot le 17 novembre 2026 :** [happyclick.danhabib.dev](https://happyclick.danhabib.dev), commit `969d467`, déploiement Coolify `enbdelpmy0pbqsspjzvmfr79` terminé, 60 URLs HTTPS identiques au build, projet et FAQ vérifiés en navigateur. Dépôt public : [danhab05/happyclick](https://github.com/danhab05/happyclick). La validation de cette base ne valide pas le nouveau rendu local.
+Historique : DA « logo 2027 » (bleu ciel, Ubuntu) aux commits `259697a`, `6ed6231` et `e8bf224`, spécification dans [tasks/design-2027.md](tasks/design-2027.md) et mesures mobiles dans [tasks/mobile-review.md](tasks/mobile-review.md). DA antérieure au commit `969d467`, reproduction initiale au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
 ## Édition Happy Click 2027
 
@@ -37,13 +35,13 @@ Node >=22.12 pour l’installation ; les scripts npm utilisent Node 22.23.4 loca
 
 | Route | Contenu |
 |---|---|
-| `/` | Accueil, thèmes, parcours enfants/familles/animateurs |
-| `/quiz` | Choix des thèmes et du parcours complet |
+| `/` | Table de jeu : trois paquets de cartes, jeux de rôles, Mes écrans et moi, coin des adultes |
+| `/quiz` | Choix du paquet ou des 29 cartes mélangées, règle du jeu |
 | `/quiz/comportements` | 10 questions |
 | `/quiz/sante` | 8 questions |
 | `/quiz/ecologie` | 11 questions |
 | `/quiz/tout` | Les 29 cartes, 116 propositions |
-| `/mes-usages` | 11 questions, restitution descriptive sans diagnostic |
+| `/mes-usages` | « Mes écrans et moi » : 11 questions, restitution descriptive sans diagnostic |
 | `/kit` | Textes d’origine et 8 PDF ; V2/V1/ancienne archive addiction, autres activités conservées |
 | `/kit/reflexion` | 14 questions enseignants, notes temporaires |
 | `/kit/roles/addiction` | Écrans et équilibre : 6 rôles, 4 scènes |
@@ -53,7 +51,7 @@ Node >=22.12 pour l’installation ; les scripts npm utilisent Node 22.23.4 loca
 | `/faq` | Préparer une séance, choisir les versions, utiliser les activités |
 | `/guides` | Étude parents (9 pages), guide jeunes (52 pages), résumés datés et crédits |
 
-Les quiz comportent choix multiples, validation, progression, retour, explications, pistes de discussion, nuances, références recto/verso, bilan et rejouer. Sans JavaScript, les cartes et leurs corrigés restent lisibles. Les activités gardent l’esprit de débat ; aucun classement ni barème de diagnostic.
+Les quiz comportent choix multiples, « Retourner la carte » (dos de la carte : réponse, explication, question pour en parler, puis nuance et pages source pour les adultes), progression, carte d’avant, récapitulatif et rejouer. Sans JavaScript, les cartes et leurs corrigés restent lisibles. Les activités gardent l’esprit de débat ; aucun classement ni barème de diagnostic.
 
 Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajoutent V2 par défaut et V1 variante. Les liens ouvrir/télécharger sont toujours visibles ; les aperçus natifs s’ouvrent dans un volet. Les deux liens externes GATE sont conservés au pied de page et tous les textes de présentation d’origine sont présents, parfois dans un volet explicitement titré.
 
@@ -67,8 +65,9 @@ Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajou
 
 ## Preuves et limites
 
-- `tasks/design-2027.md` : nouvelle DA, couverture des composants, contrastes calculés, analyse responsive et checklist de revue.
-- `tasks/verification.md` : rapport régénéré par verify ; 60 URLs HTTP 200 identiques au build, 319 références (sommaires desktop/mobile inclus), 26 blocs source, toutes les questions, 10 PDF / 204 pages et empreintes.
+- `tasks/redesign-enfants.md` : refonte « table de jeu », sources (skills GitHub) et décisions qu’elles ont guidées, tokens, contrastes, composition, autocritique et limites.
+- `tasks/design-2027.md` : DA précédente autour du logo, conservée comme historique.
+- `tasks/verification.md` : rapport régénéré par verify ; 65 URLs HTTP 200 identiques au build (dont polices et licences OFL), 319 références (sommaires desktop/mobile inclus), 26 blocs source, toutes les questions, 10 PDF / 204 pages et empreintes.
 - `tasks/public-verification.md` : preuves publiques durables, maintenues manuellement et jamais réécrites par verify.
 - `tasks/browser-review.md` : retours réels du superviseur, séparés par version. La revue de 259697a est approuvée ; périmètre exact et limites consignés.
 - `tasks/pdf-analysis.md`, `tasks/quiz-source-map.md` : analyse des huit PDF historiques / 156 pages et correspondance des 29 cartes. `tasks/pdf-text/` contient les extractions/OCR ; rendus temporaires dans `tasks/pdf-images/`, ignorés par Git.

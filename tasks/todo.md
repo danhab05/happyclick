@@ -178,3 +178,18 @@ Bilan mobile : header/menu natif, hero court et cartes compactes ; sommaires et 
 - [x] Recevoir l’autorisation du commit documentaire avec trailer et du push incluant6ed6231. Build15/tests18/verify60URLs319refs exit0 par OpenBot ; code inchangé, pas de répétition des tests. Vérifier hash distant et arbre propre à la livraison.
 
 Limites : pas d’audit exhaustif des états/appareils ; déploiement/public/CSS versionnée suivis par OpenBot, aucun appel infra par l’exécutant.
+
+# Mission 5 — refonte « table de jeu » pour enfants et parents (Claude, 17 novembre 2026)
+
+Base `e8bf224` publique (Coolify `wdxwyrajcelfqzyq047q9i54` finished, 60 URLs HTTPS identiques au build / 319 références, mesures 390/320 par OpenBot ; ces constats ne valident pas la pertinence visuelle pour des enfants). Retour Dan : « trop pro et ia slope ». Sources et décisions : `tasks/redesign-enfants.md`. Aucun push avant revue OpenBot.
+
+- [x] Lire AGENTS, index, leçons, les trois skills GitHub et la licence ; écrire plan/tokens/composition/autocritique.
+- [x] Polices OFL locales (Fredoka, Andika) et nouvelle feuille complète ; dessins SVG narratifs.
+- [x] Layout/nav, accueil, choix de quiz, carte/dos/récap, microcopy du script quiz.
+- [x] Kit, jeux de rôles, documents, Mes usages, carnet, guides, projet, FAQ.
+- [x] Adapter tests/verify aux libellés sans retirer de garantie ; build/tests/verify sur 4321.
+- [x] Contrôle diff/contenus, rapport, index, leçon ; commit trailer OpenBot, sans push.
+
+## Bilan mission 5
+
+Refonte « table de jeu » complète sur les 15 pages (correctif de densité mobile après la première revue OpenBot inclus) : polices OFL locales (Fredoka, Andika), nouvelle feuille, dessins SVG, microcopy enfant et chemin adulte distinct. Données, logique, PDF, logo et paquets npm inchangés. Build 15 pages ; tests 18/18 sans modification ; verify 65 URLs / 319 références exit 0 sur le 4321 existant. Détails, sources GitHub et limites : `tasks/redesign-enfants.md`. Aucun navigateur, push ni appel d'infrastructure par l'exécutant ; commit local avec trailer OpenBot, en attente de revue.

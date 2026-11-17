@@ -1,0 +1,89 @@
+---
+/**
+ * Hand-drawn style pictures in the ink line of the official logo.
+ * Each one tells what a deck or game is about; all are decorative for assistive tech
+ * because the visible title next to them carries the meaning.
+ */
+interface Props { name: 'reflexes' | 'equilibre' | 'planete' | 'tout' | 'addiction' | 'cyberharcelement' | 'desinformation' | 'usages' | 'maison' | 'classe' | 'livre' | 'carnet' | 'mains'; size?: number; class?: string; }
+const { name, size = 96, class: className } = Astro.props;
+---
+<svg class:list={['doodle', className]} viewBox="0 0 96 96" width={size} height={size} aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  {name === 'reflexes' && <>
+    <path d="M30 46V33a14 14 0 0 1 28 0v13" />
+    <rect x="20" y="46" width="48" height="38" rx="9" fill="var(--heart)" />
+    <circle cx="44" cy="61" r="5" fill="var(--paper)" />
+    <path d="M44 66v8" stroke="var(--paper)" />
+    <path d="M66 10h20a5 5 0 0 1 5 5v12a5 5 0 0 1-5 5H77l-7 7v-7h-4a5 5 0 0 1-5-5V15a5 5 0 0 1 5-5Z" fill="var(--paper)" />
+    <path d="M70 21h.5M76 21h.5M82 21h.5" stroke-width="4" />
+  </>}
+  {name === 'equilibre' && <>
+    <rect x="24" y="10" width="42" height="76" rx="9" fill="var(--paper)" />
+    <path d="M39 18h12" />
+    <path d="M55 58a15 15 0 1 1-13-26 12 12 0 0 0 13 26Z" fill="var(--sun)" />
+    <path d="M38 76h14" />
+    <path d="M78 20v9M73.5 24.5h9M82 48v6M79 51h6" />
+  </>}
+  {name === 'planete' && <>
+    <rect x="18" y="46" width="44" height="40" rx="8" fill="var(--paper)" />
+    <path d="M32 78h16" />
+    <path d="M40 46c0-12 5-21 14-27" />
+    <path d="M54 19c9-8 22-10 33-8-1 13-10 23-25 23-5 0-8-3-8-7Z" fill="var(--leaf)" />
+    <path d="M40 34c-5-7-15-9-24-6 2 9 10 13 20 11" fill="var(--leaf)" />
+    <path d="M60 25c6-3 12-6 18-9" />
+  </>}
+  {name === 'tout' && <>
+    <rect x="12" y="26" width="34" height="48" rx="6" fill="var(--heart)" transform="rotate(-12 29 50)" />
+    <rect x="31" y="20" width="34" height="48" rx="6" fill="var(--sun)" />
+    <rect x="50" y="26" width="34" height="48" rx="6" fill="var(--leaf)" transform="rotate(12 67 50)" />
+    <path d="M42 34c0-5 4-7 6-7s6 2 6 6c0 5-6 6-6 11M48 53h.5" stroke-width="3.5" />
+  </>}
+  {name === 'addiction' && <>
+    <path d="M48 18v62M30 84h36M20 34h56" />
+    <path d="M20 34 10 58h20L20 34ZM76 34l-10 24h20L76 34Z" />
+    <path d="M10 58a10 6 0 0 0 20 0" fill="var(--paper)" />
+    <path d="M66 58a10 6 0 0 0 20 0" fill="var(--paper)" />
+    <rect x="13" y="42" width="14" height="13" rx="2.5" fill="var(--sky)" />
+    <circle cx="76" cy="49" r="7" fill="var(--sun)" />
+    <circle cx="48" cy="16" r="4" fill="var(--heart)" />
+  </>}
+  {name === 'cyberharcelement' && <>
+    <path d="M10 14h40a6 6 0 0 1 6 6v18a6 6 0 0 1-6 6H26l-9 9v-9h-7a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6Z" fill="var(--paper)" />
+    <path d="M14 30l6-6 6 8 6-8 6 8 6-6" />
+    <path d="M86 46H46a6 6 0 0 0-6 6v18a6 6 0 0 0 6 6h24l9 9v-9h7a6 6 0 0 0 6-6V52a6 6 0 0 0-6-6Z" fill="var(--sky)" />
+    <path d="M66 70s-11-6-11-13a5.5 5.5 0 0 1 11-2 5.5 5.5 0 0 1 11 2c0 7-11 13-11 13Z" fill="var(--heart)" />
+  </>}
+  {name === 'desinformation' && <>
+    <rect x="12" y="14" width="50" height="64" rx="5" fill="var(--paper)" />
+    <path d="M20 26h34M20 36h22M20 46h28M20 56h18" />
+    <circle cx="60" cy="56" r="17" fill="var(--sky)" />
+    <path d="M73 69l15 15" stroke-width="6" />
+    <path d="M55 51c0-4 3-6 5.5-6s5.5 2 5.5 5.5c0 4-5.5 4.5-5.5 9M60.5 65h.5" stroke-width="3.5" />
+  </>}
+  {name === 'usages' && <>
+    <rect x="16" y="10" width="54" height="76" rx="7" fill="var(--paper)" />
+    <path d="M27 28l4 4 7-8M44 28h16M27 48l4 4 7-8M44 48h16M27 68h11M44 68h16" />
+    <path d="M86 30 66 78l-6 4 1-7 20-47Z" fill="var(--sun)" />
+  </>}
+  {name === 'maison' && <>
+    <path d="M14 46 48 16l34 30" />
+    <path d="M22 40v42h52V40" />
+    <path d="M40 82V60h16v22" />
+  </>}
+  {name === 'classe' && <>
+    <rect x="10" y="16" width="76" height="50" rx="5" />
+    <path d="M22 32h24M22 44h36M30 82l8-16M66 82l-8-16" />
+  </>}
+  {name === 'livre' && <>
+    <path d="M48 26c-10-7-24-8-36-6v58c12-2 26-1 36 6 10-7 24-8 36-6V20c-12-2-26-1-36 6Z" />
+    <path d="M48 26v58" />
+  </>}
+  {name === 'carnet' && <>
+    <rect x="20" y="10" width="56" height="76" rx="6" />
+    <path d="M20 26h-6M20 48h-6M20 70h-6M34 30h28M34 44h28M34 58h18" />
+  </>}
+  {name === 'mains' && <>
+    <path d="M48 46s-18-10-18-22a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 12-18 22-18 22Z" fill="var(--heart)" />
+    <path d="M8 62c8-2 18 0 26 8 3 3 1 8-4 7l-10-2M8 62v18c10 0 20 2 28-2" fill="var(--paper)" />
+    <path d="M88 62c-8-2-18 0-26 8-3 3-1 8 4 7l10-2M88 62v18c-10 0-20 2-28-2" fill="var(--paper)" />
+  </>}
+</svg>

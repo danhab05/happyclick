@@ -1,38 +1,61 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ThemeCards from '../components/ThemeCards.astro';
+import Doodle from '../components/Doodle.astro';
+import games from '../data/roles.json';
+const pictures = { addiction: 'addiction', cyberharcelement: 'cyberharcelement', desinformation: 'desinformation' } as const;
 ---
 <Layout active="/">
-  <section class="welcome">
-    <div class="wrap home-hero">
-      <div class="hero-copy">
-        <p class="edition-badge">Happy Click 2027</p>
-        <h1>Le numérique,<br />on en parle <em>ensemble ?</em></h1>
-        <p class="lead">Des quiz et des jeux pour parler du numérique, en classe ou en famille.</p>
-        <div class="actions"><a class="button" href="/quiz">Commencer un quiz <span aria-hidden="true">→</span></a><a class="button secondary hero-secondary" href="/kit">Le kit pédagogique <span aria-hidden="true">→</span></a></div>
-        <ul class="hero-benefits" aria-label="L’esprit Happy Click"><li>Sans compte</li><li>Sans classement</li><li>À ton rythme</li></ul>
+  <div class="wrap">
+    <section class="board home-board" aria-labelledby="home-title">
+      <div class="board-intro">
+        <h1 id="home-title">Tire une carte, on en parle&nbsp;!</h1>
+        <p>Choisis un paquet, réponds, puis retourne la carte.</p>
       </div>
-      <div class="hero-logo"><img src="/assets/2027/logo-512.png" width="512" height="551" alt="Logo officiel Happy Click : un cœur, deux mains et un curseur" fetchpriority="high" /><p>Un clic pour apprendre.<br /><strong>Une discussion pour comprendre.</strong></p></div>
+      <ThemeCards />
+      <a class="board-all" href="/quiz/tout"><Doodle name="tout" size={40} />Les 29 cartes mélangées</a>
+    </section>
+  </div>
+
+  <section class="wrap section" aria-labelledby="games-title">
+    <div class="home-section-head">
+      <h2 id="games-title">Change de place</h2>
+      <p>Trois histoires à jouer à six. Chacun reçoit un personnage, puis on discute après chaque scène.</p>
+    </div>
+    <ul class="scenes">
+      {games.map(g => <li><a class="scene" href={`/kit/roles/${g.slug}`}><Doodle name={pictures[g.slug as keyof typeof pictures]} size={84} /><span><strong>{g.title}</strong><span>6 personnages, 4 scènes</span></span></a></li>)}
+    </ul>
+    <div class="mirror">
+      <Doodle name="usages" size={88} />
+      <div><h2>Mes écrans et moi</h2><p>Onze petites questions pour regarder tes habitudes. Rien n’est noté, rien n’est envoyé.</p></div>
+      <a class="button secondary" href="/mes-usages">Répondre aux questions</a>
     </div>
   </section>
-  <section class="wrap section home-themes" aria-labelledby="themes-title">
-    <div class="section-heading"><div><p class="eyebrow">Les quiz Happy Click</p><h2 id="themes-title">Choisis ton thème.</h2></div><p>29 questions à discuter. Choisis tes réponses, puis découvre les explications et leurs nuances.</p></div>
-    <ThemeCards />
-  </section>
-  <section class="audience-section section">
-    <div class="wrap"><div class="section-heading"><div><p class="eyebrow">Un point de départ pour chacun</p><h2>Comment veux-tu<br />utiliser Happy Click ?</h2></div><p>Les mêmes outils, plusieurs façons d’échanger. Choisis le parcours qui te ressemble.</p></div>
-      <div class="audience-grid">
-        <article><h3>J’explore mes usages</h3><p>Jouer avec les cartes, questionner ce que je crois savoir et regarder mes propres habitudes.</p><a class="text-link" href="/mes-usages">Faire le point sur mes usages <span aria-hidden="true">→</span></a></article>
-        <article><h3>On en parle en famille</h3><p>Comprendre les points de vue des enfants et des parents, avec deux guides pour ouvrir la discussion.</p><a class="text-link" href="/guides">Lire les guides <span aria-hidden="true">→</span></a></article>
-        <article><h3>J’anime une classe</h3><p>Des cartes à imprimer, trois jeux de rôles et un carnet pour réfléchir à l’éducation au numérique.</p><a class="text-link" href="/kit">Préparer un atelier <span aria-hidden="true">→</span></a></article>
+
+  <section class="grownups section" aria-labelledby="grownups-title">
+    <div class="wrap grownups-grid">
+      <div class="grownups-intro">
+        <h2 id="grownups-title">Pour les adultes qui accompagnent</h2>
+        <p>Parent ou enseignant, tu trouveras ici comment jouer avec les enfants, les documents à imprimer et des repères pour en parler.</p>
+        <ul class="reassure">
+          <li>Pas de compte, rien n’est enregistré.</li>
+          <li>Pas de score : le but est de discuter.</li>
+          <li>Chaque réponse renvoie à la page du document d’origine.</li>
+        </ul>
       </div>
+      <ul class="paths">
+        <li><a class="path" href="/faq#famille"><Doodle name="maison" size={48} /><strong>Jouer à la maison</strong><span>Ouvrir une carte avec son enfant et écouter son avis.</span></a></li>
+        <li><a class="path" href="/kit"><Doodle name="classe" size={48} /><strong>Animer une séance en classe</strong><span>Cartes à imprimer, jeux de rôles et questionnaires.</span></a></li>
+        <li><a class="path" href="/guides"><Doodle name="livre" size={48} /><strong>Lire les guides pour les parents</strong><span>Une étude et un guide de 2021, résumés chapitre par chapitre.</span></a></li>
+        <li><a class="path" href="/faq"><Doodle name="carnet" size={48} /><strong>Questions fréquentes</strong><span>Pour qui, quels PDF, que deviennent les réponses.</span></a></li>
+      </ul>
     </div>
   </section>
-  <section class="wrap section">
-    <div class="edition-feature"><div><p class="eyebrow">L’édition 2026–2027</p><h2>Happy Click 2027,<br />le projet continue.</h2><p>Une nouvelle promotion et deux présentations du jeu « Écrans et équilibre ». Retrouve les supports, l’équipe et les repères pour préparer une séance.</p><div class="actions"><a class="button" href="/projet-2027">Découvrir le projet <span aria-hidden="true">→</span></a><a class="text-link" href="/faq">Les questions fréquentes</a></div></div><div class="edition-spec"><h3>On joue, puis on en parle.</h3><p>Six rôles, quatre scènes et des points de vue à comparer.</p><a class="text-link" href="/kit/roles/addiction">Explorer le jeu de rôles <span aria-hidden="true">→</span></a></div></div>
-  </section>
-  <section class="wrap section compact discussion-section">
-    <div><p class="eyebrow">La discussion fait partie du jeu</p><h2>Chaque avis compte.</h2></div>
-    <div><p class="lead">Les cartes invitent à débattre en petits groupes de 4 à 6, pour comprendre nos usages, poser des questions et faire ses propres choix. Chaque quiz donne accès à la page du document d’origine. Plusieurs réponses sont parfois possibles. L’objectif est de comprendre, pas de gagner.</p><p class="original-motto">Le NUMÉRIQUE n'est pas mauvais ...<br /><strong>Il suffit d'en faire BON USAGE</strong></p><a class="text-link" href="/kit#roles">Découvrir les trois jeux de rôles <span aria-hidden="true">→</span></a></div>
+
+  <section class="wrap section compact">
+    <div class="edition-note">
+      <img src="/assets/2027/logo-128.png" width="128" height="138" alt="Logo Happy Click 2027 : un cœur, deux mains et un curseur" loading="lazy" />
+      <p>Happy Click 2027 est préparé par une nouvelle équipe, avec deux versions du jeu « Écrans et équilibre ». <a class="text-link" href="/projet-2027">Découvrir le projet et l’équipe</a></p>
+    </div>
   </section>
 </Layout>

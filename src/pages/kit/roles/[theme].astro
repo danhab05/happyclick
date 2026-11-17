@@ -2,23 +2,53 @@
 import ResponsiveDisclosure from '../../../components/ResponsiveDisclosure.astro';
 import Layout from '../../../layouts/Layout.astro';
 import PdfDocument from '../../../components/PdfDocument.astro';
-import games from '../../../data/roles.json';
 import AddictionDocuments from '../../../components/AddictionDocuments.astro';
+import Doodle from '../../../components/Doodle.astro';
+import games from '../../../data/roles.json';
 export function getStaticPaths(){ return games.map(game=>({params:{theme:game.slug},props:{game}})); }
 const { game } = Astro.props;
 ---
 <Layout active="/kit" title={game.title}>
-  <section class="wrap page-intro"><p class="breadcrumb"><a href="/kit#roles">← Kit pédagogique / Jeux de rôles</a></p><p class="eyebrow">6 personnages · 4 scènes · Un adulte pour accompagner</p><h1>{game.title}</h1>{game.slug==='addiction' && <p class="edition-label">Happy Click 2027 · Édition 2026–2027 · V2</p>}<p class="lead">Distribuez les rôles, jouez une scène, puis faites une pause pour en discuter. Les personnages sont fictifs : personne n’a à raconter son histoire personnelle.</p></section>
+  <div class="wrap read-head">
+    <div>
+      <p class="breadcrumb"><a href="/kit#roles">Tous les jeux de rôles</a></p>
+      <p class="audience">Un jeu à six, avec un adulte pour animer</p>
+      <h1>{game.title}</h1>
+      {game.slug==='addiction' && <p class="edition-label">Happy Click 2027, édition 2026–2027, version V2</p>}
+      <p class="lead">Chacun joue un personnage inventé, scène après scène. Après chaque scène, on fait une pause pour en parler. Personne n’a à raconter sa propre histoire.</p>
+    </div>
+    <Doodle name={game.slug as any} size={112} />
+  </div>
   <div class="wrap section resource-layout">
-    <aside class="contents" aria-label="Sommaire du jeu"><ResponsiveDisclosure title="Votre séance"><a href="#personnages">Choisir les rôles</a>{game.rounds.map((r,i)=><a href={`#tour-${i+1}`}>Tour {i+1} · {r.title}</a>)}<a href="#document">Le document complet</a></ResponsiveDisclosure></aside>
+    <aside class="contents" aria-label="Sommaire du jeu"><ResponsiveDisclosure title="La séance"><a href="#personnages">Les personnages</a>{game.rounds.map((r,i)=><a href={`#tour-${i+1}`}>Scène {i+1} : {r.title}</a>)}<a href="#document">Le document complet</a></ResponsiveDisclosure></aside>
     <div class="resource-content">
-      <div class="callout"><h3>Avant de commencer</h3><p>Choisissez un rôle par personne. Lisez sa carte, jouez le contexte, puis laissez chacun expliquer son point de vue. Un participant peut préférer observer. Ces modalités facilitent l’animation ; les pages source restent accessibles à chaque étape.</p></div>
+      <div class="callout"><h3>Avant de commencer</h3><p>Un rôle par personne. Chacun lit sa carte, on joue la scène, puis chacun explique ce que son personnage pense. On peut aussi choisir d’observer. Les pages du document restent accessibles à chaque étape.</p></div>
       {game.slug==='cyberharcelement' && <div class="callout caution"><h3>Écouter sans mettre la pression</h3><p>Le débrief p.19 recommande de respecter la parole et le rythme de la personne. Nous retenons cette posture pour l’animation, même lorsque certaines formulations du scénario sont plus insistantes. La victime n’est pas responsable du harcèlement (p.11).</p></div>}
       {game.slug==='addiction' && <div class="callout caution"><h3>Une fiction, pas une évaluation</h3><p>Les noms des rôles reprennent le PDF « addiction ». Ils ne désignent aucun participant. Les horaires, durées de sommeil et explications sur la lumière bleue restent des formulations du support, pas des prescriptions ni un diagnostic. Les sources p.24 sont générales et ne documentent pas chaque affirmation. L’enjeu est de discuter du contexte et de l’accompagnement.</p></div>}
-      {game.slug==='addiction' && <div class="callout"><h3>Un jeu complet, deux présentations</h3><p>Les six rôles, quatre tours et douze questions sont conservés. V2 utilise des pictogrammes ; V1 propose des photographies. Les deux versions ont la même pagination. <a href="#document">Consulter, télécharger ou retrouver l’archive</a>.</p></div>}
-      <section class="resource-section" id="personnages"><p class="eyebrow">01 / Les personnages</p><h2>À chacun son point de vue.</h2><div class="role-cards">{game.roles.map((r,i)=><details><summary>{i+1}. {r.name}</summary><div class="details-body"><p>{r.text}</p><p class="source-note"><a href={`${game.file}#page=${r.page}`}>Carte originale · page {r.page}</a></p></div></details>)}</div><p class="source-note">L’animateur peut également consulter la <a href={`${game.file}#page=7`}>carte spécialiste, page 7</a>, pour préparer la discussion.</p></section>
-      {game.rounds.map((r,i)=><section class="round" id={`tour-${i+1}`}><p class="eyebrow">Tour {i+1} / 4</p><h2>{r.title}</h2><p class="lead">{r.context}</p><details><summary>Personnages et idées pour jouer la scène</summary><div class="details-body"><p>{r.participants}</p><p>{r.help}</p><p class="source-note"><a href={`${game.file}#page=${r.helpPage}`}>Aide originale · page {r.helpPage}</a></p></div></details><h3>Place à la discussion</h3>{r.questions.length>0 ? <ol>{r.questions.map(q=><li>{q}</li>)}</ol> : <p>Le document ne propose pas de questions de débrief pour ce tour.</p>}<details><summary>Pistes pour l’animateur</summary><div class="details-body"><p>{r.lesson}</p>{r.answerPage && <p class="source-note"><a href={`${game.file}#page=${r.answerPage}`}>Réponses du support · page {r.answerPage}</a></p>}</div></details><p class="source-note"><a href={`${game.file}#page=${r.page}`}>Contexte · page {r.page}</a>{r.debriefPage && <span> · <a href={`${game.file}#page=${r.debriefPage}`}>Débrief · page {r.debriefPage}</a></span>}</p>{i<3 && <a class="text-link" href={`#tour-${i+2}`}>Passer au tour suivant ↓</a>}</section>)}
-      <section class="resource-section" id="document"><h2>Retrouver toutes les cartes.</h2>{game.slug==='addiction' ? <AddictionDocuments /> : <PdfDocument src={game.file} title={game.title} />}<details><summary>Sources nommées dans le document</summary><div class="details-body"><p>{game.sources.replace(/Sources\s*:/,'')}</p><p class="source-note">Liste du support, page {game.pages}. Ces références génériques ne constituent pas une vérification de l’actualité de chaque affirmation.</p></div></details><a class="text-link" href="/kit#roles">Explorer un autre jeu de rôles →</a></section>
+      {game.slug==='addiction' && <div class="callout"><h3>Un jeu, deux présentations</h3><p>Les six rôles, quatre scènes et douze questions sont les mêmes. La V2 utilise des pictogrammes, la V1 des photos, avec la même pagination. <a href="#document">Ouvrir, télécharger ou retrouver l’archive</a>.</p></div>}
+      <section class="resource-section" id="personnages">
+        <h2>Les personnages</h2>
+        <p>Ouvre une carte pour lire le rôle, puis choisis qui le joue.</p>
+        <div class="role-cards">{game.roles.map(r=><details><summary>{r.name}</summary><div class="details-body"><p>{r.text}</p><p class="source-note"><a href={`${game.file}#page=${r.page}`}>Carte originale, page {r.page}</a></p></div></details>)}</div>
+        <p class="source-note">Pour préparer la discussion, l’adulte peut lire la <a href={`${game.file}#page=7`}>carte du spécialiste, page 7</a>.</p>
+      </section>
+      {game.rounds.map((r,i)=><section class="round" id={`tour-${i+1}`}>
+        <p class="eyebrow">Scène {i+1} sur 4</p>
+        <h2>{r.title}</h2>
+        <p class="lead">{r.context}</p>
+        <details><summary>Qui joue, et des idées pour jouer la scène</summary><div class="details-body"><p>{r.participants}</p><p>{r.help}</p><p class="source-note"><a href={`${game.file}#page=${r.helpPage}`}>Aide originale, page {r.helpPage}</a></p></div></details>
+        <h3>On en parle</h3>
+        {r.questions.length>0 ? <ol>{r.questions.map(q=><li>{q}</li>)}</ol> : <p>Le document ne propose pas de questions pour cette scène.</p>}
+        <details><summary>Pour l’adulte : ce que la scène peut faire comprendre</summary><div class="details-body"><p>{r.lesson}</p>{r.answerPage && <p class="source-note"><a href={`${game.file}#page=${r.answerPage}`}>Réponses du document, page {r.answerPage}</a></p>}</div></details>
+        <p class="source-note"><a href={`${game.file}#page=${r.page}`}>Scène, page {r.page}</a>{r.debriefPage && <span>, <a href={`${game.file}#page=${r.debriefPage}`}>débrief, page {r.debriefPage}</a></span>}</p>
+        {i<3 && <a class="text-link" href={`#tour-${i+2}`}>Scène suivante</a>}
+      </section>)}
+      <section class="resource-section" id="document">
+        <h2>Toutes les cartes à imprimer</h2>
+        {game.slug==='addiction' ? <AddictionDocuments /> : <PdfDocument src={game.file} title={game.title} />}
+        <details><summary>Les sources citées dans le document</summary><div class="details-body"><p>{game.sources.replace(/Sources\s*:/,'')}</p><p class="source-note">Liste du document, page {game.pages}. Ces références générales ne garantissent pas que chaque affirmation est encore à jour.</p></div></details>
+        <a class="text-link" href="/kit#roles">Choisir un autre jeu de rôles</a>
+      </section>
     </div>
   </div>
 </Layout>

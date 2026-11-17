@@ -1,13 +1,19 @@
 ---
-const themes = [
- { slug: 'comportements', count: 10, name: 'Les bons réflexes', label: 'Comportements', text: 'Mots de passe, informations, photos… et les personnes de l’autre côté de l’écran.', icon: 'M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3Zm-4 9 3 3 5-6' },
- { slug: 'sante', count: 8, name: 'Trouver son équilibre', label: 'Santé & attention', text: 'Notifications, vidéos courtes, sommeil : prendre le temps de questionner nos habitudes.', icon: 'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7v5l3 2' },
- { slug: 'ecologie', count: 11, name: 'Derrière nos écrans', label: 'Écologie', text: 'Des matériaux à la seconde vie des appareils, explorer la face matérielle du numérique.', icon: 'M20 4C8 3 3 7 5 14c2 7 12 6 14-2 1-3 1-5 1-8ZM4 21c3-7 7-10 11-12' },
-];
+import Doodle from './Doodle.astro';
+interface Props { class?: string; }
+const { class: className } = Astro.props;
+// Three decks of the printed quiz, named as on the cards; counts follow src/data/quiz.json.
+const decks = [
+ { slug: 'comportements', count: 10, name: 'Les bons réflexes', topic: 'Mots de passe, photos, messages.', picture: 'reflexes' },
+ { slug: 'sante', count: 8, name: 'Trouver son équilibre', topic: 'Écrans, sommeil, temps pour soi.', picture: 'equilibre' },
+ { slug: 'ecologie', count: 11, name: 'Derrière nos écrans', topic: 'D’où viennent nos appareils ?', picture: 'planete' },
+] as const;
 ---
-<div class="cards-grid themes">
-  {themes.map(t => <a class:list={['theme-card',`theme-${t.slug}`]} href={`/quiz/${t.slug}`}>
-    <div class="card-top"><span class="theme-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d={t.icon} /></svg></span><span class="question-count">{t.count} questions</span></div>
-    <p class="theme-label">{t.label}</p><h3>{t.name}</h3><p class="theme-description">{t.text}</p><div class="card-bottom"><span>Explorer ce thème</span><span aria-hidden="true">→</span></div>
-  </a>)}
-</div>
+<ul class:list={['decks', className]} aria-label="Les trois paquets de cartes">
+  {decks.map(d => <li class={`deck-${d.slug}`}><a class="deck" href={`/quiz/${d.slug}`}>
+    <span class="deck-picture"><Doodle name={d.picture} size={88} /></span>
+    <span class="deck-name">{d.name}</span>
+    <span class="deck-topic">{d.topic}</span>
+    <span class="deck-count"><span>{d.count} cartes</span></span>
+  </a></li>)}
+</ul>
