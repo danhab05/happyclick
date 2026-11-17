@@ -21,7 +21,7 @@
 - Un rebuild a transitoirement échoué sur un chunk de prérendu absent ; le rebuild complet suivant a réussi, puis toutes les réponses HTTP ont été comparées aux fichiers générés.
 
 ## Contraintes et reprise
-Déploiement de la nouvelle préversion confirmé `finished` par OpenBot sur le commit `6dab746` ; domaine alternatif accessible en HTTPS avec certificat valide. Aucun appel d’infrastructure par cet exécutant. Ce suivi documentaire reste local, sans push. Aucun DNS ni site original modifié. Pas de navigateur externe par cet exécutant. Chaque commit porte le trailer OpenBot demandé.
+Déploiement de la nouvelle préversion confirmé `finished` par OpenBot sur le commit `6dab746` ; domaines principal et alternatif validés en HTTPS par OpenBot ; confirmation du domaine principal le 17 novembre 2026. Aucun appel d’infrastructure par cet exécutant. Ce suivi documentaire reste local, sans push. Aucun DNS ni site original modifié par cet exécutant ; ajout DNS autorisé effectué par OpenBot le 17 novembre 2026. Pas de navigateur externe par cet exécutant. Chaque commit porte le trailer OpenBot demandé.
 
 ```bash
 cd /root/happyclick
@@ -42,10 +42,10 @@ Dépôt privé créé après vérification d’absence via connecteur, API gh et
 ## Retour de revue et infrastructure
 - [x] Documenter la revue navigateur réussie d’OpenBot et ses contrôles build/verify.
 - [x] Documenter Coolify : projet `yuhz20ol6ogbmzj1pol2r7pz`, app `ezv2qhhub0jjl6cg4zgkp8p8`, branche `feat/astro-preview`, Nixpacks `npm ci` / `npm run build`, statique `/dist`, port 80.
-- [x] Documenter les domaines transmis : `happyclick.danhabib.dev` NXDOMAIN ; `happyclick.app.danhabib.dev` ajouté et résolvant 72.61.167.104. Accès public HTTPS et certificat valide ensuite confirmés par OpenBot sur le domaine alternatif ; domaine initial toujours NXDOMAIN, A autorisé mais pas encore ajouté.
+- [x] Documenter les domaines : domaine alternatif validé en premier ; domaine principal `happyclick.danhabib.dev` désormais résolu et validé en HTTPS par OpenBot le 17 novembre 2026. Historique DNS conservé dans `tasks/public-verification.md`.
 - [x] Remplacer `trailingSlash: never` par `ignore` ; rebuild réussi et quatre variantes /kit et /guides avec/sans slash vérifiées HTTP 200 sans redirection.
 
-Le superviseur a confirmé le déploiement `zamd0grrvoe11mumcyfvaycq` terminé sur `6dab746`. Aucun appel de déploiement ni changement d’infrastructure à effectuer par cet exécutant ; un push sur la branche raccordée peut activer le webhook existant.
+Le superviseur a confirmé le déploiement initial `zamd0grrvoe11mumcyfvaycq`, puis le redéploiement du 17 novembre 2026 `1rbbwrx32ragmtnltqbirebp`, tous deux terminés sur `6dab746`. Aucun appel de déploiement ni changement d’infrastructure à effectuer par cet exécutant ; un push sur la branche raccordée peut activer le webhook existant.
 
 Le serveur local a été redémarré après modification de la configuration Astro : `0.0.0.0:4321`, PID 2872878 au contrôle. Aucun appel à Coolify ni modification des domaines dans ce correctif.
 
@@ -93,7 +93,12 @@ Reprise : `npm run build && npm test && npm run verify -- --base-url http://127.
 - [x] Consigner l’accès à `https://happyclick.app.danhabib.dev` en HTTPS avec certificat valide, confirmé par OpenBot.
 - [x] Consigner la vérification publique exécutée par OpenBot : `npm run verify -- --base-url https://happyclick.app.danhabib.dev`, **50 URLs HTTP 200 identiques au build / 276 références**.
 - [x] Consigner le quiz santé joué sur le domaine public, feedback OK, et le parcours local `/quiz/tout` terminé avec 29 résumés, premier choix multiple et aucun débordement à 1920 px.
-- [x] Documenter l’autorisation Dan : A `happyclick` → `72.61.167.104`, **pas encore ajouté**. `happyclick.danhabib.dev` reste NXDOMAIN.
-- [ ] Suivi réservé au superviseur : accès name.com (session déconnectée, aucun identifiant de connexion enregistré), ajout de l’enregistrement autorisé puis vérification du domaine initial. Aucune action DNS demandée à l’exécutant.
+- [x] Consigner l’ajout autorisé par Dan et effectué par OpenBot : seul A `happyclick.danhabib.dev` → `72.61.167.104`, TTL300, sans doublon ; autres enregistrements présents. Connexion Name.com via Google avec le compte de Dan.
+- [x] Consigner les contrôles du 17 novembre 2026 : `ns1hwy.name.com`, `ns2hjl.name.com`, `ns3qty.name.com`, `ns4cjp.name.com`, 1.1.1.1 et 8.8.8.8 répondent 72.61.167.104.
+- [x] Consigner la résolution du certificat au mauvais nom par OpenBot via redéploiement API de l’app `ezv2qhhub0jjl6cg4zgkp8p8` : `1rbbwrx32ragmtnltqbirebp` finished, commit6dab746.
+- [x] Consigner curl HTTPS200 sans bypass TLS : CN/SAN happyclick.danhabib.dev, Let’s Encrypt YR2, notBefore17nov2026 / notAfter15fev2027.
+- [x] Consigner verify du domaine principal exécuté par OpenBot : 50URLs200 identiques build / 276références, dont accueil/kit/guides/8PDF/assets.
+- [x] Consigner navigateur sur le domaine HTTPS exact : accueil noindex confirmé, quiz comportements sélection/feedback testé.
+- [x] Conserver les preuves publiques dans `tasks/public-verification.md`, non réécrit par verify ; mettre à jour les références dans les documents de reprise.
 
-Cette mise à jour concerne uniquement README, carte, todo, verification et browser-review. Aucun code modifié, aucun test/build relancé pour ces changements documentaires, aucun push ni appel d’infrastructure.
+Cette mise à jour concerne uniquement README, carte et documents de suivi/preuves, dont `tasks/public-verification.md`. Aucun code modifié, aucun test/build relancé pour ces changements documentaires, aucun push ni appel d’infrastructure.

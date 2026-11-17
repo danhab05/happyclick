@@ -2,7 +2,7 @@
 
 Commande : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`
 
-La section de contrôle générée ci-dessous correspond au build local. Le complément public en fin de document consigne les résultats rapportés par OpenBot. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.
+Contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.
 
 ## Pages, contenu et interactions
 
@@ -46,15 +46,10 @@ Les 10 tests Node/DOM de `npm test` couvrent la transcription et les clés des 2
 Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.
 
 
-## Complément documentaire — validation publique par le superviseur
+## Preuves publiques durables — confirmation du 17 novembre 2026
 
-Ce complément consigne les preuves transmises par OpenBot, sans nouvelle exécution réseau ou infrastructure par l’exécutant. Il est également conservé dans README et `tasks/browser-review.md` ; une régénération par `scripts/verify.py` réécrit ce rapport automatique.
+Les preuves rapportées par OpenBot sont conservées dans [public-verification.md](public-verification.md), document maintenu manuellement que `scripts/verify.py` ne réécrit pas. Le présent rapport automatique peut être régénéré ; cette section de renvoi n’est pas la seule copie des preuves.
 
-- Déploiement Coolify `zamd0grrvoe11mumcyfvaycq` : **finished**, commit `6dab746`.
-- `https://happyclick.app.danhabib.dev` : **accessible en HTTPS, certificat valide**, confirmé par OpenBot.
-- Commande exécutée par OpenBot : `npm run verify -- --base-url https://happyclick.app.danhabib.dev`.
-- Résultat public : **50 URLs HTTP 200 identiques au build, 276 références vérifiées**.
-- Navigateur public : quiz santé joué, feedback OK.
-- Navigateur local : `/quiz/tout` terminé, 29 questions, 29 résumés, premier choix multiple, aucun débordement à 1920 px.
+Domaine principal `https://happyclick.danhabib.dev` : DNS 72.61.167.104 confirmé sur quatre NS autoritatifs et deux résolveurs publics ; HTTPS200 validé sans bypass après redéploiement `1rbbwrx32ragmtnltqbirebp` finished sur6dab746. Certificat CN/SAN happyclick.danhabib.dev, Let’s Encrypt YR2, 17 novembre 2026–15 février 2027.
 
-`happyclick.danhabib.dev` reste NXDOMAIN. A `happyclick` → `72.61.167.104` autorisé par Dan mais **pas encore ajouté** ; OpenBot vérifie l’accès name.com, déconnecté sans identifiant de connexion enregistré. Aucun changement DNS par l’exécutant. Mise à jour documentaire uniquement, commit local sans push.
+Commande exécutée par OpenBot : `npm run verify -- --base-url https://happyclick.danhabib.dev`. Résultat : **50 URLs HTTP200 identiques au build / 276références**, dont accueil/kit/guides/8PDF/assets. Navigateur HTTPS exact : accueil noindex et quiz comportements sélection/feedback OK. Historique du domaine alternatif et parcours local29questions conservés dans le document durable. Aucun nouveau contrôle réseau, code ou infrastructure par l’exécutant pour cette finalisation ; commit local sans push.

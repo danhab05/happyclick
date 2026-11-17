@@ -13,7 +13,7 @@ Compte rendu final transmis par OpenBot, superviseur. Aucun navigateur utilisé 
 - Build et 10 tests revérifiés par le superviseur ; vérification locale de 50 URLs et 276 ancres/pages PDF confirmée.
 - Parcours `/quiz/tout` terminé en navigateur local : 29 questions et 29 résumés, premier choix multiple, aucun débordement à 1920 px.
 - Quiz santé joué sur `https://happyclick.app.danhabib.dev` : feedback OK.
-- Les tests Node/DOM couvrent aussi les choix multiples et la progression des quatre parcours. Le test public rapporté porte sur le quiz santé ; le parcours de 29 questions a été effectué localement.
+- Les tests Node/DOM couvrent aussi les choix multiples et la progression des quatre parcours. Le quiz santé a été testé sur le domaine alternatif ; le parcours de 29 questions a été effectué localement. Le contrôle du domaine principal du 17 novembre est détaillé ci-dessous.
 
 ## Autorisation de livraison
 
@@ -28,6 +28,12 @@ Le push autorisé a été effectué jusqu’au commit `6dab746a80281eac645146e1b
 - `npm run verify -- --base-url https://happyclick.app.danhabib.dev` exécuté par OpenBot : 50 URLs HTTP 200 identiques au build, 276 références vérifiées.
 - Ces confirmations proviennent du superviseur ; aucun appel d’infrastructure ou navigateur utilisé par l’exécutant pour cette mise à jour.
 
-## Domaine initial et DNS
+## Domaine principal — confirmation du 17 novembre 2026
 
-`happyclick.danhabib.dev` reste NXDOMAIN. Dan a autorisé A `happyclick` → `72.61.167.104`, **pas encore ajouté**. OpenBot vérifie l’accès à name.com : session déconnectée et aucun identifiant de connexion enregistré. Cette attente DNS ne remet pas en cause l’accès HTTPS confirmé sur le domaine alternatif.
+Sur **`https://happyclick.danhabib.dev`**, URL HTTPS exacte, OpenBot a confirmé l’accueil avec **noindex**, puis testé **sélection et feedback** du quiz comportements. Ce contrôle est distinct du parcours complet local et du quiz santé testé sur le domaine alternatif.
+
+OpenBot a ajouté chez Name.com le seul A autorisé, `happyclick.danhabib.dev` → `72.61.167.104`, TTL300, sans doublon ; autres enregistrements présents. Les quatre NS autoritatifs et les résolveurs 1.1.1.1/8.8.8.8 ont répondu 72.61.167.104. Après résolution d’un certificat au mauvais nom par redéploiement API Coolify, `1rbbwrx32ragmtnltqbirebp` est `finished` sur `6dab746`. HTTPS200 validé sans bypass, CN/SAN happyclick.danhabib.dev, Let’s Encrypt YR2, validité observée du 17 novembre 2026 au 15 février 2027.
+
+Verify exécuté par le superviseur sur ce domaine : **50 URLs HTTP200 identiques au build / 276 références**, incluant accueil, kit, guides, huit PDF et assets. Les noms des NS, la connexion Name.com et l’historique remplacé sont consignés dans [public-verification.md](public-verification.md), document durable indépendant de la génération de `verification.md`.
+
+Aucun code ni infrastructure modifié par l’exécutant ; finalisation documentaire locale, sans push.

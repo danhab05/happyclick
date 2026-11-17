@@ -2,7 +2,7 @@
 
 Nouvelle interface papier ivoire, encre marine, corail et turquoise, avec le cœur-curseur Happy Click et les polices locales ClickChesse/Josefin/Ubuntu. Treize pages statiques, quatre parcours de quiz (trois thèmes et l’ensemble), activités locales et documents accessibles sur le même site. L’ancienne interface est récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
-**Préversion accessible : https://happyclick.app.danhabib.dev**, HTTPS et certificat valide confirmés par OpenBot sur le commit déployé `6dab746`. Le push autorisé a été effectué ; **ce nouveau suivi documentaire reste local, sans push**, pour éviter un déploiement uniquement documentaire. Aucun appel d’infrastructure ni changement DNS par cet exécutant. Le commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` est conservé.
+**Préversion accessible : https://happyclick.danhabib.dev**, DNS et HTTPS avec certificat valide confirmés par OpenBot le **17 novembre 2026**, sur le commit déployé `6dab746`. Le domaine alternatif `https://happyclick.app.danhabib.dev` a également été validé par le superviseur. Le push autorisé a été effectué ; **ce nouveau suivi documentaire reste local, sans push**, pour éviter un déploiement uniquement documentaire. Aucun appel d’infrastructure ni changement DNS par cet exécutant. Le commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` est conservé.
 
 ## Reprendre et vérifier
 
@@ -59,7 +59,8 @@ Les 8 PDF d’origine sont inchangés. Les liens ouvrir/télécharger sont toujo
 - `tasks/quiz-source-map.md` : correspondance des 29 questions et corrigés, pages et quadrants.
 - `tasks/pdf-text/` : textes complets, OCR et inventaire par page versionnés (~412 Ko).
 - `tasks/pdf-images/` : 16 cartes rendues individuellement et autres pages graphiques, disponibles localement pour OpenBot ; ~12 Mo ignorés par Git et reproductibles.
-- `tasks/verification.md` : rapport généré par verify (contenus, 8 empreintes PDF, noindex, liens/ancres et tous les assets HTTP).
+- `tasks/verification.md` : rapport généré par verify (contenus, 8 empreintes PDF, noindex, liens/ancres et tous les assets HTTP), réécrit à chaque exécution.
+- `tasks/public-verification.md` : preuves publiques durables, maintenues manuellement ; DNS, certificat, déploiements et contrôles du superviseur. Ce fichier n’est pas réécrit par verify.
 - `tasks/browser-review.md` : périmètre exact de la revue locale et publique rapportée par OpenBot.
 - `source-snapshot/` : HTML/CSS originaux non servis ; `assets.json` contient les 18 ressources et leurs SHA-256. Seule la feuille CSS originale est adaptée ; les autres ressources originales restent identiques.
 - `tasks/todo.md`, `tasks/lessons.md`, `.opencode/codebase_map.md` : suivi et reprise.
@@ -78,10 +79,14 @@ Déploiement et accès public confirmés par OpenBot ; constats consignés ici s
 | Branche | `feat/astro-preview` |
 | Build | Nixpacks : `npm ci` puis `npm run build` |
 | Service | Statique, répertoire `/dist`, port `80` |
-| Déploiement | `zamd0grrvoe11mumcyfvaycq` : `finished`, commit `6dab746` |
-| Domaine initial | `happyclick.danhabib.dev` : reste NXDOMAIN ; enregistrement A autorisé mais pas encore ajouté |
-| Domaine accessible | `https://happyclick.app.danhabib.dev` : accessible en HTTPS, certificat valide selon OpenBot |
+| Dernier déploiement confirmé | `1rbbwrx32ragmtnltqbirebp` : `finished`, commit `6dab746` ; redéploiement API par OpenBot |
+| Domaine principal | `https://happyclick.danhabib.dev` : DNS 72.61.167.104, HTTPS 200 avec validation TLS sans bypass |
+| Domaine alternatif | `https://happyclick.app.danhabib.dev` : accessible en HTTPS, certificat valide selon OpenBot |
 
 OpenBot a exécuté `npm run verify -- --base-url https://happyclick.app.danhabib.dev` : **50 URLs HTTP 200 identiques au build et 276 références vérifiées**. Ce contrôle public est distinct de la vérification locale et du test navigateur du quiz santé.
 
-Dan a autorisé l’enregistrement **A `happyclick` → `72.61.167.104`** pour `happyclick.danhabib.dev`. **Il n’a pas encore été ajouté** : OpenBot vérifie l’accès à name.com, dont la session est déconnectée et sans identifiant de connexion enregistré. Le domaine initial reste NXDOMAIN. L’exécutant documente cet état uniquement ; aucun changement DNS ni modification du site original.
+Le **17 novembre 2026**, OpenBot a ajouté chez Name.com, après connexion Google avec le compte de Dan, le seul enregistrement autorisé **A `happyclick.danhabib.dev` → `72.61.167.104`, TTL 300** : aucun doublon, autres enregistrements présents. Les quatre NS autoritatifs `ns1hwy.name.com`, `ns2hjl.name.com`, `ns3qty.name.com`, `ns4cjp.name.com` ainsi que `1.1.1.1` et `8.8.8.8` ont répondu 72.61.167.104 selon ses contrôles.
+
+Un certificat au mauvais nom a été résolu par le redéploiement Coolify indiqué ci-dessus. Certificat observé : **CN/SAN `happyclick.danhabib.dev`**, émetteur **Let’s Encrypt YR2**, valable du **17 novembre 2026 au 15 février 2027**. OpenBot a obtenu HTTPS 200 avec validation TLS sans bypass, puis exécuté `npm run verify -- --base-url https://happyclick.danhabib.dev` : **50 URLs HTTP 200 identiques au build, 276 références**, incluant les huit PDF et les assets. Sur ce domaine exact, il a confirmé l’accueil noindex et testé la sélection et le feedback du quiz comportements.
+
+Les preuves et l’historique du précédent état DNS sont conservés durablement dans [tasks/public-verification.md](tasks/public-verification.md). Aucun code ni infrastructure modifié par l’exécutant ; finalisation documentaire committée localement sans push.

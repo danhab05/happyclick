@@ -1,7 +1,7 @@
 # Cartographie — Happy Click
 
 ## État et reprise
-Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt privé `danhab05/happyclick`, branche `feat/astro-preview`. **Préversion déployée au commit `6dab746`, accès HTTPS confirmé par OpenBot. Ce suivi documentaire reste local, sans push** : cette branche est raccordée au webhook Coolify. Commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` conservé, documentation ajoutée dans un commit suivant. Ancienne DA au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
+Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt privé `danhab05/happyclick`, branche `feat/astro-preview`. **Préversion déployée au commit `6dab746`, DNS et HTTPS de `happyclick.danhabib.dev` confirmés par OpenBot le 17 novembre 2026. Ce suivi documentaire reste local, sans push** : cette branche est raccordée au webhook Coolify. Commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` conservé, documentation ajoutée dans un commit suivant. Ancienne DA au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
 Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` avant de relancer). `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Pas de navigateur/Playwright par l’exécutant.
 
@@ -39,11 +39,14 @@ Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` a
 - `tests/activities.test.mjs` : 10tests Node/LinkeDOM, aucune utilisation de navigateur ; build préalable nécessaire.
 - `scripts/verify.py` : 13routes, 26blocs source, contenu des quiz/questionnaires, navigation/noindex, scripts locaux ciblés, API de réseau/stockage interdites, 8PDF/156pages/hash, ancres/pages PDF, tous assets et variantes slash en HTTP.
 - `tasks/verification.md` : rapport généré (50URLs/276références au dernier contrôle) ; `tasks/browser-review.md` : retours visuels réels rapportés, séparés des contrôles automatiques.
+- `tasks/public-verification.md` : preuves publiques durables (DNS, TLS, déploiements, verify et navigateur), maintenues manuellement et jamais réécrites par verify.
 - `tasks/todo.md`, `tasks/lessons.md`, `README.md` : suivi, leçons et reprise.
 
 ## Infrastructure et limites
-Coolify créé/configuré par OpenBot : projet `yuhz20ol6ogbmzj1pol2r7pz`, application `ezv2qhhub0jjl6cg4zgkp8p8`, branche dédiée, Nixpacks npmci/build, static /dist port80. Déploiement `zamd0grrvoe11mumcyfvaycq` confirmé `finished` sur `6dab746` par OpenBot ; `https://happyclick.app.danhabib.dev` accessible avec certificat valide. Verify public exécuté par OpenBot : 50 URLs HTTP 200 identiques au build, 276 références. Aucun appel d’infrastructure par l’exécutant.
+Coolify créé/configuré par OpenBot : projet `yuhz20ol6ogbmzj1pol2r7pz`, application `ezv2qhhub0jjl6cg4zgkp8p8`, branche dédiée, Nixpacks npmci/build, static /dist port80. Dernier déploiement confirmé le 17 novembre 2026 : `1rbbwrx32ragmtnltqbirebp`, `finished` sur `6dab746`, redéploiement API effectué par OpenBot pour résoudre un certificat au mauvais nom.
 
-`happyclick.danhabib.dev` reste NXDOMAIN. Dan a autorisé A `happyclick` → `72.61.167.104`, **pas encore ajouté**. OpenBot vérifie l’accès name.com : session déconnectée, aucun identifiant de connexion enregistré. Ne pas confondre ce DNS en attente avec le domaine alternatif déjà accessible.
+Domaine principal `https://happyclick.danhabib.dev` : A → `72.61.167.104` TTL300 ajouté par OpenBot chez Name.com après connexion Google avec Dan, sans doublon ni retrait d’autres enregistrements. Les quatre NS autoritatifs et les résolveurs 1.1.1.1/8.8.8.8 répondent 72.61.167.104 selon ses contrôles. HTTPS200 sans bypass ; certificat CN/SAN happyclick.danhabib.dev, Let’s Encrypt YR2, 17 novembre 2026–15 février 2027. Verify public : 50URLs200 identiques build/276références ; navigateur accueil noindex et quiz comportements sélection/feedback OK. Domaine alternatif déjà validé : `https://happyclick.app.danhabib.dev`.
+
+Historique DNS, noms des NS, preuves TLS et déploiement précédent : `tasks/public-verification.md`. Aucun appel d’infrastructure par l’exécutant ; ces résultats sont ceux du superviseur.
 
 Aucun compte/backend/formulaire envoyé/analytics/persistance. Les conseils/cartes ambigus sont attribués au support et nuancés ; guides de2021 explicitement datés. Revue finale navigateur approuvée par OpenBot : voir `tasks/browser-review.md` pour les mesures 320/1920 px, focus initial et questionnaires. Complément : quiz santé public avec feedback OK ; parcours `/quiz/tout` local terminé, 29 résumés, premier choix multiple et aucun débordement à 1920 px. Ne pas extrapoler au-delà de ce périmètre ; infrastructure et DNS restent supervisés par OpenBot. Tout commit inclut le trailer OpenBot demandé.
