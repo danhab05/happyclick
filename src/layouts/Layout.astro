@@ -1,7 +1,7 @@
 ---
 interface Props { active: string; title?: string; }
 const { active, title = 'Le numérique, ça se discute' } = Astro.props;
-const links = [ ['/', 'Accueil'], ['/quiz', 'Quiz'], ['/kit', 'Kit pédagogique'], ['/guides', 'Guides'] ];
+const links = [ ['/', 'Accueil'], ['/quiz', 'Quiz'], ['/kit', 'Kit pédagogique'], ['/guides', 'Guides'], ['/projet-2027', 'Le projet'] ];
 ---
 <!doctype html>
 <html lang="fr">
@@ -12,17 +12,16 @@ const links = [ ['/', 'Accueil'], ['/quiz', 'Quiz'], ['/kit', 'Kit pédagogique'
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>{title} — Happy Click</title>
     <link rel="stylesheet" href="/style.css" />
-    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/assets/2027/favicon-96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/2027/apple-touch-180.png" />
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" aria-label="Happy Click, accueil">
-          <img src="/assets/images/LogoBasseRes.png" width="444" height="463" alt="" />
-          <span>Happy Click<span class="brand-sub">Le numérique en confiance</span></span>
+          <img src="/assets/2027/logo-128.png" width="128" height="138" alt="" />
+          <span>Happy Click<span class="brand-sub">Édition 2026–2027</span></span>
         </a>
         <nav aria-label="Navigation principale">
           {links.map(([href, label]) => <a href={href} aria-current={href === active ? 'page' : undefined}>{label}</a>)}
@@ -33,9 +32,9 @@ const links = [ ['/', 'Accueil'], ['/quiz', 'Quiz'], ['/kit', 'Kit pédagogique'
     <main id="contenu" tabindex="-1"><slot /></main>
     <footer class="site-footer">
       <div class="wrap footer-grid">
-        <div><a class="brand" href="/"><img src="/assets/images/LogoBasseRes.png" width="444" height="463" alt="" /><span>Happy Click</span></a><p>Des questions pour comprendre.<br />Des échanges pour avancer.</p><p class="small">Happy Click - Campagne 2025-2026</p></div>
+        <div><a class="brand" href="/"><img src="/assets/2027/logo-128.png" width="128" height="138" alt="" /><span>Happy Click</span></a><p>Des questions pour comprendre.<br />Des échanges pour avancer.</p><p class="small"><a href="/projet-2027">Happy Click 2027 · 2026–2027</a></p><p class="small">Archives : Happy Click - Campagne 2025-2026</p></div>
         <div><h2>Explorer ensemble</h2><a href="/quiz">Les 29 cartes du quiz</a><a href="/mes-usages">Faire le point sur mes usages</a><a href="/kit/reflexion">Le carnet des enseignants</a><a href="/guides">Les guides et leurs sources</a></div>
-        <div><h2>Le projet</h2><a href="https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/" target="_blank" rel="noopener noreferrer">2024-2025 <span class="sr-only">(nouvel onglet)</span> ↗</a><a href="https://www.telecom-sudparis.eu/ecole/gestion-apprentissage-travail-en-equipe/" target="_blank" rel="noopener noreferrer">Qu'est-ce qu'un GATE® ? <span class="sr-only">(nouvel onglet)</span> ↗</a><p class="small">Une démarche de discussion, sans compte ni envoi de réponses.</p></div>
+        <div><h2>Le projet</h2><a href="/projet-2027">L’édition 2026–2027</a><a href="/faq">Questions fréquentes</a><a href="https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/" target="_blank" rel="noopener noreferrer">2024-2025 <span class="sr-only">(nouvel onglet)</span> ↗</a><a href="https://www.telecom-sudparis.eu/ecole/gestion-apprentissage-travail-en-equipe/" target="_blank" rel="noopener noreferrer">Qu'est-ce qu'un GATE® ? <span class="sr-only">(nouvel onglet)</span> ↗</a><p class="small">Une démarche de discussion, sans compte ni envoi de réponses.</p></div>
       </div>
       <div class="wrap footer-bottom"><span>Comprendre · Échanger · Choisir</span><span>Préversion · Indexation désactivée</span></div>
     </footer>

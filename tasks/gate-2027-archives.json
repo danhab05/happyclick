@@ -1,0 +1,1286 @@
+[
+  {
+    "archive": "archive-addiction.pdf",
+    "existing": "public/resources/kit/rp_addiction.pdf",
+    "pages": 28,
+    "sha256": "b6a968b660b160cf8865b73b7e965839b2f44b4b4dddf77233da499ea43859bd",
+    "existingSha256": "c954745ecabbbd5f0a54a3bbdcf2e2c01c2a8009ebf86b44c1db2732b2eb09c0",
+    "textEqual": true,
+    "charactersPerPage": [
+      540,
+      552,
+      462,
+      410,
+      228,
+      435,
+      1511,
+      509,
+      524,
+      0,
+      322,
+      1378,
+      527,
+      659,
+      0,
+      331,
+      1299,
+      681,
+      689,
+      0,
+      436,
+      1816,
+      618,
+      886,
+      0,
+      442,
+      1682,
+      443
+    ],
+    "renderComparison": [
+      {
+        "page": 1,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 2,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 3,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 4,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          675
+        ],
+        "diffBBox": [
+          492,
+          473,
+          493,
+          474
+        ],
+        "meanAbsDifference": [
+          1.234567901234568e-06,
+          7.4074074074074075e-06,
+          9.876543209876543e-06
+        ]
+      },
+      {
+        "page": 5,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 6,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          675
+        ],
+        "diffBBox": [
+          493,
+          436,
+          494,
+          437
+        ],
+        "meanAbsDifference": [
+          2.469135802469136e-06,
+          1.2345679012345678e-05,
+          1.604938271604938e-05
+        ]
+      },
+      {
+        "page": 7,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 8,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 9,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 10,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 11,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 12,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 13,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 14,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 15,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 16,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 17,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 18,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 19,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 20,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 21,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 22,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 23,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 24,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          675
+        ],
+        "diffBBox": [
+          63,
+          407,
+          64,
+          408
+        ],
+        "meanAbsDifference": [
+          7.4074074074074075e-06,
+          7.4074074074074075e-06,
+          7.4074074074074075e-06
+        ]
+      },
+      {
+        "page": 25,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 26,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 27,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 28,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      }
+    ]
+  },
+  {
+    "archive": "archive-cartes.pdf",
+    "existing": "public/resources/kit/activite_cartes_a_imprimer.pdf",
+    "pages": 16,
+    "sha256": "2b542c2e7068c1e1b631b86d3a19ecad572e2bef6293abfb60d55a5999133f78",
+    "existingSha256": "e6011ead90daaa29d69e6f013e331a508e8c940f5831420a0cc5b4e707a1b4d2",
+    "textEqual": true,
+    "charactersPerPage": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "renderComparison": [
+      {
+        "page": 1,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          2.865325873576757,
+          3.7448027090694933,
+          2.453698468786808
+        ]
+      },
+      {
+        "page": 2,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          3.9236395759717313,
+          5.205596780526109,
+          3.392049469964664
+        ]
+      },
+      {
+        "page": 3,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          2.224842952493129,
+          2.8978150765606596,
+          1.915974676089517
+        ]
+      },
+      {
+        "page": 4,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          4.667073027090695,
+          6.122401845308206,
+          3.8222585394581863
+        ]
+      },
+      {
+        "page": 5,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          3.0541166077738517,
+          3.0810021594032193,
+          2.01688457008245
+        ]
+      },
+      {
+        "page": 6,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          5.548634668237142,
+          5.405533961523361,
+          3.458967412642324
+        ]
+      },
+      {
+        "page": 7,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          4.142561837455831,
+          3.068886925795053,
+          1.9545249312917157
+        ]
+      },
+      {
+        "page": 8,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          5.819245190420102,
+          4.343722025912839,
+          3.0320141342756184
+        ]
+      },
+      {
+        "page": 9,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          3.4398547310561445,
+          2.111400667451904,
+          2.114344326658814
+        ]
+      },
+      {
+        "page": 10,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          6.273372595210051,
+          4.119807616804083,
+          3.7286444837063213
+        ]
+      },
+      {
+        "page": 11,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          3.455002944640754,
+          1.6243904593639575,
+          2.6616627404789948
+        ]
+      },
+      {
+        "page": 12,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          5.2405545740086374,
+          3.038267569689831,
+          3.9013123282292894
+        ]
+      },
+      {
+        "page": 13,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          4.431226933647428,
+          2.0461719670200234,
+          3.3024941107184924
+        ]
+      },
+      {
+        "page": 14,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          6.715768551236749,
+          4.62391244601492,
+          5.430667451904201
+        ]
+      },
+      {
+        "page": 15,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          0,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          0.7755388692579506,
+          0.4301737338044759,
+          0.6357469572045544
+        ]
+      },
+      {
+        "page": 16,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          849
+        ],
+        "diffBBox": [
+          2,
+          3,
+          1200,
+          849
+        ],
+        "meanAbsDifference": [
+          0.8803140950137417,
+          0.5924960738123283,
+          0.6826168040832352
+        ]
+      }
+    ],
+    "embeddedImages": [
+      {
+        "page": 1,
+        "sha256": "37519d3137dd55eaf2245f2fe3776875941642bf831c5ab9164aa58e4e2e2f70",
+        "bytesEqual": true
+      },
+      {
+        "page": 2,
+        "sha256": "c5b8d55dae7bbe5c65e211b0f422e5ad9bedb12e08136030e90145dbd29a030e",
+        "bytesEqual": true
+      },
+      {
+        "page": 3,
+        "sha256": "c8b326fcb234ac17d97b88266c876f80803789b939c5071dba0af8368af72247",
+        "bytesEqual": true
+      },
+      {
+        "page": 4,
+        "sha256": "e0cdc9159b641a3e5418738087ddbfeb438bab357767f3ab88675bfff3b1a016",
+        "bytesEqual": true
+      },
+      {
+        "page": 5,
+        "sha256": "666a0baf1874a86f286069ac6b70c019c63130b1ea0609984425dfea4bdf9de1",
+        "bytesEqual": true
+      },
+      {
+        "page": 6,
+        "sha256": "5fcaf61ab59c109d536a850a335d439a5bb4859c3cd962c2b72a3db0d392309d",
+        "bytesEqual": true
+      },
+      {
+        "page": 7,
+        "sha256": "52708c339a2279953d30a957dac847912d3a02f54b72ae7114ae5673b08fdbca",
+        "bytesEqual": true
+      },
+      {
+        "page": 8,
+        "sha256": "9e2053c65de6f53dcaf4d50f6978bcb0028c0b343d29991d57c33ba68c7b8ce2",
+        "bytesEqual": true
+      },
+      {
+        "page": 9,
+        "sha256": "3471dfc7798f04ba1bce355020cfe2edd2a9c6d16dc717e9ecf1ba5fa643bd05",
+        "bytesEqual": true
+      },
+      {
+        "page": 10,
+        "sha256": "bf8f0881a79a1cadfcdf9ea05a188a7f91b6561ab476e322fafb405cc51b6548",
+        "bytesEqual": true
+      },
+      {
+        "page": 11,
+        "sha256": "59d8f3f4463190d1696a5eb639b7de54f770d10e3094eced00fb430c78bf075f",
+        "bytesEqual": true
+      },
+      {
+        "page": 12,
+        "sha256": "34356922c82b1a636b7dce70583806bbfe1aeb3719844bd42ca11ffef667b139",
+        "bytesEqual": true
+      },
+      {
+        "page": 13,
+        "sha256": "88b73d7beca19ef3ee5bfe46df6d38631e587592b026da39c58346a155f31527",
+        "bytesEqual": true
+      },
+      {
+        "page": 14,
+        "sha256": "feea9eb49ba56e473c9d4fb1a2b78275ea820d5e70d174585733b52df44dc654",
+        "bytesEqual": true
+      },
+      {
+        "page": 15,
+        "sha256": "aeaf4292d942033c2ae0777351a2a994c2f08f60d7c1a54f2b4f23456efae3d7",
+        "bytesEqual": true
+      },
+      {
+        "page": 16,
+        "sha256": "e185ad1ef7827850be13ec8f6a8a53f5017e441f7619d311f665797ca60af57d",
+        "bytesEqual": true
+      }
+    ]
+  },
+  {
+    "archive": "archive-cyberharcelement.pdf",
+    "existing": "public/resources/kit/rp_cyberharcelement.pdf",
+    "pages": 24,
+    "sha256": "9cba4fad63104318e4aebcae3bff2ce27ca92bf7489b4125510bce4cab2742cd",
+    "existingSha256": "bdaf0476e328bb1dc30c6b575b7add35ab8ffe822f9f20372835220e32a9c2ea",
+    "textEqual": true,
+    "charactersPerPage": [
+      434,
+      530,
+      483,
+      469,
+      390,
+      409,
+      1749,
+      627,
+      389,
+      336,
+      1419,
+      604,
+      533,
+      325,
+      1214,
+      754,
+      503,
+      379,
+      1381,
+      915,
+      721,
+      390,
+      1404,
+      472
+    ],
+    "renderComparison": [
+      {
+        "page": 1,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 2,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 3,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 4,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          675
+        ],
+        "diffBBox": [
+          492,
+          473,
+          493,
+          474
+        ],
+        "meanAbsDifference": [
+          9.876543209876543e-06,
+          1.4814814814814815e-05,
+          7.4074074074074075e-06
+        ]
+      },
+      {
+        "page": 5,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 6,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          675
+        ],
+        "diffBBox": [
+          493,
+          436,
+          494,
+          437
+        ],
+        "meanAbsDifference": [
+          1.4814814814814815e-05,
+          2.345679012345679e-05,
+          1.2345679012345678e-05
+        ]
+      },
+      {
+        "page": 7,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 8,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 9,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 10,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 11,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 12,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 13,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 14,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 15,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 16,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 17,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 18,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 19,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 20,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 21,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 22,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 23,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 24,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          675
+        ],
+        "diffBBox": [
+          85,
+          211,
+          86,
+          392
+        ],
+        "meanAbsDifference": [
+          0.00018765432098765433,
+          0.00018765432098765433,
+          0.00018765432098765433
+        ]
+      }
+    ]
+  },
+  {
+    "archive": "archive-desinformation.pdf",
+    "existing": "public/resources/kit/rp_desinformation.pdf",
+    "pages": 21,
+    "sha256": "977411c0990dc2c16ff15ff72e45f52113473044d64af2259812d28393672801",
+    "existingSha256": "a5f8757553722734990e8b3405fef9d95fe1a7c6776d07131b2af662b4d586ed",
+    "textEqual": true,
+    "charactersPerPage": [
+      444,
+      406,
+      427,
+      440,
+      361,
+      500,
+      1696,
+      609,
+      762,
+      428,
+      1000,
+      767,
+      757,
+      1000,
+      494,
+      398,
+      1144,
+      673,
+      579,
+      221,
+      301
+    ],
+    "renderComparison": [
+      {
+        "page": 1,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 2,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 3,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 4,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          675
+        ],
+        "diffBBox": [
+          492,
+          473,
+          493,
+          474
+        ],
+        "meanAbsDifference": [
+          7.4074074074074075e-06,
+          3.7037037037037037e-06,
+          8.641975308641975e-06
+        ]
+      },
+      {
+        "page": 5,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 6,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 7,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 8,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 9,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 10,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 11,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 12,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 13,
+        "pixelEqualAt1200": false,
+        "size": [
+          1200,
+          675
+        ],
+        "diffBBox": [
+          114,
+          438,
+          115,
+          507
+        ],
+        "meanAbsDifference": [
+          2.962962962962963e-05,
+          2.962962962962963e-05,
+          2.962962962962963e-05
+        ]
+      },
+      {
+        "page": 14,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 15,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 16,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 17,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 18,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 19,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 20,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      },
+      {
+        "page": 21,
+        "pixelEqualAt1200": true,
+        "size": [
+          1200,
+          675
+        ]
+      }
+    ]
+  },
+  {
+    "archive": "archive-enseignants.pdf",
+    "existing": "public/resources/kit/questionnaire_enseignants.pdf",
+    "pages": 4,
+    "sha256": "fc8f5de5ca1c462967488ed6913579585e2c5c6c57ae5db2822244c977df846b",
+    "existingSha256": "1fbf236ec41aaaab4b0e9677c0faab2cf273f325b5fb08045e9c0611ba37867a",
+    "textEqual": true,
+    "charactersPerPage": [
+      1302,
+      872,
+      1148,
+      128
+    ],
+    "renderComparison": [
+      {
+        "page": 1,
+        "pixelEqualAt1200": true,
+        "size": [
+          850,
+          1200
+        ]
+      },
+      {
+        "page": 2,
+        "pixelEqualAt1200": true,
+        "size": [
+          850,
+          1200
+        ]
+      },
+      {
+        "page": 3,
+        "pixelEqualAt1200": true,
+        "size": [
+          850,
+          1200
+        ]
+      },
+      {
+        "page": 4,
+        "pixelEqualAt1200": true,
+        "size": [
+          850,
+          1200
+        ]
+      }
+    ]
+  },
+  {
+    "archive": "archive-usages.pdf",
+    "existing": "public/resources/kit/test_numerico_dependance.pdf",
+    "pages": 2,
+    "sha256": "21148dcc1028ab912fe68bdc1de4011d9a34ee66845baab6f5e879f7c977eec6",
+    "existingSha256": "840532b90dc891ecdc0e2a0bdf65fe9bcb7ccc50f3ce79bdc5d678eb91c6536b",
+    "textEqual": true,
+    "charactersPerPage": [
+      2868,
+      2522
+    ],
+    "renderComparison": [
+      {
+        "page": 1,
+        "pixelEqualAt1200": true,
+        "size": [
+          849,
+          1200
+        ]
+      },
+      {
+        "page": 2,
+        "pixelEqualAt1200": false,
+        "size": [
+          849,
+          1200
+        ],
+        "diffBBox": [
+          382,
+          85,
+          683,
+          224
+        ],
+        "meanAbsDifference": [
+          0.03383784844915587,
+          2.4538672948566942e-05,
+          0.033576756968983115
+        ]
+      }
+    ]
+  }
+]

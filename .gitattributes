@@ -11,3 +11,5 @@ source-snapshot/*.css -text -whitespace
 *.jpg binary
 # Preserve page breaks and layout in extracted PDF evidence.
 tasks/pdf-text/*.txt -text -whitespace
+
+tasks/gate-2027-text/*.txt -text -whitespace

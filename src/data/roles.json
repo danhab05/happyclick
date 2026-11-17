@@ -2,8 +2,8 @@
   {
     "slug": "addiction",
     "title": "Écrans et équilibre",
-    "pages": 28,
-    "file": "/resources/kit/rp_addiction.pdf",
+    "pages": 24,
+    "file": "/resources/kit/2027/addiction-v2.pdf",
     "roles": [
       {
         "name": "L’élève accro",
@@ -22,12 +22,12 @@
       },
       {
         "name": "Le professeur",
-        "text": "Description : Tu remarques que l’élève est fatigué et ses notes baissent. Tu sais que les écrans peuvent être dangereux. Comportement à adopter : Parle sérieusement : « Tes résultats chutent, il faut agir ». Explique pourquoi c’est important de dormir et de travailler. Tu peux être ferme mais bienveillant. Objectif caché : Tu veux qu’il comprenne que ses études sont importantes.",
+        "text": "Description : Tu remarques que l’élève est fatigué et que ses notes baissent. Tu sais que les écrans peuvent être dangereux. Comportement à adopter : Parle sérieusement : « Tes résultats chutent, il faut agir ». Explique pourquoi c’est important de dormir et de travailler. Tu peux être ferme mais bienveillant. Objectif caché : Tu veux qu’il comprenne que ses études sont importantes.",
         "page": 4
       },
       {
         "name": "Le témoin neutre",
-        "text": "Description : Comportement à adopter : Écoute attentivement. À la fin, dis ce que tu as remarqué : « Il est vraiment fatigué… ». Objectif caché : Tu dois être honnête et aider à trouver une solution.",
+        "text": "Comportement à adopter : Écoute attentivement. À la fin, dis ce que tu as remarqué : « Il est vraiment fatigué… ». Objectif caché : Tu dois être honnête et aider à trouver une solution.",
         "page": 5
       },
       {
@@ -49,60 +49,62 @@
           "Que pourrait faire l’élève pour mieux gérer son temps d’écran ?",
           "Pourquoi est-ce important de dormir suffisamment ?"
         ],
-        "debriefPage": 11,
-        "answerPage": 12,
+        "debriefPage": 10,
+        "answerPage": 11,
         "lesson": "Discuter des signes décrits dans la scène, des activités délaissées et de la place du sommeil. Le support propose un cadre et l’aide d’un adulte."
       },
       {
         "title": "Le professeur s’inquiète",
-        "page": 13,
+        "page": 12,
         "context": "Après la discussion avec son ami, le cours commence. L’élève manque plusieurs fois de s’endormir. À la pause, le professeur le convoque : il a remarqué ses notes qui chutent et sa fatigue, et il sait que l’élève a un smartphone.",
         "participants": "Élève accro : fatigué, essaie de se justifier. Professeur : inquiet, veut lui faire comprendre les conséquences.",
         "help": "Idées d’interprétation : Professeur : Préviens l’élève que ses résultats sont en chute libre. Argumente sur : L’obligation scolaire jusqu’à 16 ans. Les difficultés à trouver un travail sans diplôme. Tu peux être ferme ou bienveillant, selon ton style. Élève accro : Essaie de minimiser le problème : « Beaucoup ont réussi sans finir le lycée ! » « Ce n’est pas si grave… » Tu peux te braquer ou rester calme, au choix. Option fun : Transforme la scène en débat houleux ou en discussion calme où l’élève commence à prendre conscience du problème.",
-        "helpPage": 14,
+        "helpPage": 13,
         "questions": [
           "Que pourrait faire l’élève pour améliorer la situation ?",
           "Quels indices montrent qu’il ne veut pas reconnaître le problème ?",
           "Pourquoi est-ce important d’écouter les conseils du professeur ?"
         ],
-        "debriefPage": 16,
-        "answerPage": 17,
+        "debriefPage": 14,
+        "answerPage": 15,
         "lesson": "Relever ce que dit l’élève pour minimiser la situation. Discuter d’un planning, des priorités et de l’aide que peut apporter le professeur."
       },
       {
         "title": "Une discussion avec la famille",
-        "page": 18,
+        "page": 16,
         "context": "Après la discussion avec le professeur, celui-ci convoque le parent de l’élève accro et un témoin. Le professeur explique le lien entre la possession du téléphone et la fatigue chronique de l’élève. Le témoin donne des exemples des actions de l’élève. Les parents réagissent.",
         "participants": "Professeur : explique calmement son hypothèse. Parent : réagit (accord ou colère). Élève accro : peut être penaud ou s’insurger. Témoin neutre : rapporte ce qu’il a observé.",
-        "help": "17  Idées d’interprétation : Professeur : Explique calmement le lien entre fatigue et usage du téléphone. Demande des témoignages au témoin. Parent : Peut s’insurger : « On critique mon éducation ?! » Peut être d’accord et s’excuser : « J’aurais dû agir plus tôt… » Peut demander : « Pourquoi tu m’as menti sur tes notes ? » Élève accro : Peut être penaud ou se braquer : « Je veux pas qu’on me mette des règles ! » Témoin neutre : Décrit ce qu’il a vu : « Il joue tout le temps, même en récré ». Option fun : Ajoute des émotions fortes (colère, tristesse, surprise) pour rendre la scène vivante.",
-        "helpPage": 19,
+        "help": "Idées d’interprétation : Professeur : Explique calmement le lien entre fatigue et usage du téléphone. Demande des témoignages au témoin. Parent : Peut s’insurger : « On critique mon éducation ?! » Peut être d’accord et s’excuser : « J’aurais dû agir plus tôt… » Peut demander : « Pourquoi tu m’as menti sur tes notes ? » Élève accro : Peut être penaud ou se braquer : « Je veux pas qu’on me mette des règles ! » Témoin neutre : Décrit ce qu’il a vu : « Il joue tout le temps, même en récré ». Option fun : Ajoute des émotions fortes (colère, tristesse, surprise) pour rendre la scène vivante.",
+        "helpPage": 17,
         "questions": [
           "Quels signes dans le comportement de l’élève montrent qu’il a du mal à contrôler son usage des écrans ?",
           "Quelles actions concrètes peuvent aider à réduire son temps d’écran ?",
           "Pourquoi est-il important que les parents et le professeur travaillent ensemble ?"
         ],
-        "debriefPage": 21,
-        "answerPage": 22,
+        "debriefPage": 18,
+        "answerPage": 19,
         "lesson": "Le document invite à des règles progressives, des activités alternatives et un dialogue sans culpabilisation. Il met l’accent sur la coopération famille/école."
       },
       {
         "title": "La consultation",
-        "page": 23,
+        "page": 20,
         "context": "Après la réunion avec le professeur, le parent décide d’emmener son enfant voir un médecin spécialiste des addictions. Le médecin explique les risques liés à l’usage excessif des écrans : sommeil, vue, stress.",
         "participants": "Médecin scolaire : expert, explique les dangers et propose des solutions. Parent : veut comprendre et protéger son enfant. Élève accro : peut être réticent ou coopératif.",
-        "help": "21  Idées d’interprétation : Médecin scolaire : Explique les risques : « Trop d’écrans = troubles du sommeil, fatigue, stress ». Donne des conseils simples : « Fixe des horaires », « Fais du sport », « Pas d’écran avant le coucher ». Essaie de créer un lien avec l’enfant en parlant de ses passions : « Tu aimes le foot ? Le manque de sommeil peut te fatiguer pour jouer ». Parent : Peut être inquiet : « Je veux qu’il comprenne pourquoi on met des règles ». Pose des questions : « Quels sont les risques si ça continue ? ». Élève accro : Peut être réticent : « Je ne veux pas qu’on m’interdise mon téléphone ! ». Ou commencer à comprendre : « Je ne savais pas que ça pouvait me rendre malade ». Option fun : Ajoute des émotions (colère, surprise, soulagement) pour rendre la scène vivante.",
-        "helpPage": 24,
+        "help": "Idées d’interprétation : Médecin scolaire : Explique les risques : « Trop d’écrans = troubles du sommeil, fatigue, stress ». Donne des conseils simples : « Fixe des horaires », « Fais du sport », « Pas d’écran avant le coucher ». Crée un lien avec l’enfant en parlant de ses passions : « Tu aimes le foot ? Le manque de sommeil peut te fatiguer pour jouer ». Parent : Peut être inquiet : « Je veux qu’il comprenne pourquoi on met des règles ». Pose des questions : « Quels sont les risques si ça continue ? ». Élève accro : Peut être réticent : « Je ne veux pas qu’on m’interdise mon téléphone ! ». Ou commencer à comprendre : « Je ne savais pas que ça pouvait me rendre malade ».",
+        "helpPage": 21,
         "questions": [
           "Quelles solutions médicales et pratiques peuvent aider à réduire l’usage excessif des écrans ?",
           "Quels risques pour la santé si on continue à utiliser les écrans sans limite ?",
           "Pourquoi est-il important de consulter un professionnel dans ce cas ?"
         ],
-        "debriefPage": 26,
-        "answerPage": 27,
+        "debriefPage": 22,
+        "answerPage": 23,
         "lesson": "Dans cette fiction, le médecin propose un accompagnement adapté. Les horaires et durées cités dans le PDF sont des exemples du support, pas des prescriptions à appliquer aux participants."
       }
     ],
-    "sources": "11   Sources :\nOMS, Santé publique France\nPlan d’action\ngouvernemental « Pour un\nusage raisonné des écrans\n»)\nSanté publique France\nMILDECA\nPlan national « Pour un\nusage raisonné des écrans\n»)\nÉtudes sur les mécanismes\nde défense dans l’addiction\ncomportementale, INSERM\nÉducation nationale –\nPrévention des addictions\nnumériques\n(Ministère de la Santé"
+    "sources": "Sources :\nOMS, Santé publique France\nPlan d’action gouvernemental « Pour un usage raisonné des écrans »\nSanté publique France\nMILDECA\nPlan national « Pour un usage raisonné des écrans »\nÉtudes sur les mécanismes de défense dans l’addiction comportementale, INSERM\nÉducation nationale – Prévention des addictions numériques\nMinistère de la Santé",
+    "edition": "2026–2027 · V2",
+    "archiveFile": "/resources/kit/rp_addiction.pdf"
   },
   {
     "slug": "cyberharcelement",

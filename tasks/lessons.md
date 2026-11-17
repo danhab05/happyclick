@@ -7,3 +7,6 @@
 - Un PDF sans texte extrait n’est pas vide : rendre/OCR toutes ses pages, contrôler visuellement les cartes et consigner la couverture intégrale. Aucun score ou diagnostic inventé pour les questionnaires.
 - Une nouvelle DA rend les anciennes assertions de titres/navigation obsolètes : adapter les attentes sans supprimer les contrôles de textes, questions, PDF, liens, noindex et HTTP. Ne pas réutiliser la validation visuelle de la précédente version.
 - Tester les mots longs dans les titres à 320 px (ex. Cyberharcèlement) ; autoriser césure/retour à la ligne plutôt que masquer un débordement.
+- Ne pas déduire la transparence du nom du fichier : vérifier le canal alpha et le rendu ; un damier RGB est une image opaque.
+- Des hashes PDF différents ne prouvent pas un nouveau contenu : comparer texte, pagination et rendus ; pour les cartes sans texte, comparer les images incorporées. Distinguer archives de promotion et nouveautés.
+- Consigner les preuves publiques dans un document durable indépendant du rapport que verify régénère.

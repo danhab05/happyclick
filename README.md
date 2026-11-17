@@ -1,8 +1,14 @@
 # Happy Click — préversion pédagogique Astro
 
-Nouvelle interface papier ivoire, encre marine, corail et turquoise, avec le cœur-curseur Happy Click et les polices locales ClickChesse/Josefin/Ubuntu. Treize pages statiques, quatre parcours de quiz (trois thèmes et l’ensemble), activités locales et documents accessibles sur le même site. L’ancienne interface est récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
+Nouvelle interface papier ivoire, encre marine, corail et turquoise, avec le cœur-curseur Happy Click et les polices locales ClickChesse/Josefin/Ubuntu. Quinze pages statiques locales, quatre parcours de quiz (trois thèmes et l’ensemble), activités locales et documents accessibles sur le même site. L’ancienne interface est récupérable au commit `cc71f4a98d650bbc915b92eb463feefaa51a807e`.
 
 **Préversion accessible : https://happyclick.danhabib.dev**, DNS et HTTPS avec certificat valide confirmés par OpenBot le **17 novembre 2026**, sur le commit déployé `6dab746`. Le domaine alternatif `https://happyclick.app.danhabib.dev` a également été validé par le superviseur. Le push autorisé a été effectué ; **ce nouveau suivi documentaire reste local, sans push**, pour éviter un déploiement uniquement documentaire. Aucun appel d’infrastructure ni changement DNS par cet exécutant. Le commit d’implémentation `0fc4fb9bc985be9c1952e3ec395bcc4355cb23f3` est conservé.
+
+## Nouveautés locales — Happy Click2027
+
+**Aucun push de cette mission** : les nouveautés restent locales pour revue. Le déploiement public confirmé ci-dessous reste au commit6dab746. DA et29quiz conservés ; logo officiel PNG transparent, page projet/FAQ, équipe confirmée sans contacts et supports addictionV2/V1 de24pages. Le jeu complet garde ses six rôles/quatre tours/douze questions ; l’ancien PDF28pages est disponible en archive.
+
+Rapport complet : [tasks/gate-2027.md](tasks/gate-2027.md), provenance et hashes : `tasks/gate-2027-assets.json`, comparaison des six archives : `tasks/gate-2027-archives.json`. Les originaux Drive sont hors dépôt ; documents de gestion, contacts, finances, neuf portraits et onepager historique ne sont pas publiés. Revue navigateur locale2027 rapportée par OpenBot dans `tasks/browser-review.md`.
 
 ## Reprendre et vérifier
 
@@ -34,16 +40,18 @@ Node >=22.12 pour l’installation ; les scripts npm utilisent Node 22.23.4 loca
 | `/quiz/ecologie` | 11 questions |
 | `/quiz/tout` | Les 29 cartes, 116 propositions |
 | `/mes-usages` | 11 questions, restitution descriptive sans diagnostic |
-| `/kit` | Textes d’origine et 6 PDF ; accès aux activités |
+| `/kit` | Textes d’origine et 8 PDF ; V2/V1/ancienne archive addiction, autres activités conservées |
 | `/kit/reflexion` | 14 questions enseignants, notes temporaires |
 | `/kit/roles/addiction` | Écrans et équilibre : 6 rôles, 4 scènes |
 | `/kit/roles/cyberharcelement` | 6 rôles, 4 scènes |
 | `/kit/roles/desinformation` | 6 rôles, 4 scènes |
+| `/projet-2027` | Mission, édition2026–2027, équipe et transmission entre promotions |
+| `/faq` | Préparer une séance, choisir les versions, utiliser les activités |
 | `/guides` | Étude parents (9 pages), guide jeunes (52 pages), résumés datés et crédits |
 
 Les quiz comportent choix multiples, validation, progression, retour, explications, pistes de discussion, nuances, références recto/verso, bilan et rejouer. Sans JavaScript, les cartes et leurs corrigés restent lisibles. Les activités gardent l’esprit de débat ; aucun classement ni barème de diagnostic.
 
-Les 8 PDF d’origine sont inchangés. Les liens ouvrir/télécharger sont toujours visibles ; les aperçus natifs s’ouvrent dans un volet. Les deux liens externes GATE sont conservés au pied de page et tous les textes de présentation d’origine sont présents, parfois dans un volet explicitement titré.
+Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajoutent V2 par défaut et V1 variante. Les liens ouvrir/télécharger sont toujours visibles ; les aperçus natifs s’ouvrent dans un volet. Les deux liens externes GATE sont conservés au pied de page et tous les textes de présentation d’origine sont présents, parfois dans un volet explicitement titré.
 
 ## Confidentialité et accessibilité
 
@@ -65,7 +73,7 @@ Les 8 PDF d’origine sont inchangés. Les liens ouvrir/télécharger sont toujo
 - `source-snapshot/` : HTML/CSS originaux non servis ; `assets.json` contient les 18 ressources et leurs SHA-256. Seule la feuille CSS originale est adaptée ; les autres ressources originales restent identiques.
 - `tasks/todo.md`, `tasks/lessons.md`, `.opencode/codebase_map.md` : suivi et reprise.
 
-Build : 13 pages. Tests : 10/10. Verify HTTP : 50 URLs, 276 références d’ancres/pages PDF, 26 blocs source et toutes les questions contrôlés. Ces vérifications ne sont pas une mesure visuelle. Aucun navigateur lancé par l’exécutant. OpenBot a approuvé la revue finale : correctif du titre à 320 px, pages accueil/kit/guides/quiz écologie à 1920 px sans débordement, lien d’évitement au clavier, sélection/restitution/effacement du questionnaire d’usage et saisie/relecture/effacement des 14 champs enseignants. Voir `tasks/browser-review.md` pour les mesures et le périmètre exact. OpenBot a ensuite confirmé la disponibilité publique et le certificat HTTPS valide, joué le quiz santé sur le domaine public (feedback OK) et terminé `/quiz/tout` en navigateur local : 29 questions, 29 résumés, premier choix multiple, aucun débordement à 1920 px.
+Build local2027 : 15 pages. Tests : 14/14. Verify HTTP local : 60 URLs, 288 références d’ancres/pages PDF, 26 blocs source et toutes les questions contrôlés. Ces vérifications ne sont pas une mesure visuelle. Aucun navigateur lancé par l’exécutant. OpenBot a approuvé la revue finale : correctif du titre à 320 px, pages accueil/kit/guides/quiz écologie à 1920 px sans débordement, lien d’évitement au clavier, sélection/restitution/effacement du questionnaire d’usage et saisie/relecture/effacement des 14 champs enseignants. Voir `tasks/browser-review.md` pour les mesures et le périmètre exact. OpenBot a ensuite confirmé la disponibilité publique et le certificat HTTPS valide, joué le quiz santé sur le domaine public (feedback OK) et terminé `/quiz/tout` en navigateur local : 29 questions, 29 résumés, premier choix multiple, aucun débordement à 1920 px.
 
 ## Infrastructure transmise par OpenBot
 

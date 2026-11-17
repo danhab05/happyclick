@@ -62,7 +62,7 @@ def disk_for(url):
 
 expected_routes = {'/', '/kit', '/guides', '/quiz', '/quiz/comportements', '/quiz/sante',
                    '/quiz/ecologie', '/quiz/tout', '/mes-usages', '/kit/reflexion',
-                   '/kit/roles/addiction', '/kit/roles/cyberharcelement', '/kit/roles/desinformation'}
+                   '/kit/roles/addiction', '/kit/roles/cyberharcelement', '/kit/roles/desinformation', '/projet-2027', '/faq'}
 pages = {}
 for file in DIST.rglob('index.html'):
     relative = file.parent.relative_to(DIST).as_posix()
@@ -70,20 +70,23 @@ for file in DIST.rglob('index.html'):
     pages[route] = Page(file.read_text())
 assert set(pages) == expected_routes, f'Routes manquantes/inattendues : {set(pages) ^ expected_routes}'
 manifest = json.loads((ROOT / 'source-snapshot/assets.json').read_text())
+gate_assets = json.loads((ROOT / 'tasks/gate-2027-assets.json').read_text())
+new_pdfs = [item for item in gate_assets['originals'] if item['file'].endswith('.pdf')]
+manifest += new_pdfs + gate_assets['derivatives']
 source_home = Page((ROOT / 'source-snapshot/index.html').read_text())
 gate_links = [a['href'] for a in source_home.nav if a['href'].startswith('https://')]
 assert len(gate_links) == 2
 urls, fragments = {'/robots.txt'}, []
 report = ['# Vérification de la nouvelle interface et des activités', '',
           'Commande : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`', '',
-          'Contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.', '',
+          'Édition 2026–2027 : contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.', '',
           '## Pages, contenu et interactions', '']
 source_block_count = 0
 for route, page in sorted(pages.items()):
     html = disk_for(route).read_text()
     text = normalize(' '.join(page.text))
-    expected_active = '/quiz' if route.startswith('/quiz') or route == '/mes-usages' else '/kit' if route.startswith('/kit') else route
-    assert [a['href'] for a in page.nav] == ['/', '/quiz', '/kit', '/guides'], route
+    expected_active = '/projet-2027' if route in ('/projet-2027', '/faq') else '/quiz' if route.startswith('/quiz') or route == '/mes-usages' else '/kit' if route.startswith('/kit') else route
+    assert [a['href'] for a in page.nav] == ['/', '/quiz', '/kit', '/guides', '/projet-2027'], route
     assert [a['href'] for a in page.nav if a.get('aria-current') == 'page'] == [expected_active], route
     assert any(tag == 'html' and a.get('lang') == 'fr' for tag, a in page.elements), route
     assert any(tag == 'meta' and a.get('name') == 'robots' and a.get('content') == 'noindex, nofollow' for tag, a in page.elements), route
@@ -92,6 +95,7 @@ for route, page in sorted(pages.items()):
     assert 'Happy Click' in re.search(r'<title>(.*?)</title>', html).group(1), route
     assert not any(tag in ('form', 'iframe') for tag, _ in page.elements), route
     assert 'pdf-rendering.js' not in html, route
+    assert not re.search(r'drive\.google\.com|docs\.google\.com|mailto:|tel:', html), f'Lien privé/contact hors périmètre : {route}'
     ids = [a['id'] for _, a in page.elements if 'id' in a]
     assert len(ids) == len(set(ids)), f'ID dupliqué : {route}'
     assert 'contenu' in ids
@@ -105,8 +109,10 @@ for route, page in sorted(pages.items()):
             source_block_count += 1
         downloads = [a['href'] for tag, a in page.elements if tag == 'a' and 'download' in a]
         originals = ['/' + a['src'].lstrip('/') for tag, a in source.elements if tag == 'embed']
-        assert downloads == originals, f'Documents source modifiés : {route}'
-        assert [a['data'] for tag, a in page.elements if tag == 'object'] == originals
+        expected_documents = originals + ([item['local'] for item in new_pdfs] if route == '/kit' else [])
+        assert len(downloads) == len(expected_documents) and set(downloads) == set(expected_documents), f'Documents source modifiés : {route}'
+        objects = [a['data'] for tag, a in page.elements if tag == 'object']
+        assert len(objects) == len(expected_documents) and set(objects) == set(expected_documents)
     scripts = [a for tag, a in page.elements if tag == 'script']
     interactive = route.startswith('/quiz/') or route in ('/mes-usages', '/kit/reflexion')
     assert len(scripts) == int(interactive), f'JavaScript hors périmètre : {route}'
@@ -166,7 +172,8 @@ report += ['', '## Documents et empreintes source', '']
 expected_pages = {'activite_cartes_a_imprimer.pdf': 16, 'rp_addiction.pdf': 28,
                   'rp_cyberharcelement.pdf': 24, 'rp_desinformation.pdf': 21,
                   'test_numerico_dependance.pdf': 2, 'questionnaire_enseignants.pdf': 4,
-                  'guide_parents.pdf': 9, 'guide_jeune_et_numerique.pdf': 52}
+                  'guide_parents.pdf': 9, 'guide_jeune_et_numerique.pdf': 52,
+                  'addiction-v1.pdf': 24, 'addiction-v2.pdf': 24}
 pdf_pages = {}
 for item in manifest:
     path = DIST / item['local'].lstrip('/')
@@ -181,7 +188,7 @@ for item in manifest:
         pdf_pages[item['local']] = count
         report.append(f'- `{path.name}` : {count} pages, {len(data):,} octets ; SHA-256 `{item["sha256"]}` identique à la source.')
     urls.add(item['local'])
-assert len(pdf_pages) == 8 and sum(pdf_pages.values()) == 156
+assert len(pdf_pages) == 10 and sum(pdf_pages.values()) == 204
 for url, fragment in fragments:
     if url.endswith('.pdf'):
         match = re.fullmatch(r'page=(\d+)', fragment)
@@ -206,10 +213,11 @@ for url in sorted(urls):
                 assert 'application/pdf' in response.headers.get('Content-Type', ''), url
 report += ['', '## Ressources et HTTP', '',
            f'{len(urls)} URLs contrôlées sur disque' + (' et par HTTP 200 sans redirection, réponses identiques au build.' if args.base_url else ' ; contrôle HTTP non demandé.'),
-           f'{len(fragments)} références à des ancres HTML/pages PDF vérifiées. Les 12 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.', '',
+           f'{len(fragments)} références à des ancres HTML/pages PDF vérifiées. Les {len(pages)-1} routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.', '',
            '## Responsive et limites de cette vérification', '',
            'Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Voir `tasks/browser-review.md` pour le périmètre exact de la revue finale approuvée par OpenBot.', '',
-           'Les 10 tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.', '',
+           'Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.', '',
+           'Preuves publiques du commit déployé 6dab746 : `tasks/public-verification.md` (document durable non réécrit). Les nouveautés 2027 locales ne sont pas couvertes par cette ancienne validation.', '',
            'Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.']
 (ROOT / 'tasks/verification.md').write_text('\n'.join(report) + '\n')
 print('\n'.join(report))

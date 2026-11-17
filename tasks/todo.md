@@ -102,3 +102,24 @@ Reprise : `npm run build && npm test && npm run verify -- --base-url http://127.
 - [x] Conserver les preuves publiques dans `tasks/public-verification.md`, non réécrit par verify ; mettre à jour les références dans les documents de reprise.
 
 Cette mise à jour concerne uniquement README, carte et documents de suivi/preuves, dont `tasks/public-verification.md`. Aucun code modifié, aucun test/build relancé pour ces changements documentaires, aucun push ni appel d’infrastructure.
+
+# Mission 3 — édition Happy Click 2027 (2026–2027)
+
+Base locale `ef34ec5`, branche `feat/astro-preview`, arbre propre avant mission. Conserver DA, 29 questions et trois jeux ; aucun push avant revue, aucun navigateur ni infrastructure par l’exécutant.
+
+- [x] Inventorier les sept originaux fournis, dimensions/transparence/hash des logos ; extraire et examiner intégralement les PDF V1/V2, comparer au support addiction 2025–2026.
+- [x] Documenter provenance, couverture, différences et limites dans `tasks/gate-2027.md`, sans données de gestion privées.
+- [x] Intégrer V2 par défaut et V1 variante nommée, sans perdre les six rôles/quatre tours ; conserver l’ancien support en archive et proposer aperçu/téléchargement dans kit/jeu.
+- [x] Intégrer le logo PNG officiel approprié, avec dérivés optimisés traçables, dans header/footer/favicon et présentation de l’édition.
+- [x] Ajouter page projet/édition 2026–2027 et FAQ avec parcours publics, distinction des promotions, sans promesse ni collecte.
+- [x] Adapter tests et verify aux routes/assets/documents, conserver les garanties existantes ; build/tests/HTTP sur4321.
+- [x] Mettre à jour carte et documentation, bilan sourcé ; commit trailer OpenBot uniquement après vérifications. Aucun push.
+
+Complément superviseur reçu pendant l’implémentation : comparer aussi les six PDF archives téléchargés et lire le onepager historique ; distinguer ces supports des nouveautés 2027. Le cadrage et l’équipe confirmés proviennent de sa lecture, non d’une lecture directe des documents privés par l’exécutant. Exclure contacts, finances et neuf portraits non attribués. Ajouter couverture et exclusions au rapport.
+
+
+## Bilan mission3
+
+Analyse complète V1/V2 (24pages chacune), comparaison des95pages d’archives,16images JPEG cartes identiques, cinq logos inspectés. `tasks/gate-2027.md` détaille provenance, couverture, exclusions et différences. V2 par défaut, V1 variante, archive28pages ; six rôles/quatre tours/douze questions conservés. Page projet, FAQ, équipe confirmée et logo PNG officiel intégrés sans modifier la DA globale ni les29questions.
+
+Build15pages ;14tests réussis ; verify60URLs200/288références,10PDF/204pages/hash. Revue OpenBot : accueil1920logos/rendu bon, projet320logos sans débordement, FAQ ouverture des rôles OK, jeu addiction mobile référencesV2 et troisPDF présents. Aucun navigateur par l’exécutant. Commit local avec trailer, aucun push ni infrastructure.

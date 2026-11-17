@@ -1,0 +1,111 @@
+{
+  "originals": [
+    {
+      "file": "logo-final.png",
+      "bytes": 1260301,
+      "sha256": "1e4ddd3549396781a9dc7941e885eea30e40590d299e0d456a738958c9122979",
+      "width": 1209,
+      "height": 1300,
+      "alphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "file": "logo-transparent.png",
+      "bytes": 123167,
+      "sha256": "373aa7fddcdada1fd892e7745bbc86f5f40257cde567091a9953930a25ec4722",
+      "width": 740,
+      "height": 740,
+      "alphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "file": "logo-sans-fond.png",
+      "bytes": 83579,
+      "sha256": "502bd0cea8ca1a053c6a5b69b2a31e4ea23c58a855dbf4aa7ab2ee3a9cbc9208",
+      "width": 696,
+      "height": 749,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "logo-noir.png",
+      "bytes": 68752,
+      "sha256": "b593b9f23d40fab19a4879a5c6dbbd09db0d3d448c16c501e5c2b5c214be66d6",
+      "width": 740,
+      "height": 740,
+      "alphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "file": "logo-blanc.png",
+      "bytes": 71969,
+      "sha256": "d3561e614b7e1bc27804850a1b1b38da26fcf61630963fc91c129be42c6d9bf9",
+      "width": 740,
+      "height": 740,
+      "alphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "file": "addiction-v1.pdf",
+      "bytes": 2709601,
+      "sha256": "7032e5371a83a49f656cd5e03bdb4432b158da23acd84b27e43e148bc6140edd",
+      "local": "/resources/kit/2027/addiction-v1.pdf",
+      "pages": 24
+    },
+    {
+      "file": "addiction-v2.pdf",
+      "bytes": 1767576,
+      "sha256": "7b3ed98040e29e36ebb5a88068cb02a6befdf6352b5428fbc1b56180b3e33863",
+      "local": "/resources/kit/2027/addiction-v2.pdf",
+      "pages": 24
+    }
+  ],
+  "derivatives": [
+    {
+      "local": "/assets/2027/logo-128.png",
+      "source": "logo-sans-fond.png",
+      "sha256": "6499ff58bec489f7e3f8c610dd0dd072d27b3b2063d60dee04f7cb46668ad720",
+      "bytes": 16193,
+      "width": 128,
+      "height": 138,
+      "transformation": "Métadonnées retirées, redimensionnement Lanczos, proportions conservées"
+    },
+    {
+      "local": "/assets/2027/logo-512.png",
+      "source": "logo-sans-fond.png",
+      "sha256": "b3a27e904496448ccd51cfe8663966655d545e95a2a027cb9c24f382dc2cdd2b",
+      "bytes": 101326,
+      "width": 512,
+      "height": 551,
+      "transformation": "Métadonnées retirées, redimensionnement Lanczos, proportions conservées"
+    },
+    {
+      "local": "/assets/2027/favicon-96.png",
+      "source": "logo-sans-fond.png",
+      "sha256": "4591c99a54c4dd7ce0a0d9cb8e99ff0f5f5b3ed03fd0363864fb8216259203fe",
+      "bytes": 10001,
+      "width": 96,
+      "height": 96,
+      "transformation": "Métadonnées retirées, redimensionnement Lanczos, proportions conservées, centrage transparent sans recadrage"
+    },
+    {
+      "local": "/assets/2027/apple-touch-180.png",
+      "source": "logo-sans-fond.png",
+      "sha256": "4940accbc4171eeb12c400586133b8c764c56a6f3f30c8e9968cb2911b3695a6",
+      "bytes": 23161,
+      "width": 180,
+      "height": 180,
+      "transformation": "Métadonnées retirées, redimensionnement Lanczos, proportions conservées, centrage transparent sans recadrage"
+    }
+  ]
+}

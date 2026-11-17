@@ -2,11 +2,12 @@
 
 Commande : `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`
 
-Contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.
+Édition 2026–2027 : contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la revue navigateur rapportée par OpenBot est consigné dans `tasks/browser-review.md` ; les observations sur l’ancienne interface ne sont pas transposées.
 
 ## Pages, contenu et interactions
 
 - `/` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
+- `/faq` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/guides` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/kit` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/kit/reflexion` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
@@ -14,6 +15,7 @@ Contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la 
 - `/kit/roles/cyberharcelement` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/kit/roles/desinformation` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/mes-usages` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/projet-2027` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/quiz` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/quiz/comportements` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
 - `/quiz/ecologie` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
@@ -31,25 +33,20 @@ Contrôles ci-dessous exécutés sur le build local. Le périmètre exact de la 
 - `rp_cyberharcelement.pdf` : 24 pages, 9,698,538 octets ; SHA-256 `bdaf0476e328bb1dc30c6b575b7add35ab8ffe822f9f20372835220e32a9c2ea` identique à la source.
 - `rp_desinformation.pdf` : 21 pages, 7,826,609 octets ; SHA-256 `a5f8757553722734990e8b3405fef9d95fe1a7c6776d07131b2af662b4d586ed` identique à la source.
 - `test_numerico_dependance.pdf` : 2 pages, 911,191 octets ; SHA-256 `840532b90dc891ecdc0e2a0bdf65fe9bcb7ccc50f3ce79bdc5d678eb91c6536b` identique à la source.
+- `addiction-v1.pdf` : 24 pages, 2,709,601 octets ; SHA-256 `7032e5371a83a49f656cd5e03bdb4432b158da23acd84b27e43e148bc6140edd` identique à la source.
+- `addiction-v2.pdf` : 24 pages, 1,767,576 octets ; SHA-256 `7b3ed98040e29e36ebb5a88068cb02a6befdf6352b5428fbc1b56180b3e33863` identique à la source.
 
 ## Ressources et HTTP
 
-50 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
-276 références à des ancres HTML/pages PDF vérifiées. Les 12 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
+60 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
+288 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
 
 ## Responsive et limites de cette vérification
 
 Analyse des règles CSS seulement : conteneur borné à 1240 px, marges adaptées, grilles à une colonne sur mobile, navigation avec retour à la ligne, images/PDF bornés, focus visibles et reduced-motion. Aucun navigateur lancé. Ces contrôles ne mesurent pas le rendu. Voir `tasks/browser-review.md` pour le périmètre exact de la revue finale approuvée par OpenBot.
 
-Les 10 tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
+Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
+
+Preuves publiques du commit déployé 6dab746 : `tasks/public-verification.md` (document durable non réécrit). Les nouveautés 2027 locales ne sont pas couvertes par cette ancienne validation.
 
 Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.
-
-
-## Preuves publiques durables — confirmation du 17 novembre 2026
-
-Les preuves rapportées par OpenBot sont conservées dans [public-verification.md](public-verification.md), document maintenu manuellement que `scripts/verify.py` ne réécrit pas. Le présent rapport automatique peut être régénéré ; cette section de renvoi n’est pas la seule copie des preuves.
-
-Domaine principal `https://happyclick.danhabib.dev` : DNS 72.61.167.104 confirmé sur quatre NS autoritatifs et deux résolveurs publics ; HTTPS200 validé sans bypass après redéploiement `1rbbwrx32ragmtnltqbirebp` finished sur6dab746. Certificat CN/SAN happyclick.danhabib.dev, Let’s Encrypt YR2, 17 novembre 2026–15 février 2027.
-
-Commande exécutée par OpenBot : `npm run verify -- --base-url https://happyclick.danhabib.dev`. Résultat : **50 URLs HTTP200 identiques au build / 276références**, dont accueil/kit/guides/8PDF/assets. Navigateur HTTPS exact : accueil noindex et quiz comportements sélection/feedback OK. Historique du domaine alternatif et parcours local29questions conservés dans le document durable. Aucun nouveau contrôle réseau, code ou infrastructure par l’exécutant pour cette finalisation ; commit local sans push.

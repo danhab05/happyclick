@@ -5,19 +5,19 @@ Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt privé `danhab05/happ
 
 Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` avant de relancer). `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Pas de navigateur/Playwright par l’exécutant.
 
-## Interface et routes (13 pages)
-- `src/layouts/Layout.astro` : langue, noindex, navigation Accueil/Quiz/Kit/Guides, footer et deux liens GATE originaux.
+## Interface et routes (15 pages locales, édition2026–2027)
+- `src/layouts/Layout.astro` : langue, noindex, navigation Accueil/Quiz/Kit/Guides/Projet, footer et deux liens GATE originaux.
 - `src/pages/index.astro` : accueil éditorial, trois thèmes, parcours par publics.
 - `src/components/ThemeCards.astro` : liens/counts des thèmes.
 - `src/pages/quiz/index.astro` : choix ; `quiz/[theme].astro` : 4 parcours statiques, cartes SSR, feedback accessible sans JS.
 - `src/pages/mes-usages.astro` : 11 questions sans score ; `kit/reflexion.astro` : 14 questions ouvertes facultatives.
-- `src/pages/kit.astro` : textes source, six PDF, activités.
+- `src/pages/kit.astro` : textes source, huit PDF (dont V2/V1/ancienne archive addiction), activités.
 - `src/pages/kit/roles/[theme].astro` : trois jeux × six rôles × quatre scènes, aides/débrief/pistes sourcées.
 - `src/pages/guides.astro` : deux guides, résumés/chapitres/datation/crédits et textes source.
 - `src/components/PdfDocument.astro` : liens ouvrir/télécharger permanents, aperçu natif en details et repli mobile.
 - `public/style.css` : DA ivoire/marine/corail/turquoise, polices locales, responsive 1100/800/480, focus/reduced-motion/césure des longs titres.
 - `public/assets/` : ressources d’origine ; `previews/` : deux couvertures extraites des guides.
-- `public/resources/` : huit PDF binaires inchangés ; `public/robots.txt` : Disallow /.
+- `public/resources/` : huit PDF historiques inchangés + deux originaux2027 ; `public/robots.txt` : Disallow /.
 - `astro.config.mjs` : static, slash ignore, host0.0.0.0 port4321, modules JS émis en fichiers (assetsInlineLimit0).
 
 ## Données et interactions
@@ -37,8 +37,8 @@ Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` a
 - `tasks/pdf-text/` : textes/OCR/inventaire par page versionnés. `tasks/pdf-images/` : ~12 Mo de rendus locaux ignorés par Git, disponibles au superviseur.
 - `tasks/pdf-analysis.md` : couverture156pages, synthèse des8PDF et ambiguïtés ; `tasks/quiz-source-map.md` : matrice29cartes.
 - `tests/activities.test.mjs` : 10tests Node/LinkeDOM, aucune utilisation de navigateur ; build préalable nécessaire.
-- `scripts/verify.py` : 13routes, 26blocs source, contenu des quiz/questionnaires, navigation/noindex, scripts locaux ciblés, API de réseau/stockage interdites, 8PDF/156pages/hash, ancres/pages PDF, tous assets et variantes slash en HTTP.
-- `tasks/verification.md` : rapport généré (50URLs/276références au dernier contrôle) ; `tasks/browser-review.md` : retours visuels réels rapportés, séparés des contrôles automatiques.
+- `scripts/verify.py` : 15routes, 26blocs source, contenu des quiz/questionnaires, navigation/noindex, scripts locaux ciblés, API de réseau/stockage interdites, 10PDF/204pages/hash, ancres/pages PDF, tous assets et variantes slash en HTTP.
+- `tasks/verification.md` : rapport généré (60URLs/288références au contrôle local2027) ; `tasks/browser-review.md` : retours visuels réels rapportés, séparés des contrôles automatiques.
 - `tasks/public-verification.md` : preuves publiques durables (DNS, TLS, déploiements, verify et navigateur), maintenues manuellement et jamais réécrites par verify.
 - `tasks/todo.md`, `tasks/lessons.md`, `README.md` : suivi, leçons et reprise.
 
@@ -50,3 +50,18 @@ Domaine principal `https://happyclick.danhabib.dev` : A → `72.61.167.104` TTL3
 Historique DNS, noms des NS, preuves TLS et déploiement précédent : `tasks/public-verification.md`. Aucun appel d’infrastructure par l’exécutant ; ces résultats sont ceux du superviseur.
 
 Aucun compte/backend/formulaire envoyé/analytics/persistance. Les conseils/cartes ambigus sont attribués au support et nuancés ; guides de2021 explicitement datés. Revue finale navigateur approuvée par OpenBot : voir `tasks/browser-review.md` pour les mesures 320/1920 px, focus initial et questionnaires. Complément : quiz santé public avec feedback OK ; parcours `/quiz/tout` local terminé, 29 résumés, premier choix multiple et aucun débordement à 1920 px. Ne pas extrapoler au-delà de ce périmètre ; infrastructure et DNS restent supervisés par OpenBot. Tout commit inclut le trailer OpenBot demandé.
+
+
+## Nouveautés GATE2027 locales
+
+- `src/pages/projet-2027.astro`, `faq.astro` : édition, équipe confirmée sans contacts, FAQ pratique, liens aux activités ; aucun JS nouveau.
+- `src/components/AddictionDocuments.astro` : V2 par défaut, variante V1 et archive2025–2026, previews/téléchargements dans kit et jeu.
+- `src/data/roles.json` : addiction V2 de24pages, six rôles/quatre tours/douze questions ; références8–11/12–15/16–19/20–23, sources24. Autres jeux inchangés.
+- `public/resources/kit/2027/` : deux PDF originaux de24pages ; `public/assets/2027/` : quatre dérivés du vrai PNG sans fond, utilisés dans marque/favicon/édition.
+- `scripts/prepare-gate-assets.py` : métadonnées PNG retirées, dérivés sans redessin, copie des deux PDF et inventaire SHA-256. Pillow seulement pour préparation, pas pour build.
+- `scripts/compare-gate-archives.py` : comparaison des95pages et16JPEG incorporés des cartes. Originaux requis hors dépôt `/tmp/happyclick-gate-2027`.
+- `tests/gate-2027.test.mjs` : quatre tests supplémentaires ; total14tests avec la suite précédente.
+- `tasks/gate-2027.md` : bilan/provenance/limites ; `gate-2027-assets.json`, `gate-2027-archives.json`, `gate-2027-onepager.json` : empreintes et couverture ; `gate-2027-text/` : textes complets V1/V2.
+- Revue OpenBot locale : accueil1920 logos/rendu bon ; projet320 sans débordement ; FAQ lien/ouverture des rôles OK ; addiction mobile référencesV2 et troisPDF présents.
+
+Ces nouveautés ne sont pas déployées : aucun push autorisé pendant cette mission. Préversion publique confirmée toujours sur6dab746. Conserver les preuves publiques durables et ne pas les confondre avec le build local15pages.

@@ -37,3 +37,15 @@ OpenBot a ajouté chez Name.com le seul A autorisé, `happyclick.danhabib.dev` �
 Verify exécuté par le superviseur sur ce domaine : **50 URLs HTTP200 identiques au build / 276 références**, incluant accueil, kit, guides, huit PDF et assets. Les noms des NS, la connexion Name.com et l’historique remplacé sont consignés dans [public-verification.md](public-verification.md), document durable indépendant de la génération de `verification.md`.
 
 Aucun code ni infrastructure modifié par l’exécutant ; finalisation documentaire locale, sans push.
+
+
+## Revue locale de l’édition2026–2027 (mission GATE2027)
+
+Retour transmis par OpenBot pendant la mission, distinct des preuves publiques du commit6dab746 :
+
+- Accueil1920px : logos chargés, rendu visuel bon.
+- Projet2027 mobile320px : logos chargés, aucun débordement constaté.
+- FAQ : lien depuis le projet fonctionnel ; ouverture « Comment distribuer les rôles ? » OK.
+- Jeu addiction mobile : références V2/pages et trois PDF présents.
+
+Aucun navigateur par l’exécutant. Nouveautés locales non poussées ; build15pages,14tests et verify60URLs/288références. Rapport complet : `tasks/gate-2027.md`.
