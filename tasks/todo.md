@@ -193,3 +193,8 @@ Base `e8bf224` publique (Coolify `wdxwyrajcelfqzyq047q9i54` finished, 60 URLs HT
 ## Bilan mission 5
 
 Refonte « table de jeu » complète sur les 15 pages (correctif de densité mobile après la première revue OpenBot inclus) : polices OFL locales (Fredoka, Andika), nouvelle feuille, dessins SVG, microcopy enfant et chemin adulte distinct. Données, logique, PDF, logo et paquets npm inchangés. Build 15 pages ; tests 18/18 sans modification ; verify 65 URLs / 319 références exit 0 sur le 4321 existant. Détails, sources GitHub et limites : `tasks/redesign-enfants.md`. Aucun navigateur, push ni appel d'infrastructure par l'exécutant ; commit local avec trailer OpenBot, en attente de revue.
+
+## Revue 52115d2 approuvée — publication autorisée
+
+- [x] Consigner les preuves et limites OpenBot (redesign-enfants, browser-review) et actualiser le texte de verify.
+- [x] Commit documentaire avec trailer OpenBot, sans lien de session ; push de feat/astro-preview incluant 52115d2. Aucun appel infra par l’exécutant.

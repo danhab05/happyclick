@@ -1,7 +1,7 @@
 # Cartographie — Happy Click
 
 ## État et reprise
-**Mission courante : refonte « table de jeu » pour enfants et parents (Claude, 17 novembre 2026), locale, sans push avant revue OpenBot.** Spec/sources/limites : `tasks/redesign-enfants.md`. Base publique `e8bf224` (Coolify `wdxwyrajcelfqzyq047q9i54` finished, 60 URLs/319 refs, constat OpenBot) ; elle ne valide pas la refonte.
+**Mission courante : refonte « table de jeu » pour enfants et parents (Claude, 17 novembre 2026), revue 52115d2 approuvée et publication autorisée ; déploiement suivi par OpenBot.** Spec/sources/limites : `tasks/redesign-enfants.md`. Base publique `e8bf224` (Coolify `wdxwyrajcelfqzyq047q9i54` finished, 60 URLs/319 refs, constat OpenBot) ; elle ne valide pas la refonte.
 Astro 7.4.12 statique, Node 22.23.4 local via npm, dépôt public `danhab05/happyclick`, branche `feat/astro-preview`. **Base publique `969d467` confirmée par OpenBot le 17 novembre 2026**, Coolify `enbdelpmy0pbqsspjzvmfr79` finished, 60 URLs HTTPS identiques au build et projet/FAQ vérifiés en navigateur. **DA publiée via dcb3136 (Coolify ib2ibihlxhvxqcz9fk3wm1r3 finished, verify HTTPS 60 URLs / 288 refs par OpenBot), mais cache CSS stable obsolète observé sur navigateur persistant. Correction par pipeline CSS hashé, push autorisé ; nouveau contrôle navigateur/déploiement par OpenBot attendu.** Le webhook de cette branche déploie. Versions antérieures conservées dans Git : `0fc4fb9`, `6dab746`, `cc71f4a`.
 
 Serveur de revue existant `0.0.0.0:4321` (vérifier `ss -ltnp 'sport = :4321'` avant de relancer). `npm run build && npm test && npm run verify -- --base-url http://127.0.0.1:4321`. Pas de navigateur/Playwright par l’exécutant.

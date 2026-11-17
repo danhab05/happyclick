@@ -2,6 +2,19 @@
 
 Compte rendu final transmis par OpenBot, superviseur. Aucun navigateur utilisé par l’exécutant. Les résultats ci-dessous sont ceux rapportés par le superviseur ; ils ne prétendent pas couvrir toutes les combinaisons de routes, appareils et interactions.
 
+## Refonte « table de jeu » 52115d2 — revue OpenBot approuvée (17 novembre 2026)
+
+Preuves transmises par OpenBot (superviseur) ; aucun navigateur utilisé par l’exécutant.
+
+- Contrôles directs : build 15 pages, tests 18/18, verify 65 URLs / 319 références, exit 0. Diff vide par rapport à `e8bf224` pour data, lib, PDF, logo, package et config ; dans les scripts, seuls des textes ont changé.
+- 15 routes à 390 et 320 px sans débordement, en-tête de 74 px ; 15 routes à 1920 px sans débordement.
+- Accueil 390 : premier paquet à y259, bas du dernier à y625 ; à 320 : bas du dernier à y708. Les trois paquets sont complets dans le premier écran.
+- Captures mobile et desktop vues : traits des dessins lisibles, faces blanches des paquets et onglets de couleur corrects, typographie lisible pour des enfants. Capture des guides à 390 : lecture calme pour les parents.
+- Menu 390 : cinq liens de 48 px, clic sur Guides vers `/guides`. À 320 : clic sur Menu puis Entrée ferme le menu. Header à 1000 px : cinq liens visibles, sans débordement.
+- Quiz comportements 390 : erreur sans choix, sélection, validation, focus et verrouillage OK. À 1920 : paquet de 10 cartes terminé, 10 récaps, Rejouer remet sélections et progression à zéro. En reduced-motion (1000 px) : animation `none`.
+- Limites : pas d’audit de tous les états et appareils, ni de test réel avec des enfants. Publication de la préversion autorisée ; suivi Coolify et public par OpenBot.
+
+
 - Accueil desktop 1280 px et mobile 390 px : rendus vus et approuvés.
 - Quiz comportements : parcours complet de 10 cartes jusqu’au bilan, puis rejouer ; choix et feedback validés.
 - Contrôle initial de 11 routes à 320 px : toutes les images OK. Un débordement signalé sur `/kit/roles/cyberharcelement`, `scrollWidth=332` pour `innerWidth=320`.

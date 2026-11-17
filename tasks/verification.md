@@ -47,7 +47,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Responsive et limites de cette vérification
 
-Analyse des règles CSS seulement : conteneur borné à 1180 px, paquets en une colonne sous 800 px, menu mobile natif et sommaires repliables, images/PDF bornés, cibles d’au moins 44 px, focus visibles et reduced-motion (retournement de carte désactivé). Aucun navigateur lancé : ces contrôles ne mesurent pas le rendu. La refonte « table de jeu » attend la revue OpenBot ; voir `tasks/redesign-enfants.md`. Les mesures de `tasks/mobile-review.md` concernent la version précédente.
+Analyse des règles CSS seulement : conteneur borné à 1180 px, paquets en une colonne sous 800 px, menu mobile natif et sommaires repliables, images/PDF bornés, cibles d’au moins 44 px, focus visibles et reduced-motion (retournement de carte désactivé). Aucun navigateur lancé : ces contrôles ne mesurent pas le rendu. Refonte « table de jeu » (52115d2) approuvée par OpenBot après mesures réelles à 320/390/1000/1920 px ; périmètre exact dans `tasks/browser-review.md` et `tasks/redesign-enfants.md`. Les mesures de `tasks/mobile-review.md` concernent la version précédente.
 
 Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
 
