@@ -1,24 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ThemeCards from '../../components/ThemeCards.astro';
-import Doodle from '../../components/Doodle.astro';
+import '../../styles/jeu-imprime.css';
 ---
 <Layout active="/quiz" title="Les paquets de quiz">
-  <div class="quiz-shelf">
-    <section class="wrap quiz-shelf-inner" aria-labelledby="quiz-title">
-      <h1 id="quiz-title">Choisissez un paquet</h1>
-      <p class="lead">Jouez seul, en famille ou en classe, par groupes de 4 à 6.</p>
-      <ThemeCards class="quiz-decks" />
-      <a class="all-cards-link" href="/quiz/tout"><Doodle name="tout" size={40} />Jouer les 29 cartes</a>
+  <div class="game-index">
+    <section class="casebook" aria-labelledby="quiz-title">
+      <header class="casebook-title">
+        <h1 id="quiz-title">Les quiz</h1>
+        <p>Choisissez un paquet. Jouez seul, en famille ou en classe par groupes de 4 à 6.</p>
+      </header>
+      <ThemeCards />
+    </section>
+    <section class="case-rules" aria-labelledby="how-title">
+      <h2 id="how-title">La règle du jeu</h2>
+      <div><p>Cochez une ou plusieurs réponses, puis retournez la carte. Chaque corrigé propose une question à discuter. Une carte entièrement juste vaut un point.</p>
+      <a href="/resources/kit/activite_cartes_a_imprimer.pdf">Imprimer les cartes du jeu <small>(PDF, 16 pages)</small></a></div>
     </section>
   </div>
-  <section class="wrap section" aria-labelledby="how-title">
-    <h2 id="how-title">La règle du jeu</h2>
-    <ol class="how-to">
-      <li><h3>Cochez vos réponses</h3><p>Chaque carte propose quatre réponses. Une ou plusieurs peuvent être justes.</p></li>
-      <li><h3>Retournez la carte</h3><p>Comparez vos choix avec le corrigé au dos de la carte.</p></li>
-      <li><h3>Discutez du corrigé</h3><p>Chaque carte propose une question à discuter. Votre score apparaît à la fin du paquet.</p></li>
-    </ol>
-    <p class="source-note">Pour les adultes : les questions et réponses sont celles des <a href="/resources/kit/activite_cartes_a_imprimer.pdf">cartes Happy Click à imprimer (16 pages)</a>. Les nuances et les questions pour discuter sont ajoutées par le site et signalées comme telles.</p>
-  </section>
 </Layout>

@@ -42,7 +42,7 @@ export function initReflection(root) {
         response=checked.map(input=>input.closest('label').querySelector('span').textContent).join(' ; ');
       }else response=field.querySelector('textarea').value.trim();
       const dt=root.ownerDocument.createElement('dt');dt.textContent=title;
-      const dd=root.ownerDocument.createElement('dd');dd.textContent=response || 'Pas de réponse : tu peux laisser cette question de côté.';
+      const dd=root.ownerDocument.createElement('dd');dd.textContent=response || 'Question laissée de côté.';
       list.append(dt,dd);
     });
     if(isUsage)usagePrompts(answers).forEach(prompt=>{

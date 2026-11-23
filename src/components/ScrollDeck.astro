@@ -1,28 +1,24 @@
 ---
-import Doodle from './Doodle.astro';
-import questions from '../data/quiz.json';
-
 const decks = [
-  { slug: 'comportements', title: 'Les bons réflexes', icon: 'reflexes', sample: 'q01' },
-  { slug: 'sante', title: 'Trouver son équilibre', icon: 'equilibre', sample: 'q11' },
-  { slug: 'ecologie', title: 'Derrière nos écrans', icon: 'planete', sample: 'q20' },
-] as const;
+  {slug:'comportements', name:'Les bons réflexes', image:'reflexes', count:10},
+  {slug:'sante', name:'Trouver son équilibre', image:'equilibre', count:8},
+  {slug:'ecologie', name:'Derrière nos écrans', image:'ecologie', count:11},
+];
 ---
-<section class="home-decks" aria-labelledby="home-decks-title">
-  <div class="wrap deck-directory">
-    <div class="deck-directory-intro">
-      <h2 id="home-decks-title">Les cartes du quiz</h2>
-      <p>29 questions, trois thèmes. Choisissez un paquet pour jouer.</p>
-      <a class="kit-link" href="/quiz">Voir tous les quiz</a>
+<section class="quiz-press" data-scene="jeu" aria-labelledby="play-title">
+  <div class="work-wrap">
+    <div class="play-heading">
+      <div><p class="print-credit">Le jeu en ligne</p><h2 id="play-title">À vous de <em>jouer.</em></h2></div>
+      <p>Choisissez un thème. Pour chaque question, cochez vos réponses et retournez la carte pour lire le corrigé.</p>
     </div>
-    <ul class="deck-directory-list">
-      {decks.map(deck => <li>
+    <ul class="table-packs">
+      {decks.map(deck => <li class={`pack-${deck.slug}`}>
         <a href={`/quiz/${deck.slug}`}>
-          <Doodle name={deck.icon} size={54} />
-          <span><strong>{deck.title}</strong><span class="card-excerpt">{questions.find(q => q.id === deck.sample)!.question}</span></span>
-          <span class="deck-arrow" aria-hidden="true">→</span>
+          <div class="pack-bed"><img data-motion src={`/assets/previews/carte-${deck.image}.webp`} width="800" height="566" alt="" loading="lazy" /></div>
+          <span class="pack-label"><strong>{deck.name}</strong><small>{deck.count} cartes</small></span>
         </a>
       </li>)}
     </ul>
+    <div class="play-all"><a class="line-action" href="/quiz">Voir les quatre quiz</a><a class="ink-action" href="/quiz/tout">Jouer les 29 cartes <span aria-hidden="true">↗</span></a></div>
   </div>
 </section>

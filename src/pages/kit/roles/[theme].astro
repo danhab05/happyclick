@@ -1,24 +1,20 @@
 ---
+import EditionCover from '../../../components/EditionCover.astro';
 import ResponsiveDisclosure from '../../../components/ResponsiveDisclosure.astro';
 import Layout from '../../../layouts/Layout.astro';
 import PdfDocument from '../../../components/PdfDocument.astro';
 import AddictionDocuments from '../../../components/AddictionDocuments.astro';
-import Doodle from '../../../components/Doodle.astro';
 import games from '../../../data/roles.json';
 export function getStaticPaths(){ return games.map(game=>({params:{theme:game.slug},props:{game}})); }
 const { game } = Astro.props;
 ---
 <Layout active="/kit" title={game.title}>
-  <div class="wrap read-head">
-    <div>
-      <p class="breadcrumb"><a href="/kit#roles">Tous les jeux de rôles</a></p>
-      <p class="audience">Un jeu à six, avec un adulte pour animer</p>
-      <h1>{game.title}</h1>
-      {game.slug==='addiction' && <p class="edition-label">Happy Click 2027, édition 2026–2027, version V2</p>}
-      <p class="lead">Chacun joue un personnage inventé, scène après scène. Après chaque scène, on fait une pause pour en parler. Personne n’a à raconter sa propre histoire.</p>
-    </div>
-    <Doodle name={game.slug as any} size={112} />
-  </div>
+  <EditionCover kind="roles" illustration={game.slug as "addiction" | "cyberharcelement" | "desinformation"}>
+    <p class="breadcrumb"><a href="/kit#roles">Tous les jeux de rôles</a></p>
+    <p class="audience">6 personnages · 4 scènes</p><h1>{game.title}</h1>
+    {game.slug==='addiction' && <p class="edition-label">Happy Click 2027, édition 2026–2027, version V2</p>}
+    <p class="lead">Distribuez les personnages. Un adulte anime la discussion après chaque scène. Les situations sont fictives.</p><a class="cover-action" href="#personnages">Choisir les personnages</a>
+  </EditionCover>
   <div class="wrap section resource-layout">
     <aside class="contents" aria-label="Sommaire du jeu"><ResponsiveDisclosure title="La séance"><a href="#personnages">Les personnages</a>{game.rounds.map((r,i)=><a href={`#tour-${i+1}`}>Scène {i+1} : {r.title}</a>)}<a href="#document">Le document complet</a></ResponsiveDisclosure></aside>
     <div class="resource-content">
@@ -28,7 +24,7 @@ const { game } = Astro.props;
       {game.slug==='addiction' && <div class="callout"><h3>Un jeu, deux présentations</h3><p>Les six rôles, quatre scènes et douze questions sont les mêmes. La V2 utilise des pictogrammes, la V1 des photos, avec la même pagination. <a href="#document">Ouvrir, télécharger ou retrouver l’archive</a>.</p></div>}
       <section class="resource-section" id="personnages">
         <h2>Les personnages</h2>
-        <p>Ouvre une carte pour lire le rôle, puis choisis qui le joue.</p>
+        <p>Ouvrez une carte pour lire le rôle, puis choisissez qui le joue.</p>
         <div class="role-cards">{game.roles.map(r=><details><summary>{r.name}</summary><div class="details-body"><p>{r.text}</p><p class="source-note"><a href={`${game.file}#page=${r.page}`}>Carte originale, page {r.page}</a></p></div></details>)}</div>
         <p class="source-note">Pour préparer la discussion, l’adulte peut lire la <a href={`${game.file}#page=7`}>carte du spécialiste, page 7</a>.</p>
       </section>

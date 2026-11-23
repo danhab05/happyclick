@@ -1,21 +1,18 @@
 ---
+import EditionCover from '../components/EditionCover.astro';
 import Layout from '../layouts/Layout.astro';
-import Doodle from '../components/Doodle.astro';
 import questions from '../data/usage.json';
 ---
 <Layout active="/quiz" title="Mes écrans et moi">
-  <div class="wrap reflection-layout">
-    <section class="board play-head" aria-labelledby="usage-title">
-      <p class="breadcrumb"><a href="/kit#usages">Retour au kit</a></p>
-      <div class="theme-head"><Doodle name="usages" size={92} /><h1 id="usage-title">Mes écrans et moi</h1></div>
-      <p class="lead">Ce que tu fais, ce que tu aimes, ce qui prend de la place. Il n’y a pas de bonne ou de mauvaise réponse.</p>
-    </section>
-    <div class="callout"><h2>C’est toi qui décides</h2><p>Pas de prénom, pas de score, pas de diagnostic. Tu peux sauter des questions. Tes réponses restent sur cette page : elles ne sont ni enregistrées ni envoyées.</p></div>
-  </div>
-  <section class="wrap reflection-layout section compact" data-reflection="usage"><noscript><p class="callout">Les questions marchent sans JavaScript. Pour une version papier, <a href="/resources/kit/test_numerico_dependance.pdf">ouvre le document d’origine</a>. Le récapitulatif a besoin de JavaScript.</p></noscript>
+  <EditionCover kind="usages">
+    <p class="breadcrumb"><a href="/kit#usages">Retour au kit</a></p><h1 id="usage-title">Mes écrans et moi</h1>
+    <p class="lead">Onze questions pour repérer vos activités, vos habitudes et les personnes avec qui vous en parlez.</p>
+  </EditionCover>
+  <div class="wrap reflection-layout"><div class="callout"><h2>Des réponses facultatives</h2><p>Vous pouvez passer une question. Vos choix restent sur cette page. Le questionnaire ne demande aucun prénom et ne donne ni score ni diagnostic.</p></div></div>
+  <section class="wrap reflection-layout section compact" data-reflection="usage"><noscript><p class="callout">Les questions marchent sans JavaScript. Pour une version papier, <a href="/resources/kit/test_numerico_dependance.pdf">ouvrez le document d’origine</a>. Le récapitulatif a besoin de JavaScript.</p></noscript>
     {questions.map((q,index)=><fieldset class="reflection-field" data-field={q.id} data-exclusive={q.exclusive===null?'':q.exclusive}><legend data-label>{index+1}. {q.question}</legend><span class="field-source">{q.multiple?'Plusieurs réponses possibles.':'Une seule réponse.'} <a href={`/resources/kit/test_numerico_dependance.pdf#page=${q.page}`}>Page {q.page} du PDF</a></span>{q.options.map((option,i)=><label class="choice"><input type={q.multiple?'checkbox':'radio'} name={q.id} value={i} /><span>{option}</span></label>)}</fieldset>)}
     <div class="actions js-controls"><button type="button" class="button" data-action="reflect">Relire mes réponses</button><button type="button" class="button secondary" data-action="clear">Tout effacer</button></div><p class="small" role="status" data-reset-status></p>
-    <section class="reflection-output" data-output hidden><h2 tabindex="-1">Voilà tes réponses</h2><p>Elles ne disent rien sur ta santé. Elles peuvent t’aider à choisir un sujet à aborder avec un adulte de confiance.</p><h3>Des idées pour en parler</h3><ul data-prompts></ul><p class="source-note">Pistes adaptées du questionnaire, pages 1 et 2. Ce ne sont ni des résultats médicaux ni des conseils calculés.</p><details><summary>Relire toutes mes réponses</summary><div class="details-body"><dl data-notes></dl></div></details><a class="text-link" href="/guides#guide">Des repères pour les adultes</a></section>
+    <section class="reflection-output" data-output hidden><h2 tabindex="-1">Vos réponses</h2><p>Choisissez un sujet à aborder avec un adulte de confiance.</p><h3>Des idées pour en parler</h3><ul data-prompts></ul><p class="source-note">Pistes adaptées du questionnaire, pages 1 et 2. Ce ne sont ni des résultats médicaux ni des conseils calculés.</p><details><summary>Relire toutes mes réponses</summary><div class="details-body"><dl data-notes></dl></div></details><a class="text-link" href="/guides#guide">Des repères pour les adultes</a></section>
     <p class="source-note">Pour les adultes : <a href="/resources/kit/test_numerico_dependance.pdf" download>« Teste ton usage des écrans ! », télécharger le PDF</a>. Les 11 questions et leurs réponses sont reprises. Le document ne donne pas de barème, donc le site n’ajoute aucun score. Le guide de décembre 2021, <a href="/resources/guides/guide_jeune_et_numerique.pdf#page=39">p.39 et 42–43</a>, insiste sur le contexte des usages plutôt que sur le temps seul.</p>
   </section>
   <script>import { initReflection } from '../scripts/reflection.mjs'; initReflection(document.querySelector('[data-reflection]'));</script>

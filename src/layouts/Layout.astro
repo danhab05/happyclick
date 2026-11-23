@@ -1,8 +1,11 @@
 ---
 import '../styles/site.css';
+import '../styles/atelier-interieur.css';
 import ResponsiveDisclosure from '../components/ResponsiveDisclosure.astro';
 interface Props { active: string; title?: string; }
 const { active, title = 'Bien utiliser le numérique' } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, '');
+const interior = path !== '' && path !== '/quiz' && !path.startsWith('/quiz/');
 const links = [ ['/', 'Accueil'], ['/projet-2027', 'Le projet'], ['/kit', 'Le kit'], ['/guides', 'Guides'], ['/quiz', 'Quiz'] ];
 ---
 <!doctype html>
@@ -17,13 +20,13 @@ const links = [ ['/', 'Accueil'], ['/projet-2027', 'Le projet'], ['/kit', 'Le ki
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/2027/apple-touch-180.png" />
     <link rel="preload" href="/assets/fonts/fredoka-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   </head>
-  <body>
+  <body class:list={[{ 'edition-interior': interior }]}>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" aria-label="Happy Click, accueil">
           <img src="/assets/2027/logo-128.png" width="128" height="138" alt="" />
-          <span class="brand-name">Happy Click<span class="brand-sub">Projet étudiant, 2026–2027</span></span>
+          <span class="brand-name">Happy <em>Click</em></span>
         </a>
         <nav class="desktop-navigation" aria-label="Navigation principale">
           {links.map(([href, label]) => <a href={href} aria-current={href === active ? 'page' : undefined}>{label}</a>)}
@@ -38,6 +41,7 @@ const links = [ ['/', 'Accueil'], ['/projet-2027', 'Le projet'], ['/kit', 'Le ki
     </header>
     <main id="contenu" tabindex="-1"><slot /></main>
     <footer class="site-footer">
+      <div class="wrap footer-imprint"><span>Happy <em>Click</em></span><span>Télécom SudParis<br />Édition 2026–2027</span></div>
       <div class="wrap footer-grid">
         <div><a class="brand" href="/"><img src="/assets/2027/logo-128.png" width="128" height="138" alt="" /><span class="brand-name">Happy Click<span class="brand-sub">Édition 2026–2027</span></span></a><p>Un projet d’étudiants de Télécom SudParis pour aider les enfants à bien utiliser le numérique.</p><p class="small"><a href="/projet-2027">Happy Click 2027, l’équipe et le projet</a></p><p class="small">Archives : Happy Click - Campagne 2025-2026</p></div>
         <div class="footer-links"><ResponsiveDisclosure title="Jouer et réfléchir"><a href="/quiz">Les 29 cartes du quiz</a><a href="/mes-usages">Mes écrans et moi</a><a href="/kit/reflexion">Le carnet des enseignants</a><a href="/guides">Les guides pour les parents</a></ResponsiveDisclosure></div>

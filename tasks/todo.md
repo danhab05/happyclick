@@ -208,3 +208,18 @@ Haut de page quiz resserré, compteur de carte affiché une seule fois, réponse
 
 ## Retour Dan : après « Retourner la carte », la page ne descendait pas
 Sur ordinateur, la carte est ramenée en haut de l'écran à chaque action (retourner, suivante, d'avant, rejouer). Sur téléphone, le focus sur le dos de la carte fait défiler. Nuance et source rangées dans un volet « Pour les adultes » fermé. Build, tests 18/18, verify 65 URLs.
+
+## Refonte du site en quatre scènes — novembre 2026
+
+- [x] Vérifier la préversion et ses routes, ouvrir une branche sur 26d8fd2, relire les leçons et les deux références.
+- [x] Composer l’affiche d’ouverture, la classe, l’atelier de documents et la table de jeu ; régler chaque geste sur mobile.
+- [x] Recomposer la navigation, les pages de lecture et les quatre quiz, en conservant les actions et les contenus.
+- [x] Vérifier le build, les tests et les parcours desktop et mobile en prévisualisation.
+
+### Revue et passation
+
+La revue à 1440 × 900 et 390 × 844 suit une affiche typographique avec écran en perspective, le volet d’un tableau de classe, l’ouverture d’une chemise de fiches et la distribution des trois paquets sur la table. Sur téléphone, l’affiche place l’illustration à côté du titre, le bilan tient sur une ligne chiffrée, la chemise précède les liens et la table devient trois rangées tactiles. Le contrôle visuel a conduit à déplacer le paragraphe sous l’illustration sur mobile. Les quatre effets suivent des timelines CSS natives et retrouvent leurs états en remontant ; le mode réduit conserve les scènes lisibles à l’arrêt.
+
+Les changements d’échelle et les respirations entre chapitres s’inspirent du rythme de [Lando Norris](https://landonorris.com/). Pour le contrôle du geste, le feedback immédiat et le repli statique, lecture de [apple-design-skill à la révision 91e1566](https://github.com/dickwu/apple-design-skill/tree/91e15664896f6f27e75dcf1414d1226cb95fa167), notamment SKILL.md et references/hig/motion.md. Illustration de l’écran réalisée avec ImageGen intégré, puis optimisée en WebP : moniteur cathodique en trois quarts, curseur main sortant de l’écran, encres ivoire, prune et menthe, trame sérigraphiée sur fond transparent. La fiche du professeur vient de la page 4 du PDF Écrans et équilibre V2.
+
+Base publique de départ : 26d8fd2. Branche de travail : feat/atelier-en-mouvement. Build statique de 15 pages, 18/18 tests et audit de 72 URL avec 325 références. Les quatre quiz ont été menés au score et rejoués, avec alternance de réponses justes et fausses. Les captures avant, les planches publiques, les matrices aller-retour et la preuve de déploiement sont regroupées dans /mnt/data/happyclick-atelier. Le fichier preuve-deploiement.json relie le commit de fusion, le déploiement Coolify et les empreintes HTTPS de cette livraison.

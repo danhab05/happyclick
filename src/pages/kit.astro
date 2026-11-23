@@ -1,4 +1,5 @@
 ---
+import EditionCover from '../components/EditionCover.astro';
 import ResponsiveDisclosure from '../components/ResponsiveDisclosure.astro';
 import Layout from '../layouts/Layout.astro';
 import PdfDocument from '../components/PdfDocument.astro';
@@ -11,14 +12,11 @@ const pictures = { addiction: 'addiction', cyberharcelement: 'cyberharcelement',
 const Original = (i: number) => sections[i];
 ---
 <Layout active="/kit" title="Jeux et kit à imprimer">
-  <div class="wrap read-head">
-    <div>
-      <p class="audience">Pour les enseignants, les animateurs et les parents</p>
-      <h1>Les jeux et le kit à imprimer</h1>
-      <p class="lead">Les cartes du quiz, trois jeux de rôles et deux questionnaires. Chaque activité se joue en ligne ou sur papier, pour la fin du primaire et le début du collège.</p>
-    </div>
-    <Doodle name="classe" size={112} />
-  </div>
+  <EditionCover kind="kit">
+    <p class="audience">Activités pour la classe</p>
+    <h1>Le kit à imprimer</h1><p class="lead">Distribuez les cartes, attribuez les rôles ou ouvrez un questionnaire. Chaque activité peut se jouer en classe ou à la maison.</p>
+    <a class="cover-action" href="#cartes">Parcourir les activités</a>
+  </EditionCover>
   <div class="wrap section resource-layout">
     <aside class="contents" aria-label="Sommaire du kit"><ResponsiveDisclosure title="Dans le kit"><a href="#cartes">Les cartes du quiz</a><a href="#roles">Les jeux de rôles</a><a href="#usages">Mes écrans et moi</a><a href="#enseignants">Le carnet des enseignants</a></ResponsiveDisclosure></aside>
     <div class="resource-content">
