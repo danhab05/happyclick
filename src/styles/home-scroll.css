@@ -1,161 +1,93 @@
-/* The cover and the three printed cards share a physical edge and an ink colour. */
+/* The artwork is cropped from three actual cards in the printable activity. */
 .click-hero {
-  position: relative;
-  isolation: isolate;
+  background: #e3f2f7;
+  border-bottom: 1px solid #a9c3cd;
   overflow: clip;
-  background: #152541;
-  color: white;
 }
 .click-intro {
-  position: relative;
   display: grid;
-  grid-template-columns: 1.18fr .82fr;
+  grid-template-columns: 1fr 1.02fr;
+  gap: clamp(24px, 5vw, 78px);
   align-items: center;
-  gap: clamp(24px, 4vw, 72px);
-  padding-block: clamp(48px, 8vh, 100px);
+  padding-block: clamp(48px, 6vw, 96px);
 }
 .click-copy h1 {
-  font-size: clamp(3rem, 5.7vw, 5.5rem);
-  line-height: .98;
+  max-width: 13ch;
+  font-size: clamp(3rem, 5.5vw, 5.15rem);
   letter-spacing: -.04em;
-  text-wrap: initial;
-  max-width: 14ch;
+  line-height: .99;
 }
-.click-copy h1 em { color: var(--sky); }
-.click-copy .lead { font-size: clamp(1rem, 1.4vw, 1.18rem); max-width: 54ch; margin-top: 24px; }
-.click-copy .button { box-shadow: 0 3px 0 #080d18; }
-.hero-orbit {
-  position: absolute;
-  z-index: -1;
-  width: 75vw;
-  aspect-ratio: 1;
-  right: -30vw;
-  bottom: -38vw;
-  border: clamp(30px, 7vw, 120px) solid #28405e;
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px #355372, inset 0 0 0 2px #355372;
+.click-copy .lead { max-width: 47ch; margin-top: 22px; font-size: clamp(1rem, 1.37vw, 1.2rem); line-height: 1.55; }
+.click-copy .lead a { text-decoration-color: #6b8897; }
+.click-copy .actions { margin-top: 26px; gap: 10px 24px; }
+.project-link, .kit-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font: 500 1.1rem/1.25 var(--display);
+  text-underline-offset: .25em;
 }
+.project-link { background: var(--ink); color: white; border-radius: 7px; padding: 11px 20px; text-decoration: none; }
+.project-link:hover { background: #284565; }
+.print-sample { min-width: 0; margin: 0; }
 .hand {
+  width: 78%; max-width: 415px;
+  aspect-ratio: 1.414;
   position: relative;
-  width: min(75%, 345px);
-  margin: 4% auto;
-  aspect-ratio: 4 / 5;
+  margin: 13% auto 8%;
 }
-.hand > div {
-  position: absolute;
-  inset: 0;
-  border: 3px solid var(--ink);
-  border-radius: 8%;
-  transform-origin: 48% 86%;
-  box-shadow: 4px 5px 0 #081627;
+.print-card {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  border: 1px solid #182c3a55;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px #17263533;
+  transform-origin: 44% 76%;
+  transform: translate(var(--rest-x), var(--rest-y)) rotate(var(--rest-turn));
 }
-.hand-back {
-  background: repeating-linear-gradient(135deg, #d79016 0 2px, var(--sun) 2px 11px);
-  transform: rotate(-23deg) translate(-9%, 1%);
-}
-.hand-mid { background: #fb7469; transform: rotate(-9deg) translate(-3%, 0); }
-.hand-face { display: grid; place-items: center; padding: 8%; background: var(--sky); transform: rotate(9deg); }
-.hand-face::before, .hand-face::after { content: ''; position: absolute; width: 7%; aspect-ratio: 1; border-radius: 50%; background: var(--paper); border: 2px solid var(--ink); }
-.hand-face::before { top: 5%; left: 6%; }
-.hand-face::after { bottom: 5%; right: 6%; }
-.hand-face img { width: 100%; }
-.hero-tail { position: relative; padding-block: 6px 16px; border-top: 1px solid #7790a8; }
-.hero-tail a { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; font-size: .9rem; }
-.click-hero :focus-visible { outline-color: white; box-shadow: 0 0 0 3px var(--ink); }
-
-.scroll-deck { position: relative; background: var(--ink); }
-.deck-screen { position: relative; }
-.scene { background: var(--scene-bg); color: var(--ink); overflow: clip; position: relative; isolation: isolate; }
-.scene-1 { --scene-bg: #ffac9f; --art-bg: #ffe5dc; --tilt: 5deg; }
-.scene-2 { --scene-bg: #ffcf51; --art-bg: #fff1b9; --tilt: -5deg; }
-.scene-3 { --scene-bg: #9bdbb1; --art-bg: #e1f5df; --tilt: 4deg; }
-.scene::before {
-  content: ''; position: absolute; z-index: -1; width: 76%; height: 190%; top: -45%; right: -14%;
-  border: 2px solid #14213d38; border-radius: 50%;
-  box-shadow: 0 0 0 20px var(--scene-bg), 0 0 0 22px #14213d29, 0 0 0 54px var(--scene-bg), 0 0 0 56px #14213d20;
-}
-.scene-composition {
-  display: grid; align-items: center; grid-template-columns: 1.2fr .8fr;
-  gap: 6%; padding-block: clamp(48px, 8vh, 100px);
-}
-.scene-caption { display: flex; gap: 16px; align-items: center; font: 500 1rem var(--display); }
-.scene-caption span { display: inline-block; border: 1px solid currentColor; border-radius: 999px; padding: 5px 12px; font-variant-numeric: tabular-nums; }
-.scene h2 { margin-top: 22px; max-width: 11ch; text-wrap: initial; font-size: clamp(3.35rem, 7.6vw, 7.8rem); line-height: .95; letter-spacing: -.045em; }
-.scene-print {
-  width: min(100%, 350px); justify-self: center; border: var(--line); border-radius: 20px;
-  background: var(--paper); padding: 13px; box-shadow: 5px 6px 0 var(--ink); transform: rotate(var(--tilt));
-}
-.scene-art { display: grid; place-items: center; background: var(--art-bg); border-radius: 12px; padding: clamp(12px, 2vw, 30px); }
-.scene-art svg { height: clamp(100px, 21vh, 180px); width: auto; }
-.scene-print p { font: 500 clamp(1.12rem, 1.8vw, 1.5rem)/1.23 var(--display); padding: 16px 8px 8px; }
-.deck-exit { display: flex; justify-content: center; padding: 14px; background: var(--paper); border-block: var(--line); }
-.deck-exit .button { background: var(--ink); color: white; }
-.project-motto { margin: 22px 0; padding-inline-start: 18px; border-inline-start: 4px solid var(--heart); font: 500 1.4rem/1.3 var(--display); }
-
-@media (max-width: 700px) {
-  .click-intro { display: grid; grid-template-columns: 1fr; gap: 0; padding-block: 25px 20px; }
-  .click-copy { display: contents; }
-  .click-copy h1 { grid-row: 1; grid-column: 1; width: 74%; font-size: clamp(1.95rem, 7.7vw, 3.2rem); }
-  .hand { grid-row: 1; grid-column: 1; justify-self: end; width: 20%; margin: 0 2% 0 0; }
-  .hand > div { border-width: 2px; box-shadow: 2px 2px 0 #081627; }
-  .hand-face::before, .hand-face::after { border-width: 1px; }
-  .click-copy .lead { font-size: 1rem; margin-top: 14px; }
-  .click-copy .actions { margin-top: 15px; gap: 8px; }
-  .click-copy .button { min-height: 44px; padding-inline: 14px; }
-  .hero-tail { padding-block: 0 4px; }
-  .scene-composition { grid-template-columns: 1fr; align-content: center; gap: 22px; padding-block: 32px; }
-  .scene h2 { font-size: clamp(2.5rem, 10vw, 4.5rem); max-width: 13ch; margin-top: 10px; }
-  .scene-caption { font-size: .9rem; }
-  .scene-print { width: min(90%, 275px); padding: 9px; }
-  .scene-art svg { height: clamp(64px, 16svh, 135px); }
-  .scene-print p { padding: 10px 4px 4px; }
-}
-
-/* Native scroll timelines. Static panels are the base for reduced motion,
-   scripting disabled, short viewports and browsers without timeline support. */
-@supports (animation-timeline: view()) and (animation-range: contain) {
-  @media screen and (scripting: enabled) and (prefers-reduced-motion: no-preference) and (min-height: 560px) {
-    .click-hero { view-timeline: --cover block; }
-    .hand-back, .hand-mid, .hand-face, .hero-orbit {
-      animation-name: cover-back;
+.print-back { --rest-x: -6%; --rest-y: -14%; --rest-turn: -9deg; --out-x: -15%; --out-y: -18%; --out-turn: -16deg; }
+.print-middle { --rest-x: -1%; --rest-y: -6%; --rest-turn: -2deg; --out-x: -2%; --out-y: -10%; --out-turn: -3deg; }
+.print-front { --rest-x: 3%; --rest-y: 0%; --rest-turn: 5deg; --out-x: 16%; --out-y: 7%; --out-turn: 12deg; }
+.print-sample figcaption { text-align: center; font-size: .92rem; }
+.print-sample figcaption a { display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 4px 10px; min-height: 44px; }
+.print-sample figcaption span { font-size: .82rem; color: var(--muted); }
+@supports (animation-timeline: scroll()) {
+  @media screen and (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+    .print-card {
+      animation-name: spread-paper;
       animation-timing-function: linear;
       animation-fill-mode: both;
-      animation-timeline: --cover;
-      animation-range: exit 0% exit 100%;
+      animation-timeline: scroll(root block);
+      animation-range: 0px min(44vh, 380px);
     }
-    .hand-mid { animation-name: cover-mid; }
-    .hand-face { animation-name: cover-front; }
-    .hero-orbit { animation-name: orbit; }
-    .scroll-deck { height: 310svh; view-timeline: --deal block; }
-    .deck-screen { position: sticky; top: 0; height: 100svh; overflow: clip; isolation: isolate; }
-    .scene { position: absolute; inset: 0; display: grid; align-items: center; padding-bottom: 65px; }
-    .scene-2, .scene-3, .scene-print, .scene-type, .deck-exit::before {
-      animation-name: deal;
-      animation-timing-function: linear;
-      animation-fill-mode: both;
-      animation-timeline: --deal;
-      animation-range: contain 13% contain 39%;
-    }
-    .scene-3 { animation-range: contain 55% contain 81%; }
-    .scene-type { animation-name: title-track; }
-    .scene-print { animation-name: print-track; }
-    .scene-1 > div > * { animation-range: contain 0% contain 38%; }
-    .scene-2 > div > * { animation-range: contain 14% contain 72%; }
-    .scene-3 > div > * { animation-range: contain 56% contain 100%; }
-    .deck-exit { position: absolute; bottom: 0; width: 100%; background: transparent; border: 0; padding-bottom: max(20px, env(safe-area-inset-bottom)); }
-    .deck-exit::before { content: ''; position: absolute; inset: 0; background: var(--paper); animation-name: exit-wipe; animation-range: contain 82% contain 100%; }
-    .deck-exit .button { position: relative; }
-  }
-  @media screen and (scripting: enabled) and (prefers-reduced-motion: no-preference) and (min-height: 560px) and (max-width: 700px) {
-    .scroll-deck { height: 225svh; }
-    .scroll-deck, .click-hero { --drift: 12px; }
   }
 }
-@keyframes cover-back { to { transform: translate(-16%, -12%) rotate(-43deg); } }
-@keyframes cover-mid { to { transform: translate(-6%, -3%) rotate(-20deg) scale(1.04); } }
-@keyframes cover-front { to { transform: translate(8%, 19%) rotate(18deg) scale(1.16); } }
-@keyframes orbit { to { transform: translateY(-15%) scale(1.35); } }
-@keyframes deal { from { clip-path: polygon(0 108%, 100% 100%, 100% 110%, 0 110%); } to { clip-path: polygon(0 0, 100% -8%, 100% 110%, 0 110%); } }
-@keyframes title-track { from { transform: translateY(var(--drift, 36px)); } to { transform: translateY(calc(-1 * var(--drift, 36px))); } }
-@keyframes print-track { from { transform: translateY(calc(-1 * var(--drift, 36px))) rotate(-6deg) scale(.92); } to { transform: translateY(var(--drift, 36px)) rotate(6deg) scale(1.06); } }
-@keyframes exit-wipe { from { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); } to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
+@keyframes spread-paper {
+  from { transform: translate(var(--rest-x), var(--rest-y)) rotate(var(--rest-turn)); }
+  to { transform: translate(var(--out-x), var(--out-y)) rotate(var(--out-turn)); }
+}
+.home-decks { background: #faf8f1; border-bottom: 1px solid #dedbd0; }
+.deck-directory { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(24px, 6vw, 90px); padding-block: clamp(36px, 5vw, 68px); }
+.deck-directory h2 { font-size: clamp(2rem, 3.4vw, 3rem); letter-spacing: -.025em; }
+.deck-directory-intro p { margin-top: 10px; max-width: 29ch; }
+.deck-directory-intro .kit-link { margin-top: 8px; }
+.deck-directory-list { list-style: none; margin: 0; padding: 0; }
+.deck-directory-list li { margin: 0; border-top: 1px solid #cac6b9; }
+.deck-directory-list li:last-child { border-bottom: 1px solid #cac6b9; }
+.deck-directory-list a { display: grid; grid-template-columns: 50px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 16px 4px; text-decoration: none; }
+.deck-directory-list a:hover strong { text-decoration: underline; text-underline-offset: .18em; }
+.deck-directory-list strong { display: block; font: 550 clamp(1.2rem, 2vw, 1.55rem)/1.15 var(--display); }
+.card-excerpt { display: block; margin-top: 5px; font-size: .97rem; line-height: 1.4; color: var(--muted); }
+.deck-arrow { font-size: 1.2rem; }
+.project-motto { margin: 18px 0; padding-left: 16px; border-left: 3px solid var(--sky); font: 500 1.2rem/1.4 var(--display); }
+
+@media (max-width: 720px) {
+  .click-intro { grid-template-columns: 1fr; gap: 14px; padding-block: 28px 14px; }
+  .click-copy h1 { max-width: 13ch; font-size: clamp(2.7rem, 8.8vw, 3.75rem); }
+  .click-copy .lead { margin-top: 12px; line-height: 1.4; }
+  .click-copy .actions { margin-top: 14px; gap: 10px 16px; }
+  .hand { width: 66%; max-width: 290px; margin: 8% auto 5%; }
+  .deck-directory { grid-template-columns: 1fr; gap: 12px; padding-block: 26px; }
+  .deck-directory-intro p { max-width: none; }
+  .deck-directory-intro .kit-link { margin-top: 2px; }
+  .deck-directory-list a { grid-template-columns: 40px 1fr auto; gap: 10px; padding-block: 12px; }
+}

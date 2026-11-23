@@ -6,25 +6,26 @@ import Doodle from '../components/Doodle.astro';
 ---
 <Layout active="/" title="Un projet pour bien utiliser le numérique">
   <section class="click-hero" aria-labelledby="home-title">
-    <div class="hero-orbit" aria-hidden="true"></div>
     <div class="wrap click-intro">
       <div class="click-copy">
-        <h1 id="home-title">Aider les enfants à bien utiliser <em>le numérique</em></h1>
-        <p class="lead">Happy Click est un projet d’étudiants de Télécom SudParis. Nous préparons des jeux et des interventions pour parler des écrans avec les élèves de primaire et de collège, et nous partageons nos outils avec les enseignants et les parents.</p>
-        <div class="actions"><a class="button" href="/projet-2027">Découvrir le projet</a><a class="button secondary" href="/kit">Le kit pour les enseignants</a></div>
+        <h1 id="home-title">Parler des écrans en classe.</h1>
+        <p class="lead">Les étudiants de Télécom SudParis <a href="#what-title">interviennent en primaire et au collège</a>. Retrouvez leurs cartes, leurs jeux de rôles et leurs guides pour poursuivre la discussion en classe ou à la maison.</p>
+        <div class="actions"><a class="project-link" href="/projet-2027">Découvrir le projet</a><a class="kit-link" href="/kit">Ouvrir le kit</a></div>
       </div>
-      <div class="hand">
-        <div class="hand-back" aria-hidden="true"></div>
-        <div class="hand-mid" aria-hidden="true"></div>
-        <div class="hand-face"><img src="/assets/2027/logo-512.png" width="512" height="551" alt="Logo officiel Happy Click : un cœur, deux mains et un curseur" fetchpriority="high" /></div>
-      </div>
+      <figure class="print-sample">
+        <div class="hand" aria-hidden="true">
+          <img class="print-card print-back" src="/assets/previews/carte-ecologie.webp" width="800" height="566" alt="" />
+          <img class="print-card print-middle" src="/assets/previews/carte-equilibre.webp" width="800" height="566" alt="" />
+          <img class="print-card print-front" src="/assets/previews/carte-reflexes.webp" width="800" height="566" alt="" fetchpriority="high" />
+        </div>
+        <figcaption><a href="/resources/kit/activite_cartes_a_imprimer.pdf">Les cartes à imprimer <span>PDF · 16 pages</span></a></figcaption>
+      </figure>
     </div>
-    <div class="hero-tail wrap"><a href="#what-title">Aller à la présentation du projet <span aria-hidden="true">↓</span></a></div>
   </section>
   <ScrollDeck />
 
   <section class="wrap section narrow" aria-labelledby="what-title">
-    <h2 id="what-title" tabindex="-1">Happy Click, qu’est-ce que c’est ?</h2>
+    <h2 id="what-title" tabindex="-1">Le projet Happy Click</h2>
     <blockquote class="project-motto">« Le numérique n’est pas mauvais… il suffit d’en faire bon usage. »</blockquote>
     <p>Happy Click est mené par des étudiants de première année de Télécom SudParis, dans le cadre du programme GATE® (Gestion et Apprentissage du Travail en Équipe). Le projet a été commandé par Loïc Bernable, diplômé de Télécom SudParis en 2000, directeur technique et co-fondateur de LOG.</p>
     <p>Chaque année, une nouvelle équipe reprend le projet. Elle va à la rencontre des élèves, crée des activités pour parler de santé, d’environnement et de comportement en ligne, et met ces outils à disposition de tous.</p>
@@ -32,7 +33,7 @@ import Doodle from '../components/Doodle.astro';
   </section>
 
   <section class="wrap section compact narrow" aria-labelledby="history-title">
-    <h2 id="history-title">Ce que le projet a déjà fait</h2>
+    <h2 id="history-title">Les interventions par année</h2>
     <div class="edition-history">
       <article><h3>2024–2025 : dans les classes</h3><p>370 élèves rencontrés dans 5 établissements (un collège et quatre écoles). L’équipe a créé un test sur les usages du numérique, un jeu de cartes et des fiches d’activité. Le projet a reçu le Prix exceptionnel du GATE.</p><a href="https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/" target="_blank" rel="noopener noreferrer">Voir le bilan 2024-2025 <span class="sr-only">(nouvel onglet)</span><span aria-hidden="true">↗</span></a></article>
       <article><h3>2025–2026 : le kit Happy Click</h3><p>Des documents à imprimer pour les interventions dans les écoles et collèges : cartes quiz, trois jeux de rôles, deux questionnaires, et des guides pour les parents.</p><a href="/kit">Voir le kit</a></article>
@@ -41,11 +42,11 @@ import Doodle from '../components/Doodle.astro';
   </section>
 
   <section class="wrap section compact" aria-labelledby="tools-title">
-    <h2 id="tools-title">Nos outils, pour tous</h2>
+    <h2 id="tools-title">Les outils pédagogiques</h2>
     <ul class="for-whom">
       <li><Doodle name="classe" size={64} /><h3>Pour les enseignants</h3><p>Le kit à imprimer : cartes, jeux de rôles et questionnaires, avec la façon de les animer en classe.</p><a class="text-link" href="/kit">Ouvrir le kit</a></li>
       <li><Doodle name="maison" size={64} /><h3>Pour les parents</h3><p>Deux guides pour comprendre les usages des enfants et en parler à la maison.</p><a class="text-link" href="/guides">Lire les guides</a></li>
-      <li><Doodle name="tout" size={64} /><h3>En plus : les quiz en ligne</h3><p>Les 29 cartes du quiz, à jouer sur le site, seul ou en famille.</p><a class="text-link" href="/quiz">Jouer aux quiz</a></li>
+      <li><Doodle name="tout" size={64} /><h3>Les quiz en ligne</h3><p>Les 29 cartes du quiz, à jouer sur le site, seul ou en famille.</p><a class="text-link" href="/quiz">Jouer aux quiz</a></li>
     </ul>
   </section>
 </Layout>

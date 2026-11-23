@@ -2,28 +2,27 @@
 import Doodle from './Doodle.astro';
 import questions from '../data/quiz.json';
 
-const chapters = [
-  { id: 'q01', name: 'Les bons réflexes', icon: 'reflexes', subject: 'Comportements' },
-  { id: 'q11', name: 'Trouver son équilibre', icon: 'equilibre', subject: 'Santé' },
-  { id: 'q20', name: 'Derrière nos écrans', icon: 'planete', subject: 'Écologie' },
+const decks = [
+  { slug: 'comportements', title: 'Les bons réflexes', icon: 'reflexes', sample: 'q01' },
+  { slug: 'sante', title: 'Trouver son équilibre', icon: 'equilibre', sample: 'q11' },
+  { slug: 'ecologie', title: 'Derrière nos écrans', icon: 'planete', sample: 'q20' },
 ] as const;
 ---
-<section class="scroll-deck" aria-label="Trois thèmes du jeu de cartes">
-  <div class="deck-screen">
-    {chapters.map((chapter, index) => (
-      <article class={`scene scene-${index + 1}`}>
-        <div class="scene-composition wrap">
-          <div class="scene-type">
-            <p class="scene-caption"><span>0{index + 1} / 03</span> {chapter.subject}</p>
-            <h2>{chapter.name}</h2>
-          </div>
-          <div class="scene-print">
-            <div class="scene-art"><Doodle name={chapter.icon} size={192} /></div>
-            <p>{questions.find(q => q.id === chapter.id)!.question}</p>
-          </div>
-        </div>
-      </article>
-    ))}
-    <div class="deck-exit"><a class="button" href="/quiz">Choisir un quiz <span aria-hidden="true">↗</span></a></div>
+<section class="home-decks" aria-labelledby="home-decks-title">
+  <div class="wrap deck-directory">
+    <div class="deck-directory-intro">
+      <h2 id="home-decks-title">Les cartes du quiz</h2>
+      <p>29 questions, trois thèmes. Choisissez un paquet pour jouer.</p>
+      <a class="kit-link" href="/quiz">Voir tous les quiz</a>
+    </div>
+    <ul class="deck-directory-list">
+      {decks.map(deck => <li>
+        <a href={`/quiz/${deck.slug}`}>
+          <Doodle name={deck.icon} size={54} />
+          <span><strong>{deck.title}</strong><span class="card-excerpt">{questions.find(q => q.id === deck.sample)!.question}</span></span>
+          <span class="deck-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>)}
+    </ul>
   </div>
 </section>

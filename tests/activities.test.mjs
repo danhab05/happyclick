@@ -57,7 +57,7 @@ for(const theme of ['comportements','sante','ecologie','tout']){
   const session=initQuiz(root);const cards=[...root.querySelectorAll('[data-question]')];
   assert.equal(cards.filter(card=>!card.hidden).length,1);
   click(window,cards[0].querySelector('[data-validate]'));
-  assert.match(cards[0].querySelector('[data-error]').textContent,/Choisis/);
+  assert.match(cards[0].querySelector('[data-error]').textContent,/Cochez au moins une réponse/);
   cards.forEach((card,index)=>{
    assert.equal(card.hidden,false);
    const expected=card.dataset.answers.split(',').map(Number);
