@@ -15,40 +15,64 @@ const { theme, title, topic, picture, questions } = Astro.props;
 const letter = (i: number) => String.fromCharCode(65 + i);
 ---
 <Layout active="/quiz" title={title}>
-  <div class="wrap quiz-wrap page-intro quiz-head">
-    <p class="breadcrumb"><a href="/quiz">Changer de paquet</a></p>
-    <div class="theme-head"><Doodle name={picture as any} size={64} /><div><h1>{title}</h1><p class="small">{questions.length} cartes. {topic}</p></div></div>
-  </div>
-  <section class:list={['wrap quiz-wrap section compact quiz-table', `deck-${theme}`]} data-quiz aria-label={`Paquet ${title}`}>
-    <div class="quiz-progress"><span data-counter>Les {questions.length} cartes du paquet</span><span>Pas de note, prends ton temps.</span></div><label class="sr-only" for="quiz-progress">Cartes retournées</label><progress id="quiz-progress" max={questions.length} value="0"></progress>
-    <noscript><div class="callout">Toutes les cartes sont affichées ci-dessous. Ouvre « Voir le dos de la carte » pour lire la réponse, ou <a href="/resources/kit/activite_cartes_a_imprimer.pdf">imprime les cartes en PDF</a>.</div></noscript>
-    {questions.map((q, index) => <article class="quiz-card" data-question={q.id} data-answers={q.answers.join(',')}>
-      <p class="question-no">Carte {index + 1} sur {questions.length}</p><h2 id={`${q.id}-title`} tabindex="-1">{q.question}</h2>
-      <p class="hint">Choisis une ou plusieurs réponses. Tu peux en parler avant de retourner la carte.</p>
-      <fieldset aria-labelledby={`${q.id}-title`}><legend class="sr-only">Tes réponses pour cette carte</legend>{q.options.map((option, i) => <label class="choice"><input type="checkbox" name={q.id} value={i} /><span><span class="choice-letter" aria-hidden="true">{letter(i)}</span><span class="choice-text">{option}</span></span></label>)}</fieldset>
-      <div class="quiz-controls js-controls"><button type="button" class="button" data-action="validate" data-validate>Retourner la carte</button><button type="button" class="button" data-action="next" data-next hidden>{index === questions.length - 1 ? 'Voir toutes mes cartes' : 'Carte suivante'}</button><button type="button" class="button secondary" data-action="previous" data-previous>Carte d’avant</button></div><p class="quiz-error" data-error role="alert"></p>
-      <details class="quiz-feedback" data-feedback><summary>Voir le dos de la carte</summary><div class="details-body"><div class="card-back" data-feedback-body>
-        <h3 tabindex="-1" data-feedback-title>Au dos de la carte</h3>
-        <p class="quiz-answer">{q.answers.length > 1 ? 'Les réponses de la carte' : 'La réponse de la carte'} : {q.answers.map(letter).join(' et ')}</p>
-        <p class="small" data-comparison></p>
-        <p>{q.feedback}</p>
-        <div class="talk"><h4>À toi d’en parler</h4><p class="discussion">{q.discussion}</p></div>
-        <details class="for-adults">
-          <summary>{q.nuance ? 'Pour les adultes : une nuance et la source' : 'Pour les adultes : la source'}</summary>
-          {q.nuance && <p>{q.nuance}</p>}
-          <p class="source-note">Carte Happy Click : <a href={`${q.source.file}#page=${q.source.page}`}>question page {q.source.page}</a>, <a href={`${q.source.file}#page=${q.source.answerPage}`}>réponse page {q.source.answerPage}</a>. La nuance et la question pour en parler sont ajoutées par le site.</p>
-        </details>
-      </div></div></details>
-    </article>)}
-    <section class="quiz-card quiz-end" data-end hidden>
-      <Doodle name="mains" size={96} />
-      <h2 tabindex="-1">Paquet terminé&nbsp;!</h2>
-      <p>Tu as retourné toutes les cartes. Laquelle t’a le plus surpris ? Sur laquelle n’étiez-vous pas d’accord ?</p>
-      <p>Tes réponses et le dos de chaque carte sont rappelés ci-dessous. Ils disparaissent quand tu quittes la page.</p>
-      <div class="actions"><button type="button" class="button" data-action="reset">Rejouer ce paquet</button><a class="text-link" href="/quiz">Choisir un autre paquet</a></div>
-      <div class="review-list" data-review></div>
-    </section>
-    <p class="privacy-note">Tes réponses restent sur cette page : rien n’est enregistré ni envoyé. Rejouer ou quitter la page les efface.</p>
+  <section class:list={['quiz-table', `deck-${theme}`]} data-quiz aria-label={`Paquet ${title}`}>
+    <div class="wrap quiz-wrap">
+      <header class="quiz-head">
+        <a class="quiz-back-link" href="/quiz"><span aria-hidden="true">←</span> Changer de paquet</a>
+        <div class="quiz-pack">
+          <div class="quiz-pack-art"><Doodle name={picture as any} size={64} /></div>
+          <div><h1>{title}</h1><p>{topic}</p></div>
+        </div>
+        <div class="quiz-progress">
+          <span data-counter id="quiz-counter">Les {questions.length} cartes du paquet</span>
+          <progress id="quiz-progress" aria-label="Cartes retournées" max={questions.length} value="0"></progress>
+        </div>
+      </header>
+      <noscript><div class="callout">Toutes les cartes sont affichées ci-dessous. Ouvre « Voir le dos de la carte » pour lire la réponse, ou <a href="/resources/kit/activite_cartes_a_imprimer.pdf">imprime les cartes en PDF</a>.</div></noscript>
+      {questions.map((q, index) => <article class="quiz-card" data-question={q.id} data-answers={q.answers.join(',')}>
+        <p class="question-no">Carte {index + 1} sur {questions.length}</p>
+        <h2 id={`${q.id}-title`} tabindex="-1" aria-describedby="quiz-counter">{q.question}</h2>
+        <p class="hint">Choisis une ou plusieurs réponses.</p>
+        <fieldset aria-labelledby={`${q.id}-title`}>
+          <legend class="sr-only">Tes réponses pour cette carte</legend>
+          {q.options.map((option, i) => <label class="choice">
+            <input type="checkbox" name={q.id} value={i} />
+            <span><span class="choice-letter" aria-hidden="true">{letter(i)}</span><span class="choice-text">{option}</span></span>
+          </label>)}
+        </fieldset>
+        <p class="quiz-error" data-error role="alert"></p>
+        <details class="quiz-feedback" data-feedback><summary>Voir le dos de la carte</summary><div class="details-body"><div class="card-back" data-feedback-body>
+          <h3 tabindex="-1" data-feedback-title>Au dos de la carte</h3>
+          <p class="small" data-comparison></p>
+          <p class="quiz-answer">{q.answers.length > 1 ? 'Les bonnes réponses' : 'La bonne réponse'}</p>
+          <ul class="answer-key">{q.answers.map(i => <li><b>{letter(i)}</b> {q.options[i]}</li>)}</ul>
+          <p>{q.feedback}</p>
+          <details class="talk"><summary>À toi d’en parler</summary><p class="discussion">{q.discussion}</p></details>
+          <details class="for-adults">
+            <summary>{q.nuance ? 'Pour les adultes : une nuance et la source' : 'Pour les adultes : la source'}</summary>
+            {q.nuance && <p>{q.nuance}</p>}
+            <p class="source-note">Carte Happy Click : <a href={`${q.source.file}#page=${q.source.page}`}>question page {q.source.page}</a>, <a href={`${q.source.file}#page=${q.source.answerPage}`}>réponse page {q.source.answerPage}</a>. La nuance et la question pour en parler sont ajoutées par le site et signalées comme telles.</p>
+          </details>
+        </div></div></details>
+        <div class="quiz-controls js-controls">
+          <button type="button" class="button" data-action="validate" data-validate>Retourner la carte</button>
+          <button type="button" class="button" data-action="next" data-next hidden>{index === questions.length - 1 ? 'Voir mon score' : 'Carte suivante'}</button>
+          <button type="button" class="button secondary" data-action="previous" data-previous>Carte d’avant</button>
+        </div>
+      </article>)}
+      <section class="quiz-card quiz-end" data-end hidden>
+        <div class="quiz-result">
+          <div><h2 tabindex="-1" aria-describedby="quiz-score">Paquet terminé&nbsp;!</h2>
+            <p id="quiz-score">Ton score <strong data-score></strong></p></div>
+          <Doodle name="mains" size={96} />
+        </div>
+        <div class="actions"><button type="button" class="button" data-action="reset">Rejouer ce paquet</button><a class="text-link" href="/quiz">Choisir un autre paquet</a></div>
+        <h3 class="review-heading">Tes cartes</h3>
+        <p>Laquelle t’a le plus surpris ? Ouvre une carte pour revoir tes réponses et son explication.</p>
+        <div class="review-list" data-review></div>
+      </section>
+      <p class="privacy-note">Tes réponses restent sur cette page : rien n’est enregistré ni envoyé. Rejouer ou quitter la page les efface.</p>
+    </div>
   </section>
   <script>
     import { initQuiz } from '../../scripts/quiz.mjs';

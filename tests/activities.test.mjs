@@ -61,14 +61,17 @@ for(const theme of ['comportements','sante','ecologie','tout']){
   cards.forEach((card,index)=>{
    assert.equal(card.hidden,false);
    const expected=card.dataset.answers.split(',').map(Number);
-   // Exercise both differing and matching answers; there must still be no numerical grade.
-   const values=index===0?[0]:expected;
+   // A partial answer to a multi-answer card must also count as incorrect.
+   const wrong = index === 0 || expected.length > 1;
+   const values = !wrong ? expected : expected.length > 1 ? expected.slice(1) : [(expected[0]+1)%4];
    values.forEach(value=>{const input=card.querySelectorAll('input')[value];input.checked=true;change(window,input);});
    assert.deepEqual(session.selections[index],values);
    click(window,card.querySelector('[data-validate]'));
    assert.equal(card.querySelector('[data-feedback]').hidden,false);
    assert.equal(card.querySelector('fieldset').disabled,true);
    assert.equal(card.querySelector('[data-next]').hidden,false);
+   assert.equal(card.querySelector('[data-feedback-title]').textContent,wrong ? 'Pas tout à fait' : 'Bonne réponse !');
+   assert.equal(root.querySelector('progress').value,index+1);
    if(index===1){
     click(window,card.querySelector('[data-previous]'));
     assert.equal(cards[0].hidden,false);assert.equal(cards[0].querySelector('[data-feedback]').hidden,false);
@@ -79,8 +82,12 @@ for(const theme of ['comportements','sante','ecologie','tout']){
   assert.equal(session.finished,true);assert.equal(root.querySelector('[data-end]').hidden,false);
   assert.equal(root.querySelectorAll('[data-review]>details').length,cards.length);
   assert.match(root.querySelector('[data-counter]').textContent,/explorées/);
+  const correct = cards.filter((c,i)=>i>0 && c.dataset.answers.split(',').length===1).length;
+  assert.equal(root.querySelector('[data-score]').textContent,`${correct} / ${cards.length}`);
   click(window,root.querySelector('[data-action=reset]'));
   assert.equal(session.finished,false);assert.equal(session.validated.size,0);
+  assert.equal(root.querySelector('[data-score]').textContent,'');
+  assert.equal(root.querySelector('progress').value,0);
   assert.equal(cards[0].hidden,false);assert.equal(root.querySelectorAll('[data-review]>details').length,0);
   assert.ok([...root.querySelectorAll('input')].every(input=>!input.checked));
  });
