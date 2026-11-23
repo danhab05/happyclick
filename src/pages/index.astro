@@ -1,22 +1,31 @@
 ---
+import '../styles/home-scroll.css';
+import ScrollDeck from '../components/ScrollDeck.astro';
 import Layout from '../layouts/Layout.astro';
 import Doodle from '../components/Doodle.astro';
 ---
 <Layout active="/" title="Un projet pour bien utiliser le numérique">
-  <div class="wrap">
-    <section class="board project-board" aria-labelledby="home-title">
-      <div>
-        <h1 id="home-title">Aider les enfants à bien utiliser le numérique</h1>
+  <section class="click-hero" aria-labelledby="home-title">
+    <div class="hero-orbit" aria-hidden="true"></div>
+    <div class="wrap click-intro">
+      <div class="click-copy">
+        <h1 id="home-title">Aider les enfants à bien utiliser <em>le numérique</em></h1>
         <p class="lead">Happy Click est un projet d’étudiants de Télécom SudParis. Nous préparons des jeux et des interventions pour parler des écrans avec les élèves de primaire et de collège, et nous partageons nos outils avec les enseignants et les parents.</p>
-        <p class="motto">« Le numérique n’est pas mauvais… il suffit d’en faire bon usage. »</p>
         <div class="actions"><a class="button" href="/projet-2027">Découvrir le projet</a><a class="button secondary" href="/kit">Le kit pour les enseignants</a></div>
       </div>
-      <img src="/assets/2027/logo-512.png" width="512" height="551" alt="Logo officiel Happy Click : un cœur, deux mains et un curseur" fetchpriority="high" />
-    </section>
-  </div>
+      <div class="hand">
+        <div class="hand-back" aria-hidden="true"></div>
+        <div class="hand-mid" aria-hidden="true"></div>
+        <div class="hand-face"><img src="/assets/2027/logo-512.png" width="512" height="551" alt="Logo officiel Happy Click : un cœur, deux mains et un curseur" fetchpriority="high" /></div>
+      </div>
+    </div>
+    <div class="hero-tail wrap"><a href="#what-title">Aller à la présentation du projet <span aria-hidden="true">↓</span></a></div>
+  </section>
+  <ScrollDeck />
 
   <section class="wrap section narrow" aria-labelledby="what-title">
-    <h2 id="what-title">Happy Click, qu’est-ce que c’est ?</h2>
+    <h2 id="what-title" tabindex="-1">Happy Click, qu’est-ce que c’est ?</h2>
+    <blockquote class="project-motto">« Le numérique n’est pas mauvais… il suffit d’en faire bon usage. »</blockquote>
     <p>Happy Click est mené par des étudiants de première année de Télécom SudParis, dans le cadre du programme GATE® (Gestion et Apprentissage du Travail en Équipe). Le projet a été commandé par Loïc Bernable, diplômé de Télécom SudParis en 2000, directeur technique et co-fondateur de LOG.</p>
     <p>Chaque année, une nouvelle équipe reprend le projet. Elle va à la rencontre des élèves, crée des activités pour parler de santé, d’environnement et de comportement en ligne, et met ces outils à disposition de tous.</p>
     <p class="source-note"><a href="https://www.telecom-sudparis.eu/ecole/gestion-apprentissage-travail-en-equipe/" target="_blank" rel="noopener noreferrer">Qu’est-ce que le programme GATE® ? <span class="sr-only">(nouvel onglet)</span><span aria-hidden="true">↗</span></a></p>
