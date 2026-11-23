@@ -1,0 +1,29 @@
+---
+import Doodle from './Doodle.astro';
+import questions from '../data/quiz.json';
+
+const chapters = [
+  { id: 'q01', name: 'Les bons réflexes', icon: 'reflexes', subject: 'Comportements' },
+  { id: 'q11', name: 'Trouver son équilibre', icon: 'equilibre', subject: 'Santé' },
+  { id: 'q20', name: 'Derrière nos écrans', icon: 'planete', subject: 'Écologie' },
+] as const;
+---
+<section class="scroll-deck" aria-label="Trois thèmes du jeu de cartes">
+  <div class="deck-screen">
+    {chapters.map((chapter, index) => (
+      <article class={`scene scene-${index + 1}`}>
+        <div class="scene-composition wrap">
+          <div class="scene-type">
+            <p class="scene-caption"><span>0{index + 1} / 03</span> {chapter.subject}</p>
+            <h2>{chapter.name}</h2>
+          </div>
+          <div class="scene-print">
+            <div class="scene-art"><Doodle name={chapter.icon} size={192} /></div>
+            <p>{questions.find(q => q.id === chapter.id)!.question}</p>
+          </div>
+        </div>
+      </article>
+    ))}
+    <div class="deck-exit"><a class="button" href="/quiz">Choisir un quiz <span aria-hidden="true">↗</span></a></div>
+  </div>
+</section>

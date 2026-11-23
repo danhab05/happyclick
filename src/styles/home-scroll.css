@@ -1,0 +1,161 @@
+/* The cover and the three printed cards share a physical edge and an ink colour. */
+.click-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  background: #152541;
+  color: white;
+}
+.click-intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.18fr .82fr;
+  align-items: center;
+  gap: clamp(24px, 4vw, 72px);
+  padding-block: clamp(48px, 8vh, 100px);
+}
+.click-copy h1 {
+  font-size: clamp(3rem, 5.7vw, 5.5rem);
+  line-height: .98;
+  letter-spacing: -.04em;
+  text-wrap: initial;
+  max-width: 14ch;
+}
+.click-copy h1 em { color: var(--sky); }
+.click-copy .lead { font-size: clamp(1rem, 1.4vw, 1.18rem); max-width: 54ch; margin-top: 24px; }
+.click-copy .button { box-shadow: 0 3px 0 #080d18; }
+.hero-orbit {
+  position: absolute;
+  z-index: -1;
+  width: 75vw;
+  aspect-ratio: 1;
+  right: -30vw;
+  bottom: -38vw;
+  border: clamp(30px, 7vw, 120px) solid #28405e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #355372, inset 0 0 0 2px #355372;
+}
+.hand {
+  position: relative;
+  width: min(75%, 345px);
+  margin: 4% auto;
+  aspect-ratio: 4 / 5;
+}
+.hand > div {
+  position: absolute;
+  inset: 0;
+  border: 3px solid var(--ink);
+  border-radius: 8%;
+  transform-origin: 48% 86%;
+  box-shadow: 4px 5px 0 #081627;
+}
+.hand-back {
+  background: repeating-linear-gradient(135deg, #d79016 0 2px, var(--sun) 2px 11px);
+  transform: rotate(-23deg) translate(-9%, 1%);
+}
+.hand-mid { background: #fb7469; transform: rotate(-9deg) translate(-3%, 0); }
+.hand-face { display: grid; place-items: center; padding: 8%; background: var(--sky); transform: rotate(9deg); }
+.hand-face::before, .hand-face::after { content: ''; position: absolute; width: 7%; aspect-ratio: 1; border-radius: 50%; background: var(--paper); border: 2px solid var(--ink); }
+.hand-face::before { top: 5%; left: 6%; }
+.hand-face::after { bottom: 5%; right: 6%; }
+.hand-face img { width: 100%; }
+.hero-tail { position: relative; padding-block: 6px 16px; border-top: 1px solid #7790a8; }
+.hero-tail a { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; font-size: .9rem; }
+.click-hero :focus-visible { outline-color: white; box-shadow: 0 0 0 3px var(--ink); }
+
+.scroll-deck { position: relative; background: var(--ink); }
+.deck-screen { position: relative; }
+.scene { background: var(--scene-bg); color: var(--ink); overflow: clip; position: relative; isolation: isolate; }
+.scene-1 { --scene-bg: #ffac9f; --art-bg: #ffe5dc; --tilt: 5deg; }
+.scene-2 { --scene-bg: #ffcf51; --art-bg: #fff1b9; --tilt: -5deg; }
+.scene-3 { --scene-bg: #9bdbb1; --art-bg: #e1f5df; --tilt: 4deg; }
+.scene::before {
+  content: ''; position: absolute; z-index: -1; width: 76%; height: 190%; top: -45%; right: -14%;
+  border: 2px solid #14213d38; border-radius: 50%;
+  box-shadow: 0 0 0 20px var(--scene-bg), 0 0 0 22px #14213d29, 0 0 0 54px var(--scene-bg), 0 0 0 56px #14213d20;
+}
+.scene-composition {
+  display: grid; align-items: center; grid-template-columns: 1.2fr .8fr;
+  gap: 6%; padding-block: clamp(48px, 8vh, 100px);
+}
+.scene-caption { display: flex; gap: 16px; align-items: center; font: 500 1rem var(--display); }
+.scene-caption span { display: inline-block; border: 1px solid currentColor; border-radius: 999px; padding: 5px 12px; font-variant-numeric: tabular-nums; }
+.scene h2 { margin-top: 22px; max-width: 11ch; text-wrap: initial; font-size: clamp(3.35rem, 7.6vw, 7.8rem); line-height: .95; letter-spacing: -.045em; }
+.scene-print {
+  width: min(100%, 350px); justify-self: center; border: var(--line); border-radius: 20px;
+  background: var(--paper); padding: 13px; box-shadow: 5px 6px 0 var(--ink); transform: rotate(var(--tilt));
+}
+.scene-art { display: grid; place-items: center; background: var(--art-bg); border-radius: 12px; padding: clamp(12px, 2vw, 30px); }
+.scene-art svg { height: clamp(100px, 21vh, 180px); width: auto; }
+.scene-print p { font: 500 clamp(1.12rem, 1.8vw, 1.5rem)/1.23 var(--display); padding: 16px 8px 8px; }
+.deck-exit { display: flex; justify-content: center; padding: 14px; background: var(--paper); border-block: var(--line); }
+.deck-exit .button { background: var(--ink); color: white; }
+.project-motto { margin: 22px 0; padding-inline-start: 18px; border-inline-start: 4px solid var(--heart); font: 500 1.4rem/1.3 var(--display); }
+
+@media (max-width: 700px) {
+  .click-intro { display: grid; grid-template-columns: 1fr; gap: 0; padding-block: 25px 20px; }
+  .click-copy { display: contents; }
+  .click-copy h1 { grid-row: 1; grid-column: 1; width: 74%; font-size: clamp(1.95rem, 7.7vw, 3.2rem); }
+  .hand { grid-row: 1; grid-column: 1; justify-self: end; width: 20%; margin: 0 2% 0 0; }
+  .hand > div { border-width: 2px; box-shadow: 2px 2px 0 #081627; }
+  .hand-face::before, .hand-face::after { border-width: 1px; }
+  .click-copy .lead { font-size: 1rem; margin-top: 14px; }
+  .click-copy .actions { margin-top: 15px; gap: 8px; }
+  .click-copy .button { min-height: 44px; padding-inline: 14px; }
+  .hero-tail { padding-block: 0 4px; }
+  .scene-composition { grid-template-columns: 1fr; align-content: center; gap: 22px; padding-block: 32px; }
+  .scene h2 { font-size: clamp(2.5rem, 10vw, 4.5rem); max-width: 13ch; margin-top: 10px; }
+  .scene-caption { font-size: .9rem; }
+  .scene-print { width: min(90%, 275px); padding: 9px; }
+  .scene-art svg { height: clamp(64px, 16svh, 135px); }
+  .scene-print p { padding: 10px 4px 4px; }
+}
+
+/* Native scroll timelines. Static panels are the base for reduced motion,
+   scripting disabled, short viewports and browsers without timeline support. */
+@supports (animation-timeline: view()) and (animation-range: contain) {
+  @media screen and (scripting: enabled) and (prefers-reduced-motion: no-preference) and (min-height: 560px) {
+    .click-hero { view-timeline: --cover block; }
+    .hand-back, .hand-mid, .hand-face, .hero-orbit {
+      animation-name: cover-back;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --cover;
+      animation-range: exit 0% exit 100%;
+    }
+    .hand-mid { animation-name: cover-mid; }
+    .hand-face { animation-name: cover-front; }
+    .hero-orbit { animation-name: orbit; }
+    .scroll-deck { height: 310svh; view-timeline: --deal block; }
+    .deck-screen { position: sticky; top: 0; height: 100svh; overflow: clip; isolation: isolate; }
+    .scene { position: absolute; inset: 0; display: grid; align-items: center; padding-bottom: 65px; }
+    .scene-2, .scene-3, .scene-print, .scene-type, .deck-exit::before {
+      animation-name: deal;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --deal;
+      animation-range: contain 13% contain 39%;
+    }
+    .scene-3 { animation-range: contain 55% contain 81%; }
+    .scene-type { animation-name: title-track; }
+    .scene-print { animation-name: print-track; }
+    .scene-1 > div > * { animation-range: contain 0% contain 38%; }
+    .scene-2 > div > * { animation-range: contain 14% contain 72%; }
+    .scene-3 > div > * { animation-range: contain 56% contain 100%; }
+    .deck-exit { position: absolute; bottom: 0; width: 100%; background: transparent; border: 0; padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+    .deck-exit::before { content: ''; position: absolute; inset: 0; background: var(--paper); animation-name: exit-wipe; animation-range: contain 82% contain 100%; }
+    .deck-exit .button { position: relative; }
+  }
+  @media screen and (scripting: enabled) and (prefers-reduced-motion: no-preference) and (min-height: 560px) and (max-width: 700px) {
+    .scroll-deck { height: 225svh; }
+    .scroll-deck, .click-hero { --drift: 12px; }
+  }
+}
+@keyframes cover-back { to { transform: translate(-16%, -12%) rotate(-43deg); } }
+@keyframes cover-mid { to { transform: translate(-6%, -3%) rotate(-20deg) scale(1.04); } }
+@keyframes cover-front { to { transform: translate(8%, 19%) rotate(18deg) scale(1.16); } }
+@keyframes orbit { to { transform: translateY(-15%) scale(1.35); } }
+@keyframes deal { from { clip-path: polygon(0 108%, 100% 100%, 100% 110%, 0 110%); } to { clip-path: polygon(0 0, 100% -8%, 100% 110%, 0 110%); } }
+@keyframes title-track { from { transform: translateY(var(--drift, 36px)); } to { transform: translateY(calc(-1 * var(--drift, 36px))); } }
+@keyframes print-track { from { transform: translateY(calc(-1 * var(--drift, 36px))) rotate(-6deg) scale(.92); } to { transform: translateY(var(--drift, 36px)) rotate(6deg) scale(1.06); } }
+@keyframes exit-wipe { from { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); } to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
