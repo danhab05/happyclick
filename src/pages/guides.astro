@@ -1,9 +1,9 @@
 ---
+import EditionCover from '../components/EditionCover.astro';
 import ResponsiveDisclosure from '../components/ResponsiveDisclosure.astro';
 import Layout from '../layouts/Layout.astro';
 import PdfDocument from '../components/PdfDocument.astro';
 import copy from '../data/source-copy.json';
-import Doodle from '../components/Doodle.astro';
 const parents='/resources/guides/guide_parents.pdf';
 const jeunes='/resources/guides/guide_jeune_et_numerique.pdf';
 const chapters=[
@@ -15,14 +15,11 @@ const chapters=[
 ];
 ---
 <Layout active="/guides" title="Guides pour les parents">
-  <div class="wrap read-head">
-    <div>
-      <p class="audience">Pour les parents et les professionnels</p>
-      <h1>Des guides pour accompagner les enfants</h1>
-      <p class="lead">Deux documents pour comprendre les usages des jeunes et trouver de quoi en parler à la maison. Ils datent de 2021 : leurs chiffres et références sont à lire avec cette date en tête.</p>
-    </div>
-    <Doodle name="livre" size={112} />
-  </div>
+  <EditionCover kind="guides">
+    <p class="audience">Publications de 2021</p>
+    <h1>Les guides des parents</h1><p class="lead">Deux lectures pour mettre des mots sur les usages des enfants et des adolescents. Retrouvez leurs chapitres, leurs auteurs et les PDF.</p>
+    <a class="cover-action" href="#etude">Ouvrir la première étude</a>
+  </EditionCover>
   <div class="wrap section resource-layout">
     <aside class="contents" aria-label="Sommaire des guides"><ResponsiveDisclosure title="Dans cette page"><a href="#etude">L’étude parents et enfants</a><a href="#guide">Le guide « Les jeunes et le numérique »</a><a href="#credits">Qui a écrit ces documents</a></ResponsiveDisclosure></aside>
     <div class="resource-content">

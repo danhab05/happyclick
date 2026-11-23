@@ -1,19 +1,20 @@
 ---
 import Doodle from './Doodle.astro';
-interface Props { class?: string; }
-const { class: className } = Astro.props;
-// Three decks of the printed quiz, named as on the cards; counts follow src/data/quiz.json.
 const decks = [
- { slug: 'comportements', count: 10, name: 'Les bons réflexes', topic: 'Mots de passe, photos, messages.', picture: 'reflexes' },
- { slug: 'sante', count: 8, name: 'Trouver son équilibre', topic: 'Écrans, sommeil, temps pour soi.', picture: 'equilibre' },
- { slug: 'ecologie', count: 11, name: 'Derrière nos écrans', topic: 'D’où viennent nos appareils ?', picture: 'planete' },
-] as const;
+  { slug: 'comportements', count: 10, name: 'Les bons réflexes', topic: 'Mots de passe, photos et messages', preview: 'reflexes' },
+  { slug: 'sante', count: 8, name: 'Trouver son équilibre', topic: 'Écrans, sommeil et temps pour soi', preview: 'equilibre' },
+  { slug: 'ecologie', count: 11, name: 'Derrière nos écrans', topic: 'Fabrication, achat et recyclage', preview: 'ecologie' },
+  { slug: 'tout', count: 29, name: 'Toutes les cartes', topic: 'Les trois thèmes réunis', preview: null },
+];
 ---
-<ul class:list={['decks', className]} aria-label="Les trois paquets de cartes">
-  {decks.map(d => <li class={`deck-${d.slug}`}><a class="deck" href={`/quiz/${d.slug}`}>
-    <span class="deck-picture"><Doodle name={d.picture} size={88} /></span>
-    <span class="deck-name">{d.name}</span>
-    <span class="deck-topic">{d.topic}</span>
-    <span class="deck-count">{d.count} cartes <span aria-hidden="true">→</span></span>
-  </a></li>)}
+<ul class="case-list quiz-decks" aria-label="Paquets jouables">
+  {decks.map(d => <li class={`case-row tone-${d.slug}`}>
+    <a class="case-link" href={`/quiz/${d.slug}`}>
+      <span class="case-thumb" aria-hidden="true">
+        {d.preview ? <img src={`/assets/previews/carte-${d.preview}.webp`} width="800" height="566" alt="" /> : <Doodle name="tout" size={96} />}
+      </span>
+      <span class="case-description"><strong>{d.name}</strong><span>{d.topic}</span></span>
+      <span class="case-count">{d.count} cartes</span><span class="case-arrow" aria-hidden="true">↗</span>
+    </a>
+  </li>)}
 </ul>

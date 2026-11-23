@@ -1,23 +1,18 @@
 ---
+import EditionCover from '../../components/EditionCover.astro';
 import Layout from '../../layouts/Layout.astro';
-import Doodle from '../../components/Doodle.astro';
 import questions from '../../data/teachers.json';
 ---
 <Layout active="/kit" title="Le carnet des enseignants">
-  <div class="wrap reflection-layout read-head">
-    <div>
-      <p class="breadcrumb"><a href="/kit#enseignants">Retour au kit</a></p>
-      <p class="audience">Pour les enseignants</p>
-      <h1>Le carnet des enseignants</h1>
-      <p class="lead">Quatorze questions pour réfléchir aux apprentissages, aux difficultés observées et aux leviers d’action. Écris quelques mots, ou sers-toi des questions pour une discussion d’équipe.</p>
-    </div>
-    <Doodle name="carnet" size={112} />
-  </div>
-  <div class="wrap reflection-layout"><div class="callout"><h2>Un carnet, pas une enquête</h2><p>Rien n’est collecté, aucune statistique n’est produite. Les notes restent dans la page ouverte. N’inscris pas de nom d’élève ni de situation qui permettrait de reconnaître quelqu’un. « Tout effacer » ou quitter la page supprime les notes.</p></div></div>
+  <EditionCover kind="carnet">
+    <p class="breadcrumb"><a href="/kit#enseignants">Retour au kit</a></p><h1>Le carnet des enseignants</h1>
+    <p class="lead">Quatorze questions sur les apprentissages et les difficultés en classe. Notez vos observations ou servez-vous des questions pour échanger en équipe.</p>
+  </EditionCover>
+  <div class="wrap reflection-layout"><div class="callout"><h2>Prendre des notes</h2><p>Rien n’est collecté, aucune statistique n’est produite. Les notes restent dans la page ouverte. N’inscrivez pas de nom d’élève ni de situation qui permettrait de reconnaître quelqu’un. « Tout effacer » ou quitter la page supprime les notes.</p></div></div>
   <section class="wrap reflection-layout section compact" data-reflection="teacher"><noscript><p class="callout">Les questions restent lisibles sans JavaScript. Le récapitulatif a besoin de JavaScript ; le <a href="/resources/kit/questionnaire_enseignants.pdf">PDF complet</a> reste disponible.</p></noscript>
     {questions.map((q,index)=><div class="reflection-field" data-field={q.id}>{index===0||q.section!==questions[index-1].section ? <p class="eyebrow">{q.section}</p> : null}<label data-label for={q.id}>{index+1}. {q.question}</label><span class="field-source"><a href={`/resources/kit/questionnaire_enseignants.pdf#page=${q.page}`}>Question d’origine, page {q.page}</a></span><textarea id={q.id} rows="4" maxlength="3000" autocomplete="off" placeholder="Mes pistes (facultatif)"></textarea></div>)}
     <div class="actions js-controls"><button type="button" class="button" data-action="reflect">Relire mon carnet</button><button type="button" class="button secondary" data-action="clear">Tout effacer</button></div><p class="small" role="status" data-reset-status></p>
-    <section class="reflection-output" data-output hidden><h2 tabindex="-1">Tes pistes de réflexion</h2><p>Ces notes reprennent seulement ce que tu viens d’écrire. Quel levier aimerais-tu approfondir avec ton équipe ?</p><dl data-notes></dl><a class="text-link" href="/kit#roles">Revenir aux jeux du kit</a></section>
+    <section class="reflection-output" data-output hidden><h2 tabindex="-1">Vos pistes de réflexion</h2><p>Relisez vos notes et choisissez une piste à approfondir avec votre équipe.</p><dl data-notes></dl><a class="text-link" href="/kit#roles">Revenir aux jeux du kit</a></section>
     <p class="source-note">Source : <a href="/resources/kit/questionnaire_enseignants.pdf" download>Questionnaire enseignants, « Enjeux du numérique à l’école » (4 pages)</a>. Les 14 questions ouvertes sont reprises ; les informations générales et la collecte prévues par le PDF ne sont pas demandées ici.</p>
   </section>
   <script>import { initReflection } from '../../scripts/reflection.mjs'; initReflection(document.querySelector('[data-reflection]'));</script>

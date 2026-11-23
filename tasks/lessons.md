@@ -18,3 +18,5 @@
 - Retour Dan après la refonte « table de jeu » : « J'ai rien compris […] Les quiz c'était en plus, c'était pas le truc principal. Faut quand même parler du projet. » Avant de choisir un angle, relire le site officiel en ligne et les éditions précédentes pour savoir **ce qu'est le produit** (ici, un projet étudiant d'interventions en école, avec un kit). Ne pas faire d'une activité secondaire la promesse principale. Expliquer les livraisons à Dan en phrases simples, sans jargon de design.
 
 - Pour cette tâche de scroll cinématique Happy Click, Dan a choisi explicitement Codex GPT Astra en effort high. Ne jamais sélectionner Sol par défaut pour cette mission.
+
+- Dan a rejeté la version du 23 novembre centrée sur l’éventail de cartes. Une demande de refonte complète implique de changer la composition et la navigation de toutes les familles de pages. Pour un accueil rythmé par le scroll, établir d’abord un storyboard du haut au bas de la page, puis comparer les silhouettes à des positions fixes en descendant et en remontant, aussi sur mobile.
