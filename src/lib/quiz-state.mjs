@@ -1,4 +1,4 @@
-/** In-memory discussion session. It deliberately has no score or persistence. */
+/** In-memory discussion session. Each card matches only with the exact set of answers. */
 export class QuizSession {
   constructor(questions) {
     if (!questions.length) throw new Error('A quiz needs questions');

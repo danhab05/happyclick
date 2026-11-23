@@ -14,16 +14,9 @@ export function initQuiz(root) {
   const summary = root.querySelector('[data-review]');
   root.classList.add('enhanced');
   root.dataset.ready = 'true';
-  const view = root.ownerDocument.defaultView;
-  const media = query => Boolean(view?.matchMedia?.(query).matches);
-  // Bring the whole card to the top of the screen, then focus without a second jump.
-  // Side by side (wide screens) the card top is the reference; stacked (phones) the focused heading is.
+  const score = root.querySelector('[data-score]');
   function focus(element) {
-    const card = element?.closest('[data-question],[data-end]');
-    if (card && media('(min-width: 900px)')) {
-      card.scrollIntoView?.({ block: 'start', behavior: media('(prefers-reduced-motion: reduce)') ? 'auto' : 'smooth' });
-      element.focus({ preventScroll: true });
-    } else element?.focus();
+    element.focus({ preventScroll: true });
   }
   function render() {
     cards.forEach((card,index) => {
@@ -37,14 +30,26 @@ export function initQuiz(root) {
       feedback.open = validated;
       card.querySelector('[data-validate]').hidden = validated;
       card.querySelector('[data-next]').hidden = !validated;
-      card.querySelector('[data-previous]').disabled = index === 0;
-      card.querySelector('[data-comparison]').textContent = validated
-        ? session.matches(index) ? 'Tu as choisi comme la carte. Explique pourquoi à quelqu’un.' : 'La carte propose autre chose. Lis pourquoi, puis dis ce que tu en penses.'
-        : '';
+      card.querySelector('[data-previous]').hidden = index === 0;
+      const comparison = card.querySelector('[data-comparison]');
+      const verdict = card.querySelector('[data-feedback-title]');
+      if (!validated) {
+        comparison.textContent = '';
+        verdict.textContent = 'Au dos de la carte';
+        return;
+      }
+      const correct = session.matches(index);
+      verdict.textContent = correct ? 'Bonne réponse !' : 'Pas tout à fait';
+      if (!correct) {
+        const labels = card.querySelectorAll('.choice-text');
+        const choices = session.selections[index].map(value => labels[value].textContent);
+        comparison.textContent = `Ton choix : ${choices.join(' · ')}`;
+      }
     });
     end.hidden = !session.finished;
     progress.value = session.validated.size;
     counter.textContent = session.finished ? `${cards.length} cartes explorées, paquet terminé` : `Carte ${session.index+1} sur ${cards.length}`;
+    score.textContent = session.finished ? `${cards.filter((_, index) => session.matches(index)).length} / ${cards.length}` : '';
     if (session.finished) {
       summary.replaceChildren();
       cards.forEach((card,index) => {
@@ -59,12 +64,19 @@ export function initQuiz(root) {
         body.append(selection);
         const feedback = card.querySelector('[data-feedback-body]').cloneNode(true);
         feedback.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
-        feedback.querySelector('[data-comparison]')?.remove();
+        feedback.querySelector('[data-comparison]').remove();
         body.append(feedback);
         details.append(title,body);
         summary.append(details);
       });
     }
+  }
+  function reset() {
+    session.reset();
+    summary.replaceChildren();
+    root.querySelectorAll('[data-error]').forEach(error => { error.textContent = ''; });
+    root.querySelectorAll('.card-back details').forEach(details => { details.open = false; });
+    render();
   }
   root.addEventListener('change', event => {
     if (!event.target.matches('input[type=checkbox]')) return;
@@ -73,7 +85,7 @@ export function initQuiz(root) {
     card.querySelector('[data-error]').textContent = '';
   });
   root.addEventListener('click', event => {
-    const action = event.target.closest('button')?.dataset.action;
+    const action = event.target.closest('button:not([hidden])')?.dataset.action;
     if (!action) return;
     const card = cards[session.index];
     if (action === 'validate') {
@@ -89,16 +101,12 @@ export function initQuiz(root) {
     } else if (action === 'previous' && session.previous()) {
       render(); focus(cards[session.index].querySelector('h2'));
     } else if (action === 'reset') {
-      session.reset();
-      summary.replaceChildren();
-      cards.forEach(c=>{c.querySelector('[data-error]').textContent='';});
-      render(); focus(cards[0].querySelector('h2'));
+      reset();
+      focus(cards[0].querySelector('h2'));
     }
   });
   // Do not let back-forward cache restore a participant's previous session.
-  root.ownerDocument.defaultView?.addEventListener('pagehide', () => {
-    session.reset(); summary.replaceChildren(); render();
-  });
+  root.ownerDocument.defaultView?.addEventListener('pagehide', reset);
   render();
   return session;
 }
