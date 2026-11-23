@@ -43,7 +43,7 @@ export function initQuiz(root) {
       if (!correct) {
         const labels = card.querySelectorAll('.choice-text');
         const choices = session.selections[index].map(value => labels[value].textContent);
-        comparison.textContent = `Ton choix : ${choices.join(' · ')}`;
+        comparison.textContent = `Votre choix : ${choices.join(' · ')}`;
       }
     });
     end.hidden = !session.finished;
@@ -60,7 +60,7 @@ export function initQuiz(root) {
         body.className = 'details-body';
         const selection = root.ownerDocument.createElement('p');
         const labels = [...card.querySelectorAll('.choice-text')];
-        selection.textContent = `Tes réponses : ${session.selections[index].map(value => labels[value].textContent).join(' ; ')}`;
+        selection.textContent = `Vos réponses : ${session.selections[index].map(value => labels[value].textContent).join(' ; ')}`;
         body.append(selection);
         const feedback = card.querySelector('[data-feedback-body]').cloneNode(true);
         feedback.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
@@ -90,7 +90,7 @@ export function initQuiz(root) {
     const card = cards[session.index];
     if (action === 'validate') {
       if (!session.validate()) {
-        card.querySelector('[data-error]').textContent = 'Choisis au moins une réponse avant de retourner la carte.';
+        card.querySelector('[data-error]').textContent = 'Cochez au moins une réponse avant de retourner la carte.';
         focus(card.querySelector('input'));
         return;
       }
