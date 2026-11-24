@@ -1,41 +1,52 @@
 ---
 import '../styles/home-scroll.css';
-import ScrollDeck from '../components/ScrollDeck.astro';
+import AtelierJeu from '../components/AtelierJeu.astro';
+import '../styles/traversee.css';
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout active="/" title="Les écrans en classe">
   <div class="workshop">
-    <section class="poster" data-scene="affiche" aria-labelledby="home-title">
-      <div class="work-wrap poster-grid">
-        <div class="poster-copy">
-          <p class="print-credit">Télécom SudParis <span aria-hidden="true">/</span> Projet étudiant</p>
-          <h1 id="home-title"><span>Écrans</span> <em>en classe.</em></h1>
-          <p class="poster-intro">Des étudiants rencontrent les élèves de primaire et de collège pour parler du numérique. Découvrez les activités qu’ils apportent en classe.</p>
-          <div class="poster-links"><a class="ink-action" href="/projet-2027">Découvrir le projet <span aria-hidden="true">↗</span></a><a class="line-action" href="/kit">Ouvrir le kit</a></div>
-        </div>
-        <div class="press-art" aria-hidden="true">
-          <div class="ink-block"></div>
-          <img class="monitor-print" data-motion src="/assets/previews/ordinateur-atelier.webp" alt="" width="720" height="720" fetchpriority="high" />
-        </div>
-      </div>
-      <div class="poster-foot work-wrap"><span>Happy Click · Édition 2026–2027</span><a href="#what-title">Dans les classes <span aria-hidden="true">↓</span></a></div>
-    </section>
+    <div class="opening-story" data-scroll-story>
+      <div class="story-stage">
+        <section class="poster" data-story-face="first" data-scene="affiche" aria-labelledby="home-title">
+          <div class="work-wrap poster-grid">
+            <div class="poster-copy">
+              <p class="print-credit">Télécom SudParis <span aria-hidden="true">/</span> Projet étudiant</p>
+              <h1 id="home-title"><span>Écrans</span> <em>en classe.</em></h1>
+              <p class="poster-intro">Des étudiants rencontrent les élèves de primaire et de collège pour parler du numérique. Découvrez les activités qu’ils apportent en classe.</p>
+              <div class="poster-links"><a class="ink-action" href="/projet-2027">Découvrir le projet <span aria-hidden="true">↗</span></a><a class="line-action" href="/kit">Ouvrir le kit</a></div>
+            </div>
+            <div class="press-art" aria-hidden="true">
+              <div class="ink-block"></div>
+              <div class="monitor-mount">
+                <span class="glass-origin"></span>
+                <img class="monitor-print" data-motion src="/assets/previews/ordinateur-atelier.webp" alt="" width="720" height="720" fetchpriority="high" />
+              </div>
+            </div>
+          </div>
+          <div class="poster-foot work-wrap"><span>Happy Click · Édition 2026–2027</span><a href="#what-title">Dans les classes <span aria-hidden="true">↓</span></a></div>
+        </section>
 
-    <section class="blackboard" data-scene="classe" aria-labelledby="what-title">
-      <div class="board-ink" data-motion aria-hidden="true"></div>
-      <div class="work-wrap classroom">
-        <div class="chalk-count">
-          <p class="print-credit">Bilan de terrain <span aria-hidden="true">/</span> 2024–2025</p>
-          <p class="chalk-number">370</p>
-          <p class="chalk-label">élèves rencontrés dans<br />cinq établissements.</p>
-        </div>
-        <div class="field-note">
-          <h2 id="what-title" tabindex="-1">Dans les classes</h2>
-          <p>Que faire d’un message blessant ? Comment reconnaître une fausse information ? Les élèves choisissent, expliquent leur réponse et comparent leurs points de vue.</p>
-          <a href="https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/" class="line-action" target="_blank" rel="noopener noreferrer">Lire le bilan 2024–2025 <span class="sr-only">(nouvel onglet)</span></a>
-        </div>
+        <div class="screen-cut" aria-hidden="true"></div>
+        <section class="blackboard" data-story-face="last" data-scene="classe" aria-labelledby="what-title">
+          <div class="board-ink" data-motion aria-hidden="true"></div>
+          <div class="work-wrap classroom">
+            <div class="chalk-count">
+              <p class="print-credit">Bilan de terrain <span aria-hidden="true">/</span> 2024–2025</p>
+              <div class="chalk-figure"><p class="chalk-number">370</p>
+                <svg class="chalk-line" aria-hidden="true" viewBox="0 0 360 28" preserveAspectRatio="none"><path pathLength="1" d="M5 20 Q100 2 185 10 T354 8 M48 24 Q140 13 263 18" /></svg>
+              </div>
+              <p class="chalk-label">élèves rencontrés dans<br />cinq établissements.</p>
+            </div>
+            <div class="field-note">
+              <h2 id="what-title" tabindex="-1">Dans les classes</h2>
+              <p>Que faire d’un message blessant ? Comment reconnaître une fausse information ? Les élèves choisissent, expliquent leur réponse et comparent leurs points de vue.</p>
+              <a href="https://gate.wp.telecom-sudparis.eu/gate-projets/happy-click/" class="line-action" target="_blank" rel="noopener noreferrer">Lire le bilan 2024–2025 <span class="sr-only">(nouvel onglet)</span></a>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
 
     <div class="history-strip">
       <div class="work-wrap editions">
@@ -51,23 +62,11 @@ import Layout from '../layouts/Layout.astro';
       </details>
     </div>
 
-    <section class="print-shop" data-scene="atelier" aria-labelledby="kit-title">
-      <div class="work-wrap shop-grid">
-        <div class="folio">
-          <div class="folio-pages" aria-hidden="true">
-            <div class="sheet-under"></div>
-            <img class="role-sheet" src="/assets/previews/fiche-professeur.webp" alt="" width="800" height="450" loading="lazy" />
-            <div class="folder-cover" data-motion><span>Happy Click</span><strong>Jeux de<br />rôles</strong><span>Écrans et équilibre</span></div>
-          </div>
-          <a class="folio-caption" href="/kit/roles/addiction">Fiche de rôle · Le professeur <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="shop-copy">
-          <h2 id="kit-title">L’atelier<br /> <i>à imprimer.</i></h2>
-          <p>Distribuez les rôles, lisez la scène et lancez la discussion. Le kit rassemble les fiches de jeu, les questionnaires et les cartes à découper.</p>
-          <div class="shop-links"><a href="/kit">Les activités de classe <span aria-hidden="true">↗</span></a><a href="/guides">Les guides pour les familles <span aria-hidden="true">↗</span></a><a href="/resources/kit/activite_cartes_a_imprimer.pdf">Les cartes à imprimer <small>PDF · 16 pages</small></a></div>
-        </div>
-      </div>
-    </section>
-    <ScrollDeck />
+    <AtelierJeu />
   </div>
 </Layout>
+
+<script>
+  import { initScrollStories } from '../scripts/scroll-stories.mjs';
+  initScrollStories(document);
+</script>

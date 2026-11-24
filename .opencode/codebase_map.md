@@ -1,5 +1,9 @@
 # Cartographie — Happy Click
 
+## Reprise — traversée de l’écran (24 novembre 2026)
+
+L’accueil associe deux séquences avec caméra et distribution de cartes. `src/scripts/scroll-stories.mjs` calcule la progression à partir du scroll natif sur les deux `[data-scroll-story]`. `traversee.css` dirige le passage du moniteur au tableau et `AtelierJeu.astro` / `atelier-jeu.css` la transformation de la chemise en table de jeu. Sans moteur ou avec la réduction de mouvement, les quatre sections sont dans le flux normal.
+
 ## Reprise — atelier en mouvement (23 novembre 2026)
 
 Les quatre compositions de l’accueil sont dans `src/pages/index.astro`, `src/components/ScrollDeck.astro` et `src/styles/home-scroll.css`. Les pages intérieures utilisent `EditionCover.astro` et `atelier-interieur.css`, le sélecteur et les cartes de jeu `jeu-imprime.css`. Le moteur de quiz et les données restent dans les modules décrits ci-dessous. Voir la dernière revue de `tasks/todo.md` et les mesures de livraison dans `/mnt/data/happyclick-atelier/`. Les missions antérieures qui suivent constituent l’historique.

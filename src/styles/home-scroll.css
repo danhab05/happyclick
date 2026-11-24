@@ -25,8 +25,8 @@
 .poster h1 span { font: 400 1.04em/.98 'Click Poster', var(--display); letter-spacing: -.035em; transform-origin: left bottom; }
 .poster h1 em { font-style: normal; font-weight: 500; }
 .poster-intro { max-width: 41ch; margin-block: clamp(20px, 2.5vw, 36px) 18px; font-size: clamp(1.05rem,1.4vw,1.26rem); line-height: 1.5; }
-.poster-links, .play-all { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 24px; }
-.ink-action, .line-action, .folio-caption { display: inline-flex; align-items: center; min-height: 46px; font: 550 1.12rem/1.25 var(--display); gap: 16px; }
+.poster-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 24px; }
+.ink-action, .line-action { display: inline-flex; align-items: center; min-height: 46px; font: 550 1.12rem/1.25 var(--display); gap: 16px; }
 .ink-action { padding: 12px 19px; color: var(--stock); background: var(--press-ink); border-radius: 4px; text-decoration: none; }
 .ink-action:hover { text-decoration: underline; }
 .line-action { text-underline-offset: .25em; }
@@ -59,76 +59,9 @@
 .project-origins p { max-width: 80ch; }
 .project-origins > summary { font-size: 1rem; }
 
-/* A role sheet sits inside a cover that folds away as the reader passes. */
+/* Section colours are also the backdrops of the animated print shop and game table. */
 .print-shop { overflow: clip; background: #ffc95a; border-block: 2px solid var(--press-ink); }
-.shop-grid { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: clamp(30px, 6vw, 90px); padding-block: clamp(60px,7vw,110px); }
-.folio { min-width: 0; text-align: center; }
-.folio-pages { isolation: isolate; position: relative; aspect-ratio: 1.6; perspective: 1100px; margin: 4% 3% 6%; }
-.sheet-under, .role-sheet, .folder-cover { position: absolute; border: 2px solid var(--press-ink); }
-.sheet-under { inset: 3% 1% 4% 3%; background: #eed9ff; transform: rotate(-8deg); }
-.role-sheet { width: 95%; height: auto; left: 4%; top: 4%; transform: rotate(3deg); }
-.folder-cover { inset: 10% 16% 0 0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; padding: clamp(12px,2vw,27px); background: #fa7550; box-shadow: 3px 5px 0 #49314b; transform-origin: bottom left; transform: rotate(-6deg) rotateX(12deg); }
-.folder-cover span { font: 550 clamp(.8rem,1.1vw,1rem)/1.1 var(--display); }
-.folder-cover strong { font: 400 clamp(2.2rem,4.4vw,4.25rem)/.95 'Click Poster',var(--display); }
-.folio-caption { font-size: .94rem; }
-.shop-copy h2 { font: 400 clamp(3.4rem,6.5vw,6.3rem)/.9 'Click Poster', var(--display); letter-spacing: -.035em; }
-.shop-copy h2 i, .play-heading h2 em { font: 500 .92em/.91 var(--display); letter-spacing: -.055em; }
-.shop-copy p { max-width: 44ch; margin-block: 18px; }
-.shop-links { border-top: 1px solid #8c6e39; }
-.shop-links a { min-height: 44px; display: flex; justify-content: space-between; gap: 10px; align-items: center; padding-block: 8px; border-bottom: 1px solid #8c6e39; text-decoration: none; font: 550 1.1rem/1.25 var(--display); }
-.shop-links a:hover { text-decoration: underline; }
-.shop-links small { font-weight: 400; white-space: nowrap; }
-
-/* On the table each theme has its own ink and its own direction of travel. */
 .quiz-press { overflow: clip; background: #302044; color: var(--stock); padding-block: clamp(48px,6vw,94px); }
-.play-heading { display: flex; gap: 36px; justify-content: space-between; align-items: end; }
-.play-heading .print-credit { color: #ddcaff; margin-bottom: 16px; }
-.play-heading h2 { font: 400 clamp(3.6rem,6.7vw,6.8rem)/.94 'Click Poster', var(--display); letter-spacing: -.035em; }
-.play-heading h2 em { color: #d5beff; }
-.play-heading > p { max-width: 32ch; line-height: 1.4; margin-bottom: 4px; }
-.table-packs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(14px,2.5vw,38px); padding: 0; margin: clamp(26px,4vw,66px) 0 22px; list-style: none; }
-.table-packs li { margin: 0; min-width: 0; --dx: -18%; --turn: -12deg; --swatch: #d2b9fa; }
-.table-packs .pack-sante { --dx: 0%; --turn: 6deg; --swatch: #a6ddf5; }
-.table-packs .pack-ecologie { --dx: 18%; --turn: 14deg; --swatch: #b9ec9e; }
-.table-packs a { display: block; color: inherit; text-decoration: none; }
-.table-packs a:hover strong { text-decoration: underline; }
-.pack-bed { background: var(--swatch); padding: 12% 8%; overflow: clip; border-radius: 2px; }
-.pack-bed img { width: 100%; height: auto; transform: rotate(var(--turn)); box-shadow: 1px 3px 0 #25183c66; }
-.pack-label { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-top: 12px; }
-.pack-label strong { font: 550 clamp(1.17rem,2vw,1.65rem)/1.13 var(--display); }
-.pack-label small { white-space: nowrap; color: #e3d5ec; }
-.play-all { justify-content: flex-end; border-top: 1px solid #846d96; padding-top: 16px; }
-.play-all .ink-action { background: #d7c3ff; color: var(--press-ink); }
-
-@supports (animation-timeline: view()) {
-  @media screen and (scripting: enabled) and (prefers-reduced-motion: no-preference) {
-    .poster { view-timeline: --poster block; }
-    .blackboard { view-timeline: --board block; }
-    .print-shop { view-timeline: --folio block; }
-    .quiz-press { view-timeline: --play block; }
-    .workshop :is(.monitor-print,.poster h1 span,.ink-block,.board-ink,.chalk-number,.field-note,.folder-cover,.role-sheet,.pack-bed img) {
-      animation-timing-function: linear; animation-fill-mode: both;
-    }
-    .monitor-print { animation-name: printed-screen; animation-timeline: --poster; animation-range: exit 0% exit 100%; }
-    .poster h1 span { animation-name: printed-title; animation-timeline: --poster; animation-range: exit 0% exit 100%; }
-    .ink-block { animation-name: back-plate; animation-timeline: --poster; animation-range: exit 0% exit 100%; }
-    .board-ink { animation-name: swing-board; animation-timeline: --board; }
-    .chalk-number { animation-name: chalk-scale; animation-timeline: --board; }
-    .field-note { animation-name: pin-note; animation-timeline: --board; }
-    .folder-cover { animation-name: unfold-cover; animation-timeline: --folio; animation-range: entry 6% exit 72%; }
-    .role-sheet { animation-name: extract-sheet; animation-timeline: --folio; }
-    .pack-bed img { animation-name: deal-on-table; animation-timeline: --play; }
-  }
-}
-@keyframes printed-screen { from { transform: translateY(0) rotate(3deg); } to { transform: translate(4%,-12%) rotateY(-22deg) rotate(-11deg) scale(.83); } }
-@keyframes printed-title { to { transform: translateX(-6%) skewX(-6deg) scaleX(1.12); } }
-@keyframes back-plate { to { transform: translate(-12%,9%) rotate(-13deg); } }
-@keyframes swing-board { from { transform: translateX(-32%) skewX(-24deg); } to { transform: translateX(18%) skewX(4deg); } }
-@keyframes chalk-scale { from { transform: rotate(-5deg) scale(.76); } to { transform: rotate(2deg) scale(1.1); } }
-@keyframes pin-note { from { transform: translateY(8%) rotate(3deg); } to { transform: translateY(-6%) rotate(-3deg); } }
-@keyframes unfold-cover { from { transform: translateX(6%) rotate(-3deg) rotateX(0); } to { transform: translate(-4%,8%) rotate(-8deg) rotateX(76deg); } }
-@keyframes extract-sheet { from { transform: translate(-3%,8%) rotate(-2deg); } to { transform: translate(2%,-7%) rotate(7deg); } }
-@keyframes deal-on-table { from { transform: translate(calc(-1 * var(--dx)),10%) rotate(calc(-1 * var(--turn))) scale(.84); } to { transform: translate(var(--dx),-5%) rotate(var(--turn)) scale(1.12); } }
 @media (max-width: 760px) {
   .poster-grid { grid-template-columns: minmax(0,1fr) minmax(0,.7fr); gap: 0; padding-block: 24px 20px; }
   .poster-copy { display: contents; }
@@ -150,23 +83,7 @@
   .editions h2 { grid-column: 1/-1; max-width: none; }
   .editions h3 { font-size: 1.17rem; }
   .editions p { font-size: .94rem; }
-  .shop-grid { display: grid; grid-template-columns: 1fr; gap: 0; padding-block: 28px; }
-  .shop-copy { display: contents; }
-  .shop-copy h2 { grid-row: 1; font-size: clamp(2.8rem,9vw,4rem); }
-  .shop-copy h2 br { display: none; }
-  .shop-copy p { grid-row: 2; margin-block: 12px; }
-  .folio { grid-row: 3; width: min(95%,435px); margin-inline: auto; }
-  .folio-pages { margin: 2% 4% 0; }
-  .shop-links { margin-top: 8px; }
-  .play-heading { display: block; }
-  .play-heading > p { max-width: 37ch; margin-top: 12px; font-size: 1rem; }
-  .play-heading h2 { font-size: clamp(2.85rem,10vw,4.8rem); }
-  .table-packs { grid-template-columns: 1fr; gap: 0; margin-block: 16px; }
-  .table-packs li { border-top: 1px solid #927ca6; }
-  .table-packs a { display: grid; grid-template-columns: minmax(85px,.55fr) minmax(0,1fr); gap: 18px; align-items: center; padding-block: 12px; }
-  .pack-bed { padding: 9% 12%; }
-  .pack-label { display: grid; gap: 4px; margin: 0; }
-  .play-all { justify-content: flex-start; }
+
 }
 @media (max-width: 370px) {
   .poster-grid { grid-template-columns: 1.2fr .8fr; }
