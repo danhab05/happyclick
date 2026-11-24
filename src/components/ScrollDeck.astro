@@ -5,20 +5,20 @@ const decks = [
   {slug:'ecologie', name:'Derrière nos écrans', image:'ecologie', count:11},
 ];
 ---
-<section class="quiz-press" data-scene="jeu" aria-labelledby="play-title">
-  <div class="work-wrap">
-    <div class="play-heading">
+<section class="quiz-press playing-table" data-scene="jeu" data-story-face="last" aria-labelledby="play-title">
+  <div class="work-wrap table-layout">
+    <header class="table-title">
       <div><p class="print-credit">Le jeu en ligne</p><h2 id="play-title">À vous de <em>jouer.</em></h2></div>
-      <p>Choisissez un thème. Pour chaque question, cochez vos réponses et retournez la carte pour lire le corrigé.</p>
-    </div>
-    <ul class="table-packs">
-      {decks.map(deck => <li class={`pack-${deck.slug}`}>
+      <p>Choisissez un thème. Cochez vos réponses et retournez la carte pour lire le corrigé.</p>
+    </header>
+    <ul class="dealt-packs">
+      {decks.map(deck => <li class={`seat seat-${deck.slug}`}>
         <a href={`/quiz/${deck.slug}`}>
-          <div class="pack-bed"><img data-motion src={`/assets/previews/carte-${deck.image}.webp`} width="800" height="566" alt="" loading="lazy" /></div>
-          <span class="pack-label"><strong>{deck.name}</strong><small>{deck.count} cartes</small></span>
+          <span class="dealt-card" data-motion><img src={`/assets/previews/carte-${deck.image}.webp`} width="800" height="566" alt="" loading="lazy" /></span>
+          <span class="dealt-label"><strong>{deck.name}</strong><small>{deck.count} cartes</small></span>
         </a>
       </li>)}
     </ul>
-    <div class="play-all"><a class="line-action" href="/quiz">Voir les quatre quiz</a><a class="ink-action" href="/quiz/tout">Jouer les 29 cartes <span aria-hidden="true">↗</span></a></div>
+    <div class="table-actions"><a class="line-action" href="/quiz">Voir les quatre quiz</a><a class="ink-action" href="/quiz/tout">Jouer les 29 cartes <span aria-hidden="true">↗</span></a></div>
   </div>
 </section>

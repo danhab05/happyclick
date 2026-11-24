@@ -1,0 +1,138 @@
+/* Two playable, ordinary sections are the base layout for short viewports and reduced motion. */
+.print-room { background: #ffc95a; color: var(--press-ink); }
+.print-layout { display: grid; grid-template-columns: 1fr 1.16fr; gap: 12px 8%; align-items: center; padding-block: clamp(42px,7vw,100px); }
+.print-intro h2, .table-title h2 { font: 400 clamp(3.4rem,6.8vw,7rem)/.9 'Click Poster',var(--display); letter-spacing: -.035em; }
+.print-intro h2 em, .table-title h2 em { font: 500 .94em/.95 var(--display); letter-spacing: -.055em; }
+.print-intro p { max-width: 41ch; margin-block: 18px 4px; }
+.print-destinations { display: grid; }
+.print-destinations a { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; padding-block: 6px; border-top: 1px solid #876429; font: 550 1.07rem/1.2 var(--display); text-decoration: none; }
+.print-destinations small { white-space: nowrap; font-weight: 400; }
+.print-destinations a:hover, .dealt-packs a:hover strong { text-decoration: underline; }
+.binder { grid-row: 1 / 3; grid-column: 2; min-width: 0; text-align: center; }
+.binder-object { position: relative; width: 91%; margin: 6% auto 5%; aspect-ratio: 1.46; perspective: 1100px; }
+.binder-back, .binder-lid, .binder-sheet { position: absolute; border: 2px solid var(--press-ink); border-radius: 4px; }
+.binder-back { inset: 0; background: #e24f33; transform: rotate(5deg); }
+.binder-back::before { content: ''; position: absolute; top: -12px; right: -2px; width: 35%; height: 14px; background: inherit; border: 2px solid var(--press-ink); border-bottom: 0; border-radius: 6px 6px 0 0; }
+.binder-sheet { left: 2%; top: -3%; width: 94%; transform: rotate(1deg); }
+.binder-lid { inset: 8% 4% -1% -2%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; padding: 6%; text-align: left; background: #fa7550; box-shadow: 2px 4px 0 #693324; transform-origin: 8% 99%; transform: rotate(-5deg); }
+.binder-lid strong { font: 400 clamp(2.5rem,5.1vw,5rem)/.9 'Click Poster',var(--display); }
+.binder-lid :is(span,small) { font: 550 clamp(.8rem,1.2vw,1.12rem)/1 var(--display); }
+.binder-caption { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font: 500 .98rem/1.2 var(--display); }
+.playing-table { background: #302044; color: var(--stock); }
+.table-title { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
+.table-title .print-credit { color: #d9c7fb; margin-bottom: 12px; }
+.table-title h2 em { color: #decaff; }
+.table-title > p { max-width: 32ch; line-height: 1.4; }
+.dealt-packs { list-style: none; margin: 32px 0 22px; padding: 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 4%; }
+.dealt-packs .seat { margin: 0; min-width: 0; --seat-x: 20cqw; --seat-y: 49cqh; --delay: .15; --angle: -6deg; --swatch: #d4bcff; }
+.dealt-packs .seat-sante { --seat-x: 50cqw; --seat-y: 46cqh; --delay: .24; --angle: 2deg; --swatch: #a6ddf5; }
+.dealt-packs .seat-ecologie { --seat-x: 80cqw; --seat-y: 49cqh; --delay: .33; --angle: 6deg; --swatch: #b9ec9e; }
+.seat a { display: block; color: var(--stock); text-decoration: none; }
+.dealt-card { position: relative; display: block; width: 93%; margin: 0 auto; aspect-ratio: 800 / 566; background: var(--swatch); transform: rotate(var(--angle)); border-radius: 4px; box-shadow: 0 3px 0 var(--swatch),0 5px 0 #281733,0 7px 0 var(--swatch); }
+.dealt-card img { width: 100%; height: 100%; border-radius: 4px; }
+.dealt-label { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 12px; border-top: 1px solid #897795; margin-top: 30px; padding-top: 8px; }
+.dealt-label strong { font: 550 clamp(1.12rem,1.85vw,1.7rem)/1.12 var(--display); }
+.dealt-label small { white-space: nowrap; font-size: .9rem; }
+.table-actions { margin-top: 18px; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 4px 24px; }
+.table-actions .ink-action { background: #deccff; color: var(--press-ink); }
+
+@media (max-width: 760px) {
+  .print-layout { grid-template-columns: 1fr; gap: 12px; padding-block: 28px; }
+  .print-intro h2 br { display: none; }
+  .print-intro h2, .table-title h2 { font-size: clamp(2.75rem,9vw,4.2rem); }
+  .print-intro p { margin: 8px 0; font-size: 1rem; line-height: 1.34; }
+  .binder { grid-area: auto; width: min(75%,330px); margin-inline: auto; }
+  .binder-caption { font-size: .9rem; }
+  .table-title { display: block; }
+  .table-title .print-credit { margin-bottom: 8px; }
+  .table-title > p { margin-top: 10px; font-size: .97rem; }
+  .dealt-packs { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 18px 0; }
+  .seat a { display: grid; grid-template-columns: minmax(82px,.7fr) minmax(0,1fr); gap: 6%; align-items: center; min-height: 62px; }
+  .dealt-card { width: min(90%,160px); }
+  .dealt-label { display: grid; margin: 0; border: 0; }
+  .table-actions { justify-content: flex-start; gap: 4px 16px; }
+}
+
+/* The images stay mounted from the closed folder to their playable slots. */
+.deal-story[data-running] {
+  height: 252svh;
+  --dock-x: 70cqw; --dock-y: 48cqh;
+  --folder-turn: clamp(0, calc(var(--p) * 3.5), 1);
+  --folder-away: clamp(0, calc((var(--p) - .39) * 3.1), 1);
+  --table-slide: clamp(0, calc((var(--p) - .24) * 2.25), 1);
+  --label-in: clamp(0, calc((var(--p) - .73) * 4.7), 1);
+}
+.deal-story[data-running] .deal-stage {
+  position: sticky; top: 0; height: 100svh; isolation: isolate; overflow: clip;
+  container-type: size; background: #ffc95a;
+}
+.deal-story[data-running] :is(.print-room,.playing-table) { position: absolute; inset: 0; padding: 0; margin: 0; border: 0; background: transparent; overflow: visible; }
+.deal-story[data-running] .print-layout, .deal-story[data-running] .table-layout { width: auto; margin: 0; padding: 0; display: contents; }
+.deal-story[data-running] .playing-table::before {
+  content: ''; position: absolute; inset: -13cqh -15cqw; z-index: -1; background: #302044;
+  border-top: clamp(12px,2cqh,26px) solid #644d76; transform-origin: right top;
+  transform: translateY(calc(111% * (1 - var(--table-slide)))) rotate(calc(9deg * (1 - var(--table-slide))));
+}
+.deal-story[data-running] .print-intro, .deal-story[data-running] .print-destinations {
+  position: absolute; z-index: 2; left: 6cqw; width: 36cqw;
+  transform: translate(calc(-78cqw * var(--out)),calc(-8cqh * var(--out))) rotate(calc(-9deg * var(--out)));
+}
+.deal-story[data-running] .print-intro { bottom: 48cqh; }
+.deal-story[data-running] .print-destinations { top: 54cqh; }
+.deal-story[data-running] .binder { display: contents; }
+.deal-story[data-running] .binder-object {
+  position: absolute; width: min(42cqw,70cqh); left: var(--dock-x); top: var(--dock-y); margin: 0;
+  transform: translate(-50%,-50%) translateY(calc(115cqh * var(--folder-away))) rotate(calc(-7deg * var(--folder-away)));
+  z-index: 1;
+}
+.deal-story[data-running] .binder-lid {
+  transform: rotate(-5deg) rotateX(calc(-122deg * var(--folder-turn)));
+}
+.deal-story[data-running] .binder-lid > * { opacity: clamp(0, calc((.76 - var(--folder-turn)) * 9), 1); }
+.deal-story[data-running] [data-story-face][inert] { pointer-events: none; }
+.deal-story[data-running] .binder-sheet { transform: translateY(calc(-15% * var(--folder-turn))) rotate(calc(1deg + 8deg * var(--folder-turn))); }
+.deal-story[data-running] .binder-caption { position: absolute; z-index: 2; top: 79cqh; left: var(--dock-x); transform: translateX(-50%) translateY(calc(35cqh * var(--out))); }
+.deal-story[data-running] .table-title {
+  position: absolute; left: 6cqw; right: 6cqw; top: 6cqh;
+  transform: translateY(calc(-43cqh * (1 - var(--in))));
+}
+.deal-story[data-running] .table-title h2 { font-size: clamp(3.4rem,min(7.5cqw,11cqh),7.8rem); }
+.deal-story[data-running] .table-actions {
+  position: absolute; bottom: 5cqh; right: 6cqw; margin: 0;
+  transform: translateY(calc(39cqh * (1 - var(--label-in))));
+}
+.deal-story[data-running] .dealt-packs { display: contents; }
+.deal-story[data-running] .seat {
+  --travel: clamp(0, calc((var(--p) - var(--delay)) * 2.45), 1);
+  --card-w: min(25cqw,45cqh);
+  position: absolute; width: var(--card-w); left: var(--seat-x); top: var(--seat-y);
+  z-index: 3; transform: translate(-50%,-50%);
+}
+.deal-story[data-running] .seat a { display: block; }
+.deal-story[data-running] .dealt-card {
+  width: 100%; margin: 0;
+  opacity: clamp(0, calc((var(--p) - .085) * 14), 1);
+  transform: translate(calc((var(--dock-x) - var(--seat-x)) * (1 - var(--travel))),calc((var(--dock-y) - var(--seat-y)) * (1 - var(--travel))))
+    rotate(calc(var(--angle) * (3 - 2 * var(--travel)))) scale(calc(.66 + .34 * var(--travel)));
+}
+.deal-story[data-running] .dealt-label {
+  position: absolute; width: 100%; top: 100%; margin-top: clamp(10px,2.6cqh,25px);
+  opacity: var(--label-in); transform: translateY(calc(15px * (1 - var(--label-in))));
+}
+@media (max-width: 760px) {
+  .deal-story[data-running] { height: 230svh; --dock-x: 50cqw; --dock-y: 47cqh; }
+  .deal-story[data-running] .print-intro, .deal-story[data-running] .print-destinations { left: 6cqw; width: 88cqw; }
+  .deal-story[data-running] .print-intro { bottom: auto; top: 5cqh; }
+  .deal-story[data-running] .print-intro h2 { font-size: clamp(2.7rem,10cqw,4.2rem); }
+  .deal-story[data-running] .print-destinations { top: auto; bottom: 5cqh; }
+  .deal-story[data-running] .binder-object { width: min(65cqw,41cqh); }
+  .deal-story[data-running] .binder-caption { top: 64cqh; white-space: nowrap; }
+  .deal-story[data-running] .table-title { top: 4cqh; }
+  .deal-story[data-running] .table-title h2 { font-size: clamp(2.65rem,10cqw,4rem); }
+  .deal-story[data-running] .table-title > p { max-width: 37ch; }
+  .deal-story[data-running] .seat { --card-w: min(34cqw,22cqh); --seat-x: 24cqw; --seat-y: 34cqh; }
+  .deal-story[data-running] .seat-sante { --seat-y: 52cqh; }
+  .deal-story[data-running] .seat-ecologie { --seat-y: 70cqh; }
+  .deal-story[data-running] .dealt-label { left: calc(100% + 5cqw); top: 50%; width: 46cqw; padding: 0; margin: 0; transform: translateY(-50%); }
+  .deal-story[data-running] .table-actions { bottom: 4cqh; right: auto; left: 6cqw; }
+}

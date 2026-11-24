@@ -127,7 +127,8 @@ for route, page in sorted(pages.items()):
         active_stylesheets.add(stylesheet)
     scripts = [a for tag, a in page.elements if tag == 'script']
     interactive = route.startswith('/quiz/') or route in ('/mes-usages', '/kit/reflexion')
-    assert len(scripts) == int(interactive), f'JavaScript hors périmètre : {route}'
+    has_module = interactive or route == '/'  # Scroll-linked staging on the home page.
+    assert len(scripts) == int(has_module), f'JavaScript hors périmètre : {route}'
     for script in scripts:
         assert script.get('type') == 'module' and script.get('src', '').startswith('/_astro/'), route
     assert not any(name.startswith('on') for _, a in page.elements for name in a), route

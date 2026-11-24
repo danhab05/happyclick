@@ -1,0 +1,32 @@
+---
+import ScrollDeck from './ScrollDeck.astro';
+import '../styles/atelier-jeu.css';
+---
+<div class="deal-story" data-scroll-story>
+  <div class="story-stage deal-stage">
+    <section class="print-shop print-room" data-scene="atelier" data-story-face="first" aria-labelledby="kit-title">
+      <div class="work-wrap print-layout">
+        <div class="print-intro">
+          <h2 id="kit-title">L’atelier<br /> <em>à imprimer.</em></h2>
+          <p>Distribuez les rôles, lisez la scène et lancez la discussion. Le kit rassemble les fiches de jeu, les questionnaires et les cartes à découper.</p>
+        </div>
+        <div class="binder">
+          <div class="binder-object" aria-hidden="true">
+            <div class="binder-back"></div>
+            <img class="binder-sheet" src="/assets/previews/fiche-professeur.webp" alt="" width="800" height="450" loading="lazy" />
+            <div class="binder-lid" data-motion>
+              <span>Happy Click</span><strong>Jeux de<br />rôles</strong><small>Écrans et équilibre</small>
+            </div>
+          </div>
+          <a class="binder-caption" href="/kit/roles/addiction">Fiche de rôle · Le professeur <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="print-destinations">
+          <a href="/kit">Les activités de classe <span aria-hidden="true">↗</span></a>
+          <a href="/guides">Les guides pour les familles <span aria-hidden="true">↗</span></a>
+          <a href="/resources/kit/activite_cartes_a_imprimer.pdf">Les cartes à imprimer <small>PDF · 16 pages</small></a>
+        </div>
+      </div>
+    </section>
+    <ScrollDeck />
+  </div>
+</div>

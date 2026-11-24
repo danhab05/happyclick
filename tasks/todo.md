@@ -223,3 +223,11 @@ La revue à 1440 × 900 et 390 × 844 suit une affiche typographique avec écran
 Les changements d’échelle et les respirations entre chapitres s’inspirent du rythme de [Lando Norris](https://landonorris.com/). Pour le contrôle du geste, le feedback immédiat et le repli statique, lecture de [apple-design-skill à la révision 91e1566](https://github.com/dickwu/apple-design-skill/tree/91e15664896f6f27e75dcf1414d1226cb95fa167), notamment SKILL.md et references/hig/motion.md. Illustration de l’écran réalisée avec ImageGen intégré, puis optimisée en WebP : moniteur cathodique en trois quarts, curseur main sortant de l’écran, encres ivoire, prune et menthe, trame sérigraphiée sur fond transparent. La fiche du professeur vient de la page 4 du PDF Écrans et équilibre V2.
 
 Base publique de départ : 26d8fd2. Branche de travail : feat/atelier-en-mouvement. Build statique de 15 pages, 18/18 tests et audit de 72 URL avec 325 références. Les quatre quiz ont été menés au score et rejoués, avec alternance de réponses justes et fausses. Les captures avant, les planches publiques, les matrices aller-retour et la preuve de déploiement sont regroupées dans /mnt/data/happyclick-atelier. Le fichier preuve-deploiement.json relie le commit de fusion, le déploiement Coolify et les empreintes HTTPS de cette livraison.
+
+## Traversée de l’écran et distribution des cartes
+
+- [x] Repartir de la préversion 34d769a et relever les limites des déplacements de l’itération précédente.
+- [x] Accrocher deux séquences au défilement natif, avec un passage du moniteur au tableau et une chemise qui distribue les cartes.
+- [x] Contrôler les séquences sur ordinateur et mobile et préparer la capture vidéo de la préversion.
+
+Revue locale : chaque piste utilise le défilement natif, avec une scène fixe et deux compositions qui partagent le même cadre. L’ordinateur s’approche de la vitre, le tableau grandit dans la vitre puis occupe l’écran ; dans l’atelier, la couverture se rabat et trois cartes physiques sont distribuées. Les couvertures du kit et des guides s’ouvrent aussi. Le repli en flux vertical garde les liens et le contenu accessibles. Build Astro 15 pages, 18 tests réussis. Preuves de publication et vidéo dans /mnt/data/happyclick-traversee/.

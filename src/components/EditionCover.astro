@@ -4,20 +4,36 @@ interface Props {
   kind: 'kit' | 'guides' | 'projet' | 'faq' | 'roles' | 'carnet' | 'usages';
   illustration?: 'addiction' | 'cyberharcelement' | 'desinformation';
 }
+const kitCards = [
+  { name: 'Écologie', file: 'ecologie' },
+  { name: 'Santé', file: 'equilibre' },
+  { name: 'Comportements', file: 'reflexes' },
+];
 const { kind, illustration = 'addiction' } = Astro.props;
 ---
 <header class={`edition-cover cover-${kind}`}>
   <div class="wrap edition-cover-inner">
     <div class="edition-cover-copy"><slot /></div>
     <div class="edition-art" aria-hidden="true">
-      {kind === 'kit' && <>
-        <img class="plate rear" src="/assets/previews/carte-equilibre.webp" width="800" height="566" alt="" />
-        <img class="plate front" src="/assets/previews/carte-reflexes.webp" width="800" height="566" alt="" />
-      </>}
-      {kind === 'guides' && <>
-        <img class="plate rear" src="/assets/previews/guide-jeunes.jpg" width="424" height="600" alt="" />
-        <img class="plate front" src="/assets/previews/etude-parents.jpg" width="424" height="600" alt="" />
-      </>}
+      {kind === 'kit' && <div class="kit-deal">
+        {kitCards.map(({name, file}) => <figure class={`kit-print sheet-${file}`}>
+          <img src={`/assets/previews/carte-${file}.webp`} width="800" height="566" alt="" />
+          <figcaption>{name}</figcaption>
+        </figure>)}
+      </div>}
+      {kind === 'guides' && <div class="study-book">
+        <img class="study-companion" src="/assets/previews/guide-jeunes.jpg" width="424" height="600" alt="" />
+        <div class="study-leaf">
+          <img class="study-cover" src="/assets/previews/etude-parents.jpg" width="424" height="600" alt="" />
+          <div class="study-verso"><span>Parents,<br />enfants<br />&amp; numérique</span><small>Étude OPEN et Unaf<br />Juillet 2021</small></div>
+        </div>
+        <div class="study-contents">
+          <strong>Dans l’étude</strong>
+          <p><b>2–3</b> Les risques et les opportunités</p>
+          <p><b>4–6</b> Les écarts de perception</p>
+          <p><b>7–8</b> Le dialogue en famille</p>
+        </div>
+      </div>}
       {kind === 'projet' && <div class="print-year"><span>20</span><span>27</span></div>}
       {kind === 'faq' && <div class="question-print">?</div>}
       {kind === 'roles' && <div class="role-sheet"><Doodle name={illustration} size={150} /><span>Jeu de rôles</span></div>}

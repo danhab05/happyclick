@@ -20,3 +20,5 @@
 - Pour cette tâche de scroll cinématique Happy Click, Dan a choisi explicitement Codex GPT Astra en effort high. Ne jamais sélectionner Sol par défaut pour cette mission.
 
 - Dan a rejeté la version du 23 novembre centrée sur l’éventail de cartes. Une demande de refonte complète implique de changer la composition et la navigation de toutes les familles de pages. Pour un accueil rythmé par le scroll, établir d’abord un storyboard du haut au bas de la page, puis comparer les silhouettes à des positions fixes en descendant et en remontant, aussi sur mobile.
+
+- Dan veut voir le décor changer dès le premier geste. Au contrôle d’une animation, regarder la séquence à vitesse normale et ses états intermédiaires : une petite variation de matrice sur un visuel ne prouve pas que la scène se transforme.
