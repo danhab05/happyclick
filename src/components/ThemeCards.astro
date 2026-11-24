@@ -1,5 +1,9 @@
 ---
 import Doodle from './Doodle.astro';
+import QuizComingSoon from './QuizComingSoon.astro';
+import { quizzesEnabled } from '../lib/quiz-availability.mjs';
+
+const Row = quizzesEnabled ? 'a' : 'div';
 const decks = [
   { slug: 'comportements', count: 10, name: 'Les bons réflexes', topic: 'Mots de passe, photos et messages', preview: 'reflexes' },
   { slug: 'sante', count: 8, name: 'Trouver son équilibre', topic: 'Écrans, sommeil et temps pour soi', preview: 'equilibre' },
@@ -7,14 +11,15 @@ const decks = [
   { slug: 'tout', count: 29, name: 'Toutes les cartes', topic: 'Les trois thèmes réunis', preview: null },
 ];
 ---
-<ul class="case-list quiz-decks" aria-label="Paquets jouables">
+<ul class="case-list quiz-decks" aria-label="Paquets de quiz">
   {decks.map(d => <li class={`case-row tone-${d.slug}`}>
-    <a class="case-link" href={`/quiz/${d.slug}`}>
+    <Row class="case-content" href={quizzesEnabled ? `/quiz/${d.slug}` : undefined}>
       <span class="case-thumb" aria-hidden="true">
         {d.preview ? <img src={`/assets/previews/carte-${d.preview}.webp`} width="800" height="566" alt="" /> : <Doodle name="tout" size={96} />}
       </span>
       <span class="case-description"><strong>{d.name}</strong><span>{d.topic}</span></span>
-      <span class="case-count">{d.count} cartes</span><span class="case-arrow" aria-hidden="true">↗</span>
-    </a>
+      <span class="case-count">{d.count} cartes</span>
+      {quizzesEnabled ? <span class="case-arrow" aria-hidden="true">↗</span> : <QuizComingSoon />}
+    </Row>
   </li>)}
 </ul>

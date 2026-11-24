@@ -1,4 +1,8 @@
 ---
+import QuizComingSoon from './QuizComingSoon.astro';
+import { quizzesEnabled } from '../lib/quiz-availability.mjs';
+
+const Pack = quizzesEnabled ? 'a' : 'div';
 const decks = [
   {slug:'comportements', name:'Les bons réflexes', image:'reflexes', count:10},
   {slug:'sante', name:'Trouver son équilibre', image:'equilibre', count:8},
@@ -8,17 +12,20 @@ const decks = [
 <section class="quiz-press playing-table" data-scene="jeu" data-story-face="last" aria-labelledby="play-title">
   <div class="work-wrap table-layout">
     <header class="table-title">
-      <div><p class="print-credit">Le jeu en ligne</p><h2 id="play-title">À vous de <em>jouer.</em></h2></div>
-      <p>Choisissez un thème. Cochez vos réponses et retournez la carte pour lire le corrigé.</p>
+      <div><p class="print-credit">Le jeu en ligne</p><h2 id="play-title">{quizzesEnabled ? <>À vous de <em>jouer.</em></> : <>Les <em>quiz.</em></>}</h2></div>
+      <p>{quizzesEnabled ? 'Choisissez un thème. Cochez vos réponses et retournez la carte pour lire le corrigé.' : 'Retrouvez les bons réflexes, les écrans et le sommeil, et l’écologie numérique dans les cartes à imprimer.'}</p>
     </header>
     <ul class="dealt-packs">
       {decks.map(deck => <li class={`seat seat-${deck.slug}`}>
-        <a href={`/quiz/${deck.slug}`}>
+        <Pack class="dealt-pack" href={quizzesEnabled ? `/quiz/${deck.slug}` : undefined}>
           <span class="dealt-card" data-motion><img src={`/assets/previews/carte-${deck.image}.webp`} width="800" height="566" alt="" loading="lazy" /></span>
-          <span class="dealt-label"><strong>{deck.name}</strong><small>{deck.count} cartes</small></span>
-        </a>
+          <span class="dealt-label"><strong>{deck.name}</strong><small>{deck.count} cartes</small>{!quizzesEnabled && <QuizComingSoon />}</span>
+        </Pack>
       </li>)}
     </ul>
-    <div class="table-actions"><a class="line-action" href="/quiz">Voir les quatre quiz</a><a class="ink-action" href="/quiz/tout">Jouer les 29 cartes <span aria-hidden="true">↗</span></a></div>
+    <div class="table-actions">
+      <a class="line-action" href="/quiz">Voir les quatre quiz</a>
+      {quizzesEnabled ? <a class="ink-action" href="/quiz/tout">Jouer les 29 cartes <span aria-hidden="true">↗</span></a> : <span class="complete-pack">Toutes les cartes <QuizComingSoon /></span>}
+    </div>
   </div>
 </section>

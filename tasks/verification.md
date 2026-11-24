@@ -6,7 +6,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Pages, contenu et interactions
 
-- `/` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
+- `/` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
 - `/faq` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/guides` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/kit` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
@@ -17,15 +17,18 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 - `/mes-usages` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
 - `/projet-2027` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
 - `/quiz` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/quiz/comportements` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
-- `/quiz/ecologie` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
-- `/quiz/sante` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
-- `/quiz/tout` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
-- 26 blocs de textes originaux contrôlés ; 29 cartes intégrales dans leur thème et dans le parcours complet ; 11 questions d’usage et 14 questions enseignants.
+- `/quiz/comportements` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
+- `/quiz/ecologie` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
+- `/quiz/sante` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
+- `/quiz/tout` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
+- 26 blocs de textes originaux contrôlés ; 29 cartes conservées dans les données, quatre quiz signalés « À venir », anciennes URL sans jeu ; 11 questions d’usage et 14 questions enseignants.
 
 ## CSS actifs versionnés
 
-- `/_astro/Doodle.DyowUzhb.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/Layout.B-UZPWny.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/QuizComingSoon.LlBtdbIo.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/index.DWjuLAb3.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/jeu-imprime.oEA6sCnC.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 
 ## Documents et empreintes source
 
@@ -42,14 +45,14 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Ressources et HTTP
 
-65 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
-319 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
+74 URLs contrôlées sur disque ; contrôle HTTP non demandé.
+211 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
 
 ## Responsive et limites de cette vérification
 
 Analyse des règles CSS seulement : conteneur borné à 1180 px, paquets en une colonne sous 800 px, menu mobile natif et sommaires repliables, images/PDF bornés, cibles d’au moins 44 px, focus visibles et reduced-motion (retournement de carte désactivé). Aucun navigateur lancé : ces contrôles ne mesurent pas le rendu. Refonte « table de jeu » (52115d2) approuvée par OpenBot après mesures réelles à 320/390/1000/1920 px ; périmètre exact dans `tasks/browser-review.md` et `tasks/redesign-enfants.md`. Les mesures de `tasks/mobile-review.md` concernent la version précédente.
 
-Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.
+Les tests Node/DOM de `npm test` couvrent la préversion sans quiz jouables et, sur un build activé isolé, la progression et les corrigés des quatre parcours. Ils couvrent aussi les questionnaires. Ce script ne remplace pas leur exécution.
 
 Base publique e8bf224 confirmée par OpenBot : `tasks/public-verification.md`. La CSS reste importée par Astro avec un hash de contenu, contrôlé ici.
 

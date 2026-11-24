@@ -237,3 +237,10 @@ Revue locale : chaque piste utilise le défilement natif, avec une scène fixe e
 - [x] Composer la troisième séquence entre le tableau de classe et la distribution. Le feuillet 2025–2026 tourne autour de la reliure et découvre l’édition 2026–2027. Les deux liens et le volet sur les origines restent accessibles.
 - [x] Adapter la composition au format portrait, prévoir la lecture des deux pages en mode statique et utiliser la même progression pour le geste inverse.
 - La passation et les films avant/après sur les deux formats sont regroupés dans `/mnt/data/happyclick-traversee/`. La version de comparaison est `34d769a`.
+
+## Désactivation des quiz sur la préversion
+
+- [x] Garder les quatre paquets visibles avec un badge « À venir » et rendre les anciennes URL non jouables.
+- [x] Vérifier les deux états, les liens et les ressources. Contrôler en navigateur le défilement et l’accès au catalogue à 320, 390 et 1440 px, les quatre anciennes URL et le PDF.
+
+La préversion se publie via `feat/astro-preview`. Le contrôle public porte sur le catalogue, les quatre anciennes URL et le PDF.

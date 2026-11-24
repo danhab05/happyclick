@@ -35,12 +35,9 @@ Node >=22.12 pour l’installation ; les scripts npm utilisent Node 22.23.4 loca
 
 | Route | Contenu |
 |---|---|
-| `/` | Table de jeu : trois paquets de cartes, jeux de rôles, Mes écrans et moi, coin des adultes |
-| `/quiz` | Choix du paquet ou des 29 cartes mélangées, règle du jeu |
-| `/quiz/comportements` | 10 questions |
-| `/quiz/sante` | 8 questions |
-| `/quiz/ecologie` | 11 questions |
-| `/quiz/tout` | Les 29 cartes, 116 propositions |
+| `/` | Table de jeu animée, quatre quiz « À venir », kit et guides |
+| `/quiz` | Quatre paquets « À venir » et PDF des cartes |
+| `/quiz/comportements`, `/quiz/sante`, `/quiz/ecologie`, `/quiz/tout` | Pages « À venir » avec liens vers les cartes à imprimer et le catalogue |
 | `/mes-usages` | « Mes écrans et moi » : 11 questions, restitution descriptive sans diagnostic |
 | `/kit` | Textes d’origine et 8 PDF ; V2/V1/ancienne archive addiction, autres activités conservées |
 | `/kit/reflexion` | 14 questions enseignants, notes temporaires |
@@ -51,14 +48,14 @@ Node >=22.12 pour l’installation ; les scripts npm utilisent Node 22.23.4 loca
 | `/faq` | Préparer une séance, choisir les versions, utiliser les activités |
 | `/guides` | Étude parents (9 pages), guide jeunes (52 pages), résumés datés et crédits |
 
-Les quiz comportent choix multiples, « Retourner la carte » (dos de la carte : réponse, explication, question pour en parler, puis nuance et pages source pour les adultes), progression, carte d’avant, récapitulatif et rejouer. Sans JavaScript, les cartes et leurs corrigés restent lisibles. Les activités gardent l’esprit de débat ; aucun classement ni barème de diagnostic.
+Pour réactiver les quatre quiz, lance `HAPPYCLICK_QUIZZES_ENABLED=true npm run build` ou définis cette variable de build dans Coolify avant un redéploiement. Les 29 cartes, leurs corrigés et le moteur sont conservés. `npm test` vérifie la préversion désactivée et la jouabilité dans un build activé isolé.
 
 Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajoutent V2 par défaut et V1 variante. Les liens ouvrir/télécharger sont toujours visibles ; les aperçus natifs s’ouvrent dans un volet. Les deux liens externes GATE sont conservés au pied de page et tous les textes de présentation d’origine sont présents, parfois dans un volet explicitement titré.
 
 ## Confidentialité et accessibilité
 
 - `noindex, nofollow` sur les 15 pages, `robots.txt` avec `Disallow: /`.
-- JavaScript ciblé sur les quiz et questionnaires seulement, modules locaux cacheables. Aucun compte, backend, analytics, appel réseau applicatif ni API de stockage.
+- JavaScript ciblé sur les animations de l’accueil et les questionnaires. Le moteur de quiz est chargé sur les parcours si les quiz sont réactivés. Aucun compte, backend, analytics, appel réseau applicatif ni API de stockage.
 - Les choix et notes vivent uniquement dans la page ; remise à zéro et nettoyage à sa sortie. Aucun prénom ou renseignement d’identification demandé, aucun envoi de formulaire.
 - Navigation clavier, contrôles natifs, labels/fieldset, erreurs annoncées, focus après changement d’étape, reduced-motion, mise en page responsive et titres longs pouvant revenir à la ligne.
 - Statistiques attribuées et datées de 2021. Les formulations ambiguës ou non étayées des cartes sont signalées ; elles ne sont pas élevées au rang de faits universels ou de conseils médicaux/juridiques actuels.

@@ -1,82 +1,38 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Doodle from '../../components/Doodle.astro';
-import '../../styles/jeu-imprime.css';
+import QuizComingSoon from '../../components/QuizComingSoon.astro';
+import QuizGame from '../../components/QuizGame.astro';
 import allQuestions from '../../data/quiz.json';
+import { quizzesEnabled } from '../../lib/quiz-availability.mjs';
+import '../../styles/jeu-imprime.css';
+
 export function getStaticPaths() {
   const themes = [
     ['comportements', 'Les bons réflexes', 'reflexes'],
     ['sante', 'Trouver son équilibre', 'equilibre'],
     ['ecologie', 'Derrière nos écrans', 'planete'],
     ['tout', 'Toutes les cartes', 'tout'],
-  ];
-  return themes.map(([theme, title, picture]) => ({ params: { theme }, props: { theme, title, picture, questions: allQuestions.filter(q => theme === 'tout' || q.theme === theme) } }));
+  ] as const;
+  return themes.map(([theme, title, picture]) => ({
+    params: { theme },
+    props: { theme, title, picture, questions: allQuestions.filter(q => theme === 'tout' || q.theme === theme) },
+  }));
 }
+
 const { theme, title, picture, questions } = Astro.props;
-const letter = (i: number) => String.fromCharCode(65 + i);
 ---
 <Layout active="/quiz" title={title}>
-  <section class={`playroom tone-${theme}`} data-quiz aria-label={`Paquet ${title}`}>
-    <div class="playroom-inner">
-      <header class="game-rail">
-        <div><a class="back-to-decks" href="/quiz"><span aria-hidden="true">←</span> Les paquets</a>
-          <h1>{title}</h1></div>
-        <div class="round-meter"><span data-counter id="quiz-counter">{questions.length} cartes</span>
-          <progress aria-label="Cartes retournées" max={questions.length} value="0"></progress></div>
-      </header>
-      <noscript><p class="nojs-note">Ouvrez le dos de chaque carte pour lire son corrigé, ou <a href="/resources/kit/activite_cartes_a_imprimer.pdf">imprimez le jeu</a>.</p></noscript>
-      {questions.map((q, index) => <article class="play-sheet" data-question={q.id} data-answers={q.answers.join(',')}>
-        <div class="prompt-pane">
-          <p class="paper-folio">Carte {index + 1} sur {questions.length}</p>
-          <h2 id={`${q.id}-title`} tabindex="-1" aria-describedby="quiz-counter">{q.question}</h2>
-          <div class="prompt-mark" aria-hidden="true"><Doodle name={picture as any} size={92} /></div>
+  {quizzesEnabled ? <QuizGame {theme} {title} {picture} {questions} /> : (
+    <section class="game-index" aria-labelledby="quiz-title">
+      <div class="casebook quiz-unavailable">
+        <QuizComingSoon />
+        <h1 id="quiz-title">{title}</h1>
+        <p>En attendant le quiz en ligne, tu peux jouer avec les cartes à imprimer.</p>
+        <div class="actions">
+          <a class="button" href="/resources/kit/activite_cartes_a_imprimer.pdf">Imprimer les cartes (PDF)</a>
+          <a href="/quiz">Voir les quatre quiz</a>
         </div>
-        <div class="answer-pane">
-          <p class="answer-instruction">Cochez une ou plusieurs réponses.</p>
-          <fieldset class="answer-slips" aria-labelledby={`${q.id}-title`}>
-            <legend class="sr-only">Vos réponses pour cette carte</legend>
-            {q.options.map((option, i) => <label class="answer-slip">
-              <input type="checkbox" name={q.id} value={i} />
-              <span class="answer-letter" aria-hidden="true">{letter(i)}</span>
-              <span class="choice-text">{option}</span>
-            </label>)}
-          </fieldset>
-          <p class="game-error" data-error role="alert"></p>
-          <details class="correction" data-feedback><summary>Voir le dos de la carte</summary>
-            <div class="card-back printed-back" data-feedback-body>
-              <h3 tabindex="-1" data-feedback-title>Au dos de la carte</h3>
-              <p class="comparison" data-comparison></p>
-              <p class="key-heading">{q.answers.length > 1 ? 'Les bonnes réponses' : 'La bonne réponse'}</p>
-              <ul class="answer-key printed-key">{q.answers.map(i => <li><b>{letter(i)}</b> {q.options[i]}</li>)}</ul>
-              <p>{q.feedback}</p>
-              <details><summary>Pour en discuter</summary><p>{q.discussion}</p></details>
-              <details><summary>{q.nuance ? 'Nuance et source' : 'Source de la carte'}</summary>
-                {q.nuance && <p>{q.nuance}</p>}
-                <p>Carte Happy Click, <a href={`${q.source.file}#page=${q.source.page}`}>question page {q.source.page}</a> et <a href={`${q.source.file}#page=${q.source.answerPage}`}>réponse page {q.source.answerPage}</a>. Les pistes de discussion et les nuances sont proposées par le site.</p>
-              </details>
-            </div>
-          </details>
-          <div class="game-actions">
-            <button type="button" class="ink-button" data-action="validate" data-validate>Retourner la carte <span aria-hidden="true">↗</span></button>
-            <button type="button" class="ink-button" data-action="next" data-next hidden>{index === questions.length - 1 ? 'Voir le score' : 'Carte suivante'} <span aria-hidden="true">→</span></button>
-            <button type="button" class="back-button" data-action="previous" data-previous>Carte précédente</button>
-          </div>
-        </div>
-      </article>)}
-      <section class="result-sheet" data-end hidden>
-        <div class="result-cover">
-          <div class="result-number"><p id="quiz-score">Votre score <strong data-score></strong></p></div>
-          <div class="result-next"><h2 tabindex="-1" aria-describedby="quiz-score">Paquet terminé&nbsp;!</h2>
-            <button type="button" class="ink-button" data-action="reset">Rejouer ce paquet <span aria-hidden="true">↻</span></button>
-            <a class="back-button" href="/quiz">Choisir un autre paquet</a></div>
-        </div>
-        <div class="result-index"><h3>Le corrigé de votre partie</h3><div class="review-list" data-review></div></div>
-      </section>
-      <p class="game-privacy">Vos réponses restent sur cette page et s’effacent en fin de session.</p>
-    </div>
-  </section>
-  <script>
-    import { initQuiz } from '../../scripts/quiz.mjs';
-    initQuiz(document.querySelector('[data-quiz]'));
-  </script>
+      </div>
+    </section>
+  )}
 </Layout>

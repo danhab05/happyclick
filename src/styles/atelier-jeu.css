@@ -27,14 +27,15 @@
 .dealt-packs .seat { margin: 0; min-width: 0; --seat-x: 20cqw; --seat-y: 49cqh; --delay: .15; --angle: -6deg; --swatch: #d4bcff; }
 .dealt-packs .seat-sante { --seat-x: 50cqw; --seat-y: 46cqh; --delay: .24; --angle: 2deg; --swatch: #a6ddf5; }
 .dealt-packs .seat-ecologie { --seat-x: 80cqw; --seat-y: 49cqh; --delay: .33; --angle: 6deg; --swatch: #b9ec9e; }
-.seat a { display: block; color: var(--stock); text-decoration: none; }
+.dealt-pack { display: block; color: var(--stock); text-decoration: none; }
 .dealt-card { position: relative; display: block; width: 93%; margin: 0 auto; aspect-ratio: 800 / 566; background: var(--swatch); transform: rotate(var(--angle)); border-radius: 4px; box-shadow: 0 3px 0 var(--swatch),0 5px 0 #281733,0 7px 0 var(--swatch); }
 .dealt-card img { width: 100%; height: 100%; border-radius: 4px; }
-.dealt-label { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 12px; border-top: 1px solid #897795; margin-top: 30px; padding-top: 8px; }
+.dealt-label { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; border-top: 1px solid #897795; margin-top: 30px; padding-top: 8px; }
 .dealt-label strong { font: 550 clamp(1.12rem,1.85vw,1.7rem)/1.12 var(--display); }
 .dealt-label small { white-space: nowrap; font-size: .9rem; }
 .table-actions { margin-top: 18px; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 4px 24px; }
 .table-actions .ink-action { background: #deccff; color: var(--press-ink); }
+.complete-pack { display: inline-flex; align-items: center; gap: 8px; font: 550 1.12rem/1.25 var(--display); }
 
 @media (max-width: 760px) {
   .print-layout { grid-template-columns: 1fr; gap: 12px; padding-block: 28px; }
@@ -47,9 +48,9 @@
   .table-title .print-credit { margin-bottom: 8px; }
   .table-title > p { margin-top: 10px; font-size: .97rem; }
   .dealt-packs { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 18px 0; }
-  .seat a { display: grid; grid-template-columns: minmax(82px,.7fr) minmax(0,1fr); gap: 6%; align-items: center; min-height: 62px; }
+  .dealt-pack { display: grid; grid-template-columns: minmax(82px,.7fr) minmax(0,1fr); gap: 6%; align-items: center; min-height: 62px; }
   .dealt-card { width: min(90%,160px); }
-  .dealt-label { display: grid; margin: 0; border: 0; }
+  .dealt-label { display: grid; justify-items: start; margin: 0; border: 0; }
   .table-actions { justify-content: flex-start; gap: 4px 16px; }
 }
 
@@ -108,7 +109,7 @@
   position: absolute; width: var(--card-w); left: var(--seat-x); top: var(--seat-y);
   z-index: 3; transform: translate(-50%,-50%);
 }
-.deal-story[data-running] .seat a { display: block; }
+.deal-story[data-running] .dealt-pack { display: block; }
 .deal-story[data-running] .dealt-card {
   width: 100%; margin: 0;
   opacity: clamp(0, calc((var(--p) - .085) * 14), 1);

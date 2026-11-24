@@ -1,13 +1,20 @@
-import { test } from 'node:test';
+import { after, before, test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parseHTML } from 'linkedom';
+import { build } from 'astro';
+import config from '../astro.config.mjs';
 import { QuizSession } from '../src/lib/quiz-state.mjs';
 import { usagePrompts } from '../src/lib/reflection.mjs';
 import { initQuiz } from '../src/scripts/quiz.mjs';
 import { initReflection } from '../src/scripts/reflection.mjs';
 const json = name => JSON.parse(readFileSync(new URL(`../src/data/${name}.json`,import.meta.url),'utf8'));
 const questions=json('quiz');
+const quizThemes = ['comportements', 'sante', 'ecologie', 'tout'];
+const quizTitles = ['Les bons réflexes', 'Trouver son équilibre', 'Derrière nos écrans', 'Toutes les cartes'];
+const dist = new URL('../dist/', import.meta.url);
 const load = route => parseHTML(readFileSync(new URL(`../dist/${route}/index.html`,import.meta.url),'utf8'));
 const click = (window,node) => node.dispatchEvent(new window.Event('click',{bubbles:true}));
 const change = (window,node) => node.dispatchEvent(new window.Event('change',{bubbles:true}));
@@ -51,9 +58,66 @@ test('session requires a choice and validation, locks validated answers, support
  assert.ok(session.selections.every(values=>values.length===0));
 });
 
-for(const theme of ['comportements','sante','ecologie','tout']){
+test('the preview exposes four inert quiz badges and no play links', () => {
+ for (const file of readdirSync(dist, { recursive: true }).filter(file => file.endsWith('index.html'))) {
+  const { document } = parseHTML(readFileSync(new URL(file, dist), 'utf8'));
+  const playLinks = [...document.querySelectorAll('a[href]')].filter(link => /^\/quiz\/[^/?#]/.test(link.getAttribute('href')));
+  assert.equal(playLinks.length, 0, file);
+  assert.equal(document.querySelector('[data-quiz]'), null, file);
+ }
+ for (const file of ['index.html', 'quiz/index.html']) {
+  const { document } = parseHTML(readFileSync(new URL(file, dist), 'utf8'));
+  const badges = [...document.querySelectorAll('.quiz-coming-soon')];
+  assert.equal(badges.length, 4, file);
+  badges.forEach((badge, index) => {
+   assert.equal(badge.textContent, 'À venir');
+   assert.ok(!badge.closest('a, button, [role="button"], [tabindex]:not([tabindex="-1"])'));
+   assert.ok(badge.parentElement.textContent.includes(quizTitles[index]));
+  });
+ }
+});
+
+for (const [index, theme] of quizThemes.entries()) {
+ test(`the old ${theme} URL shows an unavailable state with printable cards`, () => {
+  const { document } = load(`quiz/${theme}`);
+  const main = document.querySelector('main');
+  assert.equal(main.querySelector('h1').textContent, quizTitles[index]);
+  assert.equal(main.querySelector('.quiz-coming-soon').textContent, 'À venir');
+  assert.ok(!main.querySelector('[data-quiz], [data-question], input, button'));
+  assert.equal(document.querySelectorAll('script').length, 0);
+  assert.ok(main.querySelector('a[href="/quiz"]'));
+  assert.ok(main.querySelector('a[href="/resources/kit/activite_cartes_a_imprimer.pdf"]'));
+ });
+}
+
+// Build the reactivated game outside dist so the deployable preview stays disabled.
+let enabledBuild;
+before(async () => {
+ const workspace = fileURLToPath(new URL('../.astro/', import.meta.url));
+ mkdirSync(workspace, { recursive: true });
+ enabledBuild = mkdtempSync(join(workspace, 'quiz-enabled-test-'));
+ const previous = process.env.HAPPYCLICK_QUIZZES_ENABLED;
+ process.env.HAPPYCLICK_QUIZZES_ENABLED = 'true';
+ try {
+  await build({
+   ...config,
+   configFile: false,
+   outDir: join(enabledBuild, 'dist'),
+   cacheDir: join(enabledBuild, 'cache'),
+   vite: { ...config.vite, cacheDir: join(enabledBuild, 'vite') },
+   logLevel: 'silent',
+  });
+ } finally {
+  if (previous === undefined) delete process.env.HAPPYCLICK_QUIZZES_ENABLED;
+  else process.env.HAPPYCLICK_QUIZZES_ENABLED = previous;
+ }
+});
+after(() => { if (enabledBuild) rmSync(enabledBuild, { recursive: true, force: true }); });
+
+for(const theme of quizThemes){
  test(`DOM discussion flow: ${theme}, all cards, multiple answers, previous, summary and replay`,()=>{
-  const {document,window}=load(`quiz/${theme}`);const root=document.querySelector('[data-quiz]');
+  const {document,window}=parseHTML(readFileSync(join(enabledBuild, 'dist', 'quiz', theme, 'index.html'), 'utf8'));
+  const root=document.querySelector('[data-quiz]');
   const session=initQuiz(root);const cards=[...root.querySelectorAll('[data-question]')];
   assert.equal(cards.filter(card=>!card.hidden).length,1);
   click(window,cards[0].querySelector('[data-validate]'));

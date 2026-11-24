@@ -7,6 +7,7 @@ import AddictionDocuments from '../components/AddictionDocuments.astro';
 import Doodle from '../components/Doodle.astro';
 import copy from '../data/source-copy.json';
 import roles from '../data/roles.json';
+import { quizzesEnabled } from '../lib/quiz-availability.mjs';
 const {intro,sections} = copy.kit;
 const pictures = { addiction: 'addiction', cyberharcelement: 'cyberharcelement', desinformation: 'desinformation' } as const;
 const Original = (i: number) => sections[i];
@@ -28,10 +29,10 @@ const Original = (i: number) => sections[i];
       <section class="resource-section" id="cartes">
         <div class="section-picture"><Doodle name="tout" size={72} /><h2>Les cartes du quiz</h2></div>
         <p>29 cartes en trois paquets : 10 sur les comportements, 8 sur la santé, 11 sur l’écologie. En classe, par groupes de 4 à 6.</p>
-        <div class="actions"><a class="button" href="/quiz">Jouer les cartes en ligne</a></div>
+        <div class="actions"><a class="text-link" href="/quiz">Voir les quatre quiz</a></div>
         <details><summary>Le texte d’origine du kit</summary><div class="details-body original-copy"><h3>{Original(0).title}</h3><p class="resource-meta">{Original(0).subtitle}</p>{Original(0).paragraphs.map(p=><p>{p}</p>)}</div></details>
         <PdfDocument src="/resources/kit/activite_cartes_a_imprimer.pdf" title="Quizz — cartes à imprimer" height={800} />
-        <p class="source-note">16 pages. Sur le site, chaque carte renvoie à ses pages, et les limites de certaines réponses sont signalées.</p>
+        <p class="source-note">16 pages. {quizzesEnabled ? 'Sur le site, chaque carte renvoie à ses pages, et les limites de certaines réponses sont signalées.' : 'Les corrigés sont au verso des cartes.'}</p>
       </section>
 
       <section class="resource-section" id="roles">

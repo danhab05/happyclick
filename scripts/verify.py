@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 import re
 import subprocess
 from html.parser import HTMLParser
@@ -15,6 +16,7 @@ DIST = ROOT / 'dist'
 parser = argparse.ArgumentParser()
 parser.add_argument('--base-url', help='GET every built file and route, including trailing-slash variants')
 args = parser.parse_args()
+quizzes_enabled = os.environ.get('HAPPYCLICK_QUIZZES_ENABLED') == 'true'
 
 
 def normalize(value):
@@ -126,7 +128,8 @@ for route, page in sorted(pages.items()):
         assert re.fullmatch(r'/_astro/[^/]+\.[A-Za-z0-9_-]{8,}\.css', stylesheet), f'CSS sans hash de contenu : {route} {stylesheet}'
         active_stylesheets.add(stylesheet)
     scripts = [a for tag, a in page.elements if tag == 'script']
-    interactive = route.startswith('/quiz/') or route in ('/mes-usages', '/kit/reflexion')
+    is_quiz_game = route.startswith('/quiz/')
+    interactive = (is_quiz_game and quizzes_enabled) or route in ('/mes-usages', '/kit/reflexion')
     has_module = interactive or route == '/'  # Scroll-linked staging on the home page.
     assert len(scripts) == int(has_module), f'JavaScript hors périmètre : {route}'
     for script in scripts:
@@ -134,6 +137,12 @@ for route, page in sorted(pages.items()):
     assert not any(name.startswith('on') for _, a in page.elements for name in a), route
     if not interactive:
         assert not any(tag in ('input', 'textarea') for tag, _ in page.elements), route
+    if not quizzes_enabled:
+        assert not any('data-quiz' in a or 'data-question' in a for _, a in page.elements), route
+        assert not any(tag == 'a' and urlsplit(a.get('href', '')).path.rstrip('/').startswith('/quiz/')
+                       for tag, a in page.elements), f'Lien vers un quiz désactivé : {route}'
+        if is_quiz_game:
+            assert 'À venir' in text, route
     for tag, attrs in page.elements:
         for attr in ('href', 'src', 'data'):
             target = attrs.get(attr, '')
@@ -154,14 +163,19 @@ for route, page in sorted(pages.items()):
         urls.add(route + '/')
     report.append(f'- `{route}` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; {len(scripts)} module JS ciblé.')
 
-# Question text/options and page references must actually reach the server-rendered HTML.
+# Verify the source even while the quiz HTML is disabled.
 quiz = json.loads((ROOT / 'src/data/quiz.json').read_text())
 assert len(quiz) == 29
-for question in quiz:
-    for route in ('/quiz/tout', '/quiz/' + question['theme']):
-        text = normalize(' '.join(pages[route].text))
-        for value in [question['question'], *question['options'], question['feedback'], question['discussion'], question['nuance']]:
-            assert normalize(value) in text, f'Carte incomplète : {route} {question["id"]}'
+if quizzes_enabled:
+    for question in quiz:
+        for route in ('/quiz/tout', '/quiz/' + question['theme']):
+            text = normalize(' '.join(pages[route].text))
+            for value in [question['question'], *question['options'], question['feedback'], question['discussion'], question['nuance']]:
+                assert normalize(value) in text, f'Carte incomplète : {route} {question["id"]}'
+else:
+    for route in ('/', '/quiz'):
+        badges = [(tag, a) for tag, a in pages[route].elements if 'quiz-coming-soon' in a.get('class', '').split()]
+        assert len(badges) == 4 and all(tag == 'span' and 'tabindex' not in a for tag, a in badges), route
 for filename, route, expected in [('usage', '/mes-usages', 11), ('teachers', '/kit/reflexion', 14)]:
     questions = json.loads((ROOT / f'src/data/{filename}.json').read_text())
     assert len(questions) == expected
@@ -170,7 +184,9 @@ for filename, route, expected in [('usage', '/mes-usages', 11), ('teachers', '/k
         assert normalize(question['question']) in text, f'{filename} : question absente'
         for option in question.get('options', []):
             assert normalize(option) in text
-report.append(f'- {source_block_count} blocs de textes originaux contrôlés ; 29 cartes intégrales dans leur thème et dans le parcours complet ; 11 questions d’usage et 14 questions enseignants.')
+quiz_summary = ('29 cartes intégrales dans leur thème et dans le parcours complet' if quizzes_enabled else
+                '29 cartes conservées dans les données, quatre quiz signalés « À venir », anciennes URL sans jeu')
+report.append(f'- {source_block_count} blocs de textes originaux contrôlés ; {quiz_summary} ; 11 questions d’usage et 14 questions enseignants.')
 
 report += ['', '## CSS actifs versionnés', '']
 for stylesheet in sorted(active_stylesheets):
@@ -241,7 +257,7 @@ report += ['', '## Ressources et HTTP', '',
            f'{len(fragments)} références à des ancres HTML/pages PDF vérifiées. Les {len(pages)-1} routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.', '',
            '## Responsive et limites de cette vérification', '',
            'Analyse des règles CSS seulement : conteneur borné à 1180 px, paquets en une colonne sous 800 px, menu mobile natif et sommaires repliables, images/PDF bornés, cibles d’au moins 44 px, focus visibles et reduced-motion (retournement de carte désactivé). Aucun navigateur lancé : ces contrôles ne mesurent pas le rendu. Refonte « table de jeu » (52115d2) approuvée par OpenBot après mesures réelles à 320/390/1000/1920 px ; périmètre exact dans `tasks/browser-review.md` et `tasks/redesign-enfants.md`. Les mesures de `tasks/mobile-review.md` concernent la version précédente.', '',
-           'Les tests Node/DOM de `npm test` couvrent la transcription et les clés des 29 cartes, la progression des quatre parcours, validation/retour/rejouer, les choix exclusifs du questionnaire, l’absence de score lié à la durée, les notes comme texte et leur effacement. Ce script ne remplace pas leur exécution.', '',
+           'Les tests Node/DOM de `npm test` couvrent la préversion sans quiz jouables et, sur un build activé isolé, la progression et les corrigés des quatre parcours. Ils couvrent aussi les questionnaires. Ce script ne remplace pas leur exécution.', '',
            'Base publique e8bf224 confirmée par OpenBot : `tasks/public-verification.md`. La CSS reste importée par Astro avec un hash de contenu, contrôlé ici.', '',
            'Aucun push, déploiement, contrôle HTTPS ni changement d’infrastructure effectué par cette vérification.']
 (ROOT / 'tasks/verification.md').write_text('\n'.join(report) + '\n')

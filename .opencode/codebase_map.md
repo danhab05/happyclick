@@ -1,5 +1,9 @@
 # Cartographie — Happy Click
 
+## Préversion avec quiz désactivés
+
+`src/lib/quiz-availability.mjs` lit `HAPPYCLICK_QUIZZES_ENABLED` au build. Sans la valeur `true`, l’accueil et `/quiz` affichent quatre badges « À venir » et les quatre anciennes routes proposent le PDF et le catalogue. `QuizGame.astro` contient l’interface réactivable. Le moteur et les 29 cartes restent aux mêmes emplacements. Les tests de jeu utilisent un build activé isolé.
+
 ## Reprise — traversée de l’écran (24 novembre 2026)
 
 L’accueil enchaîne trois séquences. `src/scripts/scroll-stories.mjs` calcule la progression à partir du scroll natif sur les trois `[data-scroll-story]`. `traversee.css` dirige le passage du moniteur au tableau, `CarnetPromotions.astro` le passage d’une promotion à l’autre et `AtelierJeu.astro` / `atelier-jeu.css` la transformation de la chemise en table de jeu. Sans moteur ou avec la réduction de mouvement, les six sections sont dans le flux normal.

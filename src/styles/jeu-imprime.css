@@ -16,7 +16,7 @@
 .casebook-title p { max-width: 28ch; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.4; }
 .case-list { margin: 0; padding: 0; list-style: none; border: 2px solid var(--jeu-encre); }
 .case-row + .case-row { margin: 0; border-top: 2px solid var(--jeu-encre); }
-.case-link {
+.case-content {
   position: relative; isolation: isolate; display: grid; align-items: center;
   grid-template-columns: minmax(110px, .4fr) minmax(0, 1.3fr) auto auto; gap: clamp(12px, 3vw, 48px);
   min-height: clamp(98px, 8.8vw, 142px); padding-right: 3%; background: var(--face); color: var(--jeu-encre); text-decoration: none;
@@ -29,10 +29,12 @@
 .case-description > span { display: block; margin-top: 6px; line-height: 1.25; font-size: clamp(.9rem, 1.4vw, 1.12rem); }
 .case-arrow { font: 500 clamp(1.7rem, 3.5vw, 3.6rem)/1 var(--display); }
 .case-count { white-space: nowrap; font: 550 1.1rem/1.2 var(--display); }
-.case-link:hover strong { text-decoration: underline; text-decoration-thickness: .065em; text-underline-offset: .12em; }
+a.case-content:hover strong { text-decoration: underline; text-decoration-thickness: .065em; text-underline-offset: .12em; }
 .case-rules { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5vw; padding-block: 38px; border-top: 2px solid var(--jeu-encre); }
 .case-rules p { max-width: 58ch; }
 .case-rules a { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 5px; min-height: 44px; }
+.quiz-unavailable h1 { margin-block: 12px; }
+.quiz-unavailable .actions { align-items: center; }
 
 /* A single spread has one coloured question face and one writable answer face. */
 .playroom { background: #30213e; padding: 0 max(4vw, calc((100vw - 1320px) / 2)) 28px; }
@@ -121,14 +123,14 @@
   .casebook { padding: 24px 14px 26px; }
   .casebook-title { display: block; margin-bottom: 20px; }
   .casebook-title p { max-width: 34ch; margin-top: 12px; }
-  .case-link { min-height: 88px; grid-template-columns: 62px 1fr 20px; gap: 0 12px; padding: 0 9px 0 0; }
+  .case-content { min-height: 88px; grid-template-columns: 62px minmax(0, 1fr) auto; gap: 0 12px; padding: 0 9px 0 0; }
   .case-thumb { grid-row: 1 / 3; }
   .case-thumb img, .case-thumb .doodle { width: 92px; max-width: none; }
   .case-description { align-self: end; padding-top: 12px; }
   .case-description strong { font-size: clamp(1.25rem, 5.5vw, 1.7rem); }
   .case-description > span { font-size: .84rem; margin-top: 3px; }
   .case-count { grid-area: 2 / 2; align-self: start; padding-block: 3px 10px; font-size: .9rem; }
-  .case-arrow { grid-area: 1 / 3 / 3; }
+  .case-content > :is(.case-arrow, .quiz-coming-soon) { grid-area: 1 / 3 / 3; }
   .case-rules { display: block; padding: 23px 18px; }
   .case-rules h2 { margin-bottom: 10px; }
   .playroom { padding-inline: 10px; }
