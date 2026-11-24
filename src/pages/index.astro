@@ -1,5 +1,6 @@
 ---
 import '../styles/home-scroll.css';
+import CarnetPromotions from '../components/CarnetPromotions.astro';
 import AtelierJeu from '../components/AtelierJeu.astro';
 import '../styles/traversee.css';
 import Layout from '../layouts/Layout.astro';
@@ -48,20 +49,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <div class="history-strip">
-      <div class="work-wrap editions">
-        <h2>Le projet au fil des promotions</h2>
-        <div><h3>2025–2026</h3><p>L’équipe réunit cartes, jeux de rôles et questionnaires dans un kit à imprimer.</p><a href="/kit">Consulter le kit</a></div>
-        <div><h3>2026–2027</h3><p>Une nouvelle équipe reprend les interventions et publie deux versions du jeu « Écrans et équilibre ».</p><a href="/projet-2027#equipe">Rencontrer l’équipe</a></div>
-      </div>
-      <details class="work-wrap project-origins">
-        <summary>Les origines du projet</summary>
-        <p>Happy Click est mené par des étudiants de première année de Télécom SudParis, dans le cadre du programme GATE®. Le projet a été commandé par Loïc Bernable, diplômé de Télécom SudParis en 2000, directeur technique et co-fondateur de LOG. L’équipe a reçu le Prix exceptionnel du GATE en 2024–2025.</p>
-        <p>« Le numérique n’est pas mauvais… il suffit d’en faire bon usage. »</p>
-        <a href="https://www.telecom-sudparis.eu/ecole/gestion-apprentissage-travail-en-equipe/" target="_blank" rel="noopener noreferrer">Le programme GATE® <span class="sr-only">(nouvel onglet)</span></a>
-      </details>
-    </div>
-
+    <CarnetPromotions />
     <AtelierJeu />
   </div>
 </Layout>
