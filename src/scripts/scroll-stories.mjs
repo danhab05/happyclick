@@ -50,8 +50,10 @@ export function initScrollStories(doc) {
       const room = root.querySelector('.classroom');
       const intro = root.querySelector('.print-intro');
       const title = root.querySelector('.table-title');
-      const fits = cover ? cover.offsetHeight + 50 <= height && room.offsetHeight <= height
-        : intro.offsetHeight < height * .45 && title.offsetHeight < height * .32;
+      let fits;
+      if (cover) fits = cover.offsetHeight + 50 <= height && room.offsetHeight <= height;
+      else if (intro) fits = intro.offsetHeight < height * .45 && title.offsetHeight < height * .32;
+      else fits = [...root.querySelectorAll('.year-layout')].every(page => page.offsetHeight + 20 <= height);
       story.active = motion.matches && fits && stage.clientWidth >= 300;
       root.toggleAttribute('data-running', story.active);
       story.previous = undefined;

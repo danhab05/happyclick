@@ -231,3 +231,9 @@ Base publique de départ : 26d8fd2. Branche de travail : feat/atelier-en-mouveme
 - [x] Contrôler les séquences sur ordinateur et mobile et préparer la capture vidéo de la préversion.
 
 Revue locale : chaque piste utilise le défilement natif, avec une scène fixe et deux compositions qui partagent le même cadre. L’ordinateur s’approche de la vitre, le tableau grandit dans la vitre puis occupe l’écran ; dans l’atelier, la couverture se rabat et trois cartes physiques sont distribuées. Les couvertures du kit et des guides s’ouvrent aussi. Le repli en flux vertical garde les liens et le contenu accessibles. Build Astro 15 pages, 18 tests réussis. Preuves de publication et vidéo dans /mnt/data/happyclick-traversee/.
+
+### Carnet des promotions et comparaison filmée
+
+- [x] Composer la troisième séquence entre le tableau de classe et la distribution. Le feuillet 2025–2026 tourne autour de la reliure et découvre l’édition 2026–2027. Les deux liens et le volet sur les origines restent accessibles.
+- [x] Adapter la composition au format portrait, prévoir la lecture des deux pages en mode statique et utiliser la même progression pour le geste inverse.
+- La passation et les films avant/après sur les deux formats sont regroupés dans `/mnt/data/happyclick-traversee/`. La version de comparaison est `34d769a`.
