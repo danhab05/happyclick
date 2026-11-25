@@ -7,12 +7,14 @@
 }
 .monitor-art { position: relative; transform-origin: var(--glass-x) var(--glass-y); transform: rotate(3deg); }
 .monitor-art .monitor-print { display: block; width: 100%; transform: none; }
-.glass-origin, .glass-target, .tap-hand { position: absolute; left: var(--glass-x); top: var(--glass-y); }
+.glass-origin, .glass-app, .tap-hand { position: absolute; left: var(--glass-x); top: var(--glass-y); }
 .glass-origin, .fingertip { width: 0; height: 0; }
-.glass-target {
-  width: 4%; aspect-ratio: 1; border: 2px solid #254f44; border-radius: 50%;
-  background: #cff5bc; transform: translate(-50%, -50%);
+.glass-app {
+  width: 22%; aspect-ratio: 1;
+  transform: translate(-50%, -50%) scale(calc(1 - .08 * var(--tap-flash, 0)));
 }
+/* Center the square blue tile. The printed cursor extends past its bottom-right corner. */
+.glass-app img { position: absolute; top: 0; left: 0; width: 110%; max-width: none; height: auto; }
 .tap-hand {
   /* The leading edge of the drawn fingertip is at (2, 35) in the 280 × 160 print. */
   --tip-x: .7143%;
@@ -22,13 +24,14 @@
   opacity: var(--hand-opacity, 1);
 }
 .tap-hand img { display: block; width: 100%; height: auto; filter: drop-shadow(1px 2px 0 #66345c66); }
-.opening-story:not([data-running]) .tap-hand { --hand-gap: 0; --hand-opacity: 1; --tap-flash: 1; }
+.opening-story:not([data-running]) .tap-hand { --hand-gap: 0; --hand-opacity: 1; }
+.opening-story:not([data-running]) .glass-app { --tap-flash: 0; }
 .fingertip { position: absolute; left: var(--tip-x); top: var(--tip-y); }
 .contact-ripple {
-  position: absolute; width: clamp(16px, 2.4vw, 34px); aspect-ratio: 1;
-  border: 2px solid #fff8dc; border-radius: 50%; box-shadow: 0 0 0 1.5px #2c5148;
-  opacity: var(--tap-flash, 1);
-  transform: translate(-50%, -50%) scale(calc(1.55 - .55 * var(--tap-flash, 1)));
+  position: absolute; inset: -5%;
+  border: 2px solid #fff8dc; border-radius: 16%; box-shadow: 0 0 0 1px #2c5148;
+  opacity: var(--tap-flash, 0);
+  transform: scale(calc(1.35 - .35 * var(--tap-flash, 0)));
 }
 .chalk-figure { position: relative; width: fit-content; }
 .chalk-line { width: 100%; height: 12%; position: absolute; left: 0; bottom: 0; fill: none; stroke: #cff5bc; stroke-width: 3; stroke-linecap: round; }

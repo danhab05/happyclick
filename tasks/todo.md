@@ -264,3 +264,4 @@ Sur `happyclick.danhabib.dev`, Chromium à 390 × 844 (émulation tactile) et 14
 Chromium à 1440 × 900 et 390 × 844 mesure un écart inférieur à 0,02 px entre l’index et la cible au contact. Le rayon d’ouverture est nul pendant l’approche et croît après le toucher. En mouvement réduit, y compris après un changement de préférence en cours de lecture, la main reste posée et le tableau se lit en défilant. La publication cible `happyclick.danhabib.dev` via `feat/astro-preview`. Le contrôle navigateur produit les captures et les mesures dans `/mnt/data/happyclick-tap/`.
 
 - [x] Recentrer le contact sur la zone verte de la vitre, puis contrôler l’alignement du doigt et le départ du zoom sur ordinateur et mobile.
+- [x] Afficher le logo Happy Click au point de contact. Au toucher, le logo se comprime brièvement et un contour clair souligne l’appui avant l’ouverture du tableau.
