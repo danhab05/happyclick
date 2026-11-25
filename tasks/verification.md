@@ -45,7 +45,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Ressources et HTTP
 
-74 URLs contrôlées sur disque ; contrôle HTTP non demandé.
+74 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
 211 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
 
 ## Responsive et limites de cette vérification

@@ -244,3 +244,9 @@ Revue locale : chaque piste utilise le défilement natif, avec une scène fixe e
 - [x] Vérifier les deux états, les liens et les ressources. Contrôler en navigateur le défilement et l’accès au catalogue à 320, 390 et 1440 px, les quatre anciennes URL et le PDF.
 
 La préversion se publie via `feat/astro-preview`. Le contrôle public porte sur le catalogue, les quatre anciennes URL et le PDF.
+
+## Retrait du geste dans l’illustration d’accueil
+
+- [x] Remplacer l’illustration du moniteur et contrôler sa transition avant publication.
+
+Le WebP transparent du moniteur sans main pèse 234 Ko. Build Astro de 15 pages, 23 tests réussis. En local, Chromium vérifie les trois animations dans les deux sens à 390 et 1440 px, les huit variantes des anciennes URL et le téléchargement du PDF des cartes.

@@ -23,3 +23,4 @@
 
 - Dan veut voir le décor changer dès le premier geste. Au contrôle d’une animation, regarder la séquence à vitesse normale et ses états intermédiaires : une petite variation de matrice sur un visuel ne prouve pas que la scène se transforme.
 - Pour une désactivation demandée après une refonte, vérifier le nouveau commit déployé, le catalogue et les anciennes URL directes. Les tests de jouabilité de la refonte ne valident pas la désactivation.
+- Sur une illustration destinée à l’école, vérifier les gestes visibles en taille réelle. Pour le moniteur, garder la vitre sans main afin d’éviter toute ambiguïté.
