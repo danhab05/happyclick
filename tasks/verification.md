@@ -27,7 +27,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 - `/_astro/Layout.B-UZPWny.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 - `/_astro/QuizComingSoon.LlBtdbIo.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
-- `/_astro/index.DWjuLAb3.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/index.BszvRm7p.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 - `/_astro/jeu-imprime.oEA6sCnC.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 
 ## Documents et empreintes source
@@ -45,7 +45,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Ressources et HTTP
 
-74 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
+75 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
 211 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
 
 ## Responsive et limites de cette vérification

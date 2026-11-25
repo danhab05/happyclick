@@ -9,6 +9,7 @@ export function initScrollStories(doc) {
     origin: root.querySelector('.glass-origin'),
   }));
   const clamp = value => Math.min(1, Math.max(0, value));
+  const tapAt = .24;
   let frame = 0;
 
   function paint() {
@@ -19,21 +20,28 @@ export function initScrollStories(doc) {
       if (progress === story.previous) continue;
       story.previous = progress;
       const style = story.root.style;
+      // The opening camera starts at contact. The other chapters use their whole track.
+      const scene = story.origin ? clamp((progress - tapAt) / (1 - tapAt)) : progress;
       style.setProperty('--p', progress.toFixed(5));
-      style.setProperty('--out', clamp(progress / .7).toFixed(5));
-      style.setProperty('--in', clamp((progress - .32) / .53).toFixed(5));
-      story.root.dataset.face = progress < .55 ? 'first' : 'last';
+      style.setProperty('--out', clamp(scene / .7).toFixed(5));
+      style.setProperty('--in', clamp((scene - .32) / .53).toFixed(5));
+      story.root.dataset.face = scene < .55 ? 'first' : 'last';
       if (!story.origin) continue;
-      // Move the point in the CRT glass toward the centre, then grow the new scene out of it.
-      const aim = clamp(progress / .58);
+      const release = clamp((scene - .065) / .18);
+      const gap = clamp(1 - progress / tapAt) + .75 * release;
+      style.setProperty('--hand-gap', gap.toFixed(5));
+      style.setProperty('--hand-opacity', (1 - release).toFixed(5));
+      style.setProperty('--tap-flash', progress < tapAt ? '0' : (1 - clamp(scene / .18)).toFixed(5));
+      style.setProperty('--through', scene.toFixed(5));
+      const aim = clamp(scene / .58);
       const dx = (story.width / 2 - story.glassX) * aim;
       const dy = (story.height / 2 - story.glassY) * aim;
       style.setProperty('--dx', dx.toFixed(2) + 'px');
       style.setProperty('--dy', dy.toFixed(2) + 'px');
       style.setProperty('--cx', (story.glassX + dx).toFixed(2) + 'px');
       style.setProperty('--cy', (story.glassY + dy).toFixed(2) + 'px');
-      const aperture = clamp((progress - .12) / .66);
-      const radius = Math.hypot(story.width, story.height) * .74 * aperture ** 1.65;
+      const aperture = clamp(scene / .78);
+      const radius = Math.hypot(story.width, story.height) * .74 * aperture ** 1.25;
       style.setProperty('--iris', radius.toFixed(2) + 'px');
       style.setProperty('--room-scale', Math.min(1, Math.max(.012, 1.94 * radius / story.width)).toFixed(4));
     }

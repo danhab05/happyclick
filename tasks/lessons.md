@@ -23,5 +23,5 @@
 
 - Dan veut voir le décor changer dès le premier geste. Au contrôle d’une animation, regarder la séquence à vitesse normale et ses états intermédiaires : une petite variation de matrice sur un visuel ne prouve pas que la scène se transforme.
 - Pour une désactivation demandée après une refonte, vérifier le nouveau commit déployé, le catalogue et les anciennes URL directes. Les tests de jouabilité de la refonte ne valident pas la désactivation.
-- Sur une illustration destinée à l’école, vérifier les gestes visibles en taille réelle. Pour le moniteur, garder la vitre sans main afin d’éviter toute ambiguïté.
+- Sur le moniteur, montrer l’index de profil, les trois autres doigts repliés et le pouce rabattu. Contrôler la silhouette sur une image fixe, puis vérifier que l’ouverture commence au point où le doigt touche la vitre et que le mode mouvement réduit garde cette pose lisible.
 - Pour clôturer un correctif visuel sur la préversion, relever le commit déployé par Coolify, comparer le fichier servi à la source et examiner les étapes du défilement sur mobile et ordinateur.

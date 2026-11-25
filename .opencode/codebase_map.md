@@ -6,6 +6,8 @@
 
 ## Reprise — traversée de l’écran (24 novembre 2026)
 
+Dans l’accueil, le moniteur WebP et la main de profil `public/assets/previews/main-index-profil.svg` partagent le même repère sur la vitre. Le contact de l’index déclenche le zoom et l’ouverture du tableau. En mouvement réduit, la main reste posée sur le repère et le tableau suit en flux normal.
+
 L’accueil enchaîne trois séquences. `src/scripts/scroll-stories.mjs` calcule la progression à partir du scroll natif sur les trois `[data-scroll-story]`. `traversee.css` dirige le passage du moniteur au tableau, `CarnetPromotions.astro` le passage d’une promotion à l’autre et `AtelierJeu.astro` / `atelier-jeu.css` la transformation de la chemise en table de jeu. Sans moteur ou avec la réduction de mouvement, les six sections sont dans le flux normal.
 
 ## Reprise — atelier en mouvement (23 novembre 2026)

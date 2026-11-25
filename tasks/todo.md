@@ -255,3 +255,10 @@ Le WebP transparent du moniteur sans main pèse 234 Ko. Build Astro de 15 pages,
 Le déploiement Coolify `gyux1eh6takdc0i8qxyngckw` du correctif `2b6484f` est terminé sur `feat/astro-preview`. Sur les deux domaines de préversion, l’ancien fichier `ordinateur-atelier.webp` renvoie HTTP 404 et les octets de `moniteur-atelier.webp` correspondent au fichier du dépôt. Le contrôle HTTPS a également comparé 74 URL au build et vérifié 211 références.
 
 Sur `happyclick.danhabib.dev`, Chromium à 390 × 844 (émulation tactile) et 1440 × 900 confirme un écran sans main à l’arrivée, au début du zoom, à l’ouverture du tableau et au retour. La traversée du moniteur, le carnet des promotions et la distribution des cartes réagissent au défilement dans les deux sens. Quatre badges « À venir » sont visibles et inactifs en fin de distribution et sur `/quiz`.
+
+## Tap de l’index sur la vitre
+
+- [x] Dessiner une main de profil, index horizontal et doigts repliés, puis caler le point de contact et l’ouverture du tableau sur la même progression.
+- [x] Vérifier les images avant, au contact et après sur ordinateur et mobile, le retour en arrière, le mouvement réduit et les badges « À venir ».
+
+Chromium à 1440 × 900 et 390 × 844 mesure un écart inférieur à 0,02 px entre l’index et la cible au contact. Le rayon d’ouverture est nul pendant l’approche et croît après le toucher. En mouvement réduit, y compris après un changement de préférence en cours de lecture, la main reste posée et le tableau se lit en défilant. La publication cible `happyclick.danhabib.dev` via `feat/astro-preview`. Le contrôle navigateur produit les captures et les mesures dans `/mnt/data/happyclick-tap/`.

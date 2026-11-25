@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 160" fill="none">
+  <defs>
+    <pattern id="grain" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r=".9" fill="#642142"/>
+    </pattern>
+  </defs>
+  <g stroke="#46143d" stroke-linejoin="round" stroke-linecap="round">
+    <!-- The top contour runs uninterrupted from the index tip to the wrist. -->
+    <path fill="#ffe5ba" stroke-width="4"
+      d="M4 34C4 27 10 23 19 23L66 24L99 22Q115 18 132 22
+         L164 30Q177 32 193 45L215 62Q224 68 240 70L220 123
+         L201 116Q192 113 182 117Q160 127 143 124
+         Q125 124 119 114Q107 114 102 103Q88 102 85 93
+         Q76 86 80 76L90 53L65 48L18 46Q5 46 4 36Z"/>
+    <path fill="#eab082" stroke="none"
+      d="M7 39Q26 42 65 41L114 44L103 58L90 53L65 48L18 46Q10 46 7 39Z
+         M139 113Q165 120 185 106Q198 99 225 107L221 120
+         L201 114Q191 111 181 116Q154 129 139 120Z"/>
+    <!-- Three flexed fingers, the little finger closest to the cuff. -->
+    <path fill="#ffd9ab" stroke-width="3.5" d="M108 57Q99 55 93 65L81 79Q75 87 81 94Q88 102 96 96L117 78Q124 71 119 63Q116 58 108 57Z"/>
+    <path fill="#ffd9ab" stroke-width="3.5" d="M127 66Q119 60 111 68L96 85Q89 93 95 101Q102 109 111 103L130 87Q140 78 134 71Z"/>
+    <path fill="#ffd9ab" stroke-width="3.5" d="M144 78Q135 70 126 79L113 93Q106 100 111 107Q117 115 126 111L144 97Q153 88 144 78Z"/>
+    <!-- The thumb lies folded across the finger bases. -->
+    <path fill="#ffe5ba" stroke-width="3.8"
+      d="M169 79Q163 64 147 58L120 47Q112 44 105 48Q100 52 103 57
+         Q107 65 119 69L136 76Q143 86 151 89"/>
+    <path stroke="#955779" stroke-width="2.2"
+      d="M107 52Q114 49 121 54L118 60Q109 59 106 55
+         M59 28L57 33M65 29L64 32M147 99Q144 105 140 108
+         M179 85Q184 94 181 101"/>
+    <path fill="url(#grain)" stroke="none" opacity=".7"
+      d="M17 40L69 40L83 44L64 45L21 43Z
+         M157 115Q174 114 186 104Q200 99 218 105L217 113Q192 105 181 115Q165 122 151 119Z"/>
+    <!-- A printer's violet cuff follows the angle of the forearm. -->
+    <path fill="#9c63bc" stroke-width="4" d="M228 59L277 78L259 150L200 125Z"/>
+    <path fill="#fff2cf" stroke-width="3.5" d="M226 57L240 62L214 134L199 128Z"/>
+    <path fill="url(#grain)" stroke="none" d="M219 129L261 141L259 148L216 133Z"/>
+    <path stroke="#6e3279" stroke-width="2" d="M237 72L269 85M228 121L251 129"/>
+    <circle cx="248" cy="117" r="4" fill="#ffdf8b" stroke-width="2.5"/>
+  </g>
+</svg>
