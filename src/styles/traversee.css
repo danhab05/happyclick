@@ -1,7 +1,8 @@
 /* The unenhanced opening is a pair of normal sections. */
 .monitor-mount {
-  --glass-x: 46%;
-  --glass-y: 39%;
+  /* Center of the glass in the illustration, excluding the case and stand. */
+  --glass-x: 40.8%;
+  --glass-y: 38.5%;
   position: relative; display: grid; width: min(97%,548px);
 }
 .monitor-art { position: relative; transform-origin: var(--glass-x) var(--glass-y); transform: rotate(3deg); }

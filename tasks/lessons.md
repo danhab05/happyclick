@@ -25,3 +25,4 @@
 - Pour une désactivation demandée après une refonte, vérifier le nouveau commit déployé, le catalogue et les anciennes URL directes. Les tests de jouabilité de la refonte ne valident pas la désactivation.
 - Sur le moniteur, montrer l’index de profil, les trois autres doigts repliés et le pouce rabattu. Contrôler la silhouette sur une image fixe, puis vérifier que l’ouverture commence au point où le doigt touche la vitre et que le mode mouvement réduit garde cette pose lisible.
 - Pour clôturer un correctif visuel sur la préversion, relever le commit déployé par Coolify, comparer le fichier servi à la source et examiner les étapes du défilement sur mobile et ordinateur.
+- Pour centrer le tap, mesurer la zone verte de la vitre dans l’illustration. La cible, le doigt au contact et l’origine du zoom partagent ce point.
