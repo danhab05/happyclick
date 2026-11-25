@@ -10,11 +10,29 @@
 .glass-origin, .glass-app, .tap-hand { position: absolute; left: var(--glass-x); top: var(--glass-y); }
 .glass-origin, .fingertip { width: 0; height: 0; }
 .glass-app {
-  width: 22%; aspect-ratio: 1;
-  transform: translate(-50%, -50%) scale(calc(1 - .08 * var(--tap-flash, 0)));
+  width: 13.5%; aspect-ratio: 1;
+  transform: translate(-50%, -50%) rotate(-6deg) skewX(-5deg) scale(calc(1 - .08 * var(--tap-flash, 0)));
 }
-/* Center the square blue tile. The printed cursor extends past its bottom-right corner. */
-.glass-app img { position: absolute; top: 0; left: 0; width: 110%; max-width: none; height: auto; }
+.glass-app-icon {
+  position: absolute; inset: 0; overflow: hidden; border-radius: 23%;
+  opacity: .94;
+}
+/* Frame the heart and hands from the logo. The app label is rendered below the icon. */
+.glass-app-icon img {
+  position: absolute; top: -4%; left: -16%; width: 145%; max-width: none; height: auto;
+  filter: saturate(.77) brightness(.98);
+}
+.glass-app-icon::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit;
+  background: repeating-linear-gradient(transparent 0 1px, #1b61451a 1px 2px);
+  box-shadow: inset 0 0 0 1px #244d4970;
+}
+.glass-app-label {
+  position: absolute; left: 50%; top: 100%; margin-top: 8%;
+  transform: translateX(-50%); white-space: nowrap;
+  color: #123c31; text-shadow: 0 0 2px #d1ffc0;
+  font: 700 clamp(.42rem, 1vw, .72rem)/1 var(--display);
+}
 .tap-hand {
   /* The leading edge of the drawn fingertip is at (2, 35) in the 280 × 160 print. */
   --tip-x: .7143%;
@@ -29,7 +47,7 @@
 .fingertip { position: absolute; left: var(--tip-x); top: var(--tip-y); }
 .contact-ripple {
   position: absolute; inset: -5%;
-  border: 2px solid #fff8dc; border-radius: 16%; box-shadow: 0 0 0 1px #2c5148;
+  border: 1px solid #eefbc9; border-radius: 25%; box-shadow: 0 0 4px #e7ffbc8c;
   opacity: var(--tap-flash, 0);
   transform: scale(calc(1.35 - .35 * var(--tap-flash, 0)));
 }

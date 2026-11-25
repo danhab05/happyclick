@@ -265,3 +265,4 @@ Chromium à 1440 × 900 et 390 × 844 mesure un écart inférieur à 0,02 px ent
 
 - [x] Recentrer le contact sur la zone verte de la vitre, puis contrôler l’alignement du doigt et le départ du zoom sur ordinateur et mobile.
 - [x] Afficher le logo Happy Click au point de contact. Au toucher, le logo se comprime brièvement et un contour clair souligne l’appui avant l’ouverture du tableau.
+- [x] Réduire la taille du logo et le présenter comme une icône d’application avec son nom. L’inclinaison et la texture suivent l’illustration de la vitre.
