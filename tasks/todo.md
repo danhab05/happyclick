@@ -248,5 +248,10 @@ La préversion se publie via `feat/astro-preview`. Le contrôle public porte sur
 ## Retrait du geste dans l’illustration d’accueil
 
 - [x] Remplacer l’illustration du moniteur et contrôler sa transition avant publication.
+- [x] Confirmer le déploiement sur Coolify, examiner les étapes du zoom en navigateur sur mobile et ordinateur, puis contrôler les trois animations et les badges.
 
 Le WebP transparent du moniteur sans main pèse 234 Ko. Build Astro de 15 pages, 23 tests réussis. En local, Chromium vérifie les trois animations dans les deux sens à 390 et 1440 px, les huit variantes des anciennes URL et le téléchargement du PDF des cartes.
+
+Le déploiement Coolify `gyux1eh6takdc0i8qxyngckw` du correctif `2b6484f` est terminé sur `feat/astro-preview`. Sur les deux domaines de préversion, l’ancien fichier `ordinateur-atelier.webp` renvoie HTTP 404 et les octets de `moniteur-atelier.webp` correspondent au fichier du dépôt. Le contrôle HTTPS a également comparé 74 URL au build et vérifié 211 références.
+
+Sur `happyclick.danhabib.dev`, Chromium à 390 × 844 (émulation tactile) et 1440 × 900 confirme un écran sans main à l’arrivée, au début du zoom, à l’ouverture du tableau et au retour. La traversée du moniteur, le carnet des promotions et la distribution des cartes réagissent au défilement dans les deux sens. Quatre badges « À venir » sont visibles et inactifs en fin de distribution et sur `/quiz`.
