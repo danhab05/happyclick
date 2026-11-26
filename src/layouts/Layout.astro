@@ -2,7 +2,7 @@
 import '../styles/site.css';
 import '../styles/atelier-interieur.css';
 import '../styles/interactions.css';
-import clickFeedbackUrl from '../scripts/click-feedback.mjs?url';
+import clickFeedbackUrl from '../scripts/click-feedback.js?url';
 import ResponsiveDisclosure from '../components/ResponsiveDisclosure.astro';
 interface Props { active: string; title?: string; }
 const { active, title = 'Bien utiliser le numérique' } = Astro.props;

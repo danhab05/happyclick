@@ -131,7 +131,7 @@ for route, page in sorted(pages.items()):
     is_quiz_game = route.startswith('/quiz/')
     interactive = (is_quiz_game and quizzes_enabled) or route in ('/mes-usages', '/kit/reflexion')
     feedback = [a for a in scripts if 'data-click-feedback' in a]
-    assert len(feedback) == 1 and re.fullmatch(r'/_astro/click-feedback\.[\w-]+\.mjs', feedback[0]['src']), route
+    assert len(feedback) == 1 and re.fullmatch(r'/_astro/click-feedback\.[\w-]+\.js', feedback[0]['src']), route
     expected_page_modules = int(interactive or route == '/')
     assert len(scripts) == 1 + expected_page_modules, f'JavaScript hors périmètre : {route}'
     for script in scripts:
@@ -203,7 +203,7 @@ for stylesheet in sorted(active_stylesheets):
 assert not (DIST / 'style.css').exists(), 'Ancienne URL CSS stable encore émise'
 assert (DIST / 'robots.txt').read_text().strip() == 'User-agent: *\nDisallow: /'
 # Client modules must stay local and ephemeral; DOM tests separately exercise their behavior.
-for script in list((ROOT / 'src/scripts').glob('*.mjs')) + list((ROOT / 'src/lib').glob('*.mjs')) + list((DIST / '_astro').glob('*.js')) + list((DIST / '_astro').glob('*.mjs')):
+for script in list((ROOT / 'src/scripts').glob('*.*js')) + list((ROOT / 'src/lib').glob('*.mjs')) + list((DIST / '_astro').glob('*.js')) + list((DIST / '_astro').glob('*.mjs')):
     assert not re.search(r'\b(fetch|XMLHttpRequest|sendBeacon|WebSocket|localStorage|sessionStorage|indexedDB)\b|document\.cookie', script.read_text()), f'API réseau/persistance interdite : {script}'
 
 report += ['', '## Documents et empreintes source', '']
@@ -253,6 +253,8 @@ for url in sorted(urls):
             assert response.read() == disk.read_bytes(), f'HTTP différent du build : {url}'
             if url in active_stylesheets:
                 assert 'text/css' in response.headers.get('Content-Type', ''), url
+            if url.endswith(('.js', '.mjs')):
+                assert 'javascript' in response.headers.get('Content-Type', ''), url
             if url.endswith('.pdf'):
                 assert 'application/pdf' in response.headers.get('Content-Type', ''), url
 report += ['', '## Ressources et HTTP', '',
