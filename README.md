@@ -55,7 +55,7 @@ Les 8 PDF d’origine sont inchangés ; les deux nouveaux PDF addiction2027 ajou
 ## Confidentialité et accessibilité
 
 - `noindex, nofollow` sur les 15 pages, `robots.txt` avec `Disallow: /`.
-- JavaScript ciblé sur les animations de l’accueil et les questionnaires. Le moteur de quiz est chargé sur les parcours si les quiz sont réactivés. Aucun compte, backend, analytics, appel réseau applicatif ni API de stockage.
+- Un module local anime les clics sur toutes les pages. L’accueil et les questionnaires chargent aussi leurs interactions spécifiques. Le moteur de quiz est chargé sur les parcours si les quiz sont réactivés. Aucun compte, backend, analytics, appel réseau applicatif ni API de stockage.
 - Les choix et notes vivent uniquement dans la page ; remise à zéro et nettoyage à sa sortie. Aucun prénom ou renseignement d’identification demandé, aucun envoi de formulaire.
 - Navigation clavier, contrôles natifs, labels/fieldset, erreurs annoncées, focus après changement d’étape, reduced-motion, mise en page responsive et titres longs pouvant revenir à la ligne.
 - Statistiques attribuées et datées de 2021. Les formulations ambiguës ou non étayées des cartes sont signalées ; elles ne sont pas élevées au rang de faits universels ou de conseils médicaux/juridiques actuels.

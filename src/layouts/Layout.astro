@@ -1,6 +1,8 @@
 ---
 import '../styles/site.css';
 import '../styles/atelier-interieur.css';
+import '../styles/interactions.css';
+import clickFeedbackUrl from '../scripts/click-feedback.mjs?url';
 import ResponsiveDisclosure from '../components/ResponsiveDisclosure.astro';
 interface Props { active: string; title?: string; }
 const { active, title = 'Bien utiliser le numérique' } = Astro.props;
@@ -15,6 +17,7 @@ const links = [ ['/', 'Accueil'], ['/projet-2027', 'Le projet'], ['/kit', 'Le ki
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <script is:inline type="module" src={clickFeedbackUrl} data-click-feedback></script>
     <title>{title} — Happy Click</title>
     <link rel="icon" type="image/png" href="/assets/2027/favicon-96.png" sizes="96x96" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/2027/apple-touch-180.png" />

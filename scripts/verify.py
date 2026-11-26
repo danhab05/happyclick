@@ -130,8 +130,10 @@ for route, page in sorted(pages.items()):
     scripts = [a for tag, a in page.elements if tag == 'script']
     is_quiz_game = route.startswith('/quiz/')
     interactive = (is_quiz_game and quizzes_enabled) or route in ('/mes-usages', '/kit/reflexion')
-    has_module = interactive or route == '/'  # Scroll-linked staging on the home page.
-    assert len(scripts) == int(has_module), f'JavaScript hors périmètre : {route}'
+    feedback = [a for a in scripts if 'data-click-feedback' in a]
+    assert len(feedback) == 1 and re.fullmatch(r'/_astro/click-feedback\.[\w-]+\.mjs', feedback[0]['src']), route
+    expected_page_modules = int(interactive or route == '/')
+    assert len(scripts) == 1 + expected_page_modules, f'JavaScript hors périmètre : {route}'
     for script in scripts:
         assert script.get('type') == 'module' and script.get('src', '').startswith('/_astro/'), route
     assert not any(name.startswith('on') for _, a in page.elements for name in a), route
@@ -161,7 +163,8 @@ for route, page in sorted(pages.items()):
     urls.add(route)
     if route != '/':
         urls.add(route + '/')
-    report.append(f'- `{route}` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; {len(scripts)} module JS ciblé.')
+    modules_label = 'module JS ciblé' if len(scripts) == 1 else 'modules JS ciblés'
+    report.append(f'- `{route}` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; {len(scripts)} {modules_label}.')
 
 # Verify the source even while the quiz HTML is disabled.
 quiz = json.loads((ROOT / 'src/data/quiz.json').read_text())
@@ -200,7 +203,7 @@ for stylesheet in sorted(active_stylesheets):
 assert not (DIST / 'style.css').exists(), 'Ancienne URL CSS stable encore émise'
 assert (DIST / 'robots.txt').read_text().strip() == 'User-agent: *\nDisallow: /'
 # Client modules must stay local and ephemeral; DOM tests separately exercise their behavior.
-for script in list((ROOT / 'src/scripts').glob('*.mjs')) + list((ROOT / 'src/lib').glob('*.mjs')) + list((DIST / '_astro').glob('*.js')):
+for script in list((ROOT / 'src/scripts').glob('*.mjs')) + list((ROOT / 'src/lib').glob('*.mjs')) + list((DIST / '_astro').glob('*.js')) + list((DIST / '_astro').glob('*.mjs')):
     assert not re.search(r'\b(fetch|XMLHttpRequest|sendBeacon|WebSocket|localStorage|sessionStorage|indexedDB)\b|document\.cookie', script.read_text()), f'API réseau/persistance interdite : {script}'
 
 report += ['', '## Documents et empreintes source', '']

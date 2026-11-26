@@ -45,7 +45,7 @@ test('new PDFs and real PNG derivatives match the provenance manifest, favicon h
   assert.equal(doc.querySelector('header .brand img').getAttribute('src'),'/assets/2027/logo-128.png');
   assert.equal(doc.querySelector('footer .brand img').getAttribute('src'),'/assets/2027/logo-128.png');
   assert.equal(doc.querySelector('meta[name=robots]').getAttribute('content'),'noindex, nofollow');
-  assert.equal(doc.querySelectorAll('script,form').length,0);
+  assert.equal(doc.querySelectorAll('script:not([data-click-feedback]),form').length,0);
  }
  const png=read('public/assets/2027/favicon-96.png');assert.equal(png.readUInt32BE(16),96);assert.equal(png.readUInt32BE(20),96);assert.equal(png[25],6);
 });

@@ -6,28 +6,28 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Pages, contenu et interactions
 
-- `/` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
-- `/faq` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/guides` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/kit` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/kit/reflexion` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
-- `/kit/roles/addiction` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/kit/roles/cyberharcelement` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/kit/roles/desinformation` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/mes-usages` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
-- `/projet-2027` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/quiz` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/quiz/comportements` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/quiz/ecologie` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/quiz/sante` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
-- `/quiz/tout` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 0 module JS ciblé.
+- `/` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 2 modules JS ciblés.
+- `/faq` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/guides` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/kit` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/kit/reflexion` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 2 modules JS ciblés.
+- `/kit/roles/addiction` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/kit/roles/cyberharcelement` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/kit/roles/desinformation` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/mes-usages` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 2 modules JS ciblés.
+- `/projet-2027` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/quiz` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/quiz/comportements` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/quiz/ecologie` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/quiz/sante` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
+- `/quiz/tout` : navigation, langue, titre, noindex, liens et identifiants contrôlés ; 1 module JS ciblé.
 - 26 blocs de textes originaux contrôlés ; 29 cartes conservées dans les données, quatre quiz signalés « À venir », anciennes URL sans jeu ; 11 questions d’usage et 14 questions enseignants.
 
 ## CSS actifs versionnés
 
-- `/_astro/Layout.B-UZPWny.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/Layout.C3NAAWgf.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 - `/_astro/QuizComingSoon.LlBtdbIo.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
-- `/_astro/index.BszvRm7p.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
+- `/_astro/index.C5mB0CIP.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 - `/_astro/jeu-imprime.oEA6sCnC.css` : feuille active avec hash, références locales contrôlées ; contenu comparé par HTTP si demandé.
 
 ## Documents et empreintes source
@@ -45,7 +45,7 @@ Commande : `npm run build && npm test && npm run verify -- --base-url http://127
 
 ## Ressources et HTTP
 
-75 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
+76 URLs contrôlées sur disque et par HTTP 200 sans redirection, réponses identiques au build.
 211 références à des ancres HTML/pages PDF vérifiées. Les 14 routes hors accueil sont testées avec et sans slash final. Tous les assets émis sont inclus, dont les modules JS et leurs chunks.
 
 ## Responsive et limites de cette vérification

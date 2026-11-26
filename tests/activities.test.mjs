@@ -84,7 +84,7 @@ for (const [index, theme] of quizThemes.entries()) {
   assert.equal(main.querySelector('h1').textContent, quizTitles[index]);
   assert.equal(main.querySelector('.quiz-coming-soon').textContent, 'À venir');
   assert.ok(!main.querySelector('[data-quiz], [data-question], input, button'));
-  assert.equal(document.querySelectorAll('script').length, 0);
+  assert.equal(document.querySelectorAll('script:not([data-click-feedback])').length, 0);
   assert.ok(main.querySelector('a[href="/quiz"]'));
   assert.ok(main.querySelector('a[href="/resources/kit/activite_cartes_a_imprimer.pdf"]'));
  });
